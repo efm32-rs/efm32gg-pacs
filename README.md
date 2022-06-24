@@ -1,6 +1,6 @@
 # EFM32GG (Giant Gecko / Giant Gecko S1) support for Rust
 
-[![PACs](https://github.com/vpetrigo/efm32-pacs/actions/workflows/pacs.yml/badge.svg)](https://github.com/vpetrigo/efm32-pacs/actions/workflows/pacs.yml)
+[![PACs](https://github.com/efm32-rs/efm32gg-pacs/actions/workflows/pacs.yml/badge.svg)](https://github.com/efm32-rs/efm32gg-pacs/actions/workflows/pacs.yml)
 
 This repository contains Peripheral Access Crates (PACs) for Silabs' EFM32 series of Cortex-M microcontrollers.
 
