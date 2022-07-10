@@ -1,0 +1,38 @@
+[package]
+name = "efm32gg11b-pac"
+description = "Peripheral access API for EFM32GG11B MCU (generated using svd2rust)"
+homepage = "https://github.com/efm32-rs/efm32gg-pacs"
+version = "0.1.1"
+authors = [ "Vladimir Petrigo <vladimir.petrigo@gmail.com>",]
+license = "BSD-3-Clause"
+keywords = [ "no-std", "arm", "cortex-m", "efm32",]
+categories = [ "embedded", "hardware-support", "no-std",]
+repository = "https://github.com/efm32-rs/efm32gg-pacs"
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
+cortex-m = "~0.7"
+vcell = "~0.1"
+
+[features]
+default = [ "rt",]
+rt = [ "cortex-m-rt/device",]
+efm32gg11b110 = []
+efm32gg11b120 = []
+efm32gg11b310 = []
+efm32gg11b320 = []
+efm32gg11b420 = []
+efm32gg11b510 = []
+efm32gg11b520 = []
+efm32gg11b820 = []
+efm32gg11b840 = []
+
+[dependencies.cortex-m-rt]
+version = "~0.7"
+optional = true
+
+[package.metadata.docs.rs]
+features = [ "rt", "efm32gg11b110", "efm32gg11b840",]
+default-target = "thumbv7em-none-eabihf"
+targets = []
