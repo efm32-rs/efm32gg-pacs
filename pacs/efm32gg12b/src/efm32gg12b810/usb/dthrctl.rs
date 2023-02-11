@@ -37,17 +37,19 @@ impl From<crate::W<DTHRCTL_SPEC>> for W {
 #[doc = "Field `NONISOTHREN` reader - Non-ISO IN Endpoints Threshold Enable"]
 pub type NONISOTHREN_R = crate::BitReader<bool>;
 #[doc = "Field `NONISOTHREN` writer - Non-ISO IN Endpoints Threshold Enable"]
-pub type NONISOTHREN_W<'a> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, 0>;
+pub type NONISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
 #[doc = "Field `ISOTHREN` reader - ISO IN Endpoints Threshold Enable"]
 pub type ISOTHREN_R = crate::BitReader<bool>;
 #[doc = "Field `ISOTHREN` writer - ISO IN Endpoints Threshold Enable"]
-pub type ISOTHREN_W<'a> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, 1>;
+pub type ISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
 #[doc = "Field `TXTHRLEN` reader - Transmit Threshold Length"]
 pub type TXTHRLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TXTHRLEN` writer - Transmit Threshold Length"]
-pub type TXTHRLEN_W<'a> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, 2>;
+pub type TXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, O>;
+#[doc = "Field `AHBTHRRATIO` reader - AHB Threshold Ratio"]
+pub type AHBTHRRATIO_R = crate::FieldReader<u8, AHBTHRRATIO_A>;
 #[doc = "AHB Threshold Ratio\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum AHBTHRRATIO_A {
     #[doc = "0: AHB threshold = MAC threshold."]
@@ -65,8 +67,6 @@ impl From<AHBTHRRATIO_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `AHBTHRRATIO` reader - AHB Threshold Ratio"]
-pub type AHBTHRRATIO_R = crate::FieldReader<u8, AHBTHRRATIO_A>;
 impl AHBTHRRATIO_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -101,9 +101,9 @@ impl AHBTHRRATIO_R {
     }
 }
 #[doc = "Field `AHBTHRRATIO` writer - AHB Threshold Ratio"]
-pub type AHBTHRRATIO_W<'a> =
-    crate::FieldWriterSafe<'a, u32, DTHRCTL_SPEC, u8, AHBTHRRATIO_A, 2, 11>;
-impl<'a> AHBTHRRATIO_W<'a> {
+pub type AHBTHRRATIO_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, DTHRCTL_SPEC, u8, AHBTHRRATIO_A, 2, O>;
+impl<'a, const O: u8> AHBTHRRATIO_W<'a, O> {
     #[doc = "AHB threshold = MAC threshold."]
     #[inline(always)]
     pub fn div1(self) -> &'a mut W {
@@ -128,15 +128,15 @@ impl<'a> AHBTHRRATIO_W<'a> {
 #[doc = "Field `RXTHREN` reader - Receive Threshold Enable"]
 pub type RXTHREN_R = crate::BitReader<bool>;
 #[doc = "Field `RXTHREN` writer - Receive Threshold Enable"]
-pub type RXTHREN_W<'a> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, 16>;
+pub type RXTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
 #[doc = "Field `RXTHRLEN` reader - Receive Threshold Length"]
 pub type RXTHRLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RXTHRLEN` writer - Receive Threshold Length"]
-pub type RXTHRLEN_W<'a> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, 17>;
+pub type RXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, O>;
 #[doc = "Field `ARBPRKEN` reader - Arbiter Parking Enable"]
 pub type ARBPRKEN_R = crate::BitReader<bool>;
 #[doc = "Field `ARBPRKEN` writer - Arbiter Parking Enable"]
-pub type ARBPRKEN_W<'a> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, 27>;
+pub type ARBPRKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Non-ISO IN Endpoints Threshold Enable"]
     #[inline(always)]
@@ -177,37 +177,44 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Non-ISO IN Endpoints Threshold Enable"]
     #[inline(always)]
-    pub fn nonisothren(&mut self) -> NONISOTHREN_W {
+    #[must_use]
+    pub fn nonisothren(&mut self) -> NONISOTHREN_W<0> {
         NONISOTHREN_W::new(self)
     }
     #[doc = "Bit 1 - ISO IN Endpoints Threshold Enable"]
     #[inline(always)]
-    pub fn isothren(&mut self) -> ISOTHREN_W {
+    #[must_use]
+    pub fn isothren(&mut self) -> ISOTHREN_W<1> {
         ISOTHREN_W::new(self)
     }
     #[doc = "Bits 2:10 - Transmit Threshold Length"]
     #[inline(always)]
-    pub fn txthrlen(&mut self) -> TXTHRLEN_W {
+    #[must_use]
+    pub fn txthrlen(&mut self) -> TXTHRLEN_W<2> {
         TXTHRLEN_W::new(self)
     }
     #[doc = "Bits 11:12 - AHB Threshold Ratio"]
     #[inline(always)]
-    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W {
+    #[must_use]
+    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<11> {
         AHBTHRRATIO_W::new(self)
     }
     #[doc = "Bit 16 - Receive Threshold Enable"]
     #[inline(always)]
-    pub fn rxthren(&mut self) -> RXTHREN_W {
+    #[must_use]
+    pub fn rxthren(&mut self) -> RXTHREN_W<16> {
         RXTHREN_W::new(self)
     }
     #[doc = "Bits 17:25 - Receive Threshold Length"]
     #[inline(always)]
-    pub fn rxthrlen(&mut self) -> RXTHRLEN_W {
+    #[must_use]
+    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<17> {
         RXTHRLEN_W::new(self)
     }
     #[doc = "Bit 27 - Arbiter Parking Enable"]
     #[inline(always)]
-    pub fn arbprken(&mut self) -> ARBPRKEN_W {
+    #[must_use]
+    pub fn arbprken(&mut self) -> ARBPRKEN_W<27> {
         ARBPRKEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -229,11 +236,10 @@ impl crate::Readable for DTHRCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dthrctl::W](W) writer structure"]
 impl crate::Writable for DTHRCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DTHRCTL to value 0x0810_0020"]
 impl crate::Resettable for DTHRCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0810_0020
-    }
+    const RESET_VALUE: Self::Ux = 0x0810_0020;
 }

@@ -37,7 +37,8 @@ impl From<crate::W<SYSWAKETIME_SPEC>> for W {
 #[doc = "Field `SYSWAKETIME` reader - Count of 64ns, 320ns or 3200ns intervals before transmission starts after deassertion of tx_lpi_en"]
 pub type SYSWAKETIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SYSWAKETIME` writer - Count of 64ns, 320ns or 3200ns intervals before transmission starts after deassertion of tx_lpi_en"]
-pub type SYSWAKETIME_W<'a> = crate::FieldWriter<'a, u32, SYSWAKETIME_SPEC, u16, u16, 16, 0>;
+pub type SYSWAKETIME_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYSWAKETIME_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Count of 64ns, 320ns or 3200ns intervals before transmission starts after deassertion of tx_lpi_en"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Count of 64ns, 320ns or 3200ns intervals before transmission starts after deassertion of tx_lpi_en"]
     #[inline(always)]
-    pub fn syswaketime(&mut self) -> SYSWAKETIME_W {
+    #[must_use]
+    pub fn syswaketime(&mut self) -> SYSWAKETIME_W<0> {
         SYSWAKETIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for SYSWAKETIME_SPEC {
 #[doc = "`write(|w| ..)` method takes [syswaketime::W](W) writer structure"]
 impl crate::Writable for SYSWAKETIME_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSWAKETIME to value 0"]
 impl crate::Resettable for SYSWAKETIME_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

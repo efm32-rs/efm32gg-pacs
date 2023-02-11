@@ -37,7 +37,8 @@ impl From<crate::W<NOOFPOLLSBEFEXP_SPEC>> for W {
 #[doc = "Field `NOOFPOLLSBEFEXP` reader - Number of Polls Cycles Before Expiration"]
 pub type NOOFPOLLSBEFEXP_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `NOOFPOLLSBEFEXP` writer - Number of Polls Cycles Before Expiration"]
-pub type NOOFPOLLSBEFEXP_W<'a> = crate::FieldWriter<'a, u32, NOOFPOLLSBEFEXP_SPEC, u32, u32, 32, 0>;
+pub type NOOFPOLLSBEFEXP_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, NOOFPOLLSBEFEXP_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Number of Polls Cycles Before Expiration"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Number of Polls Cycles Before Expiration"]
     #[inline(always)]
-    pub fn noofpollsbefexp(&mut self) -> NOOFPOLLSBEFEXP_W {
+    #[must_use]
+    pub fn noofpollsbefexp(&mut self) -> NOOFPOLLSBEFEXP_W<0> {
         NOOFPOLLSBEFEXP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for NOOFPOLLSBEFEXP_SPEC {
 #[doc = "`write(|w| ..)` method takes [noofpollsbefexp::W](W) writer structure"]
 impl crate::Writable for NOOFPOLLSBEFEXP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NOOFPOLLSBEFEXP to value 0xffff_ffff"]
 impl crate::Resettable for NOOFPOLLSBEFEXP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

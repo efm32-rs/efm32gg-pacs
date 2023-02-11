@@ -37,75 +37,75 @@ impl From<crate::W<CONFIG_SPEC>> for W {
 #[doc = "Field `ENBSPI` reader - QSPI Enable"]
 pub type ENBSPI_R = crate::BitReader<bool>;
 #[doc = "Field `ENBSPI` writer - QSPI Enable"]
-pub type ENBSPI_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 0>;
+pub type ENBSPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `SELCLKPOL` reader - Clock Polarity, CPOL"]
 pub type SELCLKPOL_R = crate::BitReader<bool>;
 #[doc = "Field `SELCLKPOL` writer - Clock Polarity, CPOL"]
-pub type SELCLKPOL_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 1>;
+pub type SELCLKPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `SELCLKPHASE` reader - Clock Phase, CPHA"]
 pub type SELCLKPHASE_R = crate::BitReader<bool>;
 #[doc = "Field `SELCLKPHASE` writer - Clock Phase, CPHA"]
-pub type SELCLKPHASE_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 2>;
+pub type SELCLKPHASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `PHYMODEENABLE` reader - PHY Mode Enable"]
 pub type PHYMODEENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PHYMODEENABLE` writer - PHY Mode Enable"]
-pub type PHYMODEENABLE_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 3>;
+pub type PHYMODEENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENBDIRACCCTLR` reader - Enable Direct Access Controller"]
 pub type ENBDIRACCCTLR_R = crate::BitReader<bool>;
 #[doc = "Field `ENBDIRACCCTLR` writer - Enable Direct Access Controller"]
-pub type ENBDIRACCCTLR_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 7>;
+pub type ENBDIRACCCTLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENBLEGACYIPMODE` reader - Legacy IP Mode Enable"]
 pub type ENBLEGACYIPMODE_R = crate::BitReader<bool>;
 #[doc = "Field `ENBLEGACYIPMODE` writer - Legacy IP Mode Enable"]
-pub type ENBLEGACYIPMODE_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 8>;
+pub type ENBLEGACYIPMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `PERIPHSELDEC` reader - Peripheral Select Decode"]
 pub type PERIPHSELDEC_R = crate::BitReader<bool>;
 #[doc = "Field `PERIPHSELDEC` writer - Peripheral Select Decode"]
-pub type PERIPHSELDEC_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 9>;
+pub type PERIPHSELDEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `PERIPHCSLINES` reader - Peripheral Chip Select Lines"]
 pub type PERIPHCSLINES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PERIPHCSLINES` writer - Peripheral Chip Select Lines"]
-pub type PERIPHCSLINES_W<'a> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u8, u8, 2, 10>;
+pub type PERIPHCSLINES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u8, u8, 2, O>;
 #[doc = "Field `WRPROTFLASH` reader - Write Protect Flash Pin"]
 pub type WRPROTFLASH_R = crate::BitReader<bool>;
 #[doc = "Field `WRPROTFLASH` writer - Write Protect Flash Pin"]
-pub type WRPROTFLASH_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 14>;
+pub type WRPROTFLASH_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENBAHBADDRREMAP` reader - Enable Address Remapping"]
 pub type ENBAHBADDRREMAP_R = crate::BitReader<bool>;
 #[doc = "Field `ENBAHBADDRREMAP` writer - Enable Address Remapping"]
-pub type ENBAHBADDRREMAP_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 16>;
+pub type ENBAHBADDRREMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENTERXIPMODE` reader - Enter XIP Mode on Next READ"]
 pub type ENTERXIPMODE_R = crate::BitReader<bool>;
 #[doc = "Field `ENTERXIPMODE` writer - Enter XIP Mode on Next READ"]
-pub type ENTERXIPMODE_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 17>;
+pub type ENTERXIPMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENTERXIPMODEIMM` reader - Enter XIP Mode Immediately"]
 pub type ENTERXIPMODEIMM_R = crate::BitReader<bool>;
 #[doc = "Field `ENTERXIPMODEIMM` writer - Enter XIP Mode Immediately"]
-pub type ENTERXIPMODEIMM_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 18>;
+pub type ENTERXIPMODEIMM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `MSTRBAUDDIV` reader - Master Mode Baud Rate Divisor"]
 pub type MSTRBAUDDIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MSTRBAUDDIV` writer - Master Mode Baud Rate Divisor"]
-pub type MSTRBAUDDIV_W<'a> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u8, u8, 4, 19>;
+pub type MSTRBAUDDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u8, u8, 4, O>;
 #[doc = "Field `ENABLEAHBDECODER` reader - Enable Address Decoder"]
 pub type ENABLEAHBDECODER_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLEAHBDECODER` writer - Enable Address Decoder"]
-pub type ENABLEAHBDECODER_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 23>;
+pub type ENABLEAHBDECODER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `ENABLEDTRPROTOCOL` reader - Enable DTR Protocol"]
 pub type ENABLEDTRPROTOCOL_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLEDTRPROTOCOL` writer - Enable DTR Protocol"]
-pub type ENABLEDTRPROTOCOL_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 24>;
+pub type ENABLEDTRPROTOCOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `PIPELINEPHY` reader - Pipeline PHY Mode Enable"]
 pub type PIPELINEPHY_R = crate::BitReader<bool>;
 #[doc = "Field `PIPELINEPHY` writer - Pipeline PHY Mode Enable"]
-pub type PIPELINEPHY_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 25>;
+pub type PIPELINEPHY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `CRCENABLE` reader - CRC Enable Bit"]
 pub type CRCENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `CRCENABLE` writer - CRC Enable Bit"]
-pub type CRCENABLE_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 29>;
+pub type CRCENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `DUALBYTEOPCODEEN` reader - Dual-byte Opcode Mode Enable Bit"]
 pub type DUALBYTEOPCODEEN_R = crate::BitReader<bool>;
 #[doc = "Field `DUALBYTEOPCODEEN` writer - Dual-byte Opcode Mode Enable Bit"]
-pub type DUALBYTEOPCODEEN_W<'a> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, 30>;
+pub type DUALBYTEOPCODEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
 #[doc = "Field `IDLE` reader - Serial Interface and Low Level SPI Pipeline is IDLE"]
 pub type IDLE_R = crate::BitReader<bool>;
 impl R {
@@ -208,92 +208,110 @@ impl R {
 impl W {
     #[doc = "Bit 0 - QSPI Enable"]
     #[inline(always)]
-    pub fn enbspi(&mut self) -> ENBSPI_W {
+    #[must_use]
+    pub fn enbspi(&mut self) -> ENBSPI_W<0> {
         ENBSPI_W::new(self)
     }
     #[doc = "Bit 1 - Clock Polarity, CPOL"]
     #[inline(always)]
-    pub fn selclkpol(&mut self) -> SELCLKPOL_W {
+    #[must_use]
+    pub fn selclkpol(&mut self) -> SELCLKPOL_W<1> {
         SELCLKPOL_W::new(self)
     }
     #[doc = "Bit 2 - Clock Phase, CPHA"]
     #[inline(always)]
-    pub fn selclkphase(&mut self) -> SELCLKPHASE_W {
+    #[must_use]
+    pub fn selclkphase(&mut self) -> SELCLKPHASE_W<2> {
         SELCLKPHASE_W::new(self)
     }
     #[doc = "Bit 3 - PHY Mode Enable"]
     #[inline(always)]
-    pub fn phymodeenable(&mut self) -> PHYMODEENABLE_W {
+    #[must_use]
+    pub fn phymodeenable(&mut self) -> PHYMODEENABLE_W<3> {
         PHYMODEENABLE_W::new(self)
     }
     #[doc = "Bit 7 - Enable Direct Access Controller"]
     #[inline(always)]
-    pub fn enbdiraccctlr(&mut self) -> ENBDIRACCCTLR_W {
+    #[must_use]
+    pub fn enbdiraccctlr(&mut self) -> ENBDIRACCCTLR_W<7> {
         ENBDIRACCCTLR_W::new(self)
     }
     #[doc = "Bit 8 - Legacy IP Mode Enable"]
     #[inline(always)]
-    pub fn enblegacyipmode(&mut self) -> ENBLEGACYIPMODE_W {
+    #[must_use]
+    pub fn enblegacyipmode(&mut self) -> ENBLEGACYIPMODE_W<8> {
         ENBLEGACYIPMODE_W::new(self)
     }
     #[doc = "Bit 9 - Peripheral Select Decode"]
     #[inline(always)]
-    pub fn periphseldec(&mut self) -> PERIPHSELDEC_W {
+    #[must_use]
+    pub fn periphseldec(&mut self) -> PERIPHSELDEC_W<9> {
         PERIPHSELDEC_W::new(self)
     }
     #[doc = "Bits 10:11 - Peripheral Chip Select Lines"]
     #[inline(always)]
-    pub fn periphcslines(&mut self) -> PERIPHCSLINES_W {
+    #[must_use]
+    pub fn periphcslines(&mut self) -> PERIPHCSLINES_W<10> {
         PERIPHCSLINES_W::new(self)
     }
     #[doc = "Bit 14 - Write Protect Flash Pin"]
     #[inline(always)]
-    pub fn wrprotflash(&mut self) -> WRPROTFLASH_W {
+    #[must_use]
+    pub fn wrprotflash(&mut self) -> WRPROTFLASH_W<14> {
         WRPROTFLASH_W::new(self)
     }
     #[doc = "Bit 16 - Enable Address Remapping"]
     #[inline(always)]
-    pub fn enbahbaddrremap(&mut self) -> ENBAHBADDRREMAP_W {
+    #[must_use]
+    pub fn enbahbaddrremap(&mut self) -> ENBAHBADDRREMAP_W<16> {
         ENBAHBADDRREMAP_W::new(self)
     }
     #[doc = "Bit 17 - Enter XIP Mode on Next READ"]
     #[inline(always)]
-    pub fn enterxipmode(&mut self) -> ENTERXIPMODE_W {
+    #[must_use]
+    pub fn enterxipmode(&mut self) -> ENTERXIPMODE_W<17> {
         ENTERXIPMODE_W::new(self)
     }
     #[doc = "Bit 18 - Enter XIP Mode Immediately"]
     #[inline(always)]
-    pub fn enterxipmodeimm(&mut self) -> ENTERXIPMODEIMM_W {
+    #[must_use]
+    pub fn enterxipmodeimm(&mut self) -> ENTERXIPMODEIMM_W<18> {
         ENTERXIPMODEIMM_W::new(self)
     }
     #[doc = "Bits 19:22 - Master Mode Baud Rate Divisor"]
     #[inline(always)]
-    pub fn mstrbauddiv(&mut self) -> MSTRBAUDDIV_W {
+    #[must_use]
+    pub fn mstrbauddiv(&mut self) -> MSTRBAUDDIV_W<19> {
         MSTRBAUDDIV_W::new(self)
     }
     #[doc = "Bit 23 - Enable Address Decoder"]
     #[inline(always)]
-    pub fn enableahbdecoder(&mut self) -> ENABLEAHBDECODER_W {
+    #[must_use]
+    pub fn enableahbdecoder(&mut self) -> ENABLEAHBDECODER_W<23> {
         ENABLEAHBDECODER_W::new(self)
     }
     #[doc = "Bit 24 - Enable DTR Protocol"]
     #[inline(always)]
-    pub fn enabledtrprotocol(&mut self) -> ENABLEDTRPROTOCOL_W {
+    #[must_use]
+    pub fn enabledtrprotocol(&mut self) -> ENABLEDTRPROTOCOL_W<24> {
         ENABLEDTRPROTOCOL_W::new(self)
     }
     #[doc = "Bit 25 - Pipeline PHY Mode Enable"]
     #[inline(always)]
-    pub fn pipelinephy(&mut self) -> PIPELINEPHY_W {
+    #[must_use]
+    pub fn pipelinephy(&mut self) -> PIPELINEPHY_W<25> {
         PIPELINEPHY_W::new(self)
     }
     #[doc = "Bit 29 - CRC Enable Bit"]
     #[inline(always)]
-    pub fn crcenable(&mut self) -> CRCENABLE_W {
+    #[must_use]
+    pub fn crcenable(&mut self) -> CRCENABLE_W<29> {
         CRCENABLE_W::new(self)
     }
     #[doc = "Bit 30 - Dual-byte Opcode Mode Enable Bit"]
     #[inline(always)]
-    pub fn dualbyteopcodeen(&mut self) -> DUALBYTEOPCODEEN_W {
+    #[must_use]
+    pub fn dualbyteopcodeen(&mut self) -> DUALBYTEOPCODEEN_W<30> {
         DUALBYTEOPCODEEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -315,11 +333,10 @@ impl crate::Readable for CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [config::W](W) writer structure"]
 impl crate::Writable for CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONFIG to value 0x8078_0081"]
 impl crate::Resettable for CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8078_0081
-    }
+    const RESET_VALUE: Self::Ux = 0x8078_0081;
 }

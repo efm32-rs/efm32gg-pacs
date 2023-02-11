@@ -37,15 +37,15 @@ impl From<crate::W<R5VDETCTRL_SPEC>> for W {
 #[doc = "Field `VREGIDETDIS` reader - VREGI Detector Disable"]
 pub type VREGIDETDIS_R = crate::BitReader<bool>;
 #[doc = "Field `VREGIDETDIS` writer - VREGI Detector Disable"]
-pub type VREGIDETDIS_W<'a> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, 0>;
+pub type VREGIDETDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, O>;
 #[doc = "Field `VBUSDETDIS` reader - VBUS Detector Disable"]
 pub type VBUSDETDIS_R = crate::BitReader<bool>;
 #[doc = "Field `VBUSDETDIS` writer - VBUS Detector Disable"]
-pub type VBUSDETDIS_W<'a> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, 1>;
+pub type VBUSDETDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, O>;
 #[doc = "Field `VREGODETDIS` reader - VREGO Detector Disable"]
 pub type VREGODETDIS_R = crate::BitReader<bool>;
 #[doc = "Field `VREGODETDIS` writer - VREGO Detector Disable"]
-pub type VREGODETDIS_W<'a> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, 2>;
+pub type VREGODETDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VDETCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - VREGI Detector Disable"]
     #[inline(always)]
@@ -66,17 +66,20 @@ impl R {
 impl W {
     #[doc = "Bit 0 - VREGI Detector Disable"]
     #[inline(always)]
-    pub fn vregidetdis(&mut self) -> VREGIDETDIS_W {
+    #[must_use]
+    pub fn vregidetdis(&mut self) -> VREGIDETDIS_W<0> {
         VREGIDETDIS_W::new(self)
     }
     #[doc = "Bit 1 - VBUS Detector Disable"]
     #[inline(always)]
-    pub fn vbusdetdis(&mut self) -> VBUSDETDIS_W {
+    #[must_use]
+    pub fn vbusdetdis(&mut self) -> VBUSDETDIS_W<1> {
         VBUSDETDIS_W::new(self)
     }
     #[doc = "Bit 2 - VREGO Detector Disable"]
     #[inline(always)]
-    pub fn vregodetdis(&mut self) -> VREGODETDIS_W {
+    #[must_use]
+    pub fn vregodetdis(&mut self) -> VREGODETDIS_W<2> {
         VREGODETDIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -98,11 +101,10 @@ impl crate::Readable for R5VDETCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [r5vdetctrl::W](W) writer structure"]
 impl crate::Writable for R5VDETCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets R5VDETCTRL to value 0"]
 impl crate::Resettable for R5VDETCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

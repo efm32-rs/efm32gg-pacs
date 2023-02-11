@@ -37,27 +37,27 @@ impl From<crate::W<IEN_SPEC>> for W {
 #[doc = "Field `VBUSDETH` reader - VBUSDETH Interrupt Enable"]
 pub type VBUSDETH_R = crate::BitReader<bool>;
 #[doc = "Field `VBUSDETH` writer - VBUSDETH Interrupt Enable"]
-pub type VBUSDETH_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 0>;
+pub type VBUSDETH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `VBUSDETL` reader - VBUSDETL Interrupt Enable"]
 pub type VBUSDETL_R = crate::BitReader<bool>;
 #[doc = "Field `VBUSDETL` writer - VBUSDETL Interrupt Enable"]
-pub type VBUSDETL_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 1>;
+pub type VBUSDETL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `ERR` reader - ERR Interrupt Enable"]
 pub type ERR_R = crate::BitReader<bool>;
 #[doc = "Field `ERR` writer - ERR Interrupt Enable"]
-pub type ERR_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 8>;
+pub type ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `DCD` reader - DCD Interrupt Enable"]
 pub type DCD_R = crate::BitReader<bool>;
 #[doc = "Field `DCD` writer - DCD Interrupt Enable"]
-pub type DCD_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 9>;
+pub type DCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `PD` reader - PD Interrupt Enable"]
 pub type PD_R = crate::BitReader<bool>;
 #[doc = "Field `PD` writer - PD Interrupt Enable"]
-pub type PD_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 10>;
+pub type PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `SD` reader - SD Interrupt Enable"]
 pub type SD_R = crate::BitReader<bool>;
 #[doc = "Field `SD` writer - SD Interrupt Enable"]
-pub type SD_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 11>;
+pub type SD_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - VBUSDETH Interrupt Enable"]
     #[inline(always)]
@@ -93,32 +93,38 @@ impl R {
 impl W {
     #[doc = "Bit 0 - VBUSDETH Interrupt Enable"]
     #[inline(always)]
-    pub fn vbusdeth(&mut self) -> VBUSDETH_W {
+    #[must_use]
+    pub fn vbusdeth(&mut self) -> VBUSDETH_W<0> {
         VBUSDETH_W::new(self)
     }
     #[doc = "Bit 1 - VBUSDETL Interrupt Enable"]
     #[inline(always)]
-    pub fn vbusdetl(&mut self) -> VBUSDETL_W {
+    #[must_use]
+    pub fn vbusdetl(&mut self) -> VBUSDETL_W<1> {
         VBUSDETL_W::new(self)
     }
     #[doc = "Bit 8 - ERR Interrupt Enable"]
     #[inline(always)]
-    pub fn err(&mut self) -> ERR_W {
+    #[must_use]
+    pub fn err(&mut self) -> ERR_W<8> {
         ERR_W::new(self)
     }
     #[doc = "Bit 9 - DCD Interrupt Enable"]
     #[inline(always)]
-    pub fn dcd(&mut self) -> DCD_W {
+    #[must_use]
+    pub fn dcd(&mut self) -> DCD_W<9> {
         DCD_W::new(self)
     }
     #[doc = "Bit 10 - PD Interrupt Enable"]
     #[inline(always)]
-    pub fn pd(&mut self) -> PD_W {
+    #[must_use]
+    pub fn pd(&mut self) -> PD_W<10> {
         PD_W::new(self)
     }
     #[doc = "Bit 11 - SD Interrupt Enable"]
     #[inline(always)]
-    pub fn sd(&mut self) -> SD_W {
+    #[must_use]
+    pub fn sd(&mut self) -> SD_W<11> {
         SD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +146,10 @@ impl crate::Readable for IEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ien::W](W) writer structure"]
 impl crate::Writable for IEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IEN to value 0"]
 impl crate::Resettable for IEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

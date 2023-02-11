@@ -37,37 +37,37 @@ impl From<crate::W<TXSTATUS_SPEC>> for W {
 #[doc = "Field `USEDBITREAD` reader - Used bit read"]
 pub type USEDBITREAD_R = crate::BitReader<bool>;
 #[doc = "Field `USEDBITREAD` writer - Used bit read"]
-pub type USEDBITREAD_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 0>;
+pub type USEDBITREAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `COLOCCRD` reader - Collision occurred"]
 pub type COLOCCRD_R = crate::BitReader<bool>;
 #[doc = "Field `COLOCCRD` writer - Collision occurred"]
-pub type COLOCCRD_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 1>;
+pub type COLOCCRD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `RETRYLMTEXCD` reader - Retry limit exceeded"]
 pub type RETRYLMTEXCD_R = crate::BitReader<bool>;
 #[doc = "Field `RETRYLMTEXCD` writer - Retry limit exceeded"]
-pub type RETRYLMTEXCD_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 2>;
+pub type RETRYLMTEXCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXGO` reader - Transmit go"]
 pub type TXGO_R = crate::BitReader<bool>;
 #[doc = "Field `AMBAERR` reader - Transmit frame corruption due to AMBA (AHB) errors."]
 pub type AMBAERR_R = crate::BitReader<bool>;
 #[doc = "Field `AMBAERR` writer - Transmit frame corruption due to AMBA (AHB) errors."]
-pub type AMBAERR_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 4>;
+pub type AMBAERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXCMPLT` reader - Transmit complete"]
 pub type TXCMPLT_R = crate::BitReader<bool>;
 #[doc = "Field `TXCMPLT` writer - Transmit complete"]
-pub type TXCMPLT_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 5>;
+pub type TXCMPLT_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXUNDERRUN` reader - Transmit under run"]
 pub type TXUNDERRUN_R = crate::BitReader<bool>;
 #[doc = "Field `TXUNDERRUN` writer - Transmit under run"]
-pub type TXUNDERRUN_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 6>;
+pub type TXUNDERRUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `LATECOLOCCRD` reader - Late collision occurred"]
 pub type LATECOLOCCRD_R = crate::BitReader<bool>;
 #[doc = "Field `LATECOLOCCRD` writer - Late collision occurred"]
-pub type LATECOLOCCRD_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 7>;
+pub type LATECOLOCCRD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 #[doc = "Field `RESPNOTOK` reader - bresp/hresp not OK"]
 pub type RESPNOTOK_R = crate::BitReader<bool>;
 #[doc = "Field `RESPNOTOK` writer - bresp/hresp not OK"]
-pub type RESPNOTOK_W<'a> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, 8>;
+pub type RESPNOTOK_W<'a, const O: u8> = crate::BitWriter<'a, u32, TXSTATUS_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Used bit read"]
     #[inline(always)]
@@ -118,42 +118,50 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Used bit read"]
     #[inline(always)]
-    pub fn usedbitread(&mut self) -> USEDBITREAD_W {
+    #[must_use]
+    pub fn usedbitread(&mut self) -> USEDBITREAD_W<0> {
         USEDBITREAD_W::new(self)
     }
     #[doc = "Bit 1 - Collision occurred"]
     #[inline(always)]
-    pub fn coloccrd(&mut self) -> COLOCCRD_W {
+    #[must_use]
+    pub fn coloccrd(&mut self) -> COLOCCRD_W<1> {
         COLOCCRD_W::new(self)
     }
     #[doc = "Bit 2 - Retry limit exceeded"]
     #[inline(always)]
-    pub fn retrylmtexcd(&mut self) -> RETRYLMTEXCD_W {
+    #[must_use]
+    pub fn retrylmtexcd(&mut self) -> RETRYLMTEXCD_W<2> {
         RETRYLMTEXCD_W::new(self)
     }
     #[doc = "Bit 4 - Transmit frame corruption due to AMBA (AHB) errors."]
     #[inline(always)]
-    pub fn ambaerr(&mut self) -> AMBAERR_W {
+    #[must_use]
+    pub fn ambaerr(&mut self) -> AMBAERR_W<4> {
         AMBAERR_W::new(self)
     }
     #[doc = "Bit 5 - Transmit complete"]
     #[inline(always)]
-    pub fn txcmplt(&mut self) -> TXCMPLT_W {
+    #[must_use]
+    pub fn txcmplt(&mut self) -> TXCMPLT_W<5> {
         TXCMPLT_W::new(self)
     }
     #[doc = "Bit 6 - Transmit under run"]
     #[inline(always)]
-    pub fn txunderrun(&mut self) -> TXUNDERRUN_W {
+    #[must_use]
+    pub fn txunderrun(&mut self) -> TXUNDERRUN_W<6> {
         TXUNDERRUN_W::new(self)
     }
     #[doc = "Bit 7 - Late collision occurred"]
     #[inline(always)]
-    pub fn latecoloccrd(&mut self) -> LATECOLOCCRD_W {
+    #[must_use]
+    pub fn latecoloccrd(&mut self) -> LATECOLOCCRD_W<7> {
         LATECOLOCCRD_W::new(self)
     }
     #[doc = "Bit 8 - bresp/hresp not OK"]
     #[inline(always)]
-    pub fn respnotok(&mut self) -> RESPNOTOK_W {
+    #[must_use]
+    pub fn respnotok(&mut self) -> RESPNOTOK_W<8> {
         RESPNOTOK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -175,11 +183,10 @@ impl crate::Readable for TXSTATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [txstatus::W](W) writer structure"]
 impl crate::Writable for TXSTATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXSTATUS to value 0"]
 impl crate::Resettable for TXSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

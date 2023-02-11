@@ -37,27 +37,27 @@ impl From<crate::W<CTRL_SPEC>> for W {
 #[doc = "Field `ITAPDLYEN` reader - Selective Tap Delay Line Enable on Rxclk_in"]
 pub type ITAPDLYEN_R = crate::BitReader<bool>;
 #[doc = "Field `ITAPDLYEN` writer - Selective Tap Delay Line Enable on Rxclk_in"]
-pub type ITAPDLYEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
+pub type ITAPDLYEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `ITAPDLYSEL` reader - Selects One of 32 Taps on the Rxclk_in Line"]
 pub type ITAPDLYSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ITAPDLYSEL` writer - Selects One of 32 Taps on the Rxclk_in Line"]
-pub type ITAPDLYSEL_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 5, 1>;
+pub type ITAPDLYSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 5, O>;
 #[doc = "Field `ITAPCHGWIN` reader - Gating Signal for Tap Delay Change"]
 pub type ITAPCHGWIN_R = crate::BitReader<bool>;
 #[doc = "Field `ITAPCHGWIN` writer - Gating Signal for Tap Delay Change"]
-pub type ITAPCHGWIN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 6>;
+pub type ITAPCHGWIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `OTAPDLYEN` reader - Selective Tap Delay Line Enable on SDIO_CLK Pin"]
 pub type OTAPDLYEN_R = crate::BitReader<bool>;
 #[doc = "Field `OTAPDLYEN` writer - Selective Tap Delay Line Enable on SDIO_CLK Pin"]
-pub type OTAPDLYEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 7>;
+pub type OTAPDLYEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `OTAPDLYSEL` reader - Selects One of 32 Taps on the SDIO_CLK Pin"]
 pub type OTAPDLYSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OTAPDLYSEL` writer - Selects One of 32 Taps on the SDIO_CLK Pin"]
-pub type OTAPDLYSEL_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, 8>;
+pub type OTAPDLYSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 4, O>;
 #[doc = "Field `TXDLYMUXSEL` reader - TX Delay Mux Selection"]
 pub type TXDLYMUXSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXDLYMUXSEL` writer - TX Delay Mux Selection"]
-pub type TXDLYMUXSEL_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, 16>;
+pub type TXDLYMUXSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 0 - Selective Tap Delay Line Enable on Rxclk_in"]
     #[inline(always)]
@@ -93,32 +93,38 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Selective Tap Delay Line Enable on Rxclk_in"]
     #[inline(always)]
-    pub fn itapdlyen(&mut self) -> ITAPDLYEN_W {
+    #[must_use]
+    pub fn itapdlyen(&mut self) -> ITAPDLYEN_W<0> {
         ITAPDLYEN_W::new(self)
     }
     #[doc = "Bits 1:5 - Selects One of 32 Taps on the Rxclk_in Line"]
     #[inline(always)]
-    pub fn itapdlysel(&mut self) -> ITAPDLYSEL_W {
+    #[must_use]
+    pub fn itapdlysel(&mut self) -> ITAPDLYSEL_W<1> {
         ITAPDLYSEL_W::new(self)
     }
     #[doc = "Bit 6 - Gating Signal for Tap Delay Change"]
     #[inline(always)]
-    pub fn itapchgwin(&mut self) -> ITAPCHGWIN_W {
+    #[must_use]
+    pub fn itapchgwin(&mut self) -> ITAPCHGWIN_W<6> {
         ITAPCHGWIN_W::new(self)
     }
     #[doc = "Bit 7 - Selective Tap Delay Line Enable on SDIO_CLK Pin"]
     #[inline(always)]
-    pub fn otapdlyen(&mut self) -> OTAPDLYEN_W {
+    #[must_use]
+    pub fn otapdlyen(&mut self) -> OTAPDLYEN_W<7> {
         OTAPDLYEN_W::new(self)
     }
     #[doc = "Bits 8:11 - Selects One of 32 Taps on the SDIO_CLK Pin"]
     #[inline(always)]
-    pub fn otapdlysel(&mut self) -> OTAPDLYSEL_W {
+    #[must_use]
+    pub fn otapdlysel(&mut self) -> OTAPDLYSEL_W<8> {
         OTAPDLYSEL_W::new(self)
     }
     #[doc = "Bits 16:17 - TX Delay Mux Selection"]
     #[inline(always)]
-    pub fn txdlymuxsel(&mut self) -> TXDLYMUXSEL_W {
+    #[must_use]
+    pub fn txdlymuxsel(&mut self) -> TXDLYMUXSEL_W<16> {
         TXDLYMUXSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +146,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,11 +37,11 @@ impl From<crate::W<SPECADDR1TOP_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Specific address 1 MSB"]
 pub type ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADDR` writer - Specific address 1 MSB"]
-pub type ADDR_W<'a> = crate::FieldWriter<'a, u32, SPECADDR1TOP_SPEC, u16, u16, 16, 0>;
+pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPECADDR1TOP_SPEC, u16, u16, 16, O>;
 #[doc = "Field `FILTERTYPE` reader - MAC SA or DA selection"]
 pub type FILTERTYPE_R = crate::BitReader<bool>;
 #[doc = "Field `FILTERTYPE` writer - MAC SA or DA selection"]
-pub type FILTERTYPE_W<'a> = crate::BitWriter<'a, u32, SPECADDR1TOP_SPEC, bool, 16>;
+pub type FILTERTYPE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPECADDR1TOP_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - Specific address 1 MSB"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Specific address 1 MSB"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
+    #[must_use]
+    pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
     #[doc = "Bit 16 - MAC SA or DA selection"]
     #[inline(always)]
-    pub fn filtertype(&mut self) -> FILTERTYPE_W {
+    #[must_use]
+    pub fn filtertype(&mut self) -> FILTERTYPE_W<16> {
         FILTERTYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for SPECADDR1TOP_SPEC {
 #[doc = "`write(|w| ..)` method takes [specaddr1top::W](W) writer structure"]
 impl crate::Writable for SPECADDR1TOP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPECADDR1TOP to value 0"]
 impl crate::Resettable for SPECADDR1TOP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

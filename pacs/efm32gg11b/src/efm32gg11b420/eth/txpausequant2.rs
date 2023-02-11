@@ -37,11 +37,13 @@ impl From<crate::W<TXPAUSEQUANT2_SPEC>> for W {
 #[doc = "Field `QUANTP4` reader - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 4."]
 pub type QUANTP4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `QUANTP4` writer - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 4."]
-pub type QUANTP4_W<'a> = crate::FieldWriter<'a, u32, TXPAUSEQUANT2_SPEC, u16, u16, 16, 0>;
+pub type QUANTP4_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TXPAUSEQUANT2_SPEC, u16, u16, 16, O>;
 #[doc = "Field `QUANTP5` reader - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 5."]
 pub type QUANTP5_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `QUANTP5` writer - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 5."]
-pub type QUANTP5_W<'a> = crate::FieldWriter<'a, u32, TXPAUSEQUANT2_SPEC, u16, u16, 16, 16>;
+pub type QUANTP5_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TXPAUSEQUANT2_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 4."]
     #[inline(always)]
@@ -57,12 +59,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 4."]
     #[inline(always)]
-    pub fn quantp4(&mut self) -> QUANTP4_W {
+    #[must_use]
+    pub fn quantp4(&mut self) -> QUANTP4_W<0> {
         QUANTP4_W::new(self)
     }
     #[doc = "Bits 16:31 - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 5."]
     #[inline(always)]
-    pub fn quantp5(&mut self) -> QUANTP5_W {
+    #[must_use]
+    pub fn quantp5(&mut self) -> QUANTP5_W<16> {
         QUANTP5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +88,10 @@ impl crate::Readable for TXPAUSEQUANT2_SPEC {
 #[doc = "`write(|w| ..)` method takes [txpausequant2::W](W) writer structure"]
 impl crate::Writable for TXPAUSEQUANT2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXPAUSEQUANT2 to value 0xffff_ffff"]
 impl crate::Resettable for TXPAUSEQUANT2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

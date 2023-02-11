@@ -37,11 +37,12 @@ impl From<crate::W<TXPAUSEQUANT_SPEC>> for W {
 #[doc = "Field `QUANT` reader - Transmit pause quantum"]
 pub type QUANT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `QUANT` writer - Transmit pause quantum"]
-pub type QUANT_W<'a> = crate::FieldWriter<'a, u32, TXPAUSEQUANT_SPEC, u16, u16, 16, 0>;
+pub type QUANT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXPAUSEQUANT_SPEC, u16, u16, 16, O>;
 #[doc = "Field `QUANTP1` reader - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 1."]
 pub type QUANTP1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `QUANTP1` writer - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 1."]
-pub type QUANTP1_W<'a> = crate::FieldWriter<'a, u32, TXPAUSEQUANT_SPEC, u16, u16, 16, 16>;
+pub type QUANTP1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TXPAUSEQUANT_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Transmit pause quantum"]
     #[inline(always)]
@@ -57,12 +58,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Transmit pause quantum"]
     #[inline(always)]
-    pub fn quant(&mut self) -> QUANT_W {
+    #[must_use]
+    pub fn quant(&mut self) -> QUANT_W<0> {
         QUANT_W::new(self)
     }
     #[doc = "Bits 16:31 - Transmit pause quantum - written with the pause quantum value for pause frame transmission of priority 1."]
     #[inline(always)]
-    pub fn quantp1(&mut self) -> QUANTP1_W {
+    #[must_use]
+    pub fn quantp1(&mut self) -> QUANTP1_W<16> {
         QUANTP1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +87,10 @@ impl crate::Readable for TXPAUSEQUANT_SPEC {
 #[doc = "`write(|w| ..)` method takes [txpausequant::W](W) writer structure"]
 impl crate::Writable for TXPAUSEQUANT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXPAUSEQUANT to value 0xffff_ffff"]
 impl crate::Resettable for TXPAUSEQUANT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

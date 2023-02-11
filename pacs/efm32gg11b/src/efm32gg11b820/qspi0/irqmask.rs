@@ -37,75 +37,77 @@ impl From<crate::W<IRQMASK_SPEC>> for W {
 #[doc = "Field `MODEMFAILMASK` reader - Mode M Failure Mask"]
 pub type MODEMFAILMASK_R = crate::BitReader<bool>;
 #[doc = "Field `MODEMFAILMASK` writer - Mode M Failure Mask"]
-pub type MODEMFAILMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 0>;
+pub type MODEMFAILMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `UNDERFLOWDETMASK` reader - Underflow Detected Mask"]
 pub type UNDERFLOWDETMASK_R = crate::BitReader<bool>;
 #[doc = "Field `UNDERFLOWDETMASK` writer - Underflow Detected Mask"]
-pub type UNDERFLOWDETMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 1>;
+pub type UNDERFLOWDETMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `INDIRECTOPDONEMASK` reader - Indirect Complete Mask"]
 pub type INDIRECTOPDONEMASK_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTOPDONEMASK` writer - Indirect Complete Mask"]
-pub type INDIRECTOPDONEMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 2>;
+pub type INDIRECTOPDONEMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `INDIRECTREADREJECTMASK` reader - Indirect Read Reject Mask"]
 pub type INDIRECTREADREJECTMASK_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTREADREJECTMASK` writer - Indirect Read Reject Mask"]
-pub type INDIRECTREADREJECTMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 3>;
+pub type INDIRECTREADREJECTMASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `PROTWRATTEMPTMASK` reader - Protected Area Write Attempt Mask"]
 pub type PROTWRATTEMPTMASK_R = crate::BitReader<bool>;
 #[doc = "Field `PROTWRATTEMPTMASK` writer - Protected Area Write Attempt Mask"]
-pub type PROTWRATTEMPTMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 4>;
+pub type PROTWRATTEMPTMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `ILLEGALACCESSDETMASK` reader - Illegal Access Detected Mask"]
 pub type ILLEGALACCESSDETMASK_R = crate::BitReader<bool>;
 #[doc = "Field `ILLEGALACCESSDETMASK` writer - Illegal Access Detected Mask"]
-pub type ILLEGALACCESSDETMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 5>;
+pub type ILLEGALACCESSDETMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `INDIRECTXFERLEVELBREACHMASK` reader - Transfer Watermark Breach Mask"]
 pub type INDIRECTXFERLEVELBREACHMASK_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTXFERLEVELBREACHMASK` writer - Transfer Watermark Breach Mask"]
-pub type INDIRECTXFERLEVELBREACHMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 6>;
+pub type INDIRECTXFERLEVELBREACHMASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `RECVOVERFLOWMASK` reader - Receive Overflow Mask"]
 pub type RECVOVERFLOWMASK_R = crate::BitReader<bool>;
 #[doc = "Field `RECVOVERFLOWMASK` writer - Receive Overflow Mask"]
-pub type RECVOVERFLOWMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 7>;
+pub type RECVOVERFLOWMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `TXFIFONOTFULLMASK` reader - Small TX FIFO Not Full Mask"]
 pub type TXFIFONOTFULLMASK_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFONOTFULLMASK` writer - Small TX FIFO Not Full Mask"]
-pub type TXFIFONOTFULLMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 8>;
+pub type TXFIFONOTFULLMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `TXFIFOFULLMASK` reader - Small TX FIFO Full Mask"]
 pub type TXFIFOFULLMASK_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFOFULLMASK` writer - Small TX FIFO Full Mask"]
-pub type TXFIFOFULLMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 9>;
+pub type TXFIFOFULLMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `RXFIFONOTEMPTYMASK` reader - Small RX FIFO Not Empty Mask"]
 pub type RXFIFONOTEMPTYMASK_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFONOTEMPTYMASK` writer - Small RX FIFO Not Empty Mask"]
-pub type RXFIFONOTEMPTYMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 10>;
+pub type RXFIFONOTEMPTYMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `RXFIFOFULLMASK` reader - Small RX FIFO Full Mask"]
 pub type RXFIFOFULLMASK_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFOFULLMASK` writer - Small RX FIFO Full Mask"]
-pub type RXFIFOFULLMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 11>;
+pub type RXFIFOFULLMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `INDRDSRAMFULLMASK` reader - Indirect Read Partition Overflow Mask"]
 pub type INDRDSRAMFULLMASK_R = crate::BitReader<bool>;
 #[doc = "Field `INDRDSRAMFULLMASK` writer - Indirect Read Partition Overflow Mask"]
-pub type INDRDSRAMFULLMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 12>;
+pub type INDRDSRAMFULLMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `POLLEXPINTMASK` reader - Polling Expiration Detected Mask"]
 pub type POLLEXPINTMASK_R = crate::BitReader<bool>;
 #[doc = "Field `POLLEXPINTMASK` writer - Polling Expiration Detected Mask"]
-pub type POLLEXPINTMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 13>;
+pub type POLLEXPINTMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `STIGREQMASK` reader - STIG Request Completion Mask"]
 pub type STIGREQMASK_R = crate::BitReader<bool>;
 #[doc = "Field `STIGREQMASK` writer - STIG Request Completion Mask"]
-pub type STIGREQMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 14>;
+pub type STIGREQMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `RXCRCDATAERRMASK` reader - RX CRC Data Error Mask"]
 pub type RXCRCDATAERRMASK_R = crate::BitReader<bool>;
 #[doc = "Field `RXCRCDATAERRMASK` writer - RX CRC Data Error Mask"]
-pub type RXCRCDATAERRMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 16>;
+pub type RXCRCDATAERRMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `RXCRCDATAVALMASK` reader - RX CRC Data Valid Mask"]
 pub type RXCRCDATAVALMASK_R = crate::BitReader<bool>;
 #[doc = "Field `RXCRCDATAVALMASK` writer - RX CRC Data Valid Mask"]
-pub type RXCRCDATAVALMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 17>;
+pub type RXCRCDATAVALMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 #[doc = "Field `TXCRCCHUNKBRKMASK` reader - TX CRC Chunk Was Broken Mask"]
 pub type TXCRCCHUNKBRKMASK_R = crate::BitReader<bool>;
 #[doc = "Field `TXCRCCHUNKBRKMASK` writer - TX CRC Chunk Was Broken Mask"]
-pub type TXCRCCHUNKBRKMASK_W<'a> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, 18>;
+pub type TXCRCCHUNKBRKMASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQMASK_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Mode M Failure Mask"]
     #[inline(always)]
@@ -201,92 +203,110 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Mode M Failure Mask"]
     #[inline(always)]
-    pub fn modemfailmask(&mut self) -> MODEMFAILMASK_W {
+    #[must_use]
+    pub fn modemfailmask(&mut self) -> MODEMFAILMASK_W<0> {
         MODEMFAILMASK_W::new(self)
     }
     #[doc = "Bit 1 - Underflow Detected Mask"]
     #[inline(always)]
-    pub fn underflowdetmask(&mut self) -> UNDERFLOWDETMASK_W {
+    #[must_use]
+    pub fn underflowdetmask(&mut self) -> UNDERFLOWDETMASK_W<1> {
         UNDERFLOWDETMASK_W::new(self)
     }
     #[doc = "Bit 2 - Indirect Complete Mask"]
     #[inline(always)]
-    pub fn indirectopdonemask(&mut self) -> INDIRECTOPDONEMASK_W {
+    #[must_use]
+    pub fn indirectopdonemask(&mut self) -> INDIRECTOPDONEMASK_W<2> {
         INDIRECTOPDONEMASK_W::new(self)
     }
     #[doc = "Bit 3 - Indirect Read Reject Mask"]
     #[inline(always)]
-    pub fn indirectreadrejectmask(&mut self) -> INDIRECTREADREJECTMASK_W {
+    #[must_use]
+    pub fn indirectreadrejectmask(&mut self) -> INDIRECTREADREJECTMASK_W<3> {
         INDIRECTREADREJECTMASK_W::new(self)
     }
     #[doc = "Bit 4 - Protected Area Write Attempt Mask"]
     #[inline(always)]
-    pub fn protwrattemptmask(&mut self) -> PROTWRATTEMPTMASK_W {
+    #[must_use]
+    pub fn protwrattemptmask(&mut self) -> PROTWRATTEMPTMASK_W<4> {
         PROTWRATTEMPTMASK_W::new(self)
     }
     #[doc = "Bit 5 - Illegal Access Detected Mask"]
     #[inline(always)]
-    pub fn illegalaccessdetmask(&mut self) -> ILLEGALACCESSDETMASK_W {
+    #[must_use]
+    pub fn illegalaccessdetmask(&mut self) -> ILLEGALACCESSDETMASK_W<5> {
         ILLEGALACCESSDETMASK_W::new(self)
     }
     #[doc = "Bit 6 - Transfer Watermark Breach Mask"]
     #[inline(always)]
-    pub fn indirectxferlevelbreachmask(&mut self) -> INDIRECTXFERLEVELBREACHMASK_W {
+    #[must_use]
+    pub fn indirectxferlevelbreachmask(&mut self) -> INDIRECTXFERLEVELBREACHMASK_W<6> {
         INDIRECTXFERLEVELBREACHMASK_W::new(self)
     }
     #[doc = "Bit 7 - Receive Overflow Mask"]
     #[inline(always)]
-    pub fn recvoverflowmask(&mut self) -> RECVOVERFLOWMASK_W {
+    #[must_use]
+    pub fn recvoverflowmask(&mut self) -> RECVOVERFLOWMASK_W<7> {
         RECVOVERFLOWMASK_W::new(self)
     }
     #[doc = "Bit 8 - Small TX FIFO Not Full Mask"]
     #[inline(always)]
-    pub fn txfifonotfullmask(&mut self) -> TXFIFONOTFULLMASK_W {
+    #[must_use]
+    pub fn txfifonotfullmask(&mut self) -> TXFIFONOTFULLMASK_W<8> {
         TXFIFONOTFULLMASK_W::new(self)
     }
     #[doc = "Bit 9 - Small TX FIFO Full Mask"]
     #[inline(always)]
-    pub fn txfifofullmask(&mut self) -> TXFIFOFULLMASK_W {
+    #[must_use]
+    pub fn txfifofullmask(&mut self) -> TXFIFOFULLMASK_W<9> {
         TXFIFOFULLMASK_W::new(self)
     }
     #[doc = "Bit 10 - Small RX FIFO Not Empty Mask"]
     #[inline(always)]
-    pub fn rxfifonotemptymask(&mut self) -> RXFIFONOTEMPTYMASK_W {
+    #[must_use]
+    pub fn rxfifonotemptymask(&mut self) -> RXFIFONOTEMPTYMASK_W<10> {
         RXFIFONOTEMPTYMASK_W::new(self)
     }
     #[doc = "Bit 11 - Small RX FIFO Full Mask"]
     #[inline(always)]
-    pub fn rxfifofullmask(&mut self) -> RXFIFOFULLMASK_W {
+    #[must_use]
+    pub fn rxfifofullmask(&mut self) -> RXFIFOFULLMASK_W<11> {
         RXFIFOFULLMASK_W::new(self)
     }
     #[doc = "Bit 12 - Indirect Read Partition Overflow Mask"]
     #[inline(always)]
-    pub fn indrdsramfullmask(&mut self) -> INDRDSRAMFULLMASK_W {
+    #[must_use]
+    pub fn indrdsramfullmask(&mut self) -> INDRDSRAMFULLMASK_W<12> {
         INDRDSRAMFULLMASK_W::new(self)
     }
     #[doc = "Bit 13 - Polling Expiration Detected Mask"]
     #[inline(always)]
-    pub fn pollexpintmask(&mut self) -> POLLEXPINTMASK_W {
+    #[must_use]
+    pub fn pollexpintmask(&mut self) -> POLLEXPINTMASK_W<13> {
         POLLEXPINTMASK_W::new(self)
     }
     #[doc = "Bit 14 - STIG Request Completion Mask"]
     #[inline(always)]
-    pub fn stigreqmask(&mut self) -> STIGREQMASK_W {
+    #[must_use]
+    pub fn stigreqmask(&mut self) -> STIGREQMASK_W<14> {
         STIGREQMASK_W::new(self)
     }
     #[doc = "Bit 16 - RX CRC Data Error Mask"]
     #[inline(always)]
-    pub fn rxcrcdataerrmask(&mut self) -> RXCRCDATAERRMASK_W {
+    #[must_use]
+    pub fn rxcrcdataerrmask(&mut self) -> RXCRCDATAERRMASK_W<16> {
         RXCRCDATAERRMASK_W::new(self)
     }
     #[doc = "Bit 17 - RX CRC Data Valid Mask"]
     #[inline(always)]
-    pub fn rxcrcdatavalmask(&mut self) -> RXCRCDATAVALMASK_W {
+    #[must_use]
+    pub fn rxcrcdatavalmask(&mut self) -> RXCRCDATAVALMASK_W<17> {
         RXCRCDATAVALMASK_W::new(self)
     }
     #[doc = "Bit 18 - TX CRC Chunk Was Broken Mask"]
     #[inline(always)]
-    pub fn txcrcchunkbrkmask(&mut self) -> TXCRCCHUNKBRKMASK_W {
+    #[must_use]
+    pub fn txcrcchunkbrkmask(&mut self) -> TXCRCCHUNKBRKMASK_W<18> {
         TXCRCCHUNKBRKMASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -308,11 +328,10 @@ impl crate::Readable for IRQMASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [irqmask::W](W) writer structure"]
 impl crate::Writable for IRQMASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRQMASK to value 0"]
 impl crate::Resettable for IRQMASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

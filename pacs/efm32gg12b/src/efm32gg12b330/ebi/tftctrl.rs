@@ -34,8 +34,10 @@ impl From<crate::W<TFTCTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DD` reader - TFT Direct Drive Mode"]
+pub type DD_R = crate::FieldReader<u8, DD_A>;
 #[doc = "TFT Direct Drive Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DD_A {
     #[doc = "0: Direct Drive is disabled."]
@@ -51,8 +53,6 @@ impl From<DD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DD` reader - TFT Direct Drive Mode"]
-pub type DD_R = crate::FieldReader<u8, DD_A>;
 impl DD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -81,8 +81,8 @@ impl DD_R {
     }
 }
 #[doc = "Field `DD` writer - TFT Direct Drive Mode"]
-pub type DD_W<'a> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, DD_A, 2, 0>;
-impl<'a> DD_W<'a> {
+pub type DD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, DD_A, 2, O>;
+impl<'a, const O: u8> DD_W<'a, O> {
     #[doc = "Direct Drive is disabled."]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -99,8 +99,10 @@ impl<'a> DD_W<'a> {
         self.variant(DD_A::EXTERNAL)
     }
 }
+#[doc = "Field `MASKBLEND` reader - TFT Mask and Blend Mode"]
+pub type MASKBLEND_R = crate::FieldReader<u8, MASKBLEND_A>;
 #[doc = "TFT Mask and Blend Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MASKBLEND_A {
     #[doc = "0: Masking and Blending are disabled."]
@@ -130,8 +132,6 @@ impl From<MASKBLEND_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `MASKBLEND` reader - TFT Mask and Blend Mode"]
-pub type MASKBLEND_R = crate::FieldReader<u8, MASKBLEND_A>;
 impl MASKBLEND_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -202,8 +202,9 @@ impl MASKBLEND_R {
     }
 }
 #[doc = "Field `MASKBLEND` writer - TFT Mask and Blend Mode"]
-pub type MASKBLEND_W<'a> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, MASKBLEND_A, 4, 2>;
-impl<'a> MASKBLEND_W<'a> {
+pub type MASKBLEND_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, MASKBLEND_A, 4, O>;
+impl<'a, const O: u8> MASKBLEND_W<'a, O> {
     #[doc = "Masking and Blending are disabled."]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -258,13 +259,15 @@ impl<'a> MASKBLEND_W<'a> {
 #[doc = "Field `SHIFTDCLKEN` reader - TFT EBI_DCLK Shift Enable"]
 pub type SHIFTDCLKEN_R = crate::BitReader<bool>;
 #[doc = "Field `SHIFTDCLKEN` writer - TFT EBI_DCLK Shift Enable"]
-pub type SHIFTDCLKEN_W<'a> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, 8>;
+pub type SHIFTDCLKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, O>;
 #[doc = "Field `FBCTRIG` reader - TFT Frame Base Copy Trigger"]
 pub type FBCTRIG_R = crate::BitReader<bool>;
 #[doc = "Field `FBCTRIG` writer - TFT Frame Base Copy Trigger"]
-pub type FBCTRIG_W<'a> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, 9>;
+pub type FBCTRIG_W<'a, const O: u8> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, O>;
+#[doc = "Field `INTERLEAVE` reader - Interleave Mode"]
+pub type INTERLEAVE_R = crate::FieldReader<u8, INTERLEAVE_A>;
 #[doc = "Interleave Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum INTERLEAVE_A {
     #[doc = "0: Allow unlimited interleaved EBI accesses per EBI_DCLK period. This can cause jitter on the EBI_DCLK"]
@@ -280,8 +283,6 @@ impl From<INTERLEAVE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `INTERLEAVE` reader - Interleave Mode"]
-pub type INTERLEAVE_R = crate::FieldReader<u8, INTERLEAVE_A>;
 impl INTERLEAVE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -310,8 +311,9 @@ impl INTERLEAVE_R {
     }
 }
 #[doc = "Field `INTERLEAVE` writer - Interleave Mode"]
-pub type INTERLEAVE_W<'a> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, INTERLEAVE_A, 2, 10>;
-impl<'a> INTERLEAVE_W<'a> {
+pub type INTERLEAVE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, INTERLEAVE_A, 2, O>;
+impl<'a, const O: u8> INTERLEAVE_W<'a, O> {
     #[doc = "Allow unlimited interleaved EBI accesses per EBI_DCLK period. This can cause jitter on the EBI_DCLK"]
     #[inline(always)]
     pub fn unlimited(self) -> &'a mut W {
@@ -331,9 +333,11 @@ impl<'a> INTERLEAVE_W<'a> {
 #[doc = "Field `COLOR1SRC` reader - Masking/Alpha Blending Color1 Source"]
 pub type COLOR1SRC_R = crate::BitReader<bool>;
 #[doc = "Field `COLOR1SRC` writer - Masking/Alpha Blending Color1 Source"]
-pub type COLOR1SRC_W<'a> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, 12>;
+pub type COLOR1SRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, O>;
+#[doc = "Field `WIDTH` reader - TFT Transaction Width"]
+pub type WIDTH_R = crate::FieldReader<u8, WIDTH_A>;
 #[doc = "TFT Transaction Width\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum WIDTH_A {
     #[doc = "0: TFT Data is 8 bit wide."]
@@ -347,8 +351,6 @@ impl From<WIDTH_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `WIDTH` reader - TFT Transaction Width"]
-pub type WIDTH_R = crate::FieldReader<u8, WIDTH_A>;
 impl WIDTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -371,8 +373,8 @@ impl WIDTH_R {
     }
 }
 #[doc = "Field `WIDTH` writer - TFT Transaction Width"]
-pub type WIDTH_W<'a> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, WIDTH_A, 2, 16>;
-impl<'a> WIDTH_W<'a> {
+pub type WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTCTRL_SPEC, u8, WIDTH_A, 2, O>;
+impl<'a, const O: u8> WIDTH_W<'a, O> {
     #[doc = "TFT Data is 8 bit wide."]
     #[inline(always)]
     pub fn byte(self) -> &'a mut W {
@@ -387,9 +389,11 @@ impl<'a> WIDTH_W<'a> {
 #[doc = "Field `ALIASBANKEN` reader - Alias to Graphics Bank Enable"]
 pub type ALIASBANKEN_R = crate::BitReader<bool>;
 #[doc = "Field `ALIASBANKEN` writer - Alias to Graphics Bank Enable"]
-pub type ALIASBANKEN_W<'a> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, 19>;
+pub type ALIASBANKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TFTCTRL_SPEC, bool, O>;
+#[doc = "Field `BANKSEL` reader - Graphics Bank"]
+pub type BANKSEL_R = crate::FieldReader<u8, BANKSEL_A>;
 #[doc = "Graphics Bank\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum BANKSEL_A {
     #[doc = "0: Memory bank 0 is used for Direct Drive, Masking, and Alpha Blending."]
@@ -407,8 +411,6 @@ impl From<BANKSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `BANKSEL` reader - Graphics Bank"]
-pub type BANKSEL_R = crate::FieldReader<u8, BANKSEL_A>;
 impl BANKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -443,8 +445,9 @@ impl BANKSEL_R {
     }
 }
 #[doc = "Field `BANKSEL` writer - Graphics Bank"]
-pub type BANKSEL_W<'a> = crate::FieldWriterSafe<'a, u32, TFTCTRL_SPEC, u8, BANKSEL_A, 2, 20>;
-impl<'a> BANKSEL_W<'a> {
+pub type BANKSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, TFTCTRL_SPEC, u8, BANKSEL_A, 2, O>;
+impl<'a, const O: u8> BANKSEL_W<'a, O> {
     #[doc = "Memory bank 0 is used for Direct Drive, Masking, and Alpha Blending."]
     #[inline(always)]
     pub fn bank0(self) -> &'a mut W {
@@ -466,8 +469,10 @@ impl<'a> BANKSEL_W<'a> {
         self.variant(BANKSEL_A::BANK3)
     }
 }
+#[doc = "Field `ALIASBANK` reader - Graphic Bank Select Aliasing"]
+pub type ALIASBANK_R = crate::FieldReader<u8, ALIASBANK_A>;
 #[doc = "Graphic Bank Select Aliasing\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ALIASBANK_A {
     #[doc = "0: Graphic Bank Select is alias to Bank Select 0"]
@@ -485,8 +490,6 @@ impl From<ALIASBANK_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `ALIASBANK` reader - Graphic Bank Select Aliasing"]
-pub type ALIASBANK_R = crate::FieldReader<u8, ALIASBANK_A>;
 impl ALIASBANK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -521,8 +524,9 @@ impl ALIASBANK_R {
     }
 }
 #[doc = "Field `ALIASBANK` writer - Graphic Bank Select Aliasing"]
-pub type ALIASBANK_W<'a> = crate::FieldWriterSafe<'a, u32, TFTCTRL_SPEC, u8, ALIASBANK_A, 2, 22>;
-impl<'a> ALIASBANK_W<'a> {
+pub type ALIASBANK_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, TFTCTRL_SPEC, u8, ALIASBANK_A, 2, O>;
+impl<'a, const O: u8> ALIASBANK_W<'a, O> {
     #[doc = "Graphic Bank Select is alias to Bank Select 0"]
     #[inline(always)]
     pub fn aliasbank0(self) -> &'a mut W {
@@ -599,52 +603,62 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - TFT Direct Drive Mode"]
     #[inline(always)]
-    pub fn dd(&mut self) -> DD_W {
+    #[must_use]
+    pub fn dd(&mut self) -> DD_W<0> {
         DD_W::new(self)
     }
     #[doc = "Bits 2:5 - TFT Mask and Blend Mode"]
     #[inline(always)]
-    pub fn maskblend(&mut self) -> MASKBLEND_W {
+    #[must_use]
+    pub fn maskblend(&mut self) -> MASKBLEND_W<2> {
         MASKBLEND_W::new(self)
     }
     #[doc = "Bit 8 - TFT EBI_DCLK Shift Enable"]
     #[inline(always)]
-    pub fn shiftdclken(&mut self) -> SHIFTDCLKEN_W {
+    #[must_use]
+    pub fn shiftdclken(&mut self) -> SHIFTDCLKEN_W<8> {
         SHIFTDCLKEN_W::new(self)
     }
     #[doc = "Bit 9 - TFT Frame Base Copy Trigger"]
     #[inline(always)]
-    pub fn fbctrig(&mut self) -> FBCTRIG_W {
+    #[must_use]
+    pub fn fbctrig(&mut self) -> FBCTRIG_W<9> {
         FBCTRIG_W::new(self)
     }
     #[doc = "Bits 10:11 - Interleave Mode"]
     #[inline(always)]
-    pub fn interleave(&mut self) -> INTERLEAVE_W {
+    #[must_use]
+    pub fn interleave(&mut self) -> INTERLEAVE_W<10> {
         INTERLEAVE_W::new(self)
     }
     #[doc = "Bit 12 - Masking/Alpha Blending Color1 Source"]
     #[inline(always)]
-    pub fn color1src(&mut self) -> COLOR1SRC_W {
+    #[must_use]
+    pub fn color1src(&mut self) -> COLOR1SRC_W<12> {
         COLOR1SRC_W::new(self)
     }
     #[doc = "Bits 16:17 - TFT Transaction Width"]
     #[inline(always)]
-    pub fn width(&mut self) -> WIDTH_W {
+    #[must_use]
+    pub fn width(&mut self) -> WIDTH_W<16> {
         WIDTH_W::new(self)
     }
     #[doc = "Bit 19 - Alias to Graphics Bank Enable"]
     #[inline(always)]
-    pub fn aliasbanken(&mut self) -> ALIASBANKEN_W {
+    #[must_use]
+    pub fn aliasbanken(&mut self) -> ALIASBANKEN_W<19> {
         ALIASBANKEN_W::new(self)
     }
     #[doc = "Bits 20:21 - Graphics Bank"]
     #[inline(always)]
-    pub fn banksel(&mut self) -> BANKSEL_W {
+    #[must_use]
+    pub fn banksel(&mut self) -> BANKSEL_W<20> {
         BANKSEL_W::new(self)
     }
     #[doc = "Bits 22:23 - Graphic Bank Select Aliasing"]
     #[inline(always)]
-    pub fn aliasbank(&mut self) -> ALIASBANK_W {
+    #[must_use]
+    pub fn aliasbank(&mut self) -> ALIASBANK_W<22> {
         ALIASBANK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -666,11 +680,10 @@ impl crate::Readable for TFTCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [tftctrl::W](W) writer structure"]
 impl crate::Writable for TFTCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TFTCTRL to value 0"]
 impl crate::Resettable for TFTCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,27 +37,31 @@ impl From<crate::W<CFGPRESETVAL3_SPEC>> for W {
 #[doc = "Field `SDR104SDCLKFREQ` reader - SDR104 SD_CLK Frequency"]
 pub type SDR104SDCLKFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDR104SDCLKFREQ` writer - SDR104 SD_CLK Frequency"]
-pub type SDR104SDCLKFREQ_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u16, u16, 10, 0>;
+pub type SDR104SDCLKFREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u16, u16, 10, O>;
 #[doc = "Field `SDR104CLKGENEN` reader - SDR104 SD_CLK Gen Enable"]
 pub type SDR104CLKGENEN_R = crate::BitReader<bool>;
 #[doc = "Field `SDR104CLKGENEN` writer - SDR104 SD_CLK Gen Enable"]
-pub type SDR104CLKGENEN_W<'a> = crate::BitWriter<'a, u32, CFGPRESETVAL3_SPEC, bool, 10>;
+pub type SDR104CLKGENEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFGPRESETVAL3_SPEC, bool, O>;
 #[doc = "Field `SDR104DRVST` reader - SDR104 SD Drive Strength"]
 pub type SDR104DRVST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDR104DRVST` writer - SDR104 SD Drive Strength"]
-pub type SDR104DRVST_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u8, u8, 2, 11>;
+pub type SDR104DRVST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u8, u8, 2, O>;
 #[doc = "Field `DDR50SDCLKFREQ` reader - Preset Value for DDR50 Speed of SD_CLK"]
 pub type DDR50SDCLKFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DDR50SDCLKFREQ` writer - Preset Value for DDR50 Speed of SD_CLK"]
-pub type DDR50SDCLKFREQ_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u16, u16, 10, 16>;
+pub type DDR50SDCLKFREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u16, u16, 10, O>;
 #[doc = "Field `DDR50CLKGENEN` reader - DDR50 Speed Clock Gen Enable"]
 pub type DDR50CLKGENEN_R = crate::BitReader<bool>;
 #[doc = "Field `DDR50CLKGENEN` writer - DDR50 Speed Clock Gen Enable"]
-pub type DDR50CLKGENEN_W<'a> = crate::BitWriter<'a, u32, CFGPRESETVAL3_SPEC, bool, 26>;
+pub type DDR50CLKGENEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFGPRESETVAL3_SPEC, bool, O>;
 #[doc = "Field `DDR50DRVST` reader - DDR50 Speed Drive Strength"]
 pub type DDR50DRVST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DDR50DRVST` writer - DDR50 Speed Drive Strength"]
-pub type DDR50DRVST_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u8, u8, 2, 27>;
+pub type DDR50DRVST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL3_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:9 - SDR104 SD_CLK Frequency"]
     #[inline(always)]
@@ -93,32 +97,38 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - SDR104 SD_CLK Frequency"]
     #[inline(always)]
-    pub fn sdr104sdclkfreq(&mut self) -> SDR104SDCLKFREQ_W {
+    #[must_use]
+    pub fn sdr104sdclkfreq(&mut self) -> SDR104SDCLKFREQ_W<0> {
         SDR104SDCLKFREQ_W::new(self)
     }
     #[doc = "Bit 10 - SDR104 SD_CLK Gen Enable"]
     #[inline(always)]
-    pub fn sdr104clkgenen(&mut self) -> SDR104CLKGENEN_W {
+    #[must_use]
+    pub fn sdr104clkgenen(&mut self) -> SDR104CLKGENEN_W<10> {
         SDR104CLKGENEN_W::new(self)
     }
     #[doc = "Bits 11:12 - SDR104 SD Drive Strength"]
     #[inline(always)]
-    pub fn sdr104drvst(&mut self) -> SDR104DRVST_W {
+    #[must_use]
+    pub fn sdr104drvst(&mut self) -> SDR104DRVST_W<11> {
         SDR104DRVST_W::new(self)
     }
     #[doc = "Bits 16:25 - Preset Value for DDR50 Speed of SD_CLK"]
     #[inline(always)]
-    pub fn ddr50sdclkfreq(&mut self) -> DDR50SDCLKFREQ_W {
+    #[must_use]
+    pub fn ddr50sdclkfreq(&mut self) -> DDR50SDCLKFREQ_W<16> {
         DDR50SDCLKFREQ_W::new(self)
     }
     #[doc = "Bit 26 - DDR50 Speed Clock Gen Enable"]
     #[inline(always)]
-    pub fn ddr50clkgenen(&mut self) -> DDR50CLKGENEN_W {
+    #[must_use]
+    pub fn ddr50clkgenen(&mut self) -> DDR50CLKGENEN_W<26> {
         DDR50CLKGENEN_W::new(self)
     }
     #[doc = "Bits 27:28 - DDR50 Speed Drive Strength"]
     #[inline(always)]
-    pub fn ddr50drvst(&mut self) -> DDR50DRVST_W {
+    #[must_use]
+    pub fn ddr50drvst(&mut self) -> DDR50DRVST_W<27> {
         DDR50DRVST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +150,10 @@ impl crate::Readable for CFGPRESETVAL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfgpresetval3::W](W) writer structure"]
 impl crate::Writable for CFGPRESETVAL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFGPRESETVAL3 to value 0"]
 impl crate::Resettable for CFGPRESETVAL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

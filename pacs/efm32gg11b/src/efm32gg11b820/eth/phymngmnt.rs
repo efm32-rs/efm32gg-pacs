@@ -37,31 +37,32 @@ impl From<crate::W<PHYMNGMNT_SPEC>> for W {
 #[doc = "Field `PHYRWDATA` reader - PHY read write data"]
 pub type PHYRWDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PHYRWDATA` writer - PHY read write data"]
-pub type PHYRWDATA_W<'a> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u16, u16, 16, 0>;
+pub type PHYRWDATA_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u16, u16, 16, O>;
 #[doc = "Field `WRITE10` reader - Must be written with 10."]
 pub type WRITE10_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WRITE10` writer - Must be written with 10."]
-pub type WRITE10_W<'a> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 2, 16>;
+pub type WRITE10_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 2, O>;
 #[doc = "Field `REGADDR` reader - Register address - specifies the register in the PHY to access."]
 pub type REGADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGADDR` writer - Register address - specifies the register in the PHY to access."]
-pub type REGADDR_W<'a> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 5, 18>;
+pub type REGADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 5, O>;
 #[doc = "Field `PHYADDR` reader - PHY address."]
 pub type PHYADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PHYADDR` writer - PHY address."]
-pub type PHYADDR_W<'a> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 5, 23>;
+pub type PHYADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 5, O>;
 #[doc = "Field `OPERATION` reader - Operation. For a Clause 45 frame: 00 is an addr, 01 is a write, 10 is a post read increment, 11 is a read frame. For a Clause 22 frame: 10 is a read, 01 is a write."]
 pub type OPERATION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OPERATION` writer - Operation. For a Clause 45 frame: 00 is an addr, 01 is a write, 10 is a post read increment, 11 is a read frame. For a Clause 22 frame: 10 is a read, 01 is a write."]
-pub type OPERATION_W<'a> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 2, 28>;
+pub type OPERATION_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHYMNGMNT_SPEC, u8, u8, 2, O>;
 #[doc = "Field `WRITE1` reader - Must be written to 1 for a valid Clause 22 frame and to 0 for a valid Clause 45 frame."]
 pub type WRITE1_R = crate::BitReader<bool>;
 #[doc = "Field `WRITE1` writer - Must be written to 1 for a valid Clause 22 frame and to 0 for a valid Clause 45 frame."]
-pub type WRITE1_W<'a> = crate::BitWriter<'a, u32, PHYMNGMNT_SPEC, bool, 30>;
+pub type WRITE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PHYMNGMNT_SPEC, bool, O>;
 #[doc = "Field `WRITE0` reader - Must be written with 0."]
 pub type WRITE0_R = crate::BitReader<bool>;
 #[doc = "Field `WRITE0` writer - Must be written with 0."]
-pub type WRITE0_W<'a> = crate::BitWriter<'a, u32, PHYMNGMNT_SPEC, bool, 31>;
+pub type WRITE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PHYMNGMNT_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - PHY read write data"]
     #[inline(always)]
@@ -102,37 +103,44 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - PHY read write data"]
     #[inline(always)]
-    pub fn phyrwdata(&mut self) -> PHYRWDATA_W {
+    #[must_use]
+    pub fn phyrwdata(&mut self) -> PHYRWDATA_W<0> {
         PHYRWDATA_W::new(self)
     }
     #[doc = "Bits 16:17 - Must be written with 10."]
     #[inline(always)]
-    pub fn write10(&mut self) -> WRITE10_W {
+    #[must_use]
+    pub fn write10(&mut self) -> WRITE10_W<16> {
         WRITE10_W::new(self)
     }
     #[doc = "Bits 18:22 - Register address - specifies the register in the PHY to access."]
     #[inline(always)]
-    pub fn regaddr(&mut self) -> REGADDR_W {
+    #[must_use]
+    pub fn regaddr(&mut self) -> REGADDR_W<18> {
         REGADDR_W::new(self)
     }
     #[doc = "Bits 23:27 - PHY address."]
     #[inline(always)]
-    pub fn phyaddr(&mut self) -> PHYADDR_W {
+    #[must_use]
+    pub fn phyaddr(&mut self) -> PHYADDR_W<23> {
         PHYADDR_W::new(self)
     }
     #[doc = "Bits 28:29 - Operation. For a Clause 45 frame: 00 is an addr, 01 is a write, 10 is a post read increment, 11 is a read frame. For a Clause 22 frame: 10 is a read, 01 is a write."]
     #[inline(always)]
-    pub fn operation(&mut self) -> OPERATION_W {
+    #[must_use]
+    pub fn operation(&mut self) -> OPERATION_W<28> {
         OPERATION_W::new(self)
     }
     #[doc = "Bit 30 - Must be written to 1 for a valid Clause 22 frame and to 0 for a valid Clause 45 frame."]
     #[inline(always)]
-    pub fn write1(&mut self) -> WRITE1_W {
+    #[must_use]
+    pub fn write1(&mut self) -> WRITE1_W<30> {
         WRITE1_W::new(self)
     }
     #[doc = "Bit 31 - Must be written with 0."]
     #[inline(always)]
-    pub fn write0(&mut self) -> WRITE0_W {
+    #[must_use]
+    pub fn write0(&mut self) -> WRITE0_W<31> {
         WRITE0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -154,11 +162,10 @@ impl crate::Readable for PHYMNGMNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [phymngmnt::W](W) writer structure"]
 impl crate::Writable for PHYMNGMNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PHYMNGMNT to value 0"]
 impl crate::Resettable for PHYMNGMNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

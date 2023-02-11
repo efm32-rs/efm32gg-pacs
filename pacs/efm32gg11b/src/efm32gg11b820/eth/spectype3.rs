@@ -37,11 +37,11 @@ impl From<crate::W<SPECTYPE3_SPEC>> for W {
 #[doc = "Field `MATCH` reader - Type ID match 3"]
 pub type MATCH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MATCH` writer - Type ID match 3"]
-pub type MATCH_W<'a> = crate::FieldWriter<'a, u32, SPECTYPE3_SPEC, u16, u16, 16, 0>;
+pub type MATCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPECTYPE3_SPEC, u16, u16, 16, O>;
 #[doc = "Field `ENBCOPY` reader - Enable copying of type ID match 3 matched frames."]
 pub type ENBCOPY_R = crate::BitReader<bool>;
 #[doc = "Field `ENBCOPY` writer - Enable copying of type ID match 3 matched frames."]
-pub type ENBCOPY_W<'a> = crate::BitWriter<'a, u32, SPECTYPE3_SPEC, bool, 31>;
+pub type ENBCOPY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPECTYPE3_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - Type ID match 3"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Type ID match 3"]
     #[inline(always)]
-    pub fn match_(&mut self) -> MATCH_W {
+    #[must_use]
+    pub fn match_(&mut self) -> MATCH_W<0> {
         MATCH_W::new(self)
     }
     #[doc = "Bit 31 - Enable copying of type ID match 3 matched frames."]
     #[inline(always)]
-    pub fn enbcopy(&mut self) -> ENBCOPY_W {
+    #[must_use]
+    pub fn enbcopy(&mut self) -> ENBCOPY_W<31> {
         ENBCOPY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for SPECTYPE3_SPEC {
 #[doc = "`write(|w| ..)` method takes [spectype3::W](W) writer structure"]
 impl crate::Writable for SPECTYPE3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPECTYPE3 to value 0"]
 impl crate::Resettable for SPECTYPE3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,18 +37,19 @@ impl From<crate::W<TSUTIMERNSEC_SPEC>> for W {
 #[doc = "Field `TIMER` reader - Timer count in nanoseconds"]
 pub type TIMER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER` writer - Timer count in nanoseconds"]
-pub type TIMER_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERNSEC_SPEC, u32, u32, 30, 0>;
+pub type TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TSUTIMERNSEC_SPEC, u32, u32, 30, O>;
 impl R {
     #[doc = "Bits 0:29 - Timer count in nanoseconds"]
     #[inline(always)]
     pub fn timer(&self) -> TIMER_R {
-        TIMER_R::new((self.bits & 0x3fff_ffff) as u32)
+        TIMER_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - Timer count in nanoseconds"]
     #[inline(always)]
-    pub fn timer(&mut self) -> TIMER_W {
+    #[must_use]
+    pub fn timer(&mut self) -> TIMER_W<0> {
         TIMER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for TSUTIMERNSEC_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsutimernsec::W](W) writer structure"]
 impl crate::Writable for TSUTIMERNSEC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TSUTIMERNSEC to value 0"]
 impl crate::Resettable for TSUTIMERNSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

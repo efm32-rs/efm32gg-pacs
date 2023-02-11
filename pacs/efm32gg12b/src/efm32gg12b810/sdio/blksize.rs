@@ -34,8 +34,10 @@ impl From<crate::W<BLKSIZE_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `TFRBLKSIZE` reader - Transfer Block Size, Specifies the Block Size for Block Data Transfers for CMD17, CMD18, CMD24, CMD25, and CMD53"]
+pub type TFRBLKSIZE_R = crate::FieldReader<u16, TFRBLKSIZE_A>;
 #[doc = "Transfer Block Size, Specifies the Block Size for Block Data Transfers for CMD17, CMD18, CMD24, CMD25, and CMD53\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum TFRBLKSIZE_A {
     #[doc = "0: `0`"]
@@ -47,8 +49,6 @@ impl From<TFRBLKSIZE_A> for u16 {
         variant as _
     }
 }
-#[doc = "Field `TFRBLKSIZE` reader - Transfer Block Size, Specifies the Block Size for Block Data Transfers for CMD17, CMD18, CMD24, CMD25, and CMD53"]
-pub type TFRBLKSIZE_R = crate::FieldReader<u16, TFRBLKSIZE_A>;
 impl TFRBLKSIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -65,16 +65,19 @@ impl TFRBLKSIZE_R {
     }
 }
 #[doc = "Field `TFRBLKSIZE` writer - Transfer Block Size, Specifies the Block Size for Block Data Transfers for CMD17, CMD18, CMD24, CMD25, and CMD53"]
-pub type TFRBLKSIZE_W<'a> = crate::FieldWriter<'a, u32, BLKSIZE_SPEC, u16, TFRBLKSIZE_A, 12, 0>;
-impl<'a> TFRBLKSIZE_W<'a> {
+pub type TFRBLKSIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, BLKSIZE_SPEC, u16, TFRBLKSIZE_A, 12, O>;
+impl<'a, const O: u8> TFRBLKSIZE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn noxfer(self) -> &'a mut W {
         self.variant(TFRBLKSIZE_A::NOXFER)
     }
 }
+#[doc = "Field `HSTSDMABUFSIZE` reader - Host SDMA Buffer Size"]
+pub type HSTSDMABUFSIZE_R = crate::FieldReader<u8, HSTSDMABUFSIZE_A>;
 #[doc = "Host SDMA Buffer Size\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum HSTSDMABUFSIZE_A {
     #[doc = "0: 4KB(Detects A11 Carry out)"]
@@ -100,8 +103,6 @@ impl From<HSTSDMABUFSIZE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `HSTSDMABUFSIZE` reader - Host SDMA Buffer Size"]
-pub type HSTSDMABUFSIZE_R = crate::FieldReader<u8, HSTSDMABUFSIZE_A>;
 impl HSTSDMABUFSIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -160,9 +161,9 @@ impl HSTSDMABUFSIZE_R {
     }
 }
 #[doc = "Field `HSTSDMABUFSIZE` writer - Host SDMA Buffer Size"]
-pub type HSTSDMABUFSIZE_W<'a> =
-    crate::FieldWriterSafe<'a, u32, BLKSIZE_SPEC, u8, HSTSDMABUFSIZE_A, 3, 12>;
-impl<'a> HSTSDMABUFSIZE_W<'a> {
+pub type HSTSDMABUFSIZE_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, BLKSIZE_SPEC, u8, HSTSDMABUFSIZE_A, 3, O>;
+impl<'a, const O: u8> HSTSDMABUFSIZE_W<'a, O> {
     #[doc = "4KB(Detects A11 Carry out)"]
     #[inline(always)]
     pub fn size4(self) -> &'a mut W {
@@ -204,8 +205,10 @@ impl<'a> HSTSDMABUFSIZE_W<'a> {
         self.variant(HSTSDMABUFSIZE_A::SIZE512)
     }
 }
+#[doc = "Field `BLKSCNTFORCURRTFR` reader - Blocks Count for Current Transfer"]
+pub type BLKSCNTFORCURRTFR_R = crate::FieldReader<u16, BLKSCNTFORCURRTFR_A>;
 #[doc = "Blocks Count for Current Transfer\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum BLKSCNTFORCURRTFR_A {
     #[doc = "0: `0`"]
@@ -217,8 +220,6 @@ impl From<BLKSCNTFORCURRTFR_A> for u16 {
         variant as _
     }
 }
-#[doc = "Field `BLKSCNTFORCURRTFR` reader - Blocks Count for Current Transfer"]
-pub type BLKSCNTFORCURRTFR_R = crate::FieldReader<u16, BLKSCNTFORCURRTFR_A>;
 impl BLKSCNTFORCURRTFR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -235,9 +236,9 @@ impl BLKSCNTFORCURRTFR_R {
     }
 }
 #[doc = "Field `BLKSCNTFORCURRTFR` writer - Blocks Count for Current Transfer"]
-pub type BLKSCNTFORCURRTFR_W<'a> =
-    crate::FieldWriter<'a, u32, BLKSIZE_SPEC, u16, BLKSCNTFORCURRTFR_A, 16, 16>;
-impl<'a> BLKSCNTFORCURRTFR_W<'a> {
+pub type BLKSCNTFORCURRTFR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, BLKSIZE_SPEC, u16, BLKSCNTFORCURRTFR_A, 16, O>;
+impl<'a, const O: u8> BLKSCNTFORCURRTFR_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn stopcnt(self) -> &'a mut W {
@@ -264,17 +265,20 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Transfer Block Size, Specifies the Block Size for Block Data Transfers for CMD17, CMD18, CMD24, CMD25, and CMD53"]
     #[inline(always)]
-    pub fn tfrblksize(&mut self) -> TFRBLKSIZE_W {
+    #[must_use]
+    pub fn tfrblksize(&mut self) -> TFRBLKSIZE_W<0> {
         TFRBLKSIZE_W::new(self)
     }
     #[doc = "Bits 12:14 - Host SDMA Buffer Size"]
     #[inline(always)]
-    pub fn hstsdmabufsize(&mut self) -> HSTSDMABUFSIZE_W {
+    #[must_use]
+    pub fn hstsdmabufsize(&mut self) -> HSTSDMABUFSIZE_W<12> {
         HSTSDMABUFSIZE_W::new(self)
     }
     #[doc = "Bits 16:31 - Blocks Count for Current Transfer"]
     #[inline(always)]
-    pub fn blkscntforcurrtfr(&mut self) -> BLKSCNTFORCURRTFR_W {
+    #[must_use]
+    pub fn blkscntforcurrtfr(&mut self) -> BLKSCNTFORCURRTFR_W<16> {
         BLKSCNTFORCURRTFR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -296,11 +300,10 @@ impl crate::Readable for BLKSIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [blksize::W](W) writer structure"]
 impl crate::Writable for BLKSIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLKSIZE to value 0"]
 impl crate::Resettable for BLKSIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,27 +37,27 @@ impl From<crate::W<ECCCTRL_SPEC>> for W {
 #[doc = "Field `RAMECCEWEN` reader - RAM ECC Write Enable"]
 pub type RAMECCEWEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAMECCEWEN` writer - RAM ECC Write Enable"]
-pub type RAMECCEWEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 0>;
+pub type RAMECCEWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 #[doc = "Field `RAMECCCHKEN` reader - RAM ECC Check Enable"]
 pub type RAMECCCHKEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAMECCCHKEN` writer - RAM ECC Check Enable"]
-pub type RAMECCCHKEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 1>;
+pub type RAMECCCHKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM1ECCEWEN` reader - RAM1 ECC Write Enable"]
 pub type RAM1ECCEWEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM1ECCEWEN` writer - RAM1 ECC Write Enable"]
-pub type RAM1ECCEWEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 2>;
+pub type RAM1ECCEWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM1ECCCHKEN` reader - RAM1 ECC Check Enable"]
 pub type RAM1ECCCHKEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM1ECCCHKEN` writer - RAM1 ECC Check Enable"]
-pub type RAM1ECCCHKEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 3>;
+pub type RAM1ECCCHKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM2ECCEWEN` reader - RAM2 ECC Write Enable"]
 pub type RAM2ECCEWEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM2ECCEWEN` writer - RAM2 ECC Write Enable"]
-pub type RAM2ECCEWEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 4>;
+pub type RAM2ECCEWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM2ECCCHKEN` reader - RAM2 ECC Check Enable"]
 pub type RAM2ECCCHKEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM2ECCCHKEN` writer - RAM2 ECC Check Enable"]
-pub type RAM2ECCCHKEN_W<'a> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, 5>;
+pub type RAM2ECCCHKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECCCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - RAM ECC Write Enable"]
     #[inline(always)]
@@ -93,32 +93,38 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RAM ECC Write Enable"]
     #[inline(always)]
-    pub fn rameccewen(&mut self) -> RAMECCEWEN_W {
+    #[must_use]
+    pub fn rameccewen(&mut self) -> RAMECCEWEN_W<0> {
         RAMECCEWEN_W::new(self)
     }
     #[doc = "Bit 1 - RAM ECC Check Enable"]
     #[inline(always)]
-    pub fn rameccchken(&mut self) -> RAMECCCHKEN_W {
+    #[must_use]
+    pub fn rameccchken(&mut self) -> RAMECCCHKEN_W<1> {
         RAMECCCHKEN_W::new(self)
     }
     #[doc = "Bit 2 - RAM1 ECC Write Enable"]
     #[inline(always)]
-    pub fn ram1eccewen(&mut self) -> RAM1ECCEWEN_W {
+    #[must_use]
+    pub fn ram1eccewen(&mut self) -> RAM1ECCEWEN_W<2> {
         RAM1ECCEWEN_W::new(self)
     }
     #[doc = "Bit 3 - RAM1 ECC Check Enable"]
     #[inline(always)]
-    pub fn ram1eccchken(&mut self) -> RAM1ECCCHKEN_W {
+    #[must_use]
+    pub fn ram1eccchken(&mut self) -> RAM1ECCCHKEN_W<3> {
         RAM1ECCCHKEN_W::new(self)
     }
     #[doc = "Bit 4 - RAM2 ECC Write Enable"]
     #[inline(always)]
-    pub fn ram2eccewen(&mut self) -> RAM2ECCEWEN_W {
+    #[must_use]
+    pub fn ram2eccewen(&mut self) -> RAM2ECCEWEN_W<4> {
         RAM2ECCEWEN_W::new(self)
     }
     #[doc = "Bit 5 - RAM2 ECC Check Enable"]
     #[inline(always)]
-    pub fn ram2eccchken(&mut self) -> RAM2ECCCHKEN_W {
+    #[must_use]
+    pub fn ram2eccchken(&mut self) -> RAM2ECCCHKEN_W<5> {
         RAM2ECCCHKEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +146,10 @@ impl crate::Readable for ECCCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [eccctrl::W](W) writer structure"]
 impl crate::Writable for ECCCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ECCCTRL to value 0"]
 impl crate::Resettable for ECCCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

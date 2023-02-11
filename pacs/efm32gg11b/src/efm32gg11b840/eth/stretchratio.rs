@@ -37,7 +37,8 @@ impl From<crate::W<STRETCHRATIO_SPEC>> for W {
 #[doc = "Field `IPGSTRETCH` reader - IPG Stretch"]
 pub type IPGSTRETCH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IPGSTRETCH` writer - IPG Stretch"]
-pub type IPGSTRETCH_W<'a> = crate::FieldWriter<'a, u32, STRETCHRATIO_SPEC, u16, u16, 16, 0>;
+pub type IPGSTRETCH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, STRETCHRATIO_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - IPG Stretch"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - IPG Stretch"]
     #[inline(always)]
-    pub fn ipgstretch(&mut self) -> IPGSTRETCH_W {
+    #[must_use]
+    pub fn ipgstretch(&mut self) -> IPGSTRETCH_W<0> {
         IPGSTRETCH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for STRETCHRATIO_SPEC {
 #[doc = "`write(|w| ..)` method takes [stretchratio::W](W) writer structure"]
 impl crate::Writable for STRETCHRATIO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STRETCHRATIO to value 0"]
 impl crate::Resettable for STRETCHRATIO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<CFG0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `FORDER` reader - Filter order"]
+pub type FORDER_R = crate::FieldReader<u8, FORDER_A>;
 #[doc = "Filter order\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum FORDER_A {
     #[doc = "0: Second order filter."]
@@ -53,8 +55,6 @@ impl From<FORDER_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `FORDER` reader - Filter order"]
-pub type FORDER_R = crate::FieldReader<u8, FORDER_A>;
 impl FORDER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,8 +89,8 @@ impl FORDER_R {
     }
 }
 #[doc = "Field `FORDER` writer - Filter order"]
-pub type FORDER_W<'a> = crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, FORDER_A, 2, 0>;
-impl<'a> FORDER_W<'a> {
+pub type FORDER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, FORDER_A, 2, O>;
+impl<'a, const O: u8> FORDER_W<'a, O> {
     #[doc = "Second order filter."]
     #[inline(always)]
     pub fn second(self) -> &'a mut W {
@@ -112,8 +112,10 @@ impl<'a> FORDER_W<'a> {
         self.variant(FORDER_A::FIFTH)
     }
 }
+#[doc = "Field `NUMCH` reader - Number of Channels"]
+pub type NUMCH_R = crate::FieldReader<u8, NUMCH_A>;
 #[doc = "Number of Channels\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NUMCH_A {
     #[doc = "0: Only one Channel."]
@@ -131,8 +133,6 @@ impl From<NUMCH_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `NUMCH` reader - Number of Channels"]
-pub type NUMCH_R = crate::FieldReader<u8, NUMCH_A>;
 impl NUMCH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -167,8 +167,8 @@ impl NUMCH_R {
     }
 }
 #[doc = "Field `NUMCH` writer - Number of Channels"]
-pub type NUMCH_W<'a> = crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, NUMCH_A, 2, 4>;
-impl<'a> NUMCH_W<'a> {
+pub type NUMCH_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, NUMCH_A, 2, O>;
+impl<'a, const O: u8> NUMCH_W<'a, O> {
     #[doc = "Only one Channel."]
     #[inline(always)]
     pub fn one(self) -> &'a mut W {
@@ -190,8 +190,10 @@ impl<'a> NUMCH_W<'a> {
         self.variant(NUMCH_A::FOUR)
     }
 }
+#[doc = "Field `DATAFORMAT` reader - Filter output format"]
+pub type DATAFORMAT_R = crate::FieldReader<u8, DATAFORMAT_A>;
 #[doc = "Filter output format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DATAFORMAT_A {
     #[doc = "0: Right aligned 16-bit, left bits are sign extended."]
@@ -215,8 +217,6 @@ impl From<DATAFORMAT_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DATAFORMAT` reader - Filter output format"]
-pub type DATAFORMAT_R = crate::FieldReader<u8, DATAFORMAT_A>;
 impl DATAFORMAT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -269,8 +269,9 @@ impl DATAFORMAT_R {
     }
 }
 #[doc = "Field `DATAFORMAT` writer - Filter output format"]
-pub type DATAFORMAT_W<'a> = crate::FieldWriter<'a, u32, CFG0_SPEC, u8, DATAFORMAT_A, 3, 8>;
-impl<'a> DATAFORMAT_W<'a> {
+pub type DATAFORMAT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFG0_SPEC, u8, DATAFORMAT_A, 3, O>;
+impl<'a, const O: u8> DATAFORMAT_W<'a, O> {
     #[doc = "Right aligned 16-bit, left bits are sign extended."]
     #[inline(always)]
     pub fn right16(self) -> &'a mut W {
@@ -307,8 +308,10 @@ impl<'a> DATAFORMAT_W<'a> {
         self.variant(DATAFORMAT_A::RAW32BIT)
     }
 }
+#[doc = "Field `FIFODVL` reader - Data Valid level in FIFO"]
+pub type FIFODVL_R = crate::FieldReader<u8, FIFODVL_A>;
 #[doc = "Data Valid level in FIFO\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum FIFODVL_A {
     #[doc = "0: Atleast one word."]
@@ -326,8 +329,6 @@ impl From<FIFODVL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `FIFODVL` reader - Data Valid level in FIFO"]
-pub type FIFODVL_R = crate::FieldReader<u8, FIFODVL_A>;
 impl FIFODVL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -362,8 +363,9 @@ impl FIFODVL_R {
     }
 }
 #[doc = "Field `FIFODVL` writer - Data Valid level in FIFO"]
-pub type FIFODVL_W<'a> = crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, FIFODVL_A, 2, 12>;
-impl<'a> FIFODVL_W<'a> {
+pub type FIFODVL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, CFG0_SPEC, u8, FIFODVL_A, 2, O>;
+impl<'a, const O: u8> FIFODVL_W<'a, O> {
     #[doc = "Atleast one word."]
     #[inline(always)]
     pub fn one(self) -> &'a mut W {
@@ -388,27 +390,27 @@ impl<'a> FIFODVL_W<'a> {
 #[doc = "Field `STEREOMODECH01` reader - Stereo mode CH01"]
 pub type STEREOMODECH01_R = crate::BitReader<bool>;
 #[doc = "Field `STEREOMODECH01` writer - Stereo mode CH01"]
-pub type STEREOMODECH01_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 16>;
+pub type STEREOMODECH01_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 #[doc = "Field `STEREOMODECH23` reader - Stereo mode CH23"]
 pub type STEREOMODECH23_R = crate::BitReader<bool>;
 #[doc = "Field `STEREOMODECH23` writer - Stereo mode CH23"]
-pub type STEREOMODECH23_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 17>;
+pub type STEREOMODECH23_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 #[doc = "Field `CH0CLKPOL` reader - CH0 CLK Polarity"]
 pub type CH0CLKPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CH0CLKPOL` writer - CH0 CLK Polarity"]
-pub type CH0CLKPOL_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 24>;
+pub type CH0CLKPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 #[doc = "Field `CH1CLKPOL` reader - CH1 CLK Polarity"]
 pub type CH1CLKPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CH1CLKPOL` writer - CH1 CLK Polarity"]
-pub type CH1CLKPOL_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 25>;
+pub type CH1CLKPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 #[doc = "Field `CH2CLKPOL` reader - CH2 CLK Polarity"]
 pub type CH2CLKPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CH2CLKPOL` writer - CH2 CLK Polarity"]
-pub type CH2CLKPOL_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 26>;
+pub type CH2CLKPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 #[doc = "Field `CH3CLKPOL` reader - CH3 CLK Polarity"]
 pub type CH3CLKPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CH3CLKPOL` writer - CH3 CLK Polarity"]
-pub type CH3CLKPOL_W<'a> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, 27>;
+pub type CH3CLKPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - Filter order"]
     #[inline(always)]
@@ -464,52 +466,62 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Filter order"]
     #[inline(always)]
-    pub fn forder(&mut self) -> FORDER_W {
+    #[must_use]
+    pub fn forder(&mut self) -> FORDER_W<0> {
         FORDER_W::new(self)
     }
     #[doc = "Bits 4:5 - Number of Channels"]
     #[inline(always)]
-    pub fn numch(&mut self) -> NUMCH_W {
+    #[must_use]
+    pub fn numch(&mut self) -> NUMCH_W<4> {
         NUMCH_W::new(self)
     }
     #[doc = "Bits 8:10 - Filter output format"]
     #[inline(always)]
-    pub fn dataformat(&mut self) -> DATAFORMAT_W {
+    #[must_use]
+    pub fn dataformat(&mut self) -> DATAFORMAT_W<8> {
         DATAFORMAT_W::new(self)
     }
     #[doc = "Bits 12:13 - Data Valid level in FIFO"]
     #[inline(always)]
-    pub fn fifodvl(&mut self) -> FIFODVL_W {
+    #[must_use]
+    pub fn fifodvl(&mut self) -> FIFODVL_W<12> {
         FIFODVL_W::new(self)
     }
     #[doc = "Bit 16 - Stereo mode CH01"]
     #[inline(always)]
-    pub fn stereomodech01(&mut self) -> STEREOMODECH01_W {
+    #[must_use]
+    pub fn stereomodech01(&mut self) -> STEREOMODECH01_W<16> {
         STEREOMODECH01_W::new(self)
     }
     #[doc = "Bit 17 - Stereo mode CH23"]
     #[inline(always)]
-    pub fn stereomodech23(&mut self) -> STEREOMODECH23_W {
+    #[must_use]
+    pub fn stereomodech23(&mut self) -> STEREOMODECH23_W<17> {
         STEREOMODECH23_W::new(self)
     }
     #[doc = "Bit 24 - CH0 CLK Polarity"]
     #[inline(always)]
-    pub fn ch0clkpol(&mut self) -> CH0CLKPOL_W {
+    #[must_use]
+    pub fn ch0clkpol(&mut self) -> CH0CLKPOL_W<24> {
         CH0CLKPOL_W::new(self)
     }
     #[doc = "Bit 25 - CH1 CLK Polarity"]
     #[inline(always)]
-    pub fn ch1clkpol(&mut self) -> CH1CLKPOL_W {
+    #[must_use]
+    pub fn ch1clkpol(&mut self) -> CH1CLKPOL_W<25> {
         CH1CLKPOL_W::new(self)
     }
     #[doc = "Bit 26 - CH2 CLK Polarity"]
     #[inline(always)]
-    pub fn ch2clkpol(&mut self) -> CH2CLKPOL_W {
+    #[must_use]
+    pub fn ch2clkpol(&mut self) -> CH2CLKPOL_W<26> {
         CH2CLKPOL_W::new(self)
     }
     #[doc = "Bit 27 - CH3 CLK Polarity"]
     #[inline(always)]
-    pub fn ch3clkpol(&mut self) -> CH3CLKPOL_W {
+    #[must_use]
+    pub fn ch3clkpol(&mut self) -> CH3CLKPOL_W<27> {
         CH3CLKPOL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -531,11 +543,10 @@ impl crate::Readable for CFG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg0::W](W) writer structure"]
 impl crate::Writable for CFG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG0 to value 0"]
 impl crate::Resettable for CFG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

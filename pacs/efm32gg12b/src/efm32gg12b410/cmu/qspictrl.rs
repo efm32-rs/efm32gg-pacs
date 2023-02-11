@@ -34,8 +34,10 @@ impl From<crate::W<QSPICTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `QSPI0CLKSEL` reader - QSPI0 Reference Clock Select"]
+pub type QSPI0CLKSEL_R = crate::FieldReader<u8, QSPI0CLKSEL_A>;
 #[doc = "QSPI0 Reference Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum QSPI0CLKSEL_A {
     #[doc = "0: HFRCO clock is used to clock QSPI0"]
@@ -53,8 +55,6 @@ impl From<QSPI0CLKSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `QSPI0CLKSEL` reader - QSPI0 Reference Clock Select"]
-pub type QSPI0CLKSEL_R = crate::FieldReader<u8, QSPI0CLKSEL_A>;
 impl QSPI0CLKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,9 +89,9 @@ impl QSPI0CLKSEL_R {
     }
 }
 #[doc = "Field `QSPI0CLKSEL` writer - QSPI0 Reference Clock Select"]
-pub type QSPI0CLKSEL_W<'a> =
-    crate::FieldWriterSafe<'a, u32, QSPICTRL_SPEC, u8, QSPI0CLKSEL_A, 2, 0>;
-impl<'a> QSPI0CLKSEL_W<'a> {
+pub type QSPI0CLKSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, QSPICTRL_SPEC, u8, QSPI0CLKSEL_A, 2, O>;
+impl<'a, const O: u8> QSPI0CLKSEL_W<'a, O> {
     #[doc = "HFRCO clock is used to clock QSPI0"]
     #[inline(always)]
     pub fn hfrco(self) -> &'a mut W {
@@ -116,7 +116,7 @@ impl<'a> QSPI0CLKSEL_W<'a> {
 #[doc = "Field `QSPI0CLKDIS` reader - QSPI0 Reference Clock Disable"]
 pub type QSPI0CLKDIS_R = crate::BitReader<bool>;
 #[doc = "Field `QSPI0CLKDIS` writer - QSPI0 Reference Clock Disable"]
-pub type QSPI0CLKDIS_W<'a> = crate::BitWriter<'a, u32, QSPICTRL_SPEC, bool, 7>;
+pub type QSPI0CLKDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, QSPICTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - QSPI0 Reference Clock Select"]
     #[inline(always)]
@@ -132,12 +132,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - QSPI0 Reference Clock Select"]
     #[inline(always)]
-    pub fn qspi0clksel(&mut self) -> QSPI0CLKSEL_W {
+    #[must_use]
+    pub fn qspi0clksel(&mut self) -> QSPI0CLKSEL_W<0> {
         QSPI0CLKSEL_W::new(self)
     }
     #[doc = "Bit 7 - QSPI0 Reference Clock Disable"]
     #[inline(always)]
-    pub fn qspi0clkdis(&mut self) -> QSPI0CLKDIS_W {
+    #[must_use]
+    pub fn qspi0clkdis(&mut self) -> QSPI0CLKDIS_W<7> {
         QSPI0CLKDIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -159,11 +161,10 @@ impl crate::Readable for QSPICTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [qspictrl::W](W) writer structure"]
 impl crate::Writable for QSPICTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets QSPICTRL to value 0"]
 impl crate::Resettable for QSPICTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -39,13 +39,15 @@ of the subscript-ns value"]
 pub type SUBNSINCR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SUBNSINCR` writer - MSB \\[23:8\\]
 of the subscript-ns value"]
-pub type SUBNSINCR_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERINCRSUBNSEC_SPEC, u16, u16, 16, 0>;
+pub type SUBNSINCR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSUTIMERINCRSUBNSEC_SPEC, u16, u16, 16, O>;
 #[doc = "Field `SUBNSINCRLSB` reader - LSB \\[7:0\\]
 of the subscript-ns value"]
 pub type SUBNSINCRLSB_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SUBNSINCRLSB` writer - LSB \\[7:0\\]
 of the subscript-ns value"]
-pub type SUBNSINCRLSB_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERINCRSUBNSEC_SPEC, u8, u8, 8, 24>;
+pub type SUBNSINCRLSB_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSUTIMERINCRSUBNSEC_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:15 - MSB \\[23:8\\]
 of the subscript-ns value"]
@@ -64,13 +66,15 @@ impl W {
     #[doc = "Bits 0:15 - MSB \\[23:8\\]
 of the subscript-ns value"]
     #[inline(always)]
-    pub fn subnsincr(&mut self) -> SUBNSINCR_W {
+    #[must_use]
+    pub fn subnsincr(&mut self) -> SUBNSINCR_W<0> {
         SUBNSINCR_W::new(self)
     }
     #[doc = "Bits 24:31 - LSB \\[7:0\\]
 of the subscript-ns value"]
     #[inline(always)]
-    pub fn subnsincrlsb(&mut self) -> SUBNSINCRLSB_W {
+    #[must_use]
+    pub fn subnsincrlsb(&mut self) -> SUBNSINCRLSB_W<24> {
         SUBNSINCRLSB_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -92,11 +96,10 @@ impl crate::Readable for TSUTIMERINCRSUBNSEC_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsutimerincrsubnsec::W](W) writer structure"]
 impl crate::Writable for TSUTIMERINCRSUBNSEC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TSUTIMERINCRSUBNSEC to value 0"]
 impl crate::Resettable for TSUTIMERINCRSUBNSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

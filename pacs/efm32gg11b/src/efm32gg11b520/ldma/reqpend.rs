@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23 - DMA Requests Pending"]
     #[inline(always)]
     pub fn reqpend(&self) -> REQPEND_R {
-        REQPEND_R::new((self.bits & 0x00ff_ffff) as u32)
+        REQPEND_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "DMA Channel Requests Pending Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reqpend](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for REQPEND_SPEC {
 }
 #[doc = "`reset()` method sets REQPEND to value 0"]
 impl crate::Resettable for REQPEND_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,15 +37,16 @@ impl From<crate::W<MODEBITCONFIG_SPEC>> for W {
 #[doc = "Field `MODE` reader - Mode Bits"]
 pub type MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MODE` writer - Mode Bits"]
-pub type MODE_W<'a> = crate::FieldWriter<'a, u32, MODEBITCONFIG_SPEC, u8, u8, 8, 0>;
+pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MODEBITCONFIG_SPEC, u8, u8, 8, O>;
 #[doc = "Field `CHUNKSIZE` reader - Chunk Size"]
 pub type CHUNKSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CHUNKSIZE` writer - Chunk Size"]
-pub type CHUNKSIZE_W<'a> = crate::FieldWriter<'a, u32, MODEBITCONFIG_SPEC, u8, u8, 3, 8>;
+pub type CHUNKSIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, MODEBITCONFIG_SPEC, u8, u8, 3, O>;
 #[doc = "Field `CRCOUTENABLE` reader - CRC# Output Enable Bit"]
 pub type CRCOUTENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `CRCOUTENABLE` writer - CRC# Output Enable Bit"]
-pub type CRCOUTENABLE_W<'a> = crate::BitWriter<'a, u32, MODEBITCONFIG_SPEC, bool, 15>;
+pub type CRCOUTENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODEBITCONFIG_SPEC, bool, O>;
 #[doc = "Field `RXCRCDATAUP` reader - RX CRC Data (upper)"]
 pub type RXCRCDATAUP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXCRCDATALOW` reader - RX CRC Data (lower)"]
@@ -80,17 +81,20 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Mode Bits"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W {
+    #[must_use]
+    pub fn mode(&mut self) -> MODE_W<0> {
         MODE_W::new(self)
     }
     #[doc = "Bits 8:10 - Chunk Size"]
     #[inline(always)]
-    pub fn chunksize(&mut self) -> CHUNKSIZE_W {
+    #[must_use]
+    pub fn chunksize(&mut self) -> CHUNKSIZE_W<8> {
         CHUNKSIZE_W::new(self)
     }
     #[doc = "Bit 15 - CRC# Output Enable Bit"]
     #[inline(always)]
-    pub fn crcoutenable(&mut self) -> CRCOUTENABLE_W {
+    #[must_use]
+    pub fn crcoutenable(&mut self) -> CRCOUTENABLE_W<15> {
         CRCOUTENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -112,11 +116,10 @@ impl crate::Readable for MODEBITCONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [modebitconfig::W](W) writer structure"]
 impl crate::Writable for MODEBITCONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MODEBITCONFIG to value 0x0200"]
 impl crate::Resettable for MODEBITCONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

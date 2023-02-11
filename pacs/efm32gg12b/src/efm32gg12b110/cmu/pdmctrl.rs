@@ -34,8 +34,10 @@ impl From<crate::W<PDMCTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `PDMCLKSEL` reader - PDM Core Clock Select"]
+pub type PDMCLKSEL_R = crate::FieldReader<u8, PDMCLKSEL_A>;
 #[doc = "PDM Core Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PDMCLKSEL_A {
     #[doc = "0: HFRCO clock is used to clock PDM"]
@@ -53,8 +55,6 @@ impl From<PDMCLKSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `PDMCLKSEL` reader - PDM Core Clock Select"]
-pub type PDMCLKSEL_R = crate::FieldReader<u8, PDMCLKSEL_A>;
 impl PDMCLKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,8 +89,9 @@ impl PDMCLKSEL_R {
     }
 }
 #[doc = "Field `PDMCLKSEL` writer - PDM Core Clock Select"]
-pub type PDMCLKSEL_W<'a> = crate::FieldWriterSafe<'a, u32, PDMCTRL_SPEC, u8, PDMCLKSEL_A, 2, 0>;
-impl<'a> PDMCLKSEL_W<'a> {
+pub type PDMCLKSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, PDMCTRL_SPEC, u8, PDMCLKSEL_A, 2, O>;
+impl<'a, const O: u8> PDMCLKSEL_W<'a, O> {
     #[doc = "HFRCO clock is used to clock PDM"]
     #[inline(always)]
     pub fn hfrco(self) -> &'a mut W {
@@ -115,7 +116,7 @@ impl<'a> PDMCLKSEL_W<'a> {
 #[doc = "Field `PDMCLKEN` reader - PDM Core Clock Enable"]
 pub type PDMCLKEN_R = crate::BitReader<bool>;
 #[doc = "Field `PDMCLKEN` writer - PDM Core Clock Enable"]
-pub type PDMCLKEN_W<'a> = crate::BitWriter<'a, u32, PDMCTRL_SPEC, bool, 7>;
+pub type PDMCLKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDMCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - PDM Core Clock Select"]
     #[inline(always)]
@@ -131,12 +132,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - PDM Core Clock Select"]
     #[inline(always)]
-    pub fn pdmclksel(&mut self) -> PDMCLKSEL_W {
+    #[must_use]
+    pub fn pdmclksel(&mut self) -> PDMCLKSEL_W<0> {
         PDMCLKSEL_W::new(self)
     }
     #[doc = "Bit 7 - PDM Core Clock Enable"]
     #[inline(always)]
-    pub fn pdmclken(&mut self) -> PDMCLKEN_W {
+    #[must_use]
+    pub fn pdmclken(&mut self) -> PDMCLKEN_W<7> {
         PDMCLKEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -158,11 +161,10 @@ impl crate::Readable for PDMCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pdmctrl::W](W) writer structure"]
 impl crate::Writable for PDMCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PDMCTRL to value 0"]
 impl crate::Resettable for PDMCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<TSUSECCMP_SPEC>> for W {
 #[doc = "Field `COMPVAL` reader - TSU timer comparison value (s)"]
 pub type COMPVAL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `COMPVAL` writer - TSU timer comparison value (s)"]
-pub type COMPVAL_W<'a> = crate::FieldWriter<'a, u32, TSUSECCMP_SPEC, u32, u32, 32, 0>;
+pub type COMPVAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TSUSECCMP_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - TSU timer comparison value (s)"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - TSU timer comparison value (s)"]
     #[inline(always)]
-    pub fn compval(&mut self) -> COMPVAL_W {
+    #[must_use]
+    pub fn compval(&mut self) -> COMPVAL_W<0> {
         COMPVAL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for TSUSECCMP_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsuseccmp::W](W) writer structure"]
 impl crate::Writable for TSUSECCMP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TSUSECCMP to value 0"]
 impl crate::Resettable for TSUSECCMP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

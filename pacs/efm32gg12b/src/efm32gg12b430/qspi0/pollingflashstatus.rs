@@ -41,8 +41,8 @@ pub type DEVICESTATUSVALID_R = crate::BitReader<bool>;
 #[doc = "Field `DEVICESTATUSNBDUMMY` reader - Auto-polling Dummy Cycles"]
 pub type DEVICESTATUSNBDUMMY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DEVICESTATUSNBDUMMY` writer - Auto-polling Dummy Cycles"]
-pub type DEVICESTATUSNBDUMMY_W<'a> =
-    crate::FieldWriter<'a, u32, POLLINGFLASHSTATUS_SPEC, u8, u8, 4, 16>;
+pub type DEVICESTATUSNBDUMMY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, POLLINGFLASHSTATUS_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:7 - Device Status"]
     #[inline(always)]
@@ -63,7 +63,8 @@ impl R {
 impl W {
     #[doc = "Bits 16:19 - Auto-polling Dummy Cycles"]
     #[inline(always)]
-    pub fn devicestatusnbdummy(&mut self) -> DEVICESTATUSNBDUMMY_W {
+    #[must_use]
+    pub fn devicestatusnbdummy(&mut self) -> DEVICESTATUSNBDUMMY_W<16> {
         DEVICESTATUSNBDUMMY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -85,11 +86,10 @@ impl crate::Readable for POLLINGFLASHSTATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [pollingflashstatus::W](W) writer structure"]
 impl crate::Writable for POLLINGFLASHSTATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets POLLINGFLASHSTATUS to value 0"]
 impl crate::Resettable for POLLINGFLASHSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

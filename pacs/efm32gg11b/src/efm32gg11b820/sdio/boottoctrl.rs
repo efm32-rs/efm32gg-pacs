@@ -37,7 +37,8 @@ impl From<crate::W<BOOTTOCTRL_SPEC>> for W {
 #[doc = "Field `BOOTDATTOCNT` reader - Boot Data Timeout Counter Value"]
 pub type BOOTDATTOCNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BOOTDATTOCNT` writer - Boot Data Timeout Counter Value"]
-pub type BOOTDATTOCNT_W<'a> = crate::FieldWriter<'a, u32, BOOTTOCTRL_SPEC, u32, u32, 32, 0>;
+pub type BOOTDATTOCNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, BOOTTOCTRL_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Boot Data Timeout Counter Value"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Boot Data Timeout Counter Value"]
     #[inline(always)]
-    pub fn bootdattocnt(&mut self) -> BOOTDATTOCNT_W {
+    #[must_use]
+    pub fn bootdattocnt(&mut self) -> BOOTDATTOCNT_W<0> {
         BOOTDATTOCNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for BOOTTOCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [boottoctrl::W](W) writer structure"]
 impl crate::Writable for BOOTTOCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BOOTTOCTRL to value 0"]
 impl crate::Resettable for BOOTTOCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

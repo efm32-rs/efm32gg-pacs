@@ -37,23 +37,25 @@ impl From<crate::W<CLOCKCTRL_SPEC>> for W {
 #[doc = "Field `INTCLKEN` reader - Internal Clock Enable"]
 pub type INTCLKEN_R = crate::BitReader<bool>;
 #[doc = "Field `INTCLKEN` writer - Internal Clock Enable"]
-pub type INTCLKEN_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 0>;
+pub type INTCLKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 #[doc = "Field `INTCLKSTABLE` reader - Internal Clock Stable"]
 pub type INTCLKSTABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SDCLKEN` reader - SDIO_CLK Pin Clock Enable"]
 pub type SDCLKEN_R = crate::BitReader<bool>;
 #[doc = "Field `SDCLKEN` writer - SDIO_CLK Pin Clock Enable"]
-pub type SDCLKEN_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 2>;
+pub type SDCLKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 #[doc = "Field `CLKGENSEL` reader - Clock Generator Select"]
 pub type CLKGENSEL_R = crate::BitReader<bool>;
 #[doc = "Field `CLKGENSEL` writer - Clock Generator Select"]
-pub type CLKGENSEL_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 5>;
+pub type CLKGENSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 #[doc = "Field `UPPSDCLKFRE` reader - Upper Bits of SD_CLK Frequency Select"]
 pub type UPPSDCLKFRE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UPPSDCLKFRE` writer - Upper Bits of SD_CLK Frequency Select"]
-pub type UPPSDCLKFRE_W<'a> = crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, u8, 2, 6>;
+pub type UPPSDCLKFRE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `SDCLKFREQSEL` reader - SD_CLK Frequency Select"]
+pub type SDCLKFREQSEL_R = crate::FieldReader<u8, SDCLKFREQSEL_A>;
 #[doc = "SD_CLK Frequency Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SDCLKFREQSEL_A {
     #[doc = "0: `0`"]
@@ -65,8 +67,6 @@ impl From<SDCLKFREQSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SDCLKFREQSEL` reader - SD_CLK Frequency Select"]
-pub type SDCLKFREQSEL_R = crate::FieldReader<u8, SDCLKFREQSEL_A>;
 impl SDCLKFREQSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -83,8 +83,9 @@ impl SDCLKFREQSEL_R {
     }
 }
 #[doc = "Field `SDCLKFREQSEL` writer - SD_CLK Frequency Select"]
-pub type SDCLKFREQSEL_W<'a> = crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, SDCLKFREQSEL_A, 8, 8>;
-impl<'a> SDCLKFREQSEL_W<'a> {
+pub type SDCLKFREQSEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, SDCLKFREQSEL_A, 8, O>;
+impl<'a, const O: u8> SDCLKFREQSEL_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn nodivision(self) -> &'a mut W {
@@ -94,19 +95,20 @@ impl<'a> SDCLKFREQSEL_W<'a> {
 #[doc = "Field `DATTOUTCNTVAL` reader - Data Timeout Counter Value"]
 pub type DATTOUTCNTVAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DATTOUTCNTVAL` writer - Data Timeout Counter Value"]
-pub type DATTOUTCNTVAL_W<'a> = crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, u8, 4, 16>;
+pub type DATTOUTCNTVAL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLOCKCTRL_SPEC, u8, u8, 4, O>;
 #[doc = "Field `SFTRSTA` reader - Software Reset for All"]
 pub type SFTRSTA_R = crate::BitReader<bool>;
 #[doc = "Field `SFTRSTA` writer - Software Reset for All"]
-pub type SFTRSTA_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 24>;
+pub type SFTRSTA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 #[doc = "Field `SFTRSTCMD` reader - Software Reset for CMD Line"]
 pub type SFTRSTCMD_R = crate::BitReader<bool>;
 #[doc = "Field `SFTRSTCMD` writer - Software Reset for CMD Line"]
-pub type SFTRSTCMD_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 25>;
+pub type SFTRSTCMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 #[doc = "Field `SFTRSTDAT` reader - Software Reset for DAT Line"]
 pub type SFTRSTDAT_R = crate::BitReader<bool>;
 #[doc = "Field `SFTRSTDAT` writer - Software Reset for DAT Line"]
-pub type SFTRSTDAT_W<'a> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, 26>;
+pub type SFTRSTDAT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCKCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Internal Clock Enable"]
     #[inline(always)]
@@ -162,47 +164,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Internal Clock Enable"]
     #[inline(always)]
-    pub fn intclken(&mut self) -> INTCLKEN_W {
+    #[must_use]
+    pub fn intclken(&mut self) -> INTCLKEN_W<0> {
         INTCLKEN_W::new(self)
     }
     #[doc = "Bit 2 - SDIO_CLK Pin Clock Enable"]
     #[inline(always)]
-    pub fn sdclken(&mut self) -> SDCLKEN_W {
+    #[must_use]
+    pub fn sdclken(&mut self) -> SDCLKEN_W<2> {
         SDCLKEN_W::new(self)
     }
     #[doc = "Bit 5 - Clock Generator Select"]
     #[inline(always)]
-    pub fn clkgensel(&mut self) -> CLKGENSEL_W {
+    #[must_use]
+    pub fn clkgensel(&mut self) -> CLKGENSEL_W<5> {
         CLKGENSEL_W::new(self)
     }
     #[doc = "Bits 6:7 - Upper Bits of SD_CLK Frequency Select"]
     #[inline(always)]
-    pub fn uppsdclkfre(&mut self) -> UPPSDCLKFRE_W {
+    #[must_use]
+    pub fn uppsdclkfre(&mut self) -> UPPSDCLKFRE_W<6> {
         UPPSDCLKFRE_W::new(self)
     }
     #[doc = "Bits 8:15 - SD_CLK Frequency Select"]
     #[inline(always)]
-    pub fn sdclkfreqsel(&mut self) -> SDCLKFREQSEL_W {
+    #[must_use]
+    pub fn sdclkfreqsel(&mut self) -> SDCLKFREQSEL_W<8> {
         SDCLKFREQSEL_W::new(self)
     }
     #[doc = "Bits 16:19 - Data Timeout Counter Value"]
     #[inline(always)]
-    pub fn dattoutcntval(&mut self) -> DATTOUTCNTVAL_W {
+    #[must_use]
+    pub fn dattoutcntval(&mut self) -> DATTOUTCNTVAL_W<16> {
         DATTOUTCNTVAL_W::new(self)
     }
     #[doc = "Bit 24 - Software Reset for All"]
     #[inline(always)]
-    pub fn sftrsta(&mut self) -> SFTRSTA_W {
+    #[must_use]
+    pub fn sftrsta(&mut self) -> SFTRSTA_W<24> {
         SFTRSTA_W::new(self)
     }
     #[doc = "Bit 25 - Software Reset for CMD Line"]
     #[inline(always)]
-    pub fn sftrstcmd(&mut self) -> SFTRSTCMD_W {
+    #[must_use]
+    pub fn sftrstcmd(&mut self) -> SFTRSTCMD_W<25> {
         SFTRSTCMD_W::new(self)
     }
     #[doc = "Bit 26 - Software Reset for DAT Line"]
     #[inline(always)]
-    pub fn sftrstdat(&mut self) -> SFTRSTDAT_W {
+    #[must_use]
+    pub fn sftrstdat(&mut self) -> SFTRSTDAT_W<26> {
         SFTRSTDAT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -224,11 +235,10 @@ impl crate::Readable for CLOCKCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clockctrl::W](W) writer structure"]
 impl crate::Writable for CLOCKCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLOCKCTRL to value 0"]
 impl crate::Resettable for CLOCKCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

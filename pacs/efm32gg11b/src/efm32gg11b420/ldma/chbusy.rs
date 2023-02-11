@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23 - Channels Busy"]
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
-        BUSY_R::new((self.bits & 0x00ff_ffff) as u32)
+        BUSY_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "DMA Channel Busy Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chbusy](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for CHBUSY_SPEC {
 }
 #[doc = "`reset()` method sets CHBUSY to value 0"]
 impl crate::Resettable for CHBUSY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

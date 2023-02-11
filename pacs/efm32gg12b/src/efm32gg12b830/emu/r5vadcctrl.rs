@@ -37,9 +37,11 @@ impl From<crate::W<R5VADCCTRL_SPEC>> for W {
 #[doc = "Field `ENAMUX` reader - Enable the 5V Subsystem ADC MUX"]
 pub type ENAMUX_R = crate::BitReader<bool>;
 #[doc = "Field `ENAMUX` writer - Enable the 5V Subsystem ADC MUX"]
-pub type ENAMUX_W<'a> = crate::BitWriter<'a, u32, R5VADCCTRL_SPEC, bool, 0>;
+pub type ENAMUX_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VADCCTRL_SPEC, bool, O>;
+#[doc = "Field `AMUXSEL` reader - ADC Mux Selection"]
+pub type AMUXSEL_R = crate::FieldReader<u8, AMUXSEL_A>;
 #[doc = "ADC Mux Selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum AMUXSEL_A {
     #[doc = "0: VBUS divided by 10"]
@@ -59,8 +61,6 @@ impl From<AMUXSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `AMUXSEL` reader - ADC Mux Selection"]
-pub type AMUXSEL_R = crate::FieldReader<u8, AMUXSEL_A>;
 impl AMUXSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -101,8 +101,9 @@ impl AMUXSEL_R {
     }
 }
 #[doc = "Field `AMUXSEL` writer - ADC Mux Selection"]
-pub type AMUXSEL_W<'a> = crate::FieldWriter<'a, u32, R5VADCCTRL_SPEC, u8, AMUXSEL_A, 4, 12>;
-impl<'a> AMUXSEL_W<'a> {
+pub type AMUXSEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, R5VADCCTRL_SPEC, u8, AMUXSEL_A, 4, O>;
+impl<'a, const O: u8> AMUXSEL_W<'a, O> {
     #[doc = "VBUS divided by 10"]
     #[inline(always)]
     pub fn vbusdiv10(self) -> &'a mut W {
@@ -144,12 +145,14 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable the 5V Subsystem ADC MUX"]
     #[inline(always)]
-    pub fn enamux(&mut self) -> ENAMUX_W {
+    #[must_use]
+    pub fn enamux(&mut self) -> ENAMUX_W<0> {
         ENAMUX_W::new(self)
     }
     #[doc = "Bits 12:15 - ADC Mux Selection"]
     #[inline(always)]
-    pub fn amuxsel(&mut self) -> AMUXSEL_W {
+    #[must_use]
+    pub fn amuxsel(&mut self) -> AMUXSEL_W<12> {
         AMUXSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -171,11 +174,10 @@ impl crate::Readable for R5VADCCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [r5vadcctrl::W](W) writer structure"]
 impl crate::Writable for R5VADCCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets R5VADCCTRL to value 0"]
 impl crate::Resettable for R5VADCCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

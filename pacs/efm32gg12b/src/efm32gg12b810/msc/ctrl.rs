@@ -37,35 +37,35 @@ impl From<crate::W<CTRL_SPEC>> for W {
 #[doc = "Field `ADDRFAULTEN` reader - Invalid Address Bus Fault Response Enable"]
 pub type ADDRFAULTEN_R = crate::BitReader<bool>;
 #[doc = "Field `ADDRFAULTEN` writer - Invalid Address Bus Fault Response Enable"]
-pub type ADDRFAULTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
+pub type ADDRFAULTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `CLKDISFAULTEN` reader - Clock-disabled Bus Fault Response Enable"]
 pub type CLKDISFAULTEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLKDISFAULTEN` writer - Clock-disabled Bus Fault Response Enable"]
-pub type CLKDISFAULTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 1>;
+pub type CLKDISFAULTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `PWRUPONDEMAND` reader - Power Up on Demand During Wake Up"]
 pub type PWRUPONDEMAND_R = crate::BitReader<bool>;
 #[doc = "Field `PWRUPONDEMAND` writer - Power Up on Demand During Wake Up"]
-pub type PWRUPONDEMAND_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 2>;
+pub type PWRUPONDEMAND_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `IFCREADCLEAR` reader - IFC Read Clears IF"]
 pub type IFCREADCLEAR_R = crate::BitReader<bool>;
 #[doc = "Field `IFCREADCLEAR` writer - IFC Read Clears IF"]
-pub type IFCREADCLEAR_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
+pub type IFCREADCLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `TIMEOUTFAULTEN` reader - Timeout Bus Fault Response Enable"]
 pub type TIMEOUTFAULTEN_R = crate::BitReader<bool>;
 #[doc = "Field `TIMEOUTFAULTEN` writer - Timeout Bus Fault Response Enable"]
-pub type TIMEOUTFAULTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 4>;
+pub type TIMEOUTFAULTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `RAMECCERRFAULTEN` reader - Two Bit ECC Error Bus Fault Response Enable"]
 pub type RAMECCERRFAULTEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAMECCERRFAULTEN` writer - Two Bit ECC Error Bus Fault Response Enable"]
-pub type RAMECCERRFAULTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 5>;
+pub type RAMECCERRFAULTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `EBIFAULTEN` reader - EBI Bus Fault Response Enable"]
 pub type EBIFAULTEN_R = crate::BitReader<bool>;
 #[doc = "Field `EBIFAULTEN` writer - EBI Bus Fault Response Enable"]
-pub type EBIFAULTEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 6>;
+pub type EBIFAULTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `WAITMODE` reader - Peripheral Access Wait Mode"]
 pub type WAITMODE_R = crate::BitReader<bool>;
 #[doc = "Field `WAITMODE` writer - Peripheral Access Wait Mode"]
-pub type WAITMODE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 12>;
+pub type WAITMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Invalid Address Bus Fault Response Enable"]
     #[inline(always)]
@@ -111,42 +111,50 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Invalid Address Bus Fault Response Enable"]
     #[inline(always)]
-    pub fn addrfaulten(&mut self) -> ADDRFAULTEN_W {
+    #[must_use]
+    pub fn addrfaulten(&mut self) -> ADDRFAULTEN_W<0> {
         ADDRFAULTEN_W::new(self)
     }
     #[doc = "Bit 1 - Clock-disabled Bus Fault Response Enable"]
     #[inline(always)]
-    pub fn clkdisfaulten(&mut self) -> CLKDISFAULTEN_W {
+    #[must_use]
+    pub fn clkdisfaulten(&mut self) -> CLKDISFAULTEN_W<1> {
         CLKDISFAULTEN_W::new(self)
     }
     #[doc = "Bit 2 - Power Up on Demand During Wake Up"]
     #[inline(always)]
-    pub fn pwrupondemand(&mut self) -> PWRUPONDEMAND_W {
+    #[must_use]
+    pub fn pwrupondemand(&mut self) -> PWRUPONDEMAND_W<2> {
         PWRUPONDEMAND_W::new(self)
     }
     #[doc = "Bit 3 - IFC Read Clears IF"]
     #[inline(always)]
-    pub fn ifcreadclear(&mut self) -> IFCREADCLEAR_W {
+    #[must_use]
+    pub fn ifcreadclear(&mut self) -> IFCREADCLEAR_W<3> {
         IFCREADCLEAR_W::new(self)
     }
     #[doc = "Bit 4 - Timeout Bus Fault Response Enable"]
     #[inline(always)]
-    pub fn timeoutfaulten(&mut self) -> TIMEOUTFAULTEN_W {
+    #[must_use]
+    pub fn timeoutfaulten(&mut self) -> TIMEOUTFAULTEN_W<4> {
         TIMEOUTFAULTEN_W::new(self)
     }
     #[doc = "Bit 5 - Two Bit ECC Error Bus Fault Response Enable"]
     #[inline(always)]
-    pub fn rameccerrfaulten(&mut self) -> RAMECCERRFAULTEN_W {
+    #[must_use]
+    pub fn rameccerrfaulten(&mut self) -> RAMECCERRFAULTEN_W<5> {
         RAMECCERRFAULTEN_W::new(self)
     }
     #[doc = "Bit 6 - EBI Bus Fault Response Enable"]
     #[inline(always)]
-    pub fn ebifaulten(&mut self) -> EBIFAULTEN_W {
+    #[must_use]
+    pub fn ebifaulten(&mut self) -> EBIFAULTEN_W<6> {
         EBIFAULTEN_W::new(self)
     }
     #[doc = "Bit 12 - Peripheral Access Wait Mode"]
     #[inline(always)]
-    pub fn waitmode(&mut self) -> WAITMODE_W {
+    #[must_use]
+    pub fn waitmode(&mut self) -> WAITMODE_W<12> {
         WAITMODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -168,11 +176,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x21"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x21
-    }
+    const RESET_VALUE: Self::Ux = 0x21;
 }

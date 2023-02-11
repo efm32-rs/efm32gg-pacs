@@ -37,99 +37,99 @@ impl From<crate::W<IFENC_SPEC>> for W {
 #[doc = "Field `CMDCOMEN` reader - Command Complete Signal Enable"]
 pub type CMDCOMEN_R = crate::BitReader<bool>;
 #[doc = "Field `CMDCOMEN` writer - Command Complete Signal Enable"]
-pub type CMDCOMEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 0>;
+pub type CMDCOMEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `TRANCOMEN` reader - Transfer Complete Signal Enable"]
 pub type TRANCOMEN_R = crate::BitReader<bool>;
 #[doc = "Field `TRANCOMEN` writer - Transfer Complete Signal Enable"]
-pub type TRANCOMEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 1>;
+pub type TRANCOMEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `BLKGAPEVTEN` reader - Block Gap Event Signal Enable"]
 pub type BLKGAPEVTEN_R = crate::BitReader<bool>;
 #[doc = "Field `BLKGAPEVTEN` writer - Block Gap Event Signal Enable"]
-pub type BLKGAPEVTEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 2>;
+pub type BLKGAPEVTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `DMAINTEN` reader - DMA Interrupt Signal Enable"]
 pub type DMAINTEN_R = crate::BitReader<bool>;
 #[doc = "Field `DMAINTEN` writer - DMA Interrupt Signal Enable"]
-pub type DMAINTEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 3>;
+pub type DMAINTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `BUFWRRDYEN` reader - Buffer Write Ready Signal Enable"]
 pub type BUFWRRDYEN_R = crate::BitReader<bool>;
 #[doc = "Field `BUFWRRDYEN` writer - Buffer Write Ready Signal Enable"]
-pub type BUFWRRDYEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 4>;
+pub type BUFWRRDYEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `BUFRDRDYEN` reader - Buffer Read Ready Signal Enable"]
 pub type BUFRDRDYEN_R = crate::BitReader<bool>;
 #[doc = "Field `BUFRDRDYEN` writer - Buffer Read Ready Signal Enable"]
-pub type BUFRDRDYEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 5>;
+pub type BUFRDRDYEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CARDINSEN` reader - Card Insertion Signal Enable"]
 pub type CARDINSEN_R = crate::BitReader<bool>;
 #[doc = "Field `CARDINSEN` writer - Card Insertion Signal Enable"]
-pub type CARDINSEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 6>;
+pub type CARDINSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CARDRMEN` reader - Card Removal Signal Enable"]
 pub type CARDRMEN_R = crate::BitReader<bool>;
 #[doc = "Field `CARDRMEN` writer - Card Removal Signal Enable"]
-pub type CARDRMEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 7>;
+pub type CARDRMEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CARDINTEN` reader - Card Interrupt Signal Enable"]
 pub type CARDINTEN_R = crate::BitReader<bool>;
 #[doc = "Field `CARDINTEN` writer - Card Interrupt Signal Enable"]
-pub type CARDINTEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 8>;
+pub type CARDINTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `RETUNINGEVTEN` reader - Re-Tunning Event Signal Enable"]
 pub type RETUNINGEVTEN_R = crate::BitReader<bool>;
 #[doc = "Field `RETUNINGEVTEN` writer - Re-Tunning Event Signal Enable"]
-pub type RETUNINGEVTEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 12>;
+pub type RETUNINGEVTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `BOOTACKRCVEN` reader - Boot Ack Received Signal Enable"]
 pub type BOOTACKRCVEN_R = crate::BitReader<bool>;
 #[doc = "Field `BOOTACKRCVEN` writer - Boot Ack Received Signal Enable"]
-pub type BOOTACKRCVEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 13>;
+pub type BOOTACKRCVEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `BOOTTERMINATEEN` reader - Boot Terminate Interrupt Signal Enable"]
 pub type BOOTTERMINATEEN_R = crate::BitReader<bool>;
 #[doc = "Field `BOOTTERMINATEEN` writer - Boot Terminate Interrupt Signal Enable"]
-pub type BOOTTERMINATEEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 14>;
+pub type BOOTTERMINATEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CMDTOUTERREN` reader - Command Time-out Error Status Enable"]
 pub type CMDTOUTERREN_R = crate::BitReader<bool>;
 #[doc = "Field `CMDTOUTERREN` writer - Command Time-out Error Status Enable"]
-pub type CMDTOUTERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 16>;
+pub type CMDTOUTERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CMDCRCERREN` reader - Command CRC Error Status Enable"]
 pub type CMDCRCERREN_R = crate::BitReader<bool>;
 #[doc = "Field `CMDCRCERREN` writer - Command CRC Error Status Enable"]
-pub type CMDCRCERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 17>;
+pub type CMDCRCERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CMDENDBITERREN` reader - Command End Bit Error Status Enable"]
 pub type CMDENDBITERREN_R = crate::BitReader<bool>;
 #[doc = "Field `CMDENDBITERREN` writer - Command End Bit Error Status Enable"]
-pub type CMDENDBITERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 18>;
+pub type CMDENDBITERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CMDINDEXERREN` reader - Command Index Error Status Enable"]
 pub type CMDINDEXERREN_R = crate::BitReader<bool>;
 #[doc = "Field `CMDINDEXERREN` writer - Command Index Error Status Enable"]
-pub type CMDINDEXERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 19>;
+pub type CMDINDEXERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `DATTOUTERREN` reader - Data Timeout Error Status Enable"]
 pub type DATTOUTERREN_R = crate::BitReader<bool>;
 #[doc = "Field `DATTOUTERREN` writer - Data Timeout Error Status Enable"]
-pub type DATTOUTERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 20>;
+pub type DATTOUTERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `DATCRCERREN` reader - Data CRC Error Status Enable"]
 pub type DATCRCERREN_R = crate::BitReader<bool>;
 #[doc = "Field `DATCRCERREN` writer - Data CRC Error Status Enable"]
-pub type DATCRCERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 21>;
+pub type DATCRCERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `DATENDBITERREN` reader - Data End Bit Error Status Enable"]
 pub type DATENDBITERREN_R = crate::BitReader<bool>;
 #[doc = "Field `DATENDBITERREN` writer - Data End Bit Error Status Enable"]
-pub type DATENDBITERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 22>;
+pub type DATENDBITERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `CURRENTLIMITERREN` reader - Current Limit Error Status Enable"]
 pub type CURRENTLIMITERREN_R = crate::BitReader<bool>;
 #[doc = "Field `CURRENTLIMITERREN` writer - Current Limit Error Status Enable"]
-pub type CURRENTLIMITERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 23>;
+pub type CURRENTLIMITERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `AUTOCMDERREN` reader - Auto CMD12 Error Status Enable"]
 pub type AUTOCMDERREN_R = crate::BitReader<bool>;
 #[doc = "Field `AUTOCMDERREN` writer - Auto CMD12 Error Status Enable"]
-pub type AUTOCMDERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 24>;
+pub type AUTOCMDERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `ADMAERREN` reader - ADMA Error Status Enable"]
 pub type ADMAERREN_R = crate::BitReader<bool>;
 #[doc = "Field `ADMAERREN` writer - ADMA Error Status Enable"]
-pub type ADMAERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 25>;
+pub type ADMAERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `TUNINGERREN` reader - Tuning Error Status Enable"]
 pub type TUNINGERREN_R = crate::BitReader<bool>;
 #[doc = "Field `TUNINGERREN` writer - Tuning Error Status Enable"]
-pub type TUNINGERREN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 26>;
+pub type TUNINGERREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 #[doc = "Field `TARGETRESPEN` reader - Target Response/Host Error Status Enable"]
 pub type TARGETRESPEN_R = crate::BitReader<bool>;
 #[doc = "Field `TARGETRESPEN` writer - Target Response/Host Error Status Enable"]
-pub type TARGETRESPEN_W<'a> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, 28>;
+pub type TARGETRESPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IFENC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Command Complete Signal Enable"]
     #[inline(always)]
@@ -255,122 +255,146 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Command Complete Signal Enable"]
     #[inline(always)]
-    pub fn cmdcomen(&mut self) -> CMDCOMEN_W {
+    #[must_use]
+    pub fn cmdcomen(&mut self) -> CMDCOMEN_W<0> {
         CMDCOMEN_W::new(self)
     }
     #[doc = "Bit 1 - Transfer Complete Signal Enable"]
     #[inline(always)]
-    pub fn trancomen(&mut self) -> TRANCOMEN_W {
+    #[must_use]
+    pub fn trancomen(&mut self) -> TRANCOMEN_W<1> {
         TRANCOMEN_W::new(self)
     }
     #[doc = "Bit 2 - Block Gap Event Signal Enable"]
     #[inline(always)]
-    pub fn blkgapevten(&mut self) -> BLKGAPEVTEN_W {
+    #[must_use]
+    pub fn blkgapevten(&mut self) -> BLKGAPEVTEN_W<2> {
         BLKGAPEVTEN_W::new(self)
     }
     #[doc = "Bit 3 - DMA Interrupt Signal Enable"]
     #[inline(always)]
-    pub fn dmainten(&mut self) -> DMAINTEN_W {
+    #[must_use]
+    pub fn dmainten(&mut self) -> DMAINTEN_W<3> {
         DMAINTEN_W::new(self)
     }
     #[doc = "Bit 4 - Buffer Write Ready Signal Enable"]
     #[inline(always)]
-    pub fn bufwrrdyen(&mut self) -> BUFWRRDYEN_W {
+    #[must_use]
+    pub fn bufwrrdyen(&mut self) -> BUFWRRDYEN_W<4> {
         BUFWRRDYEN_W::new(self)
     }
     #[doc = "Bit 5 - Buffer Read Ready Signal Enable"]
     #[inline(always)]
-    pub fn bufrdrdyen(&mut self) -> BUFRDRDYEN_W {
+    #[must_use]
+    pub fn bufrdrdyen(&mut self) -> BUFRDRDYEN_W<5> {
         BUFRDRDYEN_W::new(self)
     }
     #[doc = "Bit 6 - Card Insertion Signal Enable"]
     #[inline(always)]
-    pub fn cardinsen(&mut self) -> CARDINSEN_W {
+    #[must_use]
+    pub fn cardinsen(&mut self) -> CARDINSEN_W<6> {
         CARDINSEN_W::new(self)
     }
     #[doc = "Bit 7 - Card Removal Signal Enable"]
     #[inline(always)]
-    pub fn cardrmen(&mut self) -> CARDRMEN_W {
+    #[must_use]
+    pub fn cardrmen(&mut self) -> CARDRMEN_W<7> {
         CARDRMEN_W::new(self)
     }
     #[doc = "Bit 8 - Card Interrupt Signal Enable"]
     #[inline(always)]
-    pub fn cardinten(&mut self) -> CARDINTEN_W {
+    #[must_use]
+    pub fn cardinten(&mut self) -> CARDINTEN_W<8> {
         CARDINTEN_W::new(self)
     }
     #[doc = "Bit 12 - Re-Tunning Event Signal Enable"]
     #[inline(always)]
-    pub fn retuningevten(&mut self) -> RETUNINGEVTEN_W {
+    #[must_use]
+    pub fn retuningevten(&mut self) -> RETUNINGEVTEN_W<12> {
         RETUNINGEVTEN_W::new(self)
     }
     #[doc = "Bit 13 - Boot Ack Received Signal Enable"]
     #[inline(always)]
-    pub fn bootackrcven(&mut self) -> BOOTACKRCVEN_W {
+    #[must_use]
+    pub fn bootackrcven(&mut self) -> BOOTACKRCVEN_W<13> {
         BOOTACKRCVEN_W::new(self)
     }
     #[doc = "Bit 14 - Boot Terminate Interrupt Signal Enable"]
     #[inline(always)]
-    pub fn bootterminateen(&mut self) -> BOOTTERMINATEEN_W {
+    #[must_use]
+    pub fn bootterminateen(&mut self) -> BOOTTERMINATEEN_W<14> {
         BOOTTERMINATEEN_W::new(self)
     }
     #[doc = "Bit 16 - Command Time-out Error Status Enable"]
     #[inline(always)]
-    pub fn cmdtouterren(&mut self) -> CMDTOUTERREN_W {
+    #[must_use]
+    pub fn cmdtouterren(&mut self) -> CMDTOUTERREN_W<16> {
         CMDTOUTERREN_W::new(self)
     }
     #[doc = "Bit 17 - Command CRC Error Status Enable"]
     #[inline(always)]
-    pub fn cmdcrcerren(&mut self) -> CMDCRCERREN_W {
+    #[must_use]
+    pub fn cmdcrcerren(&mut self) -> CMDCRCERREN_W<17> {
         CMDCRCERREN_W::new(self)
     }
     #[doc = "Bit 18 - Command End Bit Error Status Enable"]
     #[inline(always)]
-    pub fn cmdendbiterren(&mut self) -> CMDENDBITERREN_W {
+    #[must_use]
+    pub fn cmdendbiterren(&mut self) -> CMDENDBITERREN_W<18> {
         CMDENDBITERREN_W::new(self)
     }
     #[doc = "Bit 19 - Command Index Error Status Enable"]
     #[inline(always)]
-    pub fn cmdindexerren(&mut self) -> CMDINDEXERREN_W {
+    #[must_use]
+    pub fn cmdindexerren(&mut self) -> CMDINDEXERREN_W<19> {
         CMDINDEXERREN_W::new(self)
     }
     #[doc = "Bit 20 - Data Timeout Error Status Enable"]
     #[inline(always)]
-    pub fn dattouterren(&mut self) -> DATTOUTERREN_W {
+    #[must_use]
+    pub fn dattouterren(&mut self) -> DATTOUTERREN_W<20> {
         DATTOUTERREN_W::new(self)
     }
     #[doc = "Bit 21 - Data CRC Error Status Enable"]
     #[inline(always)]
-    pub fn datcrcerren(&mut self) -> DATCRCERREN_W {
+    #[must_use]
+    pub fn datcrcerren(&mut self) -> DATCRCERREN_W<21> {
         DATCRCERREN_W::new(self)
     }
     #[doc = "Bit 22 - Data End Bit Error Status Enable"]
     #[inline(always)]
-    pub fn datendbiterren(&mut self) -> DATENDBITERREN_W {
+    #[must_use]
+    pub fn datendbiterren(&mut self) -> DATENDBITERREN_W<22> {
         DATENDBITERREN_W::new(self)
     }
     #[doc = "Bit 23 - Current Limit Error Status Enable"]
     #[inline(always)]
-    pub fn currentlimiterren(&mut self) -> CURRENTLIMITERREN_W {
+    #[must_use]
+    pub fn currentlimiterren(&mut self) -> CURRENTLIMITERREN_W<23> {
         CURRENTLIMITERREN_W::new(self)
     }
     #[doc = "Bit 24 - Auto CMD12 Error Status Enable"]
     #[inline(always)]
-    pub fn autocmderren(&mut self) -> AUTOCMDERREN_W {
+    #[must_use]
+    pub fn autocmderren(&mut self) -> AUTOCMDERREN_W<24> {
         AUTOCMDERREN_W::new(self)
     }
     #[doc = "Bit 25 - ADMA Error Status Enable"]
     #[inline(always)]
-    pub fn admaerren(&mut self) -> ADMAERREN_W {
+    #[must_use]
+    pub fn admaerren(&mut self) -> ADMAERREN_W<25> {
         ADMAERREN_W::new(self)
     }
     #[doc = "Bit 26 - Tuning Error Status Enable"]
     #[inline(always)]
-    pub fn tuningerren(&mut self) -> TUNINGERREN_W {
+    #[must_use]
+    pub fn tuningerren(&mut self) -> TUNINGERREN_W<26> {
         TUNINGERREN_W::new(self)
     }
     #[doc = "Bit 28 - Target Response/Host Error Status Enable"]
     #[inline(always)]
-    pub fn targetrespen(&mut self) -> TARGETRESPEN_W {
+    #[must_use]
+    pub fn targetrespen(&mut self) -> TARGETRESPEN_W<28> {
         TARGETRESPEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -392,11 +416,10 @@ impl crate::Readable for IFENC_SPEC {
 #[doc = "`write(|w| ..)` method takes [ifenc::W](W) writer structure"]
 impl crate::Writable for IFENC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IFENC to value 0"]
 impl crate::Resettable for IFENC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

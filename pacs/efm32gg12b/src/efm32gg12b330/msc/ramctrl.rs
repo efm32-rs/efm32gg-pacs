@@ -37,27 +37,27 @@ impl From<crate::W<RAMCTRL_SPEC>> for W {
 #[doc = "Field `RAMWSEN` reader - RAM WAIT STATE Enable"]
 pub type RAMWSEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAMWSEN` writer - RAM WAIT STATE Enable"]
-pub type RAMWSEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 1>;
+pub type RAMWSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 #[doc = "Field `RAMPREFETCHEN` reader - RAM Prefetch Enable"]
 pub type RAMPREFETCHEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAMPREFETCHEN` writer - RAM Prefetch Enable"]
-pub type RAMPREFETCHEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 2>;
+pub type RAMPREFETCHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM1WSEN` reader - RAM1 WAIT STATE Enable"]
 pub type RAM1WSEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM1WSEN` writer - RAM1 WAIT STATE Enable"]
-pub type RAM1WSEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 9>;
+pub type RAM1WSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM1PREFETCHEN` reader - RAM1 Prefetch Enable"]
 pub type RAM1PREFETCHEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM1PREFETCHEN` writer - RAM1 Prefetch Enable"]
-pub type RAM1PREFETCHEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 10>;
+pub type RAM1PREFETCHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM2WSEN` reader - RAM2 WAIT STATE Enable"]
 pub type RAM2WSEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM2WSEN` writer - RAM2 WAIT STATE Enable"]
-pub type RAM2WSEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 17>;
+pub type RAM2WSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 #[doc = "Field `RAM2PREFETCHEN` reader - RAM2 Prefetch Enable"]
 pub type RAM2PREFETCHEN_R = crate::BitReader<bool>;
 #[doc = "Field `RAM2PREFETCHEN` writer - RAM2 Prefetch Enable"]
-pub type RAM2PREFETCHEN_W<'a> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, 18>;
+pub type RAM2PREFETCHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RAMCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - RAM WAIT STATE Enable"]
     #[inline(always)]
@@ -93,32 +93,38 @@ impl R {
 impl W {
     #[doc = "Bit 1 - RAM WAIT STATE Enable"]
     #[inline(always)]
-    pub fn ramwsen(&mut self) -> RAMWSEN_W {
+    #[must_use]
+    pub fn ramwsen(&mut self) -> RAMWSEN_W<1> {
         RAMWSEN_W::new(self)
     }
     #[doc = "Bit 2 - RAM Prefetch Enable"]
     #[inline(always)]
-    pub fn ramprefetchen(&mut self) -> RAMPREFETCHEN_W {
+    #[must_use]
+    pub fn ramprefetchen(&mut self) -> RAMPREFETCHEN_W<2> {
         RAMPREFETCHEN_W::new(self)
     }
     #[doc = "Bit 9 - RAM1 WAIT STATE Enable"]
     #[inline(always)]
-    pub fn ram1wsen(&mut self) -> RAM1WSEN_W {
+    #[must_use]
+    pub fn ram1wsen(&mut self) -> RAM1WSEN_W<9> {
         RAM1WSEN_W::new(self)
     }
     #[doc = "Bit 10 - RAM1 Prefetch Enable"]
     #[inline(always)]
-    pub fn ram1prefetchen(&mut self) -> RAM1PREFETCHEN_W {
+    #[must_use]
+    pub fn ram1prefetchen(&mut self) -> RAM1PREFETCHEN_W<10> {
         RAM1PREFETCHEN_W::new(self)
     }
     #[doc = "Bit 17 - RAM2 WAIT STATE Enable"]
     #[inline(always)]
-    pub fn ram2wsen(&mut self) -> RAM2WSEN_W {
+    #[must_use]
+    pub fn ram2wsen(&mut self) -> RAM2WSEN_W<17> {
         RAM2WSEN_W::new(self)
     }
     #[doc = "Bit 18 - RAM2 Prefetch Enable"]
     #[inline(always)]
-    pub fn ram2prefetchen(&mut self) -> RAM2PREFETCHEN_W {
+    #[must_use]
+    pub fn ram2prefetchen(&mut self) -> RAM2PREFETCHEN_W<18> {
         RAM2PREFETCHEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +146,10 @@ impl crate::Readable for RAMCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ramctrl::W](W) writer structure"]
 impl crate::Writable for RAMCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RAMCTRL to value 0"]
 impl crate::Resettable for RAMCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

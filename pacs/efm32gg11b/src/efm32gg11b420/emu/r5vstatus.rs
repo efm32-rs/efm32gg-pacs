@@ -68,8 +68,5 @@ impl crate::Readable for R5VSTATUS_SPEC {
 }
 #[doc = "`reset()` method sets R5VSTATUS to value 0x20"]
 impl crate::Resettable for R5VSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

@@ -37,15 +37,17 @@ impl From<crate::W<TSUTIMERINCR_SPEC>> for W {
 #[doc = "Field `NSINCREMENT` reader - A count of nanoseconds by which the 1588 timer nanoseconds register will be incremented each clock cycle"]
 pub type NSINCREMENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NSINCREMENT` writer - A count of nanoseconds by which the 1588 timer nanoseconds register will be incremented each clock cycle"]
-pub type NSINCREMENT_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, 0>;
+pub type NSINCREMENT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, O>;
 #[doc = "Field `ALTNSINCR` reader - Alternative nanoseconds count"]
 pub type ALTNSINCR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ALTNSINCR` writer - Alternative nanoseconds count"]
-pub type ALTNSINCR_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, 8>;
+pub type ALTNSINCR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, O>;
 #[doc = "Field `NUMINCS` reader - Number of incs before alt inc"]
 pub type NUMINCS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUMINCS` writer - Number of incs before alt inc"]
-pub type NUMINCS_W<'a> = crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, 16>;
+pub type NUMINCS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TSUTIMERINCR_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - A count of nanoseconds by which the 1588 timer nanoseconds register will be incremented each clock cycle"]
     #[inline(always)]
@@ -66,17 +68,20 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - A count of nanoseconds by which the 1588 timer nanoseconds register will be incremented each clock cycle"]
     #[inline(always)]
-    pub fn nsincrement(&mut self) -> NSINCREMENT_W {
+    #[must_use]
+    pub fn nsincrement(&mut self) -> NSINCREMENT_W<0> {
         NSINCREMENT_W::new(self)
     }
     #[doc = "Bits 8:15 - Alternative nanoseconds count"]
     #[inline(always)]
-    pub fn altnsincr(&mut self) -> ALTNSINCR_W {
+    #[must_use]
+    pub fn altnsincr(&mut self) -> ALTNSINCR_W<8> {
         ALTNSINCR_W::new(self)
     }
     #[doc = "Bits 16:23 - Number of incs before alt inc"]
     #[inline(always)]
-    pub fn numincs(&mut self) -> NUMINCS_W {
+    #[must_use]
+    pub fn numincs(&mut self) -> NUMINCS_W<16> {
         NUMINCS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -98,11 +103,10 @@ impl crate::Readable for TSUTIMERINCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsutimerincr::W](W) writer structure"]
 impl crate::Writable for TSUTIMERINCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TSUTIMERINCR to value 0"]
 impl crate::Resettable for TSUTIMERINCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

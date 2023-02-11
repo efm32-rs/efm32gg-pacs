@@ -37,17 +37,19 @@ impl From<crate::W<HOSTCTRL1_SPEC>> for W {
 #[doc = "Field `LEDCTRL` reader - LED Control"]
 pub type LEDCTRL_R = crate::BitReader<bool>;
 #[doc = "Field `LEDCTRL` writer - LED Control"]
-pub type LEDCTRL_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 0>;
+pub type LEDCTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `DATTRANWD` reader - Data Transfer Width 1-bit or 4-bit Mode"]
 pub type DATTRANWD_R = crate::BitReader<bool>;
 #[doc = "Field `DATTRANWD` writer - Data Transfer Width 1-bit or 4-bit Mode"]
-pub type DATTRANWD_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 1>;
+pub type DATTRANWD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `HSEN` reader - High Speed Enable"]
 pub type HSEN_R = crate::BitReader<bool>;
 #[doc = "Field `HSEN` writer - High Speed Enable"]
-pub type HSEN_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 2>;
+pub type HSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
+#[doc = "Field `DMASEL` reader - DMA Select"]
+pub type DMASEL_R = crate::FieldReader<u8, DMASEL_A>;
 #[doc = "DMA Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DMASEL_A {
     #[doc = "0: SDMA selected"]
@@ -65,8 +67,6 @@ impl From<DMASEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DMASEL` reader - DMA Select"]
-pub type DMASEL_R = crate::FieldReader<u8, DMASEL_A>;
 impl DMASEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -101,8 +101,9 @@ impl DMASEL_R {
     }
 }
 #[doc = "Field `DMASEL` writer - DMA Select"]
-pub type DMASEL_W<'a> = crate::FieldWriterSafe<'a, u32, HOSTCTRL1_SPEC, u8, DMASEL_A, 2, 3>;
-impl<'a> DMASEL_W<'a> {
+pub type DMASEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, HOSTCTRL1_SPEC, u8, DMASEL_A, 2, O>;
+impl<'a, const O: u8> DMASEL_W<'a, O> {
     #[doc = "SDMA selected"]
     #[inline(always)]
     pub fn sdma(self) -> &'a mut W {
@@ -127,21 +128,23 @@ impl<'a> DMASEL_W<'a> {
 #[doc = "Field `EXTDATTRANWD` reader - Extended Data Transfer Width"]
 pub type EXTDATTRANWD_R = crate::BitReader<bool>;
 #[doc = "Field `EXTDATTRANWD` writer - Extended Data Transfer Width"]
-pub type EXTDATTRANWD_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 5>;
+pub type EXTDATTRANWD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `CDTSTLVL` reader - Card Detect Test Level"]
 pub type CDTSTLVL_R = crate::BitReader<bool>;
 #[doc = "Field `CDTSTLVL` writer - Card Detect Test Level"]
-pub type CDTSTLVL_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 6>;
+pub type CDTSTLVL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `CDSIGDET` reader - Card Detetct Signal Detection"]
 pub type CDSIGDET_R = crate::BitReader<bool>;
 #[doc = "Field `CDSIGDET` writer - Card Detetct Signal Detection"]
-pub type CDSIGDET_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 7>;
+pub type CDSIGDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `SDBUSPOWER` reader - SD Bus Power"]
 pub type SDBUSPOWER_R = crate::BitReader<bool>;
 #[doc = "Field `SDBUSPOWER` writer - SD Bus Power"]
-pub type SDBUSPOWER_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 8>;
+pub type SDBUSPOWER_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
+#[doc = "Field `SDBUSVOLTSEL` reader - SD Bus Voltage Select"]
+pub type SDBUSVOLTSEL_R = crate::FieldReader<u8, SDBUSVOLTSEL_A>;
 #[doc = "SD Bus Voltage Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SDBUSVOLTSEL_A {
     #[doc = "5: Select 1.8V"]
@@ -157,8 +160,6 @@ impl From<SDBUSVOLTSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SDBUSVOLTSEL` reader - SD Bus Voltage Select"]
-pub type SDBUSVOLTSEL_R = crate::FieldReader<u8, SDBUSVOLTSEL_A>;
 impl SDBUSVOLTSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -187,8 +188,9 @@ impl SDBUSVOLTSEL_R {
     }
 }
 #[doc = "Field `SDBUSVOLTSEL` writer - SD Bus Voltage Select"]
-pub type SDBUSVOLTSEL_W<'a> = crate::FieldWriter<'a, u32, HOSTCTRL1_SPEC, u8, SDBUSVOLTSEL_A, 3, 9>;
-impl<'a> SDBUSVOLTSEL_W<'a> {
+pub type SDBUSVOLTSEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, HOSTCTRL1_SPEC, u8, SDBUSVOLTSEL_A, 3, O>;
+impl<'a, const O: u8> SDBUSVOLTSEL_W<'a, O> {
     #[doc = "Select 1.8V"]
     #[inline(always)]
     pub fn _1p8v(self) -> &'a mut W {
@@ -208,51 +210,52 @@ impl<'a> SDBUSVOLTSEL_W<'a> {
 #[doc = "Field `HRDRST` reader - Hardware Reset Signal"]
 pub type HRDRST_R = crate::BitReader<bool>;
 #[doc = "Field `HRDRST` writer - Hardware Reset Signal"]
-pub type HRDRST_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 12>;
+pub type HRDRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `STOPATBLKGAPREQ` reader - Stop at Block Gap Request"]
 pub type STOPATBLKGAPREQ_R = crate::BitReader<bool>;
 #[doc = "Field `STOPATBLKGAPREQ` writer - Stop at Block Gap Request"]
-pub type STOPATBLKGAPREQ_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 16>;
+pub type STOPATBLKGAPREQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `CONTINUEREQ` reader - Continue Request"]
 pub type CONTINUEREQ_R = crate::BitReader<bool>;
 #[doc = "Field `CONTINUEREQ` writer - Continue Request"]
-pub type CONTINUEREQ_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 17>;
+pub type CONTINUEREQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `RDWAITCTRL` reader - Read Wait Control"]
 pub type RDWAITCTRL_R = crate::BitReader<bool>;
 #[doc = "Field `RDWAITCTRL` writer - Read Wait Control"]
-pub type RDWAITCTRL_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 18>;
+pub type RDWAITCTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `INTATBLKGAP` reader - Interrupt at Block Gap"]
 pub type INTATBLKGAP_R = crate::BitReader<bool>;
 #[doc = "Field `INTATBLKGAP` writer - Interrupt at Block Gap"]
-pub type INTATBLKGAP_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 19>;
+pub type INTATBLKGAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `SPIMODE` reader - SPI Mode Enable"]
 pub type SPIMODE_R = crate::BitReader<bool>;
 #[doc = "Field `SPIMODE` writer - SPI Mode Enable"]
-pub type SPIMODE_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 20>;
+pub type SPIMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `BOOTEN` reader - Boot Enable"]
 pub type BOOTEN_R = crate::BitReader<bool>;
 #[doc = "Field `BOOTEN` writer - Boot Enable"]
-pub type BOOTEN_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 21>;
+pub type BOOTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `ALTBOOTEN` reader - Alternate Boot Enable"]
 pub type ALTBOOTEN_R = crate::BitReader<bool>;
 #[doc = "Field `ALTBOOTEN` writer - Alternate Boot Enable"]
-pub type ALTBOOTEN_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 22>;
+pub type ALTBOOTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `BOOTACKCHK` reader - Boot Ack Check"]
 pub type BOOTACKCHK_R = crate::BitReader<bool>;
 #[doc = "Field `BOOTACKCHK` writer - Boot Ack Check"]
-pub type BOOTACKCHK_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 23>;
+pub type BOOTACKCHK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `WKUPEVNTENONCARDINT` reader - Wakeup Event Enable on Card Interrupt"]
 pub type WKUPEVNTENONCARDINT_R = crate::BitReader<bool>;
 #[doc = "Field `WKUPEVNTENONCARDINT` writer - Wakeup Event Enable on Card Interrupt"]
-pub type WKUPEVNTENONCARDINT_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 24>;
+pub type WKUPEVNTENONCARDINT_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `WKUPEVNTENONCINS` reader - Wakeup Event Enable on SD Card Insertion"]
 pub type WKUPEVNTENONCINS_R = crate::BitReader<bool>;
 #[doc = "Field `WKUPEVNTENONCINS` writer - Wakeup Event Enable on SD Card Insertion"]
-pub type WKUPEVNTENONCINS_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 25>;
+pub type WKUPEVNTENONCINS_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 #[doc = "Field `WKUPEVNTENONCRM` reader - Wakeup Event Enable on SD Card Removal"]
 pub type WKUPEVNTENONCRM_R = crate::BitReader<bool>;
 #[doc = "Field `WKUPEVNTENONCRM` writer - Wakeup Event Enable on SD Card Removal"]
-pub type WKUPEVNTENONCRM_W<'a> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, 26>;
+pub type WKUPEVNTENONCRM_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOSTCTRL1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - LED Control"]
     #[inline(always)]
@@ -363,107 +366,128 @@ impl R {
 impl W {
     #[doc = "Bit 0 - LED Control"]
     #[inline(always)]
-    pub fn ledctrl(&mut self) -> LEDCTRL_W {
+    #[must_use]
+    pub fn ledctrl(&mut self) -> LEDCTRL_W<0> {
         LEDCTRL_W::new(self)
     }
     #[doc = "Bit 1 - Data Transfer Width 1-bit or 4-bit Mode"]
     #[inline(always)]
-    pub fn dattranwd(&mut self) -> DATTRANWD_W {
+    #[must_use]
+    pub fn dattranwd(&mut self) -> DATTRANWD_W<1> {
         DATTRANWD_W::new(self)
     }
     #[doc = "Bit 2 - High Speed Enable"]
     #[inline(always)]
-    pub fn hsen(&mut self) -> HSEN_W {
+    #[must_use]
+    pub fn hsen(&mut self) -> HSEN_W<2> {
         HSEN_W::new(self)
     }
     #[doc = "Bits 3:4 - DMA Select"]
     #[inline(always)]
-    pub fn dmasel(&mut self) -> DMASEL_W {
+    #[must_use]
+    pub fn dmasel(&mut self) -> DMASEL_W<3> {
         DMASEL_W::new(self)
     }
     #[doc = "Bit 5 - Extended Data Transfer Width"]
     #[inline(always)]
-    pub fn extdattranwd(&mut self) -> EXTDATTRANWD_W {
+    #[must_use]
+    pub fn extdattranwd(&mut self) -> EXTDATTRANWD_W<5> {
         EXTDATTRANWD_W::new(self)
     }
     #[doc = "Bit 6 - Card Detect Test Level"]
     #[inline(always)]
-    pub fn cdtstlvl(&mut self) -> CDTSTLVL_W {
+    #[must_use]
+    pub fn cdtstlvl(&mut self) -> CDTSTLVL_W<6> {
         CDTSTLVL_W::new(self)
     }
     #[doc = "Bit 7 - Card Detetct Signal Detection"]
     #[inline(always)]
-    pub fn cdsigdet(&mut self) -> CDSIGDET_W {
+    #[must_use]
+    pub fn cdsigdet(&mut self) -> CDSIGDET_W<7> {
         CDSIGDET_W::new(self)
     }
     #[doc = "Bit 8 - SD Bus Power"]
     #[inline(always)]
-    pub fn sdbuspower(&mut self) -> SDBUSPOWER_W {
+    #[must_use]
+    pub fn sdbuspower(&mut self) -> SDBUSPOWER_W<8> {
         SDBUSPOWER_W::new(self)
     }
     #[doc = "Bits 9:11 - SD Bus Voltage Select"]
     #[inline(always)]
-    pub fn sdbusvoltsel(&mut self) -> SDBUSVOLTSEL_W {
+    #[must_use]
+    pub fn sdbusvoltsel(&mut self) -> SDBUSVOLTSEL_W<9> {
         SDBUSVOLTSEL_W::new(self)
     }
     #[doc = "Bit 12 - Hardware Reset Signal"]
     #[inline(always)]
-    pub fn hrdrst(&mut self) -> HRDRST_W {
+    #[must_use]
+    pub fn hrdrst(&mut self) -> HRDRST_W<12> {
         HRDRST_W::new(self)
     }
     #[doc = "Bit 16 - Stop at Block Gap Request"]
     #[inline(always)]
-    pub fn stopatblkgapreq(&mut self) -> STOPATBLKGAPREQ_W {
+    #[must_use]
+    pub fn stopatblkgapreq(&mut self) -> STOPATBLKGAPREQ_W<16> {
         STOPATBLKGAPREQ_W::new(self)
     }
     #[doc = "Bit 17 - Continue Request"]
     #[inline(always)]
-    pub fn continuereq(&mut self) -> CONTINUEREQ_W {
+    #[must_use]
+    pub fn continuereq(&mut self) -> CONTINUEREQ_W<17> {
         CONTINUEREQ_W::new(self)
     }
     #[doc = "Bit 18 - Read Wait Control"]
     #[inline(always)]
-    pub fn rdwaitctrl(&mut self) -> RDWAITCTRL_W {
+    #[must_use]
+    pub fn rdwaitctrl(&mut self) -> RDWAITCTRL_W<18> {
         RDWAITCTRL_W::new(self)
     }
     #[doc = "Bit 19 - Interrupt at Block Gap"]
     #[inline(always)]
-    pub fn intatblkgap(&mut self) -> INTATBLKGAP_W {
+    #[must_use]
+    pub fn intatblkgap(&mut self) -> INTATBLKGAP_W<19> {
         INTATBLKGAP_W::new(self)
     }
     #[doc = "Bit 20 - SPI Mode Enable"]
     #[inline(always)]
-    pub fn spimode(&mut self) -> SPIMODE_W {
+    #[must_use]
+    pub fn spimode(&mut self) -> SPIMODE_W<20> {
         SPIMODE_W::new(self)
     }
     #[doc = "Bit 21 - Boot Enable"]
     #[inline(always)]
-    pub fn booten(&mut self) -> BOOTEN_W {
+    #[must_use]
+    pub fn booten(&mut self) -> BOOTEN_W<21> {
         BOOTEN_W::new(self)
     }
     #[doc = "Bit 22 - Alternate Boot Enable"]
     #[inline(always)]
-    pub fn altbooten(&mut self) -> ALTBOOTEN_W {
+    #[must_use]
+    pub fn altbooten(&mut self) -> ALTBOOTEN_W<22> {
         ALTBOOTEN_W::new(self)
     }
     #[doc = "Bit 23 - Boot Ack Check"]
     #[inline(always)]
-    pub fn bootackchk(&mut self) -> BOOTACKCHK_W {
+    #[must_use]
+    pub fn bootackchk(&mut self) -> BOOTACKCHK_W<23> {
         BOOTACKCHK_W::new(self)
     }
     #[doc = "Bit 24 - Wakeup Event Enable on Card Interrupt"]
     #[inline(always)]
-    pub fn wkupevntenoncardint(&mut self) -> WKUPEVNTENONCARDINT_W {
+    #[must_use]
+    pub fn wkupevntenoncardint(&mut self) -> WKUPEVNTENONCARDINT_W<24> {
         WKUPEVNTENONCARDINT_W::new(self)
     }
     #[doc = "Bit 25 - Wakeup Event Enable on SD Card Insertion"]
     #[inline(always)]
-    pub fn wkupevntenoncins(&mut self) -> WKUPEVNTENONCINS_W {
+    #[must_use]
+    pub fn wkupevntenoncins(&mut self) -> WKUPEVNTENONCINS_W<25> {
         WKUPEVNTENONCINS_W::new(self)
     }
     #[doc = "Bit 26 - Wakeup Event Enable on SD Card Removal"]
     #[inline(always)]
-    pub fn wkupevntenoncrm(&mut self) -> WKUPEVNTENONCRM_W {
+    #[must_use]
+    pub fn wkupevntenoncrm(&mut self) -> WKUPEVNTENONCRM_W<26> {
         WKUPEVNTENONCRM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -485,11 +509,10 @@ impl crate::Readable for HOSTCTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [hostctrl1::W](W) writer structure"]
 impl crate::Writable for HOSTCTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOSTCTRL1 to value 0x0080_0000"]
 impl crate::Resettable for HOSTCTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0080_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0080_0000;
 }

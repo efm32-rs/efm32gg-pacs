@@ -47,8 +47,5 @@ impl crate::Readable for SLOTINTSTAT_SPEC {
 }
 #[doc = "`reset()` method sets SLOTINTSTAT to value 0x1002_0000"]
 impl crate::Resettable for SLOTINTSTAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1002_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x1002_0000;
 }

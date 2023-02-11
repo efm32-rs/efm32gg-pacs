@@ -54,8 +54,5 @@ impl crate::Readable for NETWORKSTATUS_SPEC {
 }
 #[doc = "`reset()` method sets NETWORKSTATUS to value 0x04"]
 impl crate::Resettable for NETWORKSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

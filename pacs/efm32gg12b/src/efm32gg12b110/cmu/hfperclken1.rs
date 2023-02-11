@@ -37,35 +37,35 @@ impl From<crate::W<HFPERCLKEN1_SPEC>> for W {
 #[doc = "Field `UART0` reader - Universal Asynchronous Receiver/Transmitter 0 Clock Enable"]
 pub type UART0_R = crate::BitReader<bool>;
 #[doc = "Field `UART0` writer - Universal Asynchronous Receiver/Transmitter 0 Clock Enable"]
-pub type UART0_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 0>;
+pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `UART1` reader - Universal Asynchronous Receiver/Transmitter 1 Clock Enable"]
 pub type UART1_R = crate::BitReader<bool>;
 #[doc = "Field `UART1` writer - Universal Asynchronous Receiver/Transmitter 1 Clock Enable"]
-pub type UART1_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 1>;
+pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `WTIMER0` reader - Wide Timer 0 Clock Enable"]
 pub type WTIMER0_R = crate::BitReader<bool>;
 #[doc = "Field `WTIMER0` writer - Wide Timer 0 Clock Enable"]
-pub type WTIMER0_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 2>;
+pub type WTIMER0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `WTIMER1` reader - Wide Timer 0 Clock Enable"]
 pub type WTIMER1_R = crate::BitReader<bool>;
 #[doc = "Field `WTIMER1` writer - Wide Timer 0 Clock Enable"]
-pub type WTIMER1_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 3>;
+pub type WTIMER1_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `CAN0` reader - CAN 0 Clock Enable"]
 pub type CAN0_R = crate::BitReader<bool>;
 #[doc = "Field `CAN0` writer - CAN 0 Clock Enable"]
-pub type CAN0_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 4>;
+pub type CAN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `CAN1` reader - CAN 1 Clock Enable"]
 pub type CAN1_R = crate::BitReader<bool>;
 #[doc = "Field `CAN1` writer - CAN 1 Clock Enable"]
-pub type CAN1_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 5>;
+pub type CAN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `VDAC0` reader - Digital to Analog Converter 0 Clock Enable"]
 pub type VDAC0_R = crate::BitReader<bool>;
 #[doc = "Field `VDAC0` writer - Digital to Analog Converter 0 Clock Enable"]
-pub type VDAC0_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 6>;
+pub type VDAC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 #[doc = "Field `CSEN` reader - Capacitive touch sense module Clock Enable"]
 pub type CSEN_R = crate::BitReader<bool>;
 #[doc = "Field `CSEN` writer - Capacitive touch sense module Clock Enable"]
-pub type CSEN_W<'a> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, 7>;
+pub type CSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFPERCLKEN1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Universal Asynchronous Receiver/Transmitter 0 Clock Enable"]
     #[inline(always)]
@@ -111,42 +111,50 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Universal Asynchronous Receiver/Transmitter 0 Clock Enable"]
     #[inline(always)]
-    pub fn uart0(&mut self) -> UART0_W {
+    #[must_use]
+    pub fn uart0(&mut self) -> UART0_W<0> {
         UART0_W::new(self)
     }
     #[doc = "Bit 1 - Universal Asynchronous Receiver/Transmitter 1 Clock Enable"]
     #[inline(always)]
-    pub fn uart1(&mut self) -> UART1_W {
+    #[must_use]
+    pub fn uart1(&mut self) -> UART1_W<1> {
         UART1_W::new(self)
     }
     #[doc = "Bit 2 - Wide Timer 0 Clock Enable"]
     #[inline(always)]
-    pub fn wtimer0(&mut self) -> WTIMER0_W {
+    #[must_use]
+    pub fn wtimer0(&mut self) -> WTIMER0_W<2> {
         WTIMER0_W::new(self)
     }
     #[doc = "Bit 3 - Wide Timer 0 Clock Enable"]
     #[inline(always)]
-    pub fn wtimer1(&mut self) -> WTIMER1_W {
+    #[must_use]
+    pub fn wtimer1(&mut self) -> WTIMER1_W<3> {
         WTIMER1_W::new(self)
     }
     #[doc = "Bit 4 - CAN 0 Clock Enable"]
     #[inline(always)]
-    pub fn can0(&mut self) -> CAN0_W {
+    #[must_use]
+    pub fn can0(&mut self) -> CAN0_W<4> {
         CAN0_W::new(self)
     }
     #[doc = "Bit 5 - CAN 1 Clock Enable"]
     #[inline(always)]
-    pub fn can1(&mut self) -> CAN1_W {
+    #[must_use]
+    pub fn can1(&mut self) -> CAN1_W<5> {
         CAN1_W::new(self)
     }
     #[doc = "Bit 6 - Digital to Analog Converter 0 Clock Enable"]
     #[inline(always)]
-    pub fn vdac0(&mut self) -> VDAC0_W {
+    #[must_use]
+    pub fn vdac0(&mut self) -> VDAC0_W<6> {
         VDAC0_W::new(self)
     }
     #[doc = "Bit 7 - Capacitive touch sense module Clock Enable"]
     #[inline(always)]
-    pub fn csen(&mut self) -> CSEN_W {
+    #[must_use]
+    pub fn csen(&mut self) -> CSEN_W<7> {
         CSEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -168,11 +176,10 @@ impl crate::Readable for HFPERCLKEN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [hfperclken1::W](W) writer structure"]
 impl crate::Writable for HFPERCLKEN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HFPERCLKEN1 to value 0"]
 impl crate::Resettable for HFPERCLKEN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

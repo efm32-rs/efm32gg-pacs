@@ -2,392 +2,392 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - CMU Control Register"]
-    pub ctrl: crate::Reg<ctrl::CTRL_SPEC>,
+    pub ctrl: CTRL,
     _reserved1: [u8; 0x04],
     #[doc = "0x08 - USHFRCO Control Register"]
-    pub ushfrcoctrl: crate::Reg<ushfrcoctrl::USHFRCOCTRL_SPEC>,
+    pub ushfrcoctrl: USHFRCOCTRL,
     _reserved2: [u8; 0x04],
     #[doc = "0x10 - HFRCO Control Register"]
-    pub hfrcoctrl: crate::Reg<hfrcoctrl::HFRCOCTRL_SPEC>,
+    pub hfrcoctrl: HFRCOCTRL,
     _reserved3: [u8; 0x04],
     #[doc = "0x18 - AUXHFRCO Control Register"]
-    pub auxhfrcoctrl: crate::Reg<auxhfrcoctrl::AUXHFRCOCTRL_SPEC>,
+    pub auxhfrcoctrl: AUXHFRCOCTRL,
     _reserved4: [u8; 0x04],
     #[doc = "0x20 - LFRCO Control Register"]
-    pub lfrcoctrl: crate::Reg<lfrcoctrl::LFRCOCTRL_SPEC>,
+    pub lfrcoctrl: LFRCOCTRL,
     #[doc = "0x24 - HFXO Control Register"]
-    pub hfxoctrl: crate::Reg<hfxoctrl::HFXOCTRL_SPEC>,
+    pub hfxoctrl: HFXOCTRL,
     #[doc = "0x28 - HFXO Control 1"]
-    pub hfxoctrl1: crate::Reg<hfxoctrl1::HFXOCTRL1_SPEC>,
+    pub hfxoctrl1: HFXOCTRL1,
     #[doc = "0x2c - HFXO Startup Control"]
-    pub hfxostartupctrl: crate::Reg<hfxostartupctrl::HFXOSTARTUPCTRL_SPEC>,
+    pub hfxostartupctrl: HFXOSTARTUPCTRL,
     #[doc = "0x30 - HFXO Steady State Control"]
-    pub hfxosteadystatectrl: crate::Reg<hfxosteadystatectrl::HFXOSTEADYSTATECTRL_SPEC>,
+    pub hfxosteadystatectrl: HFXOSTEADYSTATECTRL,
     #[doc = "0x34 - HFXO Timeout Control"]
-    pub hfxotimeoutctrl: crate::Reg<hfxotimeoutctrl::HFXOTIMEOUTCTRL_SPEC>,
+    pub hfxotimeoutctrl: HFXOTIMEOUTCTRL,
     #[doc = "0x38 - LFXO Control Register"]
-    pub lfxoctrl: crate::Reg<lfxoctrl::LFXOCTRL_SPEC>,
+    pub lfxoctrl: LFXOCTRL,
     _reserved11: [u8; 0x04],
     #[doc = "0x40 - DPLL Control Register"]
-    pub dpllctrl: crate::Reg<dpllctrl::DPLLCTRL_SPEC>,
+    pub dpllctrl: DPLLCTRL,
     #[doc = "0x44 - DPLL Control Register"]
-    pub dpllctrl1: crate::Reg<dpllctrl1::DPLLCTRL1_SPEC>,
+    pub dpllctrl1: DPLLCTRL1,
     _reserved13: [u8; 0x08],
     #[doc = "0x50 - Calibration Control Register"]
-    pub calctrl: crate::Reg<calctrl::CALCTRL_SPEC>,
+    pub calctrl: CALCTRL,
     #[doc = "0x54 - Calibration Counter Register"]
-    pub calcnt: crate::Reg<calcnt::CALCNT_SPEC>,
+    pub calcnt: CALCNT,
     _reserved15: [u8; 0x08],
     #[doc = "0x60 - Oscillator Enable/Disable Command Register"]
-    pub oscencmd: crate::Reg<oscencmd::OSCENCMD_SPEC>,
+    pub oscencmd: OSCENCMD,
     #[doc = "0x64 - Command Register"]
-    pub cmd: crate::Reg<cmd::CMD_SPEC>,
+    pub cmd: CMD,
     _reserved17: [u8; 0x08],
     #[doc = "0x70 - Debug Trace Clock Select"]
-    pub dbgclksel: crate::Reg<dbgclksel::DBGCLKSEL_SPEC>,
+    pub dbgclksel: DBGCLKSEL,
     #[doc = "0x74 - High Frequency Clock Select Command Register"]
-    pub hfclksel: crate::Reg<hfclksel::HFCLKSEL_SPEC>,
+    pub hfclksel: HFCLKSEL,
     _reserved19: [u8; 0x08],
     #[doc = "0x80 - Low Frequency A Clock Select Register"]
-    pub lfaclksel: crate::Reg<lfaclksel::LFACLKSEL_SPEC>,
+    pub lfaclksel: LFACLKSEL,
     #[doc = "0x84 - Low Frequency B Clock Select Register"]
-    pub lfbclksel: crate::Reg<lfbclksel::LFBCLKSEL_SPEC>,
+    pub lfbclksel: LFBCLKSEL,
     #[doc = "0x88 - Low Frequency E Clock Select Register"]
-    pub lfeclksel: crate::Reg<lfeclksel::LFECLKSEL_SPEC>,
+    pub lfeclksel: LFECLKSEL,
     #[doc = "0x8c - Low Frequency C Clock Select Register"]
-    pub lfcclksel: crate::Reg<lfcclksel::LFCCLKSEL_SPEC>,
+    pub lfcclksel: LFCCLKSEL,
     #[doc = "0x90 - Status Register"]
-    pub status: crate::Reg<status::STATUS_SPEC>,
+    pub status: STATUS,
     #[doc = "0x94 - HFCLK Status Register"]
-    pub hfclkstatus: crate::Reg<hfclkstatus::HFCLKSTATUS_SPEC>,
+    pub hfclkstatus: HFCLKSTATUS,
     _reserved25: [u8; 0x04],
     #[doc = "0x9c - HFXO Trim Status"]
-    pub hfxotrimstatus: crate::Reg<hfxotrimstatus::HFXOTRIMSTATUS_SPEC>,
+    pub hfxotrimstatus: HFXOTRIMSTATUS,
     #[doc = "0xa0 - Interrupt Flag Register"]
-    pub if_: crate::Reg<if_::IF_SPEC>,
+    pub if_: IF,
     #[doc = "0xa4 - Interrupt Flag Set Register"]
-    pub ifs: crate::Reg<ifs::IFS_SPEC>,
+    pub ifs: IFS,
     #[doc = "0xa8 - Interrupt Flag Clear Register"]
-    pub ifc: crate::Reg<ifc::IFC_SPEC>,
+    pub ifc: IFC,
     #[doc = "0xac - Interrupt Enable Register"]
-    pub ien: crate::Reg<ien::IEN_SPEC>,
+    pub ien: IEN,
     #[doc = "0xb0 - High Frequency Bus Clock Enable Register 0"]
-    pub hfbusclken0: crate::Reg<hfbusclken0::HFBUSCLKEN0_SPEC>,
+    pub hfbusclken0: HFBUSCLKEN0,
     _reserved31: [u8; 0x0c],
     #[doc = "0xc0 - High Frequency Peripheral Clock Enable Register 0"]
-    pub hfperclken0: crate::Reg<hfperclken0::HFPERCLKEN0_SPEC>,
+    pub hfperclken0: HFPERCLKEN0,
     #[doc = "0xc4 - High Frequency Peripheral Clock Enable Register 1"]
-    pub hfperclken1: crate::Reg<hfperclken1::HFPERCLKEN1_SPEC>,
+    pub hfperclken1: HFPERCLKEN1,
     _reserved33: [u8; 0x18],
     #[doc = "0xe0 - Low Frequency a Clock Enable Register 0 (Async Reg)"]
-    pub lfaclken0: crate::Reg<lfaclken0::LFACLKEN0_SPEC>,
+    pub lfaclken0: LFACLKEN0,
     _reserved34: [u8; 0x04],
     #[doc = "0xe8 - Low Frequency B Clock Enable Register 0 (Async Reg)"]
-    pub lfbclken0: crate::Reg<lfbclken0::LFBCLKEN0_SPEC>,
+    pub lfbclken0: LFBCLKEN0,
     #[doc = "0xec - Low Frequency C Clock Enable Register 0 (Async Reg)"]
-    pub lfcclken0: crate::Reg<lfcclken0::LFCCLKEN0_SPEC>,
+    pub lfcclken0: LFCCLKEN0,
     #[doc = "0xf0 - Low Frequency E Clock Enable Register 0 (Async Reg)"]
-    pub lfeclken0: crate::Reg<lfeclken0::LFECLKEN0_SPEC>,
+    pub lfeclken0: LFECLKEN0,
     _reserved37: [u8; 0x0c],
     #[doc = "0x100 - High Frequency Clock Prescaler Register"]
-    pub hfpresc: crate::Reg<hfpresc::HFPRESC_SPEC>,
+    pub hfpresc: HFPRESC,
     #[doc = "0x104 - High Frequency Bus Clock Prescaler Register"]
-    pub hfbuspresc: crate::Reg<hfbuspresc::HFBUSPRESC_SPEC>,
+    pub hfbuspresc: HFBUSPRESC,
     #[doc = "0x108 - High Frequency Core Clock Prescaler Register"]
-    pub hfcorepresc: crate::Reg<hfcorepresc::HFCOREPRESC_SPEC>,
+    pub hfcorepresc: HFCOREPRESC,
     #[doc = "0x10c - High Frequency Peripheral Clock Prescaler Register"]
-    pub hfperpresc: crate::Reg<hfperpresc::HFPERPRESC_SPEC>,
+    pub hfperpresc: HFPERPRESC,
     _reserved41: [u8; 0x04],
     #[doc = "0x114 - High Frequency Export Clock Prescaler Register"]
-    pub hfexppresc: crate::Reg<hfexppresc::HFEXPPRESC_SPEC>,
+    pub hfexppresc: HFEXPPRESC,
     #[doc = "0x118 - High Frequency Peripheral Clock Prescaler B Register"]
-    pub hfperprescb: crate::Reg<hfperprescb::HFPERPRESCB_SPEC>,
+    pub hfperprescb: HFPERPRESCB,
     #[doc = "0x11c - High Frequency Peripheral Clock Prescaler C Register"]
-    pub hfperprescc: crate::Reg<hfperprescc::HFPERPRESCC_SPEC>,
+    pub hfperprescc: HFPERPRESCC,
     #[doc = "0x120 - Low Frequency a Prescaler Register 0 (Async Reg)"]
-    pub lfapresc0: crate::Reg<lfapresc0::LFAPRESC0_SPEC>,
+    pub lfapresc0: LFAPRESC0,
     _reserved45: [u8; 0x04],
     #[doc = "0x128 - Low Frequency B Prescaler Register 0 (Async Reg)"]
-    pub lfbpresc0: crate::Reg<lfbpresc0::LFBPRESC0_SPEC>,
+    pub lfbpresc0: LFBPRESC0,
     _reserved46: [u8; 0x04],
     #[doc = "0x130 - Low Frequency E Prescaler Register 0 (Async Reg)"]
-    pub lfepresc0: crate::Reg<lfepresc0::LFEPRESC0_SPEC>,
+    pub lfepresc0: LFEPRESC0,
     _reserved47: [u8; 0x0c],
     #[doc = "0x140 - Synchronization Busy Register"]
-    pub syncbusy: crate::Reg<syncbusy::SYNCBUSY_SPEC>,
+    pub syncbusy: SYNCBUSY,
     #[doc = "0x144 - Freeze Register"]
-    pub freeze: crate::Reg<freeze::FREEZE_SPEC>,
+    pub freeze: FREEZE,
     _reserved49: [u8; 0x08],
     #[doc = "0x150 - PCNT Control Register"]
-    pub pcntctrl: crate::Reg<pcntctrl::PCNTCTRL_SPEC>,
+    pub pcntctrl: PCNTCTRL,
     _reserved50: [u8; 0x08],
     #[doc = "0x15c - ADC Control Register"]
-    pub adcctrl: crate::Reg<adcctrl::ADCCTRL_SPEC>,
+    pub adcctrl: ADCCTRL,
     #[doc = "0x160 - SDIO Control Register"]
-    pub sdioctrl: crate::Reg<sdioctrl::SDIOCTRL_SPEC>,
+    pub sdioctrl: SDIOCTRL,
     #[doc = "0x164 - QSPI Control Register"]
-    pub qspictrl: crate::Reg<qspictrl::QSPICTRL_SPEC>,
+    pub qspictrl: QSPICTRL,
     #[doc = "0x168 - PDM Control Register"]
-    pub pdmctrl: crate::Reg<pdmctrl::PDMCTRL_SPEC>,
+    pub pdmctrl: PDMCTRL,
     _reserved54: [u8; 0x04],
     #[doc = "0x170 - I/O Routing Pin Enable Register"]
-    pub routepen: crate::Reg<routepen::ROUTEPEN_SPEC>,
+    pub routepen: ROUTEPEN,
     #[doc = "0x174 - I/O Routing Location Register"]
-    pub routeloc0: crate::Reg<routeloc0::ROUTELOC0_SPEC>,
+    pub routeloc0: ROUTELOC0,
     #[doc = "0x178 - I/O Routing Location Register"]
-    pub routeloc1: crate::Reg<routeloc1::ROUTELOC1_SPEC>,
+    pub routeloc1: ROUTELOC1,
     _reserved57: [u8; 0x04],
     #[doc = "0x180 - Configuration Lock Register"]
-    pub lock: crate::Reg<lock::LOCK_SPEC>,
+    pub lock: LOCK,
     #[doc = "0x184 - HFRCO Spread Spectrum Register"]
-    pub hfrcoss: crate::Reg<hfrcoss::HFRCOSS_SPEC>,
+    pub hfrcoss: HFRCOSS,
     _reserved59: [u8; 0x68],
     #[doc = "0x1f0 - USB Control Register"]
-    pub usbctrl: crate::Reg<usbctrl::USBCTRL_SPEC>,
+    pub usbctrl: USBCTRL,
     #[doc = "0x1f4 - USB Clock Recovery Control"]
-    pub usbcrctrl: crate::Reg<usbcrctrl::USBCRCTRL_SPEC>,
+    pub usbcrctrl: USBCRCTRL,
 }
-#[doc = "CTRL register accessor: an alias for `Reg<CTRL_SPEC>`"]
+#[doc = "CTRL (rw) register accessor: an alias for `Reg<CTRL_SPEC>`"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "CMU Control Register"]
 pub mod ctrl;
-#[doc = "USHFRCOCTRL register accessor: an alias for `Reg<USHFRCOCTRL_SPEC>`"]
+#[doc = "USHFRCOCTRL (rw) register accessor: an alias for `Reg<USHFRCOCTRL_SPEC>`"]
 pub type USHFRCOCTRL = crate::Reg<ushfrcoctrl::USHFRCOCTRL_SPEC>;
 #[doc = "USHFRCO Control Register"]
 pub mod ushfrcoctrl;
-#[doc = "HFRCOCTRL register accessor: an alias for `Reg<HFRCOCTRL_SPEC>`"]
+#[doc = "HFRCOCTRL (rw) register accessor: an alias for `Reg<HFRCOCTRL_SPEC>`"]
 pub type HFRCOCTRL = crate::Reg<hfrcoctrl::HFRCOCTRL_SPEC>;
 #[doc = "HFRCO Control Register"]
 pub mod hfrcoctrl;
-#[doc = "AUXHFRCOCTRL register accessor: an alias for `Reg<AUXHFRCOCTRL_SPEC>`"]
+#[doc = "AUXHFRCOCTRL (rw) register accessor: an alias for `Reg<AUXHFRCOCTRL_SPEC>`"]
 pub type AUXHFRCOCTRL = crate::Reg<auxhfrcoctrl::AUXHFRCOCTRL_SPEC>;
 #[doc = "AUXHFRCO Control Register"]
 pub mod auxhfrcoctrl;
-#[doc = "LFRCOCTRL register accessor: an alias for `Reg<LFRCOCTRL_SPEC>`"]
+#[doc = "LFRCOCTRL (rw) register accessor: an alias for `Reg<LFRCOCTRL_SPEC>`"]
 pub type LFRCOCTRL = crate::Reg<lfrcoctrl::LFRCOCTRL_SPEC>;
 #[doc = "LFRCO Control Register"]
 pub mod lfrcoctrl;
-#[doc = "HFXOCTRL register accessor: an alias for `Reg<HFXOCTRL_SPEC>`"]
+#[doc = "HFXOCTRL (rw) register accessor: an alias for `Reg<HFXOCTRL_SPEC>`"]
 pub type HFXOCTRL = crate::Reg<hfxoctrl::HFXOCTRL_SPEC>;
 #[doc = "HFXO Control Register"]
 pub mod hfxoctrl;
-#[doc = "HFXOCTRL1 register accessor: an alias for `Reg<HFXOCTRL1_SPEC>`"]
+#[doc = "HFXOCTRL1 (rw) register accessor: an alias for `Reg<HFXOCTRL1_SPEC>`"]
 pub type HFXOCTRL1 = crate::Reg<hfxoctrl1::HFXOCTRL1_SPEC>;
 #[doc = "HFXO Control 1"]
 pub mod hfxoctrl1;
-#[doc = "HFXOSTARTUPCTRL register accessor: an alias for `Reg<HFXOSTARTUPCTRL_SPEC>`"]
+#[doc = "HFXOSTARTUPCTRL (rw) register accessor: an alias for `Reg<HFXOSTARTUPCTRL_SPEC>`"]
 pub type HFXOSTARTUPCTRL = crate::Reg<hfxostartupctrl::HFXOSTARTUPCTRL_SPEC>;
 #[doc = "HFXO Startup Control"]
 pub mod hfxostartupctrl;
-#[doc = "HFXOSTEADYSTATECTRL register accessor: an alias for `Reg<HFXOSTEADYSTATECTRL_SPEC>`"]
+#[doc = "HFXOSTEADYSTATECTRL (rw) register accessor: an alias for `Reg<HFXOSTEADYSTATECTRL_SPEC>`"]
 pub type HFXOSTEADYSTATECTRL = crate::Reg<hfxosteadystatectrl::HFXOSTEADYSTATECTRL_SPEC>;
 #[doc = "HFXO Steady State Control"]
 pub mod hfxosteadystatectrl;
-#[doc = "HFXOTIMEOUTCTRL register accessor: an alias for `Reg<HFXOTIMEOUTCTRL_SPEC>`"]
+#[doc = "HFXOTIMEOUTCTRL (rw) register accessor: an alias for `Reg<HFXOTIMEOUTCTRL_SPEC>`"]
 pub type HFXOTIMEOUTCTRL = crate::Reg<hfxotimeoutctrl::HFXOTIMEOUTCTRL_SPEC>;
 #[doc = "HFXO Timeout Control"]
 pub mod hfxotimeoutctrl;
-#[doc = "LFXOCTRL register accessor: an alias for `Reg<LFXOCTRL_SPEC>`"]
+#[doc = "LFXOCTRL (rw) register accessor: an alias for `Reg<LFXOCTRL_SPEC>`"]
 pub type LFXOCTRL = crate::Reg<lfxoctrl::LFXOCTRL_SPEC>;
 #[doc = "LFXO Control Register"]
 pub mod lfxoctrl;
-#[doc = "DPLLCTRL register accessor: an alias for `Reg<DPLLCTRL_SPEC>`"]
+#[doc = "DPLLCTRL (rw) register accessor: an alias for `Reg<DPLLCTRL_SPEC>`"]
 pub type DPLLCTRL = crate::Reg<dpllctrl::DPLLCTRL_SPEC>;
 #[doc = "DPLL Control Register"]
 pub mod dpllctrl;
-#[doc = "DPLLCTRL1 register accessor: an alias for `Reg<DPLLCTRL1_SPEC>`"]
+#[doc = "DPLLCTRL1 (rw) register accessor: an alias for `Reg<DPLLCTRL1_SPEC>`"]
 pub type DPLLCTRL1 = crate::Reg<dpllctrl1::DPLLCTRL1_SPEC>;
 #[doc = "DPLL Control Register"]
 pub mod dpllctrl1;
-#[doc = "CALCTRL register accessor: an alias for `Reg<CALCTRL_SPEC>`"]
+#[doc = "CALCTRL (rw) register accessor: an alias for `Reg<CALCTRL_SPEC>`"]
 pub type CALCTRL = crate::Reg<calctrl::CALCTRL_SPEC>;
 #[doc = "Calibration Control Register"]
 pub mod calctrl;
-#[doc = "CALCNT register accessor: an alias for `Reg<CALCNT_SPEC>`"]
+#[doc = "CALCNT (rw) register accessor: an alias for `Reg<CALCNT_SPEC>`"]
 pub type CALCNT = crate::Reg<calcnt::CALCNT_SPEC>;
 #[doc = "Calibration Counter Register"]
 pub mod calcnt;
-#[doc = "OSCENCMD register accessor: an alias for `Reg<OSCENCMD_SPEC>`"]
+#[doc = "OSCENCMD (w) register accessor: an alias for `Reg<OSCENCMD_SPEC>`"]
 pub type OSCENCMD = crate::Reg<oscencmd::OSCENCMD_SPEC>;
 #[doc = "Oscillator Enable/Disable Command Register"]
 pub mod oscencmd;
-#[doc = "CMD register accessor: an alias for `Reg<CMD_SPEC>`"]
+#[doc = "CMD (w) register accessor: an alias for `Reg<CMD_SPEC>`"]
 pub type CMD = crate::Reg<cmd::CMD_SPEC>;
 #[doc = "Command Register"]
 pub mod cmd;
-#[doc = "DBGCLKSEL register accessor: an alias for `Reg<DBGCLKSEL_SPEC>`"]
+#[doc = "DBGCLKSEL (rw) register accessor: an alias for `Reg<DBGCLKSEL_SPEC>`"]
 pub type DBGCLKSEL = crate::Reg<dbgclksel::DBGCLKSEL_SPEC>;
 #[doc = "Debug Trace Clock Select"]
 pub mod dbgclksel;
-#[doc = "HFCLKSEL register accessor: an alias for `Reg<HFCLKSEL_SPEC>`"]
+#[doc = "HFCLKSEL (w) register accessor: an alias for `Reg<HFCLKSEL_SPEC>`"]
 pub type HFCLKSEL = crate::Reg<hfclksel::HFCLKSEL_SPEC>;
 #[doc = "High Frequency Clock Select Command Register"]
 pub mod hfclksel;
-#[doc = "LFACLKSEL register accessor: an alias for `Reg<LFACLKSEL_SPEC>`"]
+#[doc = "LFACLKSEL (rw) register accessor: an alias for `Reg<LFACLKSEL_SPEC>`"]
 pub type LFACLKSEL = crate::Reg<lfaclksel::LFACLKSEL_SPEC>;
 #[doc = "Low Frequency A Clock Select Register"]
 pub mod lfaclksel;
-#[doc = "LFBCLKSEL register accessor: an alias for `Reg<LFBCLKSEL_SPEC>`"]
+#[doc = "LFBCLKSEL (rw) register accessor: an alias for `Reg<LFBCLKSEL_SPEC>`"]
 pub type LFBCLKSEL = crate::Reg<lfbclksel::LFBCLKSEL_SPEC>;
 #[doc = "Low Frequency B Clock Select Register"]
 pub mod lfbclksel;
-#[doc = "LFECLKSEL register accessor: an alias for `Reg<LFECLKSEL_SPEC>`"]
+#[doc = "LFECLKSEL (rw) register accessor: an alias for `Reg<LFECLKSEL_SPEC>`"]
 pub type LFECLKSEL = crate::Reg<lfeclksel::LFECLKSEL_SPEC>;
 #[doc = "Low Frequency E Clock Select Register"]
 pub mod lfeclksel;
-#[doc = "LFCCLKSEL register accessor: an alias for `Reg<LFCCLKSEL_SPEC>`"]
+#[doc = "LFCCLKSEL (rw) register accessor: an alias for `Reg<LFCCLKSEL_SPEC>`"]
 pub type LFCCLKSEL = crate::Reg<lfcclksel::LFCCLKSEL_SPEC>;
 #[doc = "Low Frequency C Clock Select Register"]
 pub mod lfcclksel;
-#[doc = "STATUS register accessor: an alias for `Reg<STATUS_SPEC>`"]
+#[doc = "STATUS (r) register accessor: an alias for `Reg<STATUS_SPEC>`"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "Status Register"]
 pub mod status;
-#[doc = "HFCLKSTATUS register accessor: an alias for `Reg<HFCLKSTATUS_SPEC>`"]
+#[doc = "HFCLKSTATUS (r) register accessor: an alias for `Reg<HFCLKSTATUS_SPEC>`"]
 pub type HFCLKSTATUS = crate::Reg<hfclkstatus::HFCLKSTATUS_SPEC>;
 #[doc = "HFCLK Status Register"]
 pub mod hfclkstatus;
-#[doc = "HFXOTRIMSTATUS register accessor: an alias for `Reg<HFXOTRIMSTATUS_SPEC>`"]
+#[doc = "HFXOTRIMSTATUS (r) register accessor: an alias for `Reg<HFXOTRIMSTATUS_SPEC>`"]
 pub type HFXOTRIMSTATUS = crate::Reg<hfxotrimstatus::HFXOTRIMSTATUS_SPEC>;
 #[doc = "HFXO Trim Status"]
 pub mod hfxotrimstatus;
-#[doc = "IF register accessor: an alias for `Reg<IF_SPEC>`"]
+#[doc = "IF (r) register accessor: an alias for `Reg<IF_SPEC>`"]
 pub type IF = crate::Reg<if_::IF_SPEC>;
 #[doc = "Interrupt Flag Register"]
 pub mod if_;
-#[doc = "IFS register accessor: an alias for `Reg<IFS_SPEC>`"]
+#[doc = "IFS (w) register accessor: an alias for `Reg<IFS_SPEC>`"]
 pub type IFS = crate::Reg<ifs::IFS_SPEC>;
 #[doc = "Interrupt Flag Set Register"]
 pub mod ifs;
-#[doc = "IFC register accessor: an alias for `Reg<IFC_SPEC>`"]
+#[doc = "IFC (w) register accessor: an alias for `Reg<IFC_SPEC>`"]
 pub type IFC = crate::Reg<ifc::IFC_SPEC>;
 #[doc = "Interrupt Flag Clear Register"]
 pub mod ifc;
-#[doc = "IEN register accessor: an alias for `Reg<IEN_SPEC>`"]
+#[doc = "IEN (rw) register accessor: an alias for `Reg<IEN_SPEC>`"]
 pub type IEN = crate::Reg<ien::IEN_SPEC>;
 #[doc = "Interrupt Enable Register"]
 pub mod ien;
-#[doc = "HFBUSCLKEN0 register accessor: an alias for `Reg<HFBUSCLKEN0_SPEC>`"]
+#[doc = "HFBUSCLKEN0 (rw) register accessor: an alias for `Reg<HFBUSCLKEN0_SPEC>`"]
 pub type HFBUSCLKEN0 = crate::Reg<hfbusclken0::HFBUSCLKEN0_SPEC>;
 #[doc = "High Frequency Bus Clock Enable Register 0"]
 pub mod hfbusclken0;
-#[doc = "HFPERCLKEN0 register accessor: an alias for `Reg<HFPERCLKEN0_SPEC>`"]
+#[doc = "HFPERCLKEN0 (rw) register accessor: an alias for `Reg<HFPERCLKEN0_SPEC>`"]
 pub type HFPERCLKEN0 = crate::Reg<hfperclken0::HFPERCLKEN0_SPEC>;
 #[doc = "High Frequency Peripheral Clock Enable Register 0"]
 pub mod hfperclken0;
-#[doc = "HFPERCLKEN1 register accessor: an alias for `Reg<HFPERCLKEN1_SPEC>`"]
+#[doc = "HFPERCLKEN1 (rw) register accessor: an alias for `Reg<HFPERCLKEN1_SPEC>`"]
 pub type HFPERCLKEN1 = crate::Reg<hfperclken1::HFPERCLKEN1_SPEC>;
 #[doc = "High Frequency Peripheral Clock Enable Register 1"]
 pub mod hfperclken1;
-#[doc = "LFACLKEN0 register accessor: an alias for `Reg<LFACLKEN0_SPEC>`"]
+#[doc = "LFACLKEN0 (rw) register accessor: an alias for `Reg<LFACLKEN0_SPEC>`"]
 pub type LFACLKEN0 = crate::Reg<lfaclken0::LFACLKEN0_SPEC>;
 #[doc = "Low Frequency a Clock Enable Register 0 (Async Reg)"]
 pub mod lfaclken0;
-#[doc = "LFBCLKEN0 register accessor: an alias for `Reg<LFBCLKEN0_SPEC>`"]
+#[doc = "LFBCLKEN0 (rw) register accessor: an alias for `Reg<LFBCLKEN0_SPEC>`"]
 pub type LFBCLKEN0 = crate::Reg<lfbclken0::LFBCLKEN0_SPEC>;
 #[doc = "Low Frequency B Clock Enable Register 0 (Async Reg)"]
 pub mod lfbclken0;
-#[doc = "LFCCLKEN0 register accessor: an alias for `Reg<LFCCLKEN0_SPEC>`"]
+#[doc = "LFCCLKEN0 (rw) register accessor: an alias for `Reg<LFCCLKEN0_SPEC>`"]
 pub type LFCCLKEN0 = crate::Reg<lfcclken0::LFCCLKEN0_SPEC>;
 #[doc = "Low Frequency C Clock Enable Register 0 (Async Reg)"]
 pub mod lfcclken0;
-#[doc = "LFECLKEN0 register accessor: an alias for `Reg<LFECLKEN0_SPEC>`"]
+#[doc = "LFECLKEN0 (rw) register accessor: an alias for `Reg<LFECLKEN0_SPEC>`"]
 pub type LFECLKEN0 = crate::Reg<lfeclken0::LFECLKEN0_SPEC>;
 #[doc = "Low Frequency E Clock Enable Register 0 (Async Reg)"]
 pub mod lfeclken0;
-#[doc = "HFPRESC register accessor: an alias for `Reg<HFPRESC_SPEC>`"]
+#[doc = "HFPRESC (rw) register accessor: an alias for `Reg<HFPRESC_SPEC>`"]
 pub type HFPRESC = crate::Reg<hfpresc::HFPRESC_SPEC>;
 #[doc = "High Frequency Clock Prescaler Register"]
 pub mod hfpresc;
-#[doc = "HFBUSPRESC register accessor: an alias for `Reg<HFBUSPRESC_SPEC>`"]
+#[doc = "HFBUSPRESC (rw) register accessor: an alias for `Reg<HFBUSPRESC_SPEC>`"]
 pub type HFBUSPRESC = crate::Reg<hfbuspresc::HFBUSPRESC_SPEC>;
 #[doc = "High Frequency Bus Clock Prescaler Register"]
 pub mod hfbuspresc;
-#[doc = "HFCOREPRESC register accessor: an alias for `Reg<HFCOREPRESC_SPEC>`"]
+#[doc = "HFCOREPRESC (rw) register accessor: an alias for `Reg<HFCOREPRESC_SPEC>`"]
 pub type HFCOREPRESC = crate::Reg<hfcorepresc::HFCOREPRESC_SPEC>;
 #[doc = "High Frequency Core Clock Prescaler Register"]
 pub mod hfcorepresc;
-#[doc = "HFPERPRESC register accessor: an alias for `Reg<HFPERPRESC_SPEC>`"]
+#[doc = "HFPERPRESC (rw) register accessor: an alias for `Reg<HFPERPRESC_SPEC>`"]
 pub type HFPERPRESC = crate::Reg<hfperpresc::HFPERPRESC_SPEC>;
 #[doc = "High Frequency Peripheral Clock Prescaler Register"]
 pub mod hfperpresc;
-#[doc = "HFEXPPRESC register accessor: an alias for `Reg<HFEXPPRESC_SPEC>`"]
+#[doc = "HFEXPPRESC (rw) register accessor: an alias for `Reg<HFEXPPRESC_SPEC>`"]
 pub type HFEXPPRESC = crate::Reg<hfexppresc::HFEXPPRESC_SPEC>;
 #[doc = "High Frequency Export Clock Prescaler Register"]
 pub mod hfexppresc;
-#[doc = "HFPERPRESCB register accessor: an alias for `Reg<HFPERPRESCB_SPEC>`"]
+#[doc = "HFPERPRESCB (rw) register accessor: an alias for `Reg<HFPERPRESCB_SPEC>`"]
 pub type HFPERPRESCB = crate::Reg<hfperprescb::HFPERPRESCB_SPEC>;
 #[doc = "High Frequency Peripheral Clock Prescaler B Register"]
 pub mod hfperprescb;
-#[doc = "HFPERPRESCC register accessor: an alias for `Reg<HFPERPRESCC_SPEC>`"]
+#[doc = "HFPERPRESCC (rw) register accessor: an alias for `Reg<HFPERPRESCC_SPEC>`"]
 pub type HFPERPRESCC = crate::Reg<hfperprescc::HFPERPRESCC_SPEC>;
 #[doc = "High Frequency Peripheral Clock Prescaler C Register"]
 pub mod hfperprescc;
-#[doc = "LFAPRESC0 register accessor: an alias for `Reg<LFAPRESC0_SPEC>`"]
+#[doc = "LFAPRESC0 (rw) register accessor: an alias for `Reg<LFAPRESC0_SPEC>`"]
 pub type LFAPRESC0 = crate::Reg<lfapresc0::LFAPRESC0_SPEC>;
 #[doc = "Low Frequency a Prescaler Register 0 (Async Reg)"]
 pub mod lfapresc0;
-#[doc = "LFBPRESC0 register accessor: an alias for `Reg<LFBPRESC0_SPEC>`"]
+#[doc = "LFBPRESC0 (rw) register accessor: an alias for `Reg<LFBPRESC0_SPEC>`"]
 pub type LFBPRESC0 = crate::Reg<lfbpresc0::LFBPRESC0_SPEC>;
 #[doc = "Low Frequency B Prescaler Register 0 (Async Reg)"]
 pub mod lfbpresc0;
-#[doc = "LFEPRESC0 register accessor: an alias for `Reg<LFEPRESC0_SPEC>`"]
+#[doc = "LFEPRESC0 (rw) register accessor: an alias for `Reg<LFEPRESC0_SPEC>`"]
 pub type LFEPRESC0 = crate::Reg<lfepresc0::LFEPRESC0_SPEC>;
 #[doc = "Low Frequency E Prescaler Register 0 (Async Reg)"]
 pub mod lfepresc0;
-#[doc = "SYNCBUSY register accessor: an alias for `Reg<SYNCBUSY_SPEC>`"]
+#[doc = "SYNCBUSY (r) register accessor: an alias for `Reg<SYNCBUSY_SPEC>`"]
 pub type SYNCBUSY = crate::Reg<syncbusy::SYNCBUSY_SPEC>;
 #[doc = "Synchronization Busy Register"]
 pub mod syncbusy;
-#[doc = "FREEZE register accessor: an alias for `Reg<FREEZE_SPEC>`"]
+#[doc = "FREEZE (rw) register accessor: an alias for `Reg<FREEZE_SPEC>`"]
 pub type FREEZE = crate::Reg<freeze::FREEZE_SPEC>;
 #[doc = "Freeze Register"]
 pub mod freeze;
-#[doc = "PCNTCTRL register accessor: an alias for `Reg<PCNTCTRL_SPEC>`"]
+#[doc = "PCNTCTRL (rw) register accessor: an alias for `Reg<PCNTCTRL_SPEC>`"]
 pub type PCNTCTRL = crate::Reg<pcntctrl::PCNTCTRL_SPEC>;
 #[doc = "PCNT Control Register"]
 pub mod pcntctrl;
-#[doc = "ADCCTRL register accessor: an alias for `Reg<ADCCTRL_SPEC>`"]
+#[doc = "ADCCTRL (rw) register accessor: an alias for `Reg<ADCCTRL_SPEC>`"]
 pub type ADCCTRL = crate::Reg<adcctrl::ADCCTRL_SPEC>;
 #[doc = "ADC Control Register"]
 pub mod adcctrl;
-#[doc = "SDIOCTRL register accessor: an alias for `Reg<SDIOCTRL_SPEC>`"]
+#[doc = "SDIOCTRL (rw) register accessor: an alias for `Reg<SDIOCTRL_SPEC>`"]
 pub type SDIOCTRL = crate::Reg<sdioctrl::SDIOCTRL_SPEC>;
 #[doc = "SDIO Control Register"]
 pub mod sdioctrl;
-#[doc = "QSPICTRL register accessor: an alias for `Reg<QSPICTRL_SPEC>`"]
+#[doc = "QSPICTRL (rw) register accessor: an alias for `Reg<QSPICTRL_SPEC>`"]
 pub type QSPICTRL = crate::Reg<qspictrl::QSPICTRL_SPEC>;
 #[doc = "QSPI Control Register"]
 pub mod qspictrl;
-#[doc = "PDMCTRL register accessor: an alias for `Reg<PDMCTRL_SPEC>`"]
+#[doc = "PDMCTRL (rw) register accessor: an alias for `Reg<PDMCTRL_SPEC>`"]
 pub type PDMCTRL = crate::Reg<pdmctrl::PDMCTRL_SPEC>;
 #[doc = "PDM Control Register"]
 pub mod pdmctrl;
-#[doc = "ROUTEPEN register accessor: an alias for `Reg<ROUTEPEN_SPEC>`"]
+#[doc = "ROUTEPEN (rw) register accessor: an alias for `Reg<ROUTEPEN_SPEC>`"]
 pub type ROUTEPEN = crate::Reg<routepen::ROUTEPEN_SPEC>;
 #[doc = "I/O Routing Pin Enable Register"]
 pub mod routepen;
-#[doc = "ROUTELOC0 register accessor: an alias for `Reg<ROUTELOC0_SPEC>`"]
+#[doc = "ROUTELOC0 (rw) register accessor: an alias for `Reg<ROUTELOC0_SPEC>`"]
 pub type ROUTELOC0 = crate::Reg<routeloc0::ROUTELOC0_SPEC>;
 #[doc = "I/O Routing Location Register"]
 pub mod routeloc0;
-#[doc = "ROUTELOC1 register accessor: an alias for `Reg<ROUTELOC1_SPEC>`"]
+#[doc = "ROUTELOC1 (rw) register accessor: an alias for `Reg<ROUTELOC1_SPEC>`"]
 pub type ROUTELOC1 = crate::Reg<routeloc1::ROUTELOC1_SPEC>;
 #[doc = "I/O Routing Location Register"]
 pub mod routeloc1;
-#[doc = "LOCK register accessor: an alias for `Reg<LOCK_SPEC>`"]
+#[doc = "LOCK (rw) register accessor: an alias for `Reg<LOCK_SPEC>`"]
 pub type LOCK = crate::Reg<lock::LOCK_SPEC>;
 #[doc = "Configuration Lock Register"]
 pub mod lock;
-#[doc = "HFRCOSS register accessor: an alias for `Reg<HFRCOSS_SPEC>`"]
+#[doc = "HFRCOSS (rw) register accessor: an alias for `Reg<HFRCOSS_SPEC>`"]
 pub type HFRCOSS = crate::Reg<hfrcoss::HFRCOSS_SPEC>;
 #[doc = "HFRCO Spread Spectrum Register"]
 pub mod hfrcoss;
-#[doc = "USBCTRL register accessor: an alias for `Reg<USBCTRL_SPEC>`"]
+#[doc = "USBCTRL (rw) register accessor: an alias for `Reg<USBCTRL_SPEC>`"]
 pub type USBCTRL = crate::Reg<usbctrl::USBCTRL_SPEC>;
 #[doc = "USB Control Register"]
 pub mod usbctrl;
-#[doc = "USBCRCTRL register accessor: an alias for `Reg<USBCRCTRL_SPEC>`"]
+#[doc = "USBCRCTRL (rw) register accessor: an alias for `Reg<USBCRCTRL_SPEC>`"]
 pub type USBCRCTRL = crate::Reg<usbcrctrl::USBCRCTRL_SPEC>;
 #[doc = "USB Clock Recovery Control"]
 pub mod usbcrctrl;

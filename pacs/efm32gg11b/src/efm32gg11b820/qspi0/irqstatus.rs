@@ -37,75 +37,76 @@ impl From<crate::W<IRQSTATUS_SPEC>> for W {
 #[doc = "Field `MODEMFAIL` reader - Mode M Failure"]
 pub type MODEMFAIL_R = crate::BitReader<bool>;
 #[doc = "Field `MODEMFAIL` writer - Mode M Failure"]
-pub type MODEMFAIL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 0>;
+pub type MODEMFAIL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `UNDERFLOWDET` reader - Underflow Detected"]
 pub type UNDERFLOWDET_R = crate::BitReader<bool>;
 #[doc = "Field `UNDERFLOWDET` writer - Underflow Detected"]
-pub type UNDERFLOWDET_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 1>;
+pub type UNDERFLOWDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `INDIRECTOPDONE` reader - Indirect Operation Complete"]
 pub type INDIRECTOPDONE_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTOPDONE` writer - Indirect Operation Complete"]
-pub type INDIRECTOPDONE_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 2>;
+pub type INDIRECTOPDONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `INDIRECTREADREJECT` reader - Indirect Operation Was Requested but Could Not Be Accepted"]
 pub type INDIRECTREADREJECT_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTREADREJECT` writer - Indirect Operation Was Requested but Could Not Be Accepted"]
-pub type INDIRECTREADREJECT_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 3>;
+pub type INDIRECTREADREJECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `PROTWRATTEMPT` reader - Write to Protected Area Was Attempted and Rejected"]
 pub type PROTWRATTEMPT_R = crate::BitReader<bool>;
 #[doc = "Field `PROTWRATTEMPT` writer - Write to Protected Area Was Attempted and Rejected"]
-pub type PROTWRATTEMPT_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 4>;
+pub type PROTWRATTEMPT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `ILLEGALACCESSDET` reader - Illegal Memory Access Has Been Detected"]
 pub type ILLEGALACCESSDET_R = crate::BitReader<bool>;
 #[doc = "Field `ILLEGALACCESSDET` writer - Illegal Memory Access Has Been Detected"]
-pub type ILLEGALACCESSDET_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 5>;
+pub type ILLEGALACCESSDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `INDIRECTXFERLEVELBREACH` reader - Indirect Transfer Watermark Level Breached"]
 pub type INDIRECTXFERLEVELBREACH_R = crate::BitReader<bool>;
 #[doc = "Field `INDIRECTXFERLEVELBREACH` writer - Indirect Transfer Watermark Level Breached"]
-pub type INDIRECTXFERLEVELBREACH_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 6>;
+pub type INDIRECTXFERLEVELBREACH_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `RECVOVERFLOW` reader - Receive Overflow"]
 pub type RECVOVERFLOW_R = crate::BitReader<bool>;
 #[doc = "Field `RECVOVERFLOW` writer - Receive Overflow"]
-pub type RECVOVERFLOW_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 7>;
+pub type RECVOVERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXFIFONOTFULL` reader - Small TX FIFO Not Full"]
 pub type TXFIFONOTFULL_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFONOTFULL` writer - Small TX FIFO Not Full"]
-pub type TXFIFONOTFULL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 8>;
+pub type TXFIFONOTFULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXFIFOFULL` reader - Small TX FIFO Full"]
 pub type TXFIFOFULL_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFOFULL` writer - Small TX FIFO Full"]
-pub type TXFIFOFULL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 9>;
+pub type TXFIFOFULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `RXFIFONOTEMPTY` reader - Small RX FIFO Not Empty"]
 pub type RXFIFONOTEMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFONOTEMPTY` writer - Small RX FIFO Not Empty"]
-pub type RXFIFONOTEMPTY_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 10>;
+pub type RXFIFONOTEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `RXFIFOFULL` reader - Small RX FIFO Full"]
 pub type RXFIFOFULL_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFOFULL` writer - Small RX FIFO Full"]
-pub type RXFIFOFULL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 11>;
+pub type RXFIFOFULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `INDRDSRAMFULL` reader - Indirect Read Partition Overflow"]
 pub type INDRDSRAMFULL_R = crate::BitReader<bool>;
 #[doc = "Field `INDRDSRAMFULL` writer - Indirect Read Partition Overflow"]
-pub type INDRDSRAMFULL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 12>;
+pub type INDRDSRAMFULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `POLLEXPINT` reader - The Maximum Number of Programmed Polls Cycles is Expired"]
 pub type POLLEXPINT_R = crate::BitReader<bool>;
 #[doc = "Field `POLLEXPINT` writer - The Maximum Number of Programmed Polls Cycles is Expired"]
-pub type POLLEXPINT_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 13>;
+pub type POLLEXPINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `STIGREQINT` reader - The Controller is Ready for Getting Another STIG Request"]
 pub type STIGREQINT_R = crate::BitReader<bool>;
 #[doc = "Field `STIGREQINT` writer - The Controller is Ready for Getting Another STIG Request"]
-pub type STIGREQINT_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 14>;
+pub type STIGREQINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `RXCRCDATAERR` reader - RX CRC Data Error"]
 pub type RXCRCDATAERR_R = crate::BitReader<bool>;
 #[doc = "Field `RXCRCDATAERR` writer - RX CRC Data Error"]
-pub type RXCRCDATAERR_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 16>;
+pub type RXCRCDATAERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `RXCRCDATAVAL` reader - RX CRC Data Valid"]
 pub type RXCRCDATAVAL_R = crate::BitReader<bool>;
 #[doc = "Field `RXCRCDATAVAL` writer - RX CRC Data Valid"]
-pub type RXCRCDATAVAL_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 17>;
+pub type RXCRCDATAVAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 #[doc = "Field `TXCRCCHUNKBRK` reader - TX CRC Chunk Was Broken"]
 pub type TXCRCCHUNKBRK_R = crate::BitReader<bool>;
 #[doc = "Field `TXCRCCHUNKBRK` writer - TX CRC Chunk Was Broken"]
-pub type TXCRCCHUNKBRK_W<'a> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, 18>;
+pub type TXCRCCHUNKBRK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQSTATUS_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Mode M Failure"]
     #[inline(always)]
@@ -201,92 +202,110 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Mode M Failure"]
     #[inline(always)]
-    pub fn modemfail(&mut self) -> MODEMFAIL_W {
+    #[must_use]
+    pub fn modemfail(&mut self) -> MODEMFAIL_W<0> {
         MODEMFAIL_W::new(self)
     }
     #[doc = "Bit 1 - Underflow Detected"]
     #[inline(always)]
-    pub fn underflowdet(&mut self) -> UNDERFLOWDET_W {
+    #[must_use]
+    pub fn underflowdet(&mut self) -> UNDERFLOWDET_W<1> {
         UNDERFLOWDET_W::new(self)
     }
     #[doc = "Bit 2 - Indirect Operation Complete"]
     #[inline(always)]
-    pub fn indirectopdone(&mut self) -> INDIRECTOPDONE_W {
+    #[must_use]
+    pub fn indirectopdone(&mut self) -> INDIRECTOPDONE_W<2> {
         INDIRECTOPDONE_W::new(self)
     }
     #[doc = "Bit 3 - Indirect Operation Was Requested but Could Not Be Accepted"]
     #[inline(always)]
-    pub fn indirectreadreject(&mut self) -> INDIRECTREADREJECT_W {
+    #[must_use]
+    pub fn indirectreadreject(&mut self) -> INDIRECTREADREJECT_W<3> {
         INDIRECTREADREJECT_W::new(self)
     }
     #[doc = "Bit 4 - Write to Protected Area Was Attempted and Rejected"]
     #[inline(always)]
-    pub fn protwrattempt(&mut self) -> PROTWRATTEMPT_W {
+    #[must_use]
+    pub fn protwrattempt(&mut self) -> PROTWRATTEMPT_W<4> {
         PROTWRATTEMPT_W::new(self)
     }
     #[doc = "Bit 5 - Illegal Memory Access Has Been Detected"]
     #[inline(always)]
-    pub fn illegalaccessdet(&mut self) -> ILLEGALACCESSDET_W {
+    #[must_use]
+    pub fn illegalaccessdet(&mut self) -> ILLEGALACCESSDET_W<5> {
         ILLEGALACCESSDET_W::new(self)
     }
     #[doc = "Bit 6 - Indirect Transfer Watermark Level Breached"]
     #[inline(always)]
-    pub fn indirectxferlevelbreach(&mut self) -> INDIRECTXFERLEVELBREACH_W {
+    #[must_use]
+    pub fn indirectxferlevelbreach(&mut self) -> INDIRECTXFERLEVELBREACH_W<6> {
         INDIRECTXFERLEVELBREACH_W::new(self)
     }
     #[doc = "Bit 7 - Receive Overflow"]
     #[inline(always)]
-    pub fn recvoverflow(&mut self) -> RECVOVERFLOW_W {
+    #[must_use]
+    pub fn recvoverflow(&mut self) -> RECVOVERFLOW_W<7> {
         RECVOVERFLOW_W::new(self)
     }
     #[doc = "Bit 8 - Small TX FIFO Not Full"]
     #[inline(always)]
-    pub fn txfifonotfull(&mut self) -> TXFIFONOTFULL_W {
+    #[must_use]
+    pub fn txfifonotfull(&mut self) -> TXFIFONOTFULL_W<8> {
         TXFIFONOTFULL_W::new(self)
     }
     #[doc = "Bit 9 - Small TX FIFO Full"]
     #[inline(always)]
-    pub fn txfifofull(&mut self) -> TXFIFOFULL_W {
+    #[must_use]
+    pub fn txfifofull(&mut self) -> TXFIFOFULL_W<9> {
         TXFIFOFULL_W::new(self)
     }
     #[doc = "Bit 10 - Small RX FIFO Not Empty"]
     #[inline(always)]
-    pub fn rxfifonotempty(&mut self) -> RXFIFONOTEMPTY_W {
+    #[must_use]
+    pub fn rxfifonotempty(&mut self) -> RXFIFONOTEMPTY_W<10> {
         RXFIFONOTEMPTY_W::new(self)
     }
     #[doc = "Bit 11 - Small RX FIFO Full"]
     #[inline(always)]
-    pub fn rxfifofull(&mut self) -> RXFIFOFULL_W {
+    #[must_use]
+    pub fn rxfifofull(&mut self) -> RXFIFOFULL_W<11> {
         RXFIFOFULL_W::new(self)
     }
     #[doc = "Bit 12 - Indirect Read Partition Overflow"]
     #[inline(always)]
-    pub fn indrdsramfull(&mut self) -> INDRDSRAMFULL_W {
+    #[must_use]
+    pub fn indrdsramfull(&mut self) -> INDRDSRAMFULL_W<12> {
         INDRDSRAMFULL_W::new(self)
     }
     #[doc = "Bit 13 - The Maximum Number of Programmed Polls Cycles is Expired"]
     #[inline(always)]
-    pub fn pollexpint(&mut self) -> POLLEXPINT_W {
+    #[must_use]
+    pub fn pollexpint(&mut self) -> POLLEXPINT_W<13> {
         POLLEXPINT_W::new(self)
     }
     #[doc = "Bit 14 - The Controller is Ready for Getting Another STIG Request"]
     #[inline(always)]
-    pub fn stigreqint(&mut self) -> STIGREQINT_W {
+    #[must_use]
+    pub fn stigreqint(&mut self) -> STIGREQINT_W<14> {
         STIGREQINT_W::new(self)
     }
     #[doc = "Bit 16 - RX CRC Data Error"]
     #[inline(always)]
-    pub fn rxcrcdataerr(&mut self) -> RXCRCDATAERR_W {
+    #[must_use]
+    pub fn rxcrcdataerr(&mut self) -> RXCRCDATAERR_W<16> {
         RXCRCDATAERR_W::new(self)
     }
     #[doc = "Bit 17 - RX CRC Data Valid"]
     #[inline(always)]
-    pub fn rxcrcdataval(&mut self) -> RXCRCDATAVAL_W {
+    #[must_use]
+    pub fn rxcrcdataval(&mut self) -> RXCRCDATAVAL_W<17> {
         RXCRCDATAVAL_W::new(self)
     }
     #[doc = "Bit 18 - TX CRC Chunk Was Broken"]
     #[inline(always)]
-    pub fn txcrcchunkbrk(&mut self) -> TXCRCCHUNKBRK_W {
+    #[must_use]
+    pub fn txcrcchunkbrk(&mut self) -> TXCRCCHUNKBRK_W<18> {
         TXCRCCHUNKBRK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -308,11 +327,10 @@ impl crate::Readable for IRQSTATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [irqstatus::W](W) writer structure"]
 impl crate::Writable for IRQSTATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRQSTATUS to value 0"]
 impl crate::Resettable for IRQSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

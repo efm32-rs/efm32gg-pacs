@@ -37,23 +37,23 @@ impl From<crate::W<WOLREG_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Wake on LAN ARP request IP address. Written to define the least significant 16 bits of the target IP address that is matched to generate a Wake on LAN event. A value of zero will not generate an event, even if this is matched by the received frame."]
 pub type ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADDR` writer - Wake on LAN ARP request IP address. Written to define the least significant 16 bits of the target IP address that is matched to generate a Wake on LAN event. A value of zero will not generate an event, even if this is matched by the received frame."]
-pub type ADDR_W<'a> = crate::FieldWriter<'a, u32, WOLREG_SPEC, u16, u16, 16, 0>;
+pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WOLREG_SPEC, u16, u16, 16, O>;
 #[doc = "Field `WOLMASK0` reader - Wake on LAN magic packet event enable"]
 pub type WOLMASK0_R = crate::BitReader<bool>;
 #[doc = "Field `WOLMASK0` writer - Wake on LAN magic packet event enable"]
-pub type WOLMASK0_W<'a> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, 16>;
+pub type WOLMASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, O>;
 #[doc = "Field `WOLMASK1` reader - Wake on LAN ARP request event enable"]
 pub type WOLMASK1_R = crate::BitReader<bool>;
 #[doc = "Field `WOLMASK1` writer - Wake on LAN ARP request event enable"]
-pub type WOLMASK1_W<'a> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, 17>;
+pub type WOLMASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, O>;
 #[doc = "Field `WOLMASK2` reader - Wake on LAN specific address register 1 event enable"]
 pub type WOLMASK2_R = crate::BitReader<bool>;
 #[doc = "Field `WOLMASK2` writer - Wake on LAN specific address register 1 event enable"]
-pub type WOLMASK2_W<'a> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, 18>;
+pub type WOLMASK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, O>;
 #[doc = "Field `WOLMASK3` reader - Wake on LAN multicast hash event enable"]
 pub type WOLMASK3_R = crate::BitReader<bool>;
 #[doc = "Field `WOLMASK3` writer - Wake on LAN multicast hash event enable"]
-pub type WOLMASK3_W<'a> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, 19>;
+pub type WOLMASK3_W<'a, const O: u8> = crate::BitWriter<'a, u32, WOLREG_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - Wake on LAN ARP request IP address. Written to define the least significant 16 bits of the target IP address that is matched to generate a Wake on LAN event. A value of zero will not generate an event, even if this is matched by the received frame."]
     #[inline(always)]
@@ -84,27 +84,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Wake on LAN ARP request IP address. Written to define the least significant 16 bits of the target IP address that is matched to generate a Wake on LAN event. A value of zero will not generate an event, even if this is matched by the received frame."]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
+    #[must_use]
+    pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
     #[doc = "Bit 16 - Wake on LAN magic packet event enable"]
     #[inline(always)]
-    pub fn wolmask0(&mut self) -> WOLMASK0_W {
+    #[must_use]
+    pub fn wolmask0(&mut self) -> WOLMASK0_W<16> {
         WOLMASK0_W::new(self)
     }
     #[doc = "Bit 17 - Wake on LAN ARP request event enable"]
     #[inline(always)]
-    pub fn wolmask1(&mut self) -> WOLMASK1_W {
+    #[must_use]
+    pub fn wolmask1(&mut self) -> WOLMASK1_W<17> {
         WOLMASK1_W::new(self)
     }
     #[doc = "Bit 18 - Wake on LAN specific address register 1 event enable"]
     #[inline(always)]
-    pub fn wolmask2(&mut self) -> WOLMASK2_W {
+    #[must_use]
+    pub fn wolmask2(&mut self) -> WOLMASK2_W<18> {
         WOLMASK2_W::new(self)
     }
     #[doc = "Bit 19 - Wake on LAN multicast hash event enable"]
     #[inline(always)]
-    pub fn wolmask3(&mut self) -> WOLMASK3_W {
+    #[must_use]
+    pub fn wolmask3(&mut self) -> WOLMASK3_W<19> {
         WOLMASK3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -126,11 +131,10 @@ impl crate::Readable for WOLREG_SPEC {
 #[doc = "`write(|w| ..)` method takes [wolreg::W](W) writer structure"]
 impl crate::Writable for WOLREG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WOLREG to value 0"]
 impl crate::Resettable for WOLREG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

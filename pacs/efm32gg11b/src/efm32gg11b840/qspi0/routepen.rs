@@ -37,55 +37,55 @@ impl From<crate::W<ROUTEPEN_SPEC>> for W {
 #[doc = "Field `SCLKPEN` reader - SCLK Pin Enable"]
 pub type SCLKPEN_R = crate::BitReader<bool>;
 #[doc = "Field `SCLKPEN` writer - SCLK Pin Enable"]
-pub type SCLKPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 0>;
+pub type SCLKPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `CS0PEN` reader - CS0 Pin Enable"]
 pub type CS0PEN_R = crate::BitReader<bool>;
 #[doc = "Field `CS0PEN` writer - CS0 Pin Enable"]
-pub type CS0PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 1>;
+pub type CS0PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `CS1PEN` reader - CS1 Pin Enable"]
 pub type CS1PEN_R = crate::BitReader<bool>;
 #[doc = "Field `CS1PEN` writer - CS1 Pin Enable"]
-pub type CS1PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 2>;
+pub type CS1PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ0PEN` reader - DQ0 Pin Enable"]
 pub type DQ0PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ0PEN` writer - DQ0 Pin Enable"]
-pub type DQ0PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 5>;
+pub type DQ0PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ1PEN` reader - DQ1 Pin Enable"]
 pub type DQ1PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ1PEN` writer - DQ1 Pin Enable"]
-pub type DQ1PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 6>;
+pub type DQ1PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ2PEN` reader - DQ2 Pin Enable"]
 pub type DQ2PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ2PEN` writer - DQ2 Pin Enable"]
-pub type DQ2PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 7>;
+pub type DQ2PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ3PEN` reader - DQ3 Pin Enable"]
 pub type DQ3PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ3PEN` writer - DQ3 Pin Enable"]
-pub type DQ3PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 8>;
+pub type DQ3PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ4PEN` reader - DQ4 Pin Enable"]
 pub type DQ4PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ4PEN` writer - DQ4 Pin Enable"]
-pub type DQ4PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 9>;
+pub type DQ4PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ5PEN` reader - DQ5 Pin Enable"]
 pub type DQ5PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ5PEN` writer - DQ5 Pin Enable"]
-pub type DQ5PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 10>;
+pub type DQ5PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ6PEN` reader - DQ6 Pin Enable"]
 pub type DQ6PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ6PEN` writer - DQ6 Pin Enable"]
-pub type DQ6PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 11>;
+pub type DQ6PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQ7PEN` reader - DQ7 Pin Enable"]
 pub type DQ7PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQ7PEN` writer - DQ7 Pin Enable"]
-pub type DQ7PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 12>;
+pub type DQ7PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DQSPEN` reader - DQS Pin Enable"]
 pub type DQSPEN_R = crate::BitReader<bool>;
 #[doc = "Field `DQSPEN` writer - DQS Pin Enable"]
-pub type DQSPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 13>;
+pub type DQSPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `SCLKINPEN` reader - SCLKIN Pin Enable"]
 pub type SCLKINPEN_R = crate::BitReader<bool>;
 #[doc = "Field `SCLKINPEN` writer - SCLKIN Pin Enable"]
-pub type SCLKINPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 14>;
+pub type SCLKINPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - SCLK Pin Enable"]
     #[inline(always)]
@@ -156,67 +156,80 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SCLK Pin Enable"]
     #[inline(always)]
-    pub fn sclkpen(&mut self) -> SCLKPEN_W {
+    #[must_use]
+    pub fn sclkpen(&mut self) -> SCLKPEN_W<0> {
         SCLKPEN_W::new(self)
     }
     #[doc = "Bit 1 - CS0 Pin Enable"]
     #[inline(always)]
-    pub fn cs0pen(&mut self) -> CS0PEN_W {
+    #[must_use]
+    pub fn cs0pen(&mut self) -> CS0PEN_W<1> {
         CS0PEN_W::new(self)
     }
     #[doc = "Bit 2 - CS1 Pin Enable"]
     #[inline(always)]
-    pub fn cs1pen(&mut self) -> CS1PEN_W {
+    #[must_use]
+    pub fn cs1pen(&mut self) -> CS1PEN_W<2> {
         CS1PEN_W::new(self)
     }
     #[doc = "Bit 5 - DQ0 Pin Enable"]
     #[inline(always)]
-    pub fn dq0pen(&mut self) -> DQ0PEN_W {
+    #[must_use]
+    pub fn dq0pen(&mut self) -> DQ0PEN_W<5> {
         DQ0PEN_W::new(self)
     }
     #[doc = "Bit 6 - DQ1 Pin Enable"]
     #[inline(always)]
-    pub fn dq1pen(&mut self) -> DQ1PEN_W {
+    #[must_use]
+    pub fn dq1pen(&mut self) -> DQ1PEN_W<6> {
         DQ1PEN_W::new(self)
     }
     #[doc = "Bit 7 - DQ2 Pin Enable"]
     #[inline(always)]
-    pub fn dq2pen(&mut self) -> DQ2PEN_W {
+    #[must_use]
+    pub fn dq2pen(&mut self) -> DQ2PEN_W<7> {
         DQ2PEN_W::new(self)
     }
     #[doc = "Bit 8 - DQ3 Pin Enable"]
     #[inline(always)]
-    pub fn dq3pen(&mut self) -> DQ3PEN_W {
+    #[must_use]
+    pub fn dq3pen(&mut self) -> DQ3PEN_W<8> {
         DQ3PEN_W::new(self)
     }
     #[doc = "Bit 9 - DQ4 Pin Enable"]
     #[inline(always)]
-    pub fn dq4pen(&mut self) -> DQ4PEN_W {
+    #[must_use]
+    pub fn dq4pen(&mut self) -> DQ4PEN_W<9> {
         DQ4PEN_W::new(self)
     }
     #[doc = "Bit 10 - DQ5 Pin Enable"]
     #[inline(always)]
-    pub fn dq5pen(&mut self) -> DQ5PEN_W {
+    #[must_use]
+    pub fn dq5pen(&mut self) -> DQ5PEN_W<10> {
         DQ5PEN_W::new(self)
     }
     #[doc = "Bit 11 - DQ6 Pin Enable"]
     #[inline(always)]
-    pub fn dq6pen(&mut self) -> DQ6PEN_W {
+    #[must_use]
+    pub fn dq6pen(&mut self) -> DQ6PEN_W<11> {
         DQ6PEN_W::new(self)
     }
     #[doc = "Bit 12 - DQ7 Pin Enable"]
     #[inline(always)]
-    pub fn dq7pen(&mut self) -> DQ7PEN_W {
+    #[must_use]
+    pub fn dq7pen(&mut self) -> DQ7PEN_W<12> {
         DQ7PEN_W::new(self)
     }
     #[doc = "Bit 13 - DQS Pin Enable"]
     #[inline(always)]
-    pub fn dqspen(&mut self) -> DQSPEN_W {
+    #[must_use]
+    pub fn dqspen(&mut self) -> DQSPEN_W<13> {
         DQSPEN_W::new(self)
     }
     #[doc = "Bit 14 - SCLKIN Pin Enable"]
     #[inline(always)]
-    pub fn sclkinpen(&mut self) -> SCLKINPEN_W {
+    #[must_use]
+    pub fn sclkinpen(&mut self) -> SCLKINPEN_W<14> {
         SCLKINPEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -238,11 +251,10 @@ impl crate::Readable for ROUTEPEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [routepen::W](W) writer structure"]
 impl crate::Writable for ROUTEPEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTEPEN to value 0"]
 impl crate::Resettable for ROUTEPEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

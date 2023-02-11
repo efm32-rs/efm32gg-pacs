@@ -34,8 +34,10 @@ impl From<crate::W<ROUTELOC1_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `TSUEXTCLKLOC` reader - I/O Location"]
+pub type TSUEXTCLKLOC_R = crate::FieldReader<u8, TSUEXTCLKLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TSUEXTCLKLOC_A {
     #[doc = "0: Location 0"]
@@ -53,8 +55,6 @@ impl From<TSUEXTCLKLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TSUEXTCLKLOC` reader - I/O Location"]
-pub type TSUEXTCLKLOC_R = crate::FieldReader<u8, TSUEXTCLKLOC_A>;
 impl TSUEXTCLKLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,8 +89,9 @@ impl TSUEXTCLKLOC_R {
     }
 }
 #[doc = "Field `TSUEXTCLKLOC` writer - I/O Location"]
-pub type TSUEXTCLKLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, TSUEXTCLKLOC_A, 6, 0>;
-impl<'a> TSUEXTCLKLOC_W<'a> {
+pub type TSUEXTCLKLOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, TSUEXTCLKLOC_A, 6, O>;
+impl<'a, const O: u8> TSUEXTCLKLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -112,8 +113,10 @@ impl<'a> TSUEXTCLKLOC_W<'a> {
         self.variant(TSUEXTCLKLOC_A::LOC3)
     }
 }
+#[doc = "Field `TSUTMRTOGLOC` reader - I/O Location"]
+pub type TSUTMRTOGLOC_R = crate::FieldReader<u8, TSUTMRTOGLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TSUTMRTOGLOC_A {
     #[doc = "0: Location 0"]
@@ -131,8 +134,6 @@ impl From<TSUTMRTOGLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TSUTMRTOGLOC` reader - I/O Location"]
-pub type TSUTMRTOGLOC_R = crate::FieldReader<u8, TSUTMRTOGLOC_A>;
 impl TSUTMRTOGLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -167,8 +168,9 @@ impl TSUTMRTOGLOC_R {
     }
 }
 #[doc = "Field `TSUTMRTOGLOC` writer - I/O Location"]
-pub type TSUTMRTOGLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, TSUTMRTOGLOC_A, 6, 8>;
-impl<'a> TSUTMRTOGLOC_W<'a> {
+pub type TSUTMRTOGLOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, TSUTMRTOGLOC_A, 6, O>;
+impl<'a, const O: u8> TSUTMRTOGLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -190,8 +192,10 @@ impl<'a> TSUTMRTOGLOC_W<'a> {
         self.variant(TSUTMRTOGLOC_A::LOC3)
     }
 }
+#[doc = "Field `MDIOLOC` reader - I/O Location"]
+pub type MDIOLOC_R = crate::FieldReader<u8, MDIOLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MDIOLOC_A {
     #[doc = "0: Location 0"]
@@ -209,8 +213,6 @@ impl From<MDIOLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `MDIOLOC` reader - I/O Location"]
-pub type MDIOLOC_R = crate::FieldReader<u8, MDIOLOC_A>;
 impl MDIOLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -245,8 +247,9 @@ impl MDIOLOC_R {
     }
 }
 #[doc = "Field `MDIOLOC` writer - I/O Location"]
-pub type MDIOLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, MDIOLOC_A, 6, 16>;
-impl<'a> MDIOLOC_W<'a> {
+pub type MDIOLOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, MDIOLOC_A, 6, O>;
+impl<'a, const O: u8> MDIOLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -268,8 +271,10 @@ impl<'a> MDIOLOC_W<'a> {
         self.variant(MDIOLOC_A::LOC3)
     }
 }
+#[doc = "Field `RMIILOC` reader - I/O Location"]
+pub type RMIILOC_R = crate::FieldReader<u8, RMIILOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum RMIILOC_A {
     #[doc = "0: Location 0"]
@@ -283,8 +288,6 @@ impl From<RMIILOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `RMIILOC` reader - I/O Location"]
-pub type RMIILOC_R = crate::FieldReader<u8, RMIILOC_A>;
 impl RMIILOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -307,8 +310,9 @@ impl RMIILOC_R {
     }
 }
 #[doc = "Field `RMIILOC` writer - I/O Location"]
-pub type RMIILOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, RMIILOC_A, 6, 24>;
-impl<'a> RMIILOC_W<'a> {
+pub type RMIILOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC1_SPEC, u8, RMIILOC_A, 6, O>;
+impl<'a, const O: u8> RMIILOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -345,22 +349,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - I/O Location"]
     #[inline(always)]
-    pub fn tsuextclkloc(&mut self) -> TSUEXTCLKLOC_W {
+    #[must_use]
+    pub fn tsuextclkloc(&mut self) -> TSUEXTCLKLOC_W<0> {
         TSUEXTCLKLOC_W::new(self)
     }
     #[doc = "Bits 8:13 - I/O Location"]
     #[inline(always)]
-    pub fn tsutmrtogloc(&mut self) -> TSUTMRTOGLOC_W {
+    #[must_use]
+    pub fn tsutmrtogloc(&mut self) -> TSUTMRTOGLOC_W<8> {
         TSUTMRTOGLOC_W::new(self)
     }
     #[doc = "Bits 16:21 - I/O Location"]
     #[inline(always)]
-    pub fn mdioloc(&mut self) -> MDIOLOC_W {
+    #[must_use]
+    pub fn mdioloc(&mut self) -> MDIOLOC_W<16> {
         MDIOLOC_W::new(self)
     }
     #[doc = "Bits 24:29 - I/O Location"]
     #[inline(always)]
-    pub fn rmiiloc(&mut self) -> RMIILOC_W {
+    #[must_use]
+    pub fn rmiiloc(&mut self) -> RMIILOC_W<24> {
         RMIILOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -382,11 +390,10 @@ impl crate::Readable for ROUTELOC1_SPEC {
 #[doc = "`write(|w| ..)` method takes [routeloc1::W](W) writer structure"]
 impl crate::Writable for ROUTELOC1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTELOC1 to value 0"]
 impl crate::Resettable for ROUTELOC1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

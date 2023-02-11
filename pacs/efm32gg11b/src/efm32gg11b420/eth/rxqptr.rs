@@ -37,18 +37,19 @@ impl From<crate::W<RXQPTR_SPEC>> for W {
 #[doc = "Field `DMARXQPTR` reader - Receive buffer queue base address"]
 pub type DMARXQPTR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DMARXQPTR` writer - Receive buffer queue base address"]
-pub type DMARXQPTR_W<'a> = crate::FieldWriter<'a, u32, RXQPTR_SPEC, u32, u32, 30, 2>;
+pub type DMARXQPTR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXQPTR_SPEC, u32, u32, 30, O>;
 impl R {
     #[doc = "Bits 2:31 - Receive buffer queue base address"]
     #[inline(always)]
     pub fn dmarxqptr(&self) -> DMARXQPTR_R {
-        DMARXQPTR_R::new(((self.bits >> 2) & 0x3fff_ffff) as u32)
+        DMARXQPTR_R::new((self.bits >> 2) & 0x3fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 2:31 - Receive buffer queue base address"]
     #[inline(always)]
-    pub fn dmarxqptr(&mut self) -> DMARXQPTR_W {
+    #[must_use]
+    pub fn dmarxqptr(&mut self) -> DMARXQPTR_W<2> {
         DMARXQPTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for RXQPTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxqptr::W](W) writer structure"]
 impl crate::Writable for RXQPTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXQPTR to value 0"]
 impl crate::Resettable for RXQPTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

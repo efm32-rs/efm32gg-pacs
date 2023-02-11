@@ -35,49 +35,54 @@ impl From<crate::W<FLASHCMDCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CMDEXEC` writer - Execute the Command"]
-pub type CMDEXEC_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 0>;
+pub type CMDEXEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `CMDEXECSTATUS` reader - Command Execution in Progress"]
 pub type CMDEXECSTATUS_R = crate::BitReader<bool>;
 #[doc = "Field `STIGMEMBANKEN` reader - STIG Memory Bank Enable Bit"]
 pub type STIGMEMBANKEN_R = crate::BitReader<bool>;
 #[doc = "Field `STIGMEMBANKEN` writer - STIG Memory Bank Enable Bit"]
-pub type STIGMEMBANKEN_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 2>;
+pub type STIGMEMBANKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `NUMDUMMYCYCLES` reader - Number of Dummy Cycles"]
 pub type NUMDUMMYCYCLES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUMDUMMYCYCLES` writer - Number of Dummy Cycles"]
-pub type NUMDUMMYCYCLES_W<'a> = crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 5, 7>;
+pub type NUMDUMMYCYCLES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 5, O>;
 #[doc = "Field `NUMWRDATABYTES` reader - Number of Write Data Bytes"]
 pub type NUMWRDATABYTES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUMWRDATABYTES` writer - Number of Write Data Bytes"]
-pub type NUMWRDATABYTES_W<'a> = crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 3, 12>;
+pub type NUMWRDATABYTES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `ENBWRITEDATA` reader - Write Data Enable"]
 pub type ENBWRITEDATA_R = crate::BitReader<bool>;
 #[doc = "Field `ENBWRITEDATA` writer - Write Data Enable"]
-pub type ENBWRITEDATA_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 15>;
+pub type ENBWRITEDATA_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `NUMADDRBYTES` reader - Number of Address Bytes"]
 pub type NUMADDRBYTES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUMADDRBYTES` writer - Number of Address Bytes"]
-pub type NUMADDRBYTES_W<'a> = crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 2, 16>;
+pub type NUMADDRBYTES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ENBMODEBIT` reader - Mode Bit Enable"]
 pub type ENBMODEBIT_R = crate::BitReader<bool>;
 #[doc = "Field `ENBMODEBIT` writer - Mode Bit Enable"]
-pub type ENBMODEBIT_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 18>;
+pub type ENBMODEBIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `ENBCOMDADDR` reader - Command Address Enable"]
 pub type ENBCOMDADDR_R = crate::BitReader<bool>;
 #[doc = "Field `ENBCOMDADDR` writer - Command Address Enable"]
-pub type ENBCOMDADDR_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 19>;
+pub type ENBCOMDADDR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `NUMRDDATABYTES` reader - Number of Read Data Bytes"]
 pub type NUMRDDATABYTES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUMRDDATABYTES` writer - Number of Read Data Bytes"]
-pub type NUMRDDATABYTES_W<'a> = crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 3, 20>;
+pub type NUMRDDATABYTES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `ENBREADDATA` reader - Read Data Enable"]
 pub type ENBREADDATA_R = crate::BitReader<bool>;
 #[doc = "Field `ENBREADDATA` writer - Read Data Enable"]
-pub type ENBREADDATA_W<'a> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, 23>;
+pub type ENBREADDATA_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASHCMDCTRL_SPEC, bool, O>;
 #[doc = "Field `CMDOPCODE` reader - Command Opcode"]
 pub type CMDOPCODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CMDOPCODE` writer - Command Opcode"]
-pub type CMDOPCODE_W<'a> = crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 8, 24>;
+pub type CMDOPCODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FLASHCMDCTRL_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bit 1 - Command Execution in Progress"]
     #[inline(always)]
@@ -138,57 +143,68 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Execute the Command"]
     #[inline(always)]
-    pub fn cmdexec(&mut self) -> CMDEXEC_W {
+    #[must_use]
+    pub fn cmdexec(&mut self) -> CMDEXEC_W<0> {
         CMDEXEC_W::new(self)
     }
     #[doc = "Bit 2 - STIG Memory Bank Enable Bit"]
     #[inline(always)]
-    pub fn stigmembanken(&mut self) -> STIGMEMBANKEN_W {
+    #[must_use]
+    pub fn stigmembanken(&mut self) -> STIGMEMBANKEN_W<2> {
         STIGMEMBANKEN_W::new(self)
     }
     #[doc = "Bits 7:11 - Number of Dummy Cycles"]
     #[inline(always)]
-    pub fn numdummycycles(&mut self) -> NUMDUMMYCYCLES_W {
+    #[must_use]
+    pub fn numdummycycles(&mut self) -> NUMDUMMYCYCLES_W<7> {
         NUMDUMMYCYCLES_W::new(self)
     }
     #[doc = "Bits 12:14 - Number of Write Data Bytes"]
     #[inline(always)]
-    pub fn numwrdatabytes(&mut self) -> NUMWRDATABYTES_W {
+    #[must_use]
+    pub fn numwrdatabytes(&mut self) -> NUMWRDATABYTES_W<12> {
         NUMWRDATABYTES_W::new(self)
     }
     #[doc = "Bit 15 - Write Data Enable"]
     #[inline(always)]
-    pub fn enbwritedata(&mut self) -> ENBWRITEDATA_W {
+    #[must_use]
+    pub fn enbwritedata(&mut self) -> ENBWRITEDATA_W<15> {
         ENBWRITEDATA_W::new(self)
     }
     #[doc = "Bits 16:17 - Number of Address Bytes"]
     #[inline(always)]
-    pub fn numaddrbytes(&mut self) -> NUMADDRBYTES_W {
+    #[must_use]
+    pub fn numaddrbytes(&mut self) -> NUMADDRBYTES_W<16> {
         NUMADDRBYTES_W::new(self)
     }
     #[doc = "Bit 18 - Mode Bit Enable"]
     #[inline(always)]
-    pub fn enbmodebit(&mut self) -> ENBMODEBIT_W {
+    #[must_use]
+    pub fn enbmodebit(&mut self) -> ENBMODEBIT_W<18> {
         ENBMODEBIT_W::new(self)
     }
     #[doc = "Bit 19 - Command Address Enable"]
     #[inline(always)]
-    pub fn enbcomdaddr(&mut self) -> ENBCOMDADDR_W {
+    #[must_use]
+    pub fn enbcomdaddr(&mut self) -> ENBCOMDADDR_W<19> {
         ENBCOMDADDR_W::new(self)
     }
     #[doc = "Bits 20:22 - Number of Read Data Bytes"]
     #[inline(always)]
-    pub fn numrddatabytes(&mut self) -> NUMRDDATABYTES_W {
+    #[must_use]
+    pub fn numrddatabytes(&mut self) -> NUMRDDATABYTES_W<20> {
         NUMRDDATABYTES_W::new(self)
     }
     #[doc = "Bit 23 - Read Data Enable"]
     #[inline(always)]
-    pub fn enbreaddata(&mut self) -> ENBREADDATA_W {
+    #[must_use]
+    pub fn enbreaddata(&mut self) -> ENBREADDATA_W<23> {
         ENBREADDATA_W::new(self)
     }
     #[doc = "Bits 24:31 - Command Opcode"]
     #[inline(always)]
-    pub fn cmdopcode(&mut self) -> CMDOPCODE_W {
+    #[must_use]
+    pub fn cmdopcode(&mut self) -> CMDOPCODE_W<24> {
         CMDOPCODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -210,11 +226,10 @@ impl crate::Readable for FLASHCMDCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [flashcmdctrl::W](W) writer structure"]
 impl crate::Writable for FLASHCMDCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASHCMDCTRL to value 0"]
 impl crate::Resettable for FLASHCMDCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

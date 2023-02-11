@@ -33,8 +33,5 @@ impl crate::Readable for TSUPTPRXMSBSEC_SPEC {
 }
 #[doc = "`reset()` method sets TSUPTPRXMSBSEC to value 0"]
 impl crate::Resettable for TSUPTPRXMSBSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

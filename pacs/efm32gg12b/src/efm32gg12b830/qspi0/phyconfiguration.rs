@@ -37,15 +37,16 @@ impl From<crate::W<PHYCONFIGURATION_SPEC>> for W {
 #[doc = "Field `PHYCONFIGRXDLLDELAY` reader - RX DLL Delay"]
 pub type PHYCONFIGRXDLLDELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PHYCONFIGRXDLLDELAY` writer - RX DLL Delay"]
-pub type PHYCONFIGRXDLLDELAY_W<'a> =
-    crate::FieldWriter<'a, u32, PHYCONFIGURATION_SPEC, u8, u8, 7, 0>;
+pub type PHYCONFIGRXDLLDELAY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PHYCONFIGURATION_SPEC, u8, u8, 7, O>;
 #[doc = "Field `PHYCONFIGTXDLLDELAY` reader - TX DLL Delay"]
 pub type PHYCONFIGTXDLLDELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PHYCONFIGTXDLLDELAY` writer - TX DLL Delay"]
-pub type PHYCONFIGTXDLLDELAY_W<'a> =
-    crate::FieldWriter<'a, u32, PHYCONFIGURATION_SPEC, u8, u8, 7, 16>;
+pub type PHYCONFIGTXDLLDELAY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PHYCONFIGURATION_SPEC, u8, u8, 7, O>;
 #[doc = "Field `PHYCONFIGRESYNC` writer - PHY Config Resync"]
-pub type PHYCONFIGRESYNC_W<'a> = crate::BitWriter<'a, u32, PHYCONFIGURATION_SPEC, bool, 31>;
+pub type PHYCONFIGRESYNC_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PHYCONFIGURATION_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:6 - RX DLL Delay"]
     #[inline(always)]
@@ -61,17 +62,20 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - RX DLL Delay"]
     #[inline(always)]
-    pub fn phyconfigrxdlldelay(&mut self) -> PHYCONFIGRXDLLDELAY_W {
+    #[must_use]
+    pub fn phyconfigrxdlldelay(&mut self) -> PHYCONFIGRXDLLDELAY_W<0> {
         PHYCONFIGRXDLLDELAY_W::new(self)
     }
     #[doc = "Bits 16:22 - TX DLL Delay"]
     #[inline(always)]
-    pub fn phyconfigtxdlldelay(&mut self) -> PHYCONFIGTXDLLDELAY_W {
+    #[must_use]
+    pub fn phyconfigtxdlldelay(&mut self) -> PHYCONFIGTXDLLDELAY_W<16> {
         PHYCONFIGTXDLLDELAY_W::new(self)
     }
     #[doc = "Bit 31 - PHY Config Resync"]
     #[inline(always)]
-    pub fn phyconfigresync(&mut self) -> PHYCONFIGRESYNC_W {
+    #[must_use]
+    pub fn phyconfigresync(&mut self) -> PHYCONFIGRESYNC_W<31> {
         PHYCONFIGRESYNC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -93,11 +97,10 @@ impl crate::Readable for PHYCONFIGURATION_SPEC {
 #[doc = "`write(|w| ..)` method takes [phyconfiguration::W](W) writer structure"]
 impl crate::Writable for PHYCONFIGURATION_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PHYCONFIGURATION to value 0"]
 impl crate::Resettable for PHYCONFIGURATION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

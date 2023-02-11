@@ -41,8 +41,10 @@ pub type VOLTSUP1P8V_R = crate::BitReader<bool>;
 pub type SYSBUS64BSUP_R = crate::BitReader<bool>;
 #[doc = "Field `ASYNCINTSUP` reader - Asynchronous Interrupt Support"]
 pub type ASYNCINTSUP_R = crate::BitReader<bool>;
+#[doc = "Field `IFSLOTTYPE` reader - Interface Card Slot Type"]
+pub type IFSLOTTYPE_R = crate::FieldReader<u8, IFSLOTTYPE_A>;
 #[doc = "Interface Card Slot Type\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum IFSLOTTYPE_A {
     #[doc = "0: Removable Card Slot"]
@@ -58,8 +60,6 @@ impl From<IFSLOTTYPE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `IFSLOTTYPE` reader - Interface Card Slot Type"]
-pub type IFSLOTTYPE_R = crate::FieldReader<u8, IFSLOTTYPE_A>;
 impl IFSLOTTYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -175,8 +175,5 @@ impl crate::Readable for CAPAB0_SPEC {
 }
 #[doc = "`reset()` method sets CAPAB0 to value 0"]
 impl crate::Resettable for CAPAB0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

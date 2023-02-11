@@ -37,11 +37,11 @@ impl From<crate::W<WRPROTCTRL_SPEC>> for W {
 #[doc = "Field `INV` reader - Write Protection Inversion Bit"]
 pub type INV_R = crate::BitReader<bool>;
 #[doc = "Field `INV` writer - Write Protection Inversion Bit"]
-pub type INV_W<'a> = crate::BitWriter<'a, u32, WRPROTCTRL_SPEC, bool, 0>;
+pub type INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, WRPROTCTRL_SPEC, bool, O>;
 #[doc = "Field `ENB` reader - Write Protection Enable Bit"]
 pub type ENB_R = crate::BitReader<bool>;
 #[doc = "Field `ENB` writer - Write Protection Enable Bit"]
-pub type ENB_W<'a> = crate::BitWriter<'a, u32, WRPROTCTRL_SPEC, bool, 1>;
+pub type ENB_W<'a, const O: u8> = crate::BitWriter<'a, u32, WRPROTCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Write Protection Inversion Bit"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write Protection Inversion Bit"]
     #[inline(always)]
-    pub fn inv(&mut self) -> INV_W {
+    #[must_use]
+    pub fn inv(&mut self) -> INV_W<0> {
         INV_W::new(self)
     }
     #[doc = "Bit 1 - Write Protection Enable Bit"]
     #[inline(always)]
-    pub fn enb(&mut self) -> ENB_W {
+    #[must_use]
+    pub fn enb(&mut self) -> ENB_W<1> {
         ENB_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for WRPROTCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [wrprotctrl::W](W) writer structure"]
 impl crate::Writable for WRPROTCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WRPROTCTRL to value 0"]
 impl crate::Resettable for WRPROTCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

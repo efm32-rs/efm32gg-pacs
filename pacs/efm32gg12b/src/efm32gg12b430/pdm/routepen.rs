@@ -37,23 +37,23 @@ impl From<crate::W<ROUTEPEN_SPEC>> for W {
 #[doc = "Field `DAT0PEN` reader - DAT0 I/O Enable"]
 pub type DAT0PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DAT0PEN` writer - DAT0 I/O Enable"]
-pub type DAT0PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 0>;
+pub type DAT0PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DAT1PEN` reader - DAT1 I/O Enable"]
 pub type DAT1PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DAT1PEN` writer - DAT1 I/O Enable"]
-pub type DAT1PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 1>;
+pub type DAT1PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DAT2PEN` reader - DAT2 I/O Enable"]
 pub type DAT2PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DAT2PEN` writer - DAT2 I/O Enable"]
-pub type DAT2PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 2>;
+pub type DAT2PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `DAT3PEN` reader - DAT3 I/O Enable"]
 pub type DAT3PEN_R = crate::BitReader<bool>;
 #[doc = "Field `DAT3PEN` writer - DAT3 I/O Enable"]
-pub type DAT3PEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 3>;
+pub type DAT3PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `CLKPEN` reader - CLK I/O Enable"]
 pub type CLKPEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLKPEN` writer - CLK I/O Enable"]
-pub type CLKPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 8>;
+pub type CLKPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - DAT0 I/O Enable"]
     #[inline(always)]
@@ -84,27 +84,32 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DAT0 I/O Enable"]
     #[inline(always)]
-    pub fn dat0pen(&mut self) -> DAT0PEN_W {
+    #[must_use]
+    pub fn dat0pen(&mut self) -> DAT0PEN_W<0> {
         DAT0PEN_W::new(self)
     }
     #[doc = "Bit 1 - DAT1 I/O Enable"]
     #[inline(always)]
-    pub fn dat1pen(&mut self) -> DAT1PEN_W {
+    #[must_use]
+    pub fn dat1pen(&mut self) -> DAT1PEN_W<1> {
         DAT1PEN_W::new(self)
     }
     #[doc = "Bit 2 - DAT2 I/O Enable"]
     #[inline(always)]
-    pub fn dat2pen(&mut self) -> DAT2PEN_W {
+    #[must_use]
+    pub fn dat2pen(&mut self) -> DAT2PEN_W<2> {
         DAT2PEN_W::new(self)
     }
     #[doc = "Bit 3 - DAT3 I/O Enable"]
     #[inline(always)]
-    pub fn dat3pen(&mut self) -> DAT3PEN_W {
+    #[must_use]
+    pub fn dat3pen(&mut self) -> DAT3PEN_W<3> {
         DAT3PEN_W::new(self)
     }
     #[doc = "Bit 8 - CLK I/O Enable"]
     #[inline(always)]
-    pub fn clkpen(&mut self) -> CLKPEN_W {
+    #[must_use]
+    pub fn clkpen(&mut self) -> CLKPEN_W<8> {
         CLKPEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -126,11 +131,10 @@ impl crate::Readable for ROUTEPEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [routepen::W](W) writer structure"]
 impl crate::Writable for ROUTEPEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTEPEN to value 0"]
 impl crate::Resettable for ROUTEPEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

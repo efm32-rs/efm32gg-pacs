@@ -37,19 +37,20 @@ impl From<crate::W<RDDATACAPTURE_SPEC>> for W {
 #[doc = "Field `BYPASS` reader - Bypass the Adapted Loopback Clock Circuit"]
 pub type BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `BYPASS` writer - Bypass the Adapted Loopback Clock Circuit"]
-pub type BYPASS_W<'a> = crate::BitWriter<'a, u32, RDDATACAPTURE_SPEC, bool, 0>;
+pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, RDDATACAPTURE_SPEC, bool, O>;
 #[doc = "Field `DELAY` reader - Read Delay"]
 pub type DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DELAY` writer - Read Delay"]
-pub type DELAY_W<'a> = crate::FieldWriter<'a, u32, RDDATACAPTURE_SPEC, u8, u8, 4, 1>;
+pub type DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RDDATACAPTURE_SPEC, u8, u8, 4, O>;
 #[doc = "Field `DQSENABLE` reader - DQS Enable Bit"]
 pub type DQSENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `DQSENABLE` writer - DQS Enable Bit"]
-pub type DQSENABLE_W<'a> = crate::BitWriter<'a, u32, RDDATACAPTURE_SPEC, bool, 8>;
+pub type DQSENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RDDATACAPTURE_SPEC, bool, O>;
 #[doc = "Field `DDRREADDELAY` reader - DDR Read Delay"]
 pub type DDRREADDELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DDRREADDELAY` writer - DDR Read Delay"]
-pub type DDRREADDELAY_W<'a> = crate::FieldWriter<'a, u32, RDDATACAPTURE_SPEC, u8, u8, 4, 16>;
+pub type DDRREADDELAY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RDDATACAPTURE_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bit 0 - Bypass the Adapted Loopback Clock Circuit"]
     #[inline(always)]
@@ -75,22 +76,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Bypass the Adapted Loopback Clock Circuit"]
     #[inline(always)]
-    pub fn bypass(&mut self) -> BYPASS_W {
+    #[must_use]
+    pub fn bypass(&mut self) -> BYPASS_W<0> {
         BYPASS_W::new(self)
     }
     #[doc = "Bits 1:4 - Read Delay"]
     #[inline(always)]
-    pub fn delay(&mut self) -> DELAY_W {
+    #[must_use]
+    pub fn delay(&mut self) -> DELAY_W<1> {
         DELAY_W::new(self)
     }
     #[doc = "Bit 8 - DQS Enable Bit"]
     #[inline(always)]
-    pub fn dqsenable(&mut self) -> DQSENABLE_W {
+    #[must_use]
+    pub fn dqsenable(&mut self) -> DQSENABLE_W<8> {
         DQSENABLE_W::new(self)
     }
     #[doc = "Bits 16:19 - DDR Read Delay"]
     #[inline(always)]
-    pub fn ddrreaddelay(&mut self) -> DDRREADDELAY_W {
+    #[must_use]
+    pub fn ddrreaddelay(&mut self) -> DDRREADDELAY_W<16> {
         DDRREADDELAY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -112,11 +117,10 @@ impl crate::Readable for RDDATACAPTURE_SPEC {
 #[doc = "`write(|w| ..)` method takes [rddatacapture::W](W) writer structure"]
 impl crate::Writable for RDDATACAPTURE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RDDATACAPTURE to value 0x01"]
 impl crate::Resettable for RDDATACAPTURE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

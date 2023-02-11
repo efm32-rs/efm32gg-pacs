@@ -46,8 +46,10 @@ pub type AC12ENDBITERR_R = crate::BitReader<bool>;
 pub type AC12INDEXERR_R = crate::BitReader<bool>;
 #[doc = "Field `CNIBAC12ERR` reader - Command Not Issued By Auto CMD12 Error"]
 pub type CNIBAC12ERR_R = crate::BitReader<bool>;
+#[doc = "Field `UHSMODESEL` reader - UHS Mode Select"]
+pub type UHSMODESEL_R = crate::FieldReader<u8, UHSMODESEL_A>;
 #[doc = "UHS Mode Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum UHSMODESEL_A {
     #[doc = "0: SDR12"]
@@ -67,8 +69,6 @@ impl From<UHSMODESEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `UHSMODESEL` reader - UHS Mode Select"]
-pub type UHSMODESEL_R = crate::FieldReader<u8, UHSMODESEL_A>;
 impl UHSMODESEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -109,8 +109,9 @@ impl UHSMODESEL_R {
     }
 }
 #[doc = "Field `UHSMODESEL` writer - UHS Mode Select"]
-pub type UHSMODESEL_W<'a> = crate::FieldWriter<'a, u32, AC12ERRSTAT_SPEC, u8, UHSMODESEL_A, 3, 16>;
-impl<'a> UHSMODESEL_W<'a> {
+pub type UHSMODESEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, AC12ERRSTAT_SPEC, u8, UHSMODESEL_A, 3, O>;
+impl<'a, const O: u8> UHSMODESEL_W<'a, O> {
     #[doc = "SDR12"]
     #[inline(always)]
     pub fn sdr12(self) -> &'a mut W {
@@ -140,9 +141,11 @@ impl<'a> UHSMODESEL_W<'a> {
 #[doc = "Field `SIGEN1P8V` reader - Voltage 1.8V Signal Enable"]
 pub type SIGEN1P8V_R = crate::BitReader<bool>;
 #[doc = "Field `SIGEN1P8V` writer - Voltage 1.8V Signal Enable"]
-pub type SIGEN1P8V_W<'a> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, 19>;
+pub type SIGEN1P8V_W<'a, const O: u8> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, O>;
+#[doc = "Field `DRVSTNSEL` reader - Driver Strength Select"]
+pub type DRVSTNSEL_R = crate::FieldReader<u8, DRVSTNSEL_A>;
 #[doc = "Driver Strength Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DRVSTNSEL_A {
     #[doc = "0: Driver Type B is selected (Default)"]
@@ -160,8 +163,6 @@ impl From<DRVSTNSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DRVSTNSEL` reader - Driver Strength Select"]
-pub type DRVSTNSEL_R = crate::FieldReader<u8, DRVSTNSEL_A>;
 impl DRVSTNSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -196,9 +197,9 @@ impl DRVSTNSEL_R {
     }
 }
 #[doc = "Field `DRVSTNSEL` writer - Driver Strength Select"]
-pub type DRVSTNSEL_W<'a> =
-    crate::FieldWriterSafe<'a, u32, AC12ERRSTAT_SPEC, u8, DRVSTNSEL_A, 2, 20>;
-impl<'a> DRVSTNSEL_W<'a> {
+pub type DRVSTNSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, AC12ERRSTAT_SPEC, u8, DRVSTNSEL_A, 2, O>;
+impl<'a, const O: u8> DRVSTNSEL_W<'a, O> {
     #[doc = "Driver Type B is selected (Default)"]
     #[inline(always)]
     pub fn typeb(self) -> &'a mut W {
@@ -223,19 +224,19 @@ impl<'a> DRVSTNSEL_W<'a> {
 #[doc = "Field `EXETUNING` reader - Execute Tuning"]
 pub type EXETUNING_R = crate::BitReader<bool>;
 #[doc = "Field `EXETUNING` writer - Execute Tuning"]
-pub type EXETUNING_W<'a> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, 22>;
+pub type EXETUNING_W<'a, const O: u8> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, O>;
 #[doc = "Field `SAMPCLKSEL` reader - Sampling Clock Select"]
 pub type SAMPCLKSEL_R = crate::BitReader<bool>;
 #[doc = "Field `SAMPCLKSEL` writer - Sampling Clock Select"]
-pub type SAMPCLKSEL_W<'a> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, 23>;
+pub type SAMPCLKSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, O>;
 #[doc = "Field `ASYNCINTEN` reader - Asynchronous Interrupt Enable"]
 pub type ASYNCINTEN_R = crate::BitReader<bool>;
 #[doc = "Field `ASYNCINTEN` writer - Asynchronous Interrupt Enable"]
-pub type ASYNCINTEN_W<'a> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, 30>;
+pub type ASYNCINTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, O>;
 #[doc = "Field `PRSTVALEN` reader - Preset Value Enable"]
 pub type PRSTVALEN_R = crate::BitReader<bool>;
 #[doc = "Field `PRSTVALEN` writer - Preset Value Enable"]
-pub type PRSTVALEN_W<'a> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, 31>;
+pub type PRSTVALEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AC12ERRSTAT_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Auto CMD12 Not Executed"]
     #[inline(always)]
@@ -306,37 +307,44 @@ impl R {
 impl W {
     #[doc = "Bits 16:18 - UHS Mode Select"]
     #[inline(always)]
-    pub fn uhsmodesel(&mut self) -> UHSMODESEL_W {
+    #[must_use]
+    pub fn uhsmodesel(&mut self) -> UHSMODESEL_W<16> {
         UHSMODESEL_W::new(self)
     }
     #[doc = "Bit 19 - Voltage 1.8V Signal Enable"]
     #[inline(always)]
-    pub fn sigen1p8v(&mut self) -> SIGEN1P8V_W {
+    #[must_use]
+    pub fn sigen1p8v(&mut self) -> SIGEN1P8V_W<19> {
         SIGEN1P8V_W::new(self)
     }
     #[doc = "Bits 20:21 - Driver Strength Select"]
     #[inline(always)]
-    pub fn drvstnsel(&mut self) -> DRVSTNSEL_W {
+    #[must_use]
+    pub fn drvstnsel(&mut self) -> DRVSTNSEL_W<20> {
         DRVSTNSEL_W::new(self)
     }
     #[doc = "Bit 22 - Execute Tuning"]
     #[inline(always)]
-    pub fn exetuning(&mut self) -> EXETUNING_W {
+    #[must_use]
+    pub fn exetuning(&mut self) -> EXETUNING_W<22> {
         EXETUNING_W::new(self)
     }
     #[doc = "Bit 23 - Sampling Clock Select"]
     #[inline(always)]
-    pub fn sampclksel(&mut self) -> SAMPCLKSEL_W {
+    #[must_use]
+    pub fn sampclksel(&mut self) -> SAMPCLKSEL_W<23> {
         SAMPCLKSEL_W::new(self)
     }
     #[doc = "Bit 30 - Asynchronous Interrupt Enable"]
     #[inline(always)]
-    pub fn asyncinten(&mut self) -> ASYNCINTEN_W {
+    #[must_use]
+    pub fn asyncinten(&mut self) -> ASYNCINTEN_W<30> {
         ASYNCINTEN_W::new(self)
     }
     #[doc = "Bit 31 - Preset Value Enable"]
     #[inline(always)]
-    pub fn prstvalen(&mut self) -> PRSTVALEN_W {
+    #[must_use]
+    pub fn prstvalen(&mut self) -> PRSTVALEN_W<31> {
         PRSTVALEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -358,11 +366,10 @@ impl crate::Readable for AC12ERRSTAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [ac12errstat::W](W) writer structure"]
 impl crate::Writable for AC12ERRSTAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AC12ERRSTAT to value 0"]
 impl crate::Resettable for AC12ERRSTAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

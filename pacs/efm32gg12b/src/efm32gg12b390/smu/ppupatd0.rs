@@ -37,119 +37,119 @@ impl From<crate::W<PPUPATD0_SPEC>> for W {
 #[doc = "Field `ACMP0` reader - Analog Comparator 0 access control bit"]
 pub type ACMP0_R = crate::BitReader<bool>;
 #[doc = "Field `ACMP0` writer - Analog Comparator 0 access control bit"]
-pub type ACMP0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 0>;
+pub type ACMP0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `ACMP1` reader - Analog Comparator 1 access control bit"]
 pub type ACMP1_R = crate::BitReader<bool>;
 #[doc = "Field `ACMP1` writer - Analog Comparator 1 access control bit"]
-pub type ACMP1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 1>;
+pub type ACMP1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `ACMP2` reader - Analog Comparator 2 access control bit"]
 pub type ACMP2_R = crate::BitReader<bool>;
 #[doc = "Field `ACMP2` writer - Analog Comparator 2 access control bit"]
-pub type ACMP2_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 2>;
+pub type ACMP2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `ADC0` reader - Analog to Digital Converter 0 access control bit"]
 pub type ADC0_R = crate::BitReader<bool>;
 #[doc = "Field `ADC0` writer - Analog to Digital Converter 0 access control bit"]
-pub type ADC0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 3>;
+pub type ADC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `ADC1` reader - Analog to Digital Converter 0 access control bit"]
 pub type ADC1_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1` writer - Analog to Digital Converter 0 access control bit"]
-pub type ADC1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 4>;
+pub type ADC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CAN0` reader - CAN 0 access control bit"]
 pub type CAN0_R = crate::BitReader<bool>;
 #[doc = "Field `CAN0` writer - CAN 0 access control bit"]
-pub type CAN0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 5>;
+pub type CAN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CAN1` reader - CAN 1 access control bit"]
 pub type CAN1_R = crate::BitReader<bool>;
 #[doc = "Field `CAN1` writer - CAN 1 access control bit"]
-pub type CAN1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 6>;
+pub type CAN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CMU` reader - Clock Management Unit access control bit"]
 pub type CMU_R = crate::BitReader<bool>;
 #[doc = "Field `CMU` writer - Clock Management Unit access control bit"]
-pub type CMU_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 7>;
+pub type CMU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CRYOTIMER` reader - CRYOTIMER access control bit"]
 pub type CRYOTIMER_R = crate::BitReader<bool>;
 #[doc = "Field `CRYOTIMER` writer - CRYOTIMER access control bit"]
-pub type CRYOTIMER_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 8>;
+pub type CRYOTIMER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CRYPTO0` reader - Advanced Encryption Standard Accelerator access control bit"]
 pub type CRYPTO0_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO0` writer - Advanced Encryption Standard Accelerator access control bit"]
-pub type CRYPTO0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 9>;
+pub type CRYPTO0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `CSEN` reader - Capacitive touch sense module access control bit"]
 pub type CSEN_R = crate::BitReader<bool>;
 #[doc = "Field `CSEN` writer - Capacitive touch sense module access control bit"]
-pub type CSEN_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 10>;
+pub type CSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `VDAC0` reader - Digital to Analog Converter 0 access control bit"]
 pub type VDAC0_R = crate::BitReader<bool>;
 #[doc = "Field `VDAC0` writer - Digital to Analog Converter 0 access control bit"]
-pub type VDAC0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 11>;
+pub type VDAC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `PRS` reader - Peripheral Reflex System access control bit"]
 pub type PRS_R = crate::BitReader<bool>;
 #[doc = "Field `PRS` writer - Peripheral Reflex System access control bit"]
-pub type PRS_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 12>;
+pub type PRS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `EBI` reader - External Bus Interface access control bit"]
 pub type EBI_R = crate::BitReader<bool>;
 #[doc = "Field `EBI` writer - External Bus Interface access control bit"]
-pub type EBI_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 13>;
+pub type EBI_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `EMU` reader - Energy Management Unit access control bit"]
 pub type EMU_R = crate::BitReader<bool>;
 #[doc = "Field `EMU` writer - Energy Management Unit access control bit"]
-pub type EMU_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 14>;
+pub type EMU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `FPUEH` reader - FPU Exception Handler access control bit"]
 pub type FPUEH_R = crate::BitReader<bool>;
 #[doc = "Field `FPUEH` writer - FPU Exception Handler access control bit"]
-pub type FPUEH_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 15>;
+pub type FPUEH_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `GPCRC` reader - General Purpose CRC access control bit"]
 pub type GPCRC_R = crate::BitReader<bool>;
 #[doc = "Field `GPCRC` writer - General Purpose CRC access control bit"]
-pub type GPCRC_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 16>;
+pub type GPCRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `GPIO` reader - General purpose Input/Output access control bit"]
 pub type GPIO_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO` writer - General purpose Input/Output access control bit"]
-pub type GPIO_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 17>;
+pub type GPIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `I2C0` reader - I2C 0 access control bit"]
 pub type I2C0_R = crate::BitReader<bool>;
 #[doc = "Field `I2C0` writer - I2C 0 access control bit"]
-pub type I2C0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 18>;
+pub type I2C0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `I2C1` reader - I2C 1 access control bit"]
 pub type I2C1_R = crate::BitReader<bool>;
 #[doc = "Field `I2C1` writer - I2C 1 access control bit"]
-pub type I2C1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 19>;
+pub type I2C1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `IDAC0` reader - Current Digital to Analog Converter 0 access control bit"]
 pub type IDAC0_R = crate::BitReader<bool>;
 #[doc = "Field `IDAC0` writer - Current Digital to Analog Converter 0 access control bit"]
-pub type IDAC0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 20>;
+pub type IDAC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `MSC` reader - Memory System Controller access control bit"]
 pub type MSC_R = crate::BitReader<bool>;
 #[doc = "Field `MSC` writer - Memory System Controller access control bit"]
-pub type MSC_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 21>;
+pub type MSC_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LCD` reader - Liquid Crystal Display Controller access control bit"]
 pub type LCD_R = crate::BitReader<bool>;
 #[doc = "Field `LCD` writer - Liquid Crystal Display Controller access control bit"]
-pub type LCD_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 22>;
+pub type LCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LDMA` reader - Linked Direct Memory Access Controller access control bit"]
 pub type LDMA_R = crate::BitReader<bool>;
 #[doc = "Field `LDMA` writer - Linked Direct Memory Access Controller access control bit"]
-pub type LDMA_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 23>;
+pub type LDMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LESENSE` reader - Low Energy Sensor Interface access control bit"]
 pub type LESENSE_R = crate::BitReader<bool>;
 #[doc = "Field `LESENSE` writer - Low Energy Sensor Interface access control bit"]
-pub type LESENSE_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 24>;
+pub type LESENSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LETIMER0` reader - Low Energy Timer 0 access control bit"]
 pub type LETIMER0_R = crate::BitReader<bool>;
 #[doc = "Field `LETIMER0` writer - Low Energy Timer 0 access control bit"]
-pub type LETIMER0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 25>;
+pub type LETIMER0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LETIMER1` reader - Low Energy Timer 1 access control bit"]
 pub type LETIMER1_R = crate::BitReader<bool>;
 #[doc = "Field `LETIMER1` writer - Low Energy Timer 1 access control bit"]
-pub type LETIMER1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 26>;
+pub type LETIMER1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LEUART0` reader - Low Energy UART 0 access control bit"]
 pub type LEUART0_R = crate::BitReader<bool>;
 #[doc = "Field `LEUART0` writer - Low Energy UART 0 access control bit"]
-pub type LEUART0_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 27>;
+pub type LEUART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 #[doc = "Field `LEUART1` reader - Low Energy UART 1 access control bit"]
 pub type LEUART1_R = crate::BitReader<bool>;
 #[doc = "Field `LEUART1` writer - Low Energy UART 1 access control bit"]
-pub type LEUART1_W<'a> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, 28>;
+pub type LEUART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PPUPATD0_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Analog Comparator 0 access control bit"]
     #[inline(always)]
@@ -300,147 +300,176 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Analog Comparator 0 access control bit"]
     #[inline(always)]
-    pub fn acmp0(&mut self) -> ACMP0_W {
+    #[must_use]
+    pub fn acmp0(&mut self) -> ACMP0_W<0> {
         ACMP0_W::new(self)
     }
     #[doc = "Bit 1 - Analog Comparator 1 access control bit"]
     #[inline(always)]
-    pub fn acmp1(&mut self) -> ACMP1_W {
+    #[must_use]
+    pub fn acmp1(&mut self) -> ACMP1_W<1> {
         ACMP1_W::new(self)
     }
     #[doc = "Bit 2 - Analog Comparator 2 access control bit"]
     #[inline(always)]
-    pub fn acmp2(&mut self) -> ACMP2_W {
+    #[must_use]
+    pub fn acmp2(&mut self) -> ACMP2_W<2> {
         ACMP2_W::new(self)
     }
     #[doc = "Bit 3 - Analog to Digital Converter 0 access control bit"]
     #[inline(always)]
-    pub fn adc0(&mut self) -> ADC0_W {
+    #[must_use]
+    pub fn adc0(&mut self) -> ADC0_W<3> {
         ADC0_W::new(self)
     }
     #[doc = "Bit 4 - Analog to Digital Converter 0 access control bit"]
     #[inline(always)]
-    pub fn adc1(&mut self) -> ADC1_W {
+    #[must_use]
+    pub fn adc1(&mut self) -> ADC1_W<4> {
         ADC1_W::new(self)
     }
     #[doc = "Bit 5 - CAN 0 access control bit"]
     #[inline(always)]
-    pub fn can0(&mut self) -> CAN0_W {
+    #[must_use]
+    pub fn can0(&mut self) -> CAN0_W<5> {
         CAN0_W::new(self)
     }
     #[doc = "Bit 6 - CAN 1 access control bit"]
     #[inline(always)]
-    pub fn can1(&mut self) -> CAN1_W {
+    #[must_use]
+    pub fn can1(&mut self) -> CAN1_W<6> {
         CAN1_W::new(self)
     }
     #[doc = "Bit 7 - Clock Management Unit access control bit"]
     #[inline(always)]
-    pub fn cmu(&mut self) -> CMU_W {
+    #[must_use]
+    pub fn cmu(&mut self) -> CMU_W<7> {
         CMU_W::new(self)
     }
     #[doc = "Bit 8 - CRYOTIMER access control bit"]
     #[inline(always)]
-    pub fn cryotimer(&mut self) -> CRYOTIMER_W {
+    #[must_use]
+    pub fn cryotimer(&mut self) -> CRYOTIMER_W<8> {
         CRYOTIMER_W::new(self)
     }
     #[doc = "Bit 9 - Advanced Encryption Standard Accelerator access control bit"]
     #[inline(always)]
-    pub fn crypto0(&mut self) -> CRYPTO0_W {
+    #[must_use]
+    pub fn crypto0(&mut self) -> CRYPTO0_W<9> {
         CRYPTO0_W::new(self)
     }
     #[doc = "Bit 10 - Capacitive touch sense module access control bit"]
     #[inline(always)]
-    pub fn csen(&mut self) -> CSEN_W {
+    #[must_use]
+    pub fn csen(&mut self) -> CSEN_W<10> {
         CSEN_W::new(self)
     }
     #[doc = "Bit 11 - Digital to Analog Converter 0 access control bit"]
     #[inline(always)]
-    pub fn vdac0(&mut self) -> VDAC0_W {
+    #[must_use]
+    pub fn vdac0(&mut self) -> VDAC0_W<11> {
         VDAC0_W::new(self)
     }
     #[doc = "Bit 12 - Peripheral Reflex System access control bit"]
     #[inline(always)]
-    pub fn prs(&mut self) -> PRS_W {
+    #[must_use]
+    pub fn prs(&mut self) -> PRS_W<12> {
         PRS_W::new(self)
     }
     #[doc = "Bit 13 - External Bus Interface access control bit"]
     #[inline(always)]
-    pub fn ebi(&mut self) -> EBI_W {
+    #[must_use]
+    pub fn ebi(&mut self) -> EBI_W<13> {
         EBI_W::new(self)
     }
     #[doc = "Bit 14 - Energy Management Unit access control bit"]
     #[inline(always)]
-    pub fn emu(&mut self) -> EMU_W {
+    #[must_use]
+    pub fn emu(&mut self) -> EMU_W<14> {
         EMU_W::new(self)
     }
     #[doc = "Bit 15 - FPU Exception Handler access control bit"]
     #[inline(always)]
-    pub fn fpueh(&mut self) -> FPUEH_W {
+    #[must_use]
+    pub fn fpueh(&mut self) -> FPUEH_W<15> {
         FPUEH_W::new(self)
     }
     #[doc = "Bit 16 - General Purpose CRC access control bit"]
     #[inline(always)]
-    pub fn gpcrc(&mut self) -> GPCRC_W {
+    #[must_use]
+    pub fn gpcrc(&mut self) -> GPCRC_W<16> {
         GPCRC_W::new(self)
     }
     #[doc = "Bit 17 - General purpose Input/Output access control bit"]
     #[inline(always)]
-    pub fn gpio(&mut self) -> GPIO_W {
+    #[must_use]
+    pub fn gpio(&mut self) -> GPIO_W<17> {
         GPIO_W::new(self)
     }
     #[doc = "Bit 18 - I2C 0 access control bit"]
     #[inline(always)]
-    pub fn i2c0(&mut self) -> I2C0_W {
+    #[must_use]
+    pub fn i2c0(&mut self) -> I2C0_W<18> {
         I2C0_W::new(self)
     }
     #[doc = "Bit 19 - I2C 1 access control bit"]
     #[inline(always)]
-    pub fn i2c1(&mut self) -> I2C1_W {
+    #[must_use]
+    pub fn i2c1(&mut self) -> I2C1_W<19> {
         I2C1_W::new(self)
     }
     #[doc = "Bit 20 - Current Digital to Analog Converter 0 access control bit"]
     #[inline(always)]
-    pub fn idac0(&mut self) -> IDAC0_W {
+    #[must_use]
+    pub fn idac0(&mut self) -> IDAC0_W<20> {
         IDAC0_W::new(self)
     }
     #[doc = "Bit 21 - Memory System Controller access control bit"]
     #[inline(always)]
-    pub fn msc(&mut self) -> MSC_W {
+    #[must_use]
+    pub fn msc(&mut self) -> MSC_W<21> {
         MSC_W::new(self)
     }
     #[doc = "Bit 22 - Liquid Crystal Display Controller access control bit"]
     #[inline(always)]
-    pub fn lcd(&mut self) -> LCD_W {
+    #[must_use]
+    pub fn lcd(&mut self) -> LCD_W<22> {
         LCD_W::new(self)
     }
     #[doc = "Bit 23 - Linked Direct Memory Access Controller access control bit"]
     #[inline(always)]
-    pub fn ldma(&mut self) -> LDMA_W {
+    #[must_use]
+    pub fn ldma(&mut self) -> LDMA_W<23> {
         LDMA_W::new(self)
     }
     #[doc = "Bit 24 - Low Energy Sensor Interface access control bit"]
     #[inline(always)]
-    pub fn lesense(&mut self) -> LESENSE_W {
+    #[must_use]
+    pub fn lesense(&mut self) -> LESENSE_W<24> {
         LESENSE_W::new(self)
     }
     #[doc = "Bit 25 - Low Energy Timer 0 access control bit"]
     #[inline(always)]
-    pub fn letimer0(&mut self) -> LETIMER0_W {
+    #[must_use]
+    pub fn letimer0(&mut self) -> LETIMER0_W<25> {
         LETIMER0_W::new(self)
     }
     #[doc = "Bit 26 - Low Energy Timer 1 access control bit"]
     #[inline(always)]
-    pub fn letimer1(&mut self) -> LETIMER1_W {
+    #[must_use]
+    pub fn letimer1(&mut self) -> LETIMER1_W<26> {
         LETIMER1_W::new(self)
     }
     #[doc = "Bit 27 - Low Energy UART 0 access control bit"]
     #[inline(always)]
-    pub fn leuart0(&mut self) -> LEUART0_W {
+    #[must_use]
+    pub fn leuart0(&mut self) -> LEUART0_W<27> {
         LEUART0_W::new(self)
     }
     #[doc = "Bit 28 - Low Energy UART 1 access control bit"]
     #[inline(always)]
-    pub fn leuart1(&mut self) -> LEUART1_W {
+    #[must_use]
+    pub fn leuart1(&mut self) -> LEUART1_W<28> {
         LEUART1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -462,11 +491,10 @@ impl crate::Readable for PPUPATD0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ppupatd0::W](W) writer structure"]
 impl crate::Writable for PPUPATD0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PPUPATD0 to value 0"]
 impl crate::Resettable for PPUPATD0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

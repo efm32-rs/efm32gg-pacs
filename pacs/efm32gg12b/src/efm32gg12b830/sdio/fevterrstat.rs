@@ -37,67 +37,67 @@ impl From<crate::W<FEVTERRSTAT_SPEC>> for W {
 #[doc = "Field `AC12NEX` reader - Force Event for Command Not Issued By Auto CM12 Not Executed"]
 pub type AC12NEX_R = crate::BitReader<bool>;
 #[doc = "Field `AC12NEX` writer - Force Event for Command Not Issued By Auto CM12 Not Executed"]
-pub type AC12NEX_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 0>;
+pub type AC12NEX_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `AC12TOE` reader - Force Event for Auto CMD Timeout Error"]
 pub type AC12TOE_R = crate::BitReader<bool>;
 #[doc = "Field `AC12TOE` writer - Force Event for Auto CMD Timeout Error"]
-pub type AC12TOE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 1>;
+pub type AC12TOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `AC12CRCE` reader - Force Event for Auto CMD CRC Error"]
 pub type AC12CRCE_R = crate::BitReader<bool>;
 #[doc = "Field `AC12CRCE` writer - Force Event for Auto CMD CRC Error"]
-pub type AC12CRCE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 2>;
+pub type AC12CRCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `AC12EBE` reader - Force Event for Auto CMD End Bit Error"]
 pub type AC12EBE_R = crate::BitReader<bool>;
 #[doc = "Field `AC12EBE` writer - Force Event for Auto CMD End Bit Error"]
-pub type AC12EBE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 3>;
+pub type AC12EBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `AC12INDXE` reader - Force Event for Auto CMD Index Error"]
 pub type AC12INDXE_R = crate::BitReader<bool>;
 #[doc = "Field `AC12INDXE` writer - Force Event for Auto CMD Index Error"]
-pub type AC12INDXE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 4>;
+pub type AC12INDXE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CNIBAC12E` reader - Force Event for Command Not Issued By Auto CMD12 Error"]
 pub type CNIBAC12E_R = crate::BitReader<bool>;
 #[doc = "Field `CNIBAC12E` writer - Force Event for Command Not Issued By Auto CMD12 Error"]
-pub type CNIBAC12E_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 7>;
+pub type CNIBAC12E_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CMDTOE` reader - Force Event for Command Timeout Error"]
 pub type CMDTOE_R = crate::BitReader<bool>;
 #[doc = "Field `CMDTOE` writer - Force Event for Command Timeout Error"]
-pub type CMDTOE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 16>;
+pub type CMDTOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CMDCRCE` reader - Force Event for Command CRC Error"]
 pub type CMDCRCE_R = crate::BitReader<bool>;
 #[doc = "Field `CMDCRCE` writer - Force Event for Command CRC Error"]
-pub type CMDCRCE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 17>;
+pub type CMDCRCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CMDEBE` reader - Force Event for Command End Bit Error"]
 pub type CMDEBE_R = crate::BitReader<bool>;
 #[doc = "Field `CMDEBE` writer - Force Event for Command End Bit Error"]
-pub type CMDEBE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 18>;
+pub type CMDEBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CMDINDXE` reader - Force Event for Command Index Error"]
 pub type CMDINDXE_R = crate::BitReader<bool>;
 #[doc = "Field `CMDINDXE` writer - Force Event for Command Index Error"]
-pub type CMDINDXE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 19>;
+pub type CMDINDXE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `DATTOE` reader - Force Event for Data Timeout Error"]
 pub type DATTOE_R = crate::BitReader<bool>;
 #[doc = "Field `DATTOE` writer - Force Event for Data Timeout Error"]
-pub type DATTOE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 20>;
+pub type DATTOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `DATCRCE` reader - Force Event for Data CRC Error"]
 pub type DATCRCE_R = crate::BitReader<bool>;
 #[doc = "Field `DATCRCE` writer - Force Event for Data CRC Error"]
-pub type DATCRCE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 21>;
+pub type DATCRCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `DATEBE` reader - Force Event for Data End Bit Error"]
 pub type DATEBE_R = crate::BitReader<bool>;
 #[doc = "Field `DATEBE` writer - Force Event for Data End Bit Error"]
-pub type DATEBE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 22>;
+pub type DATEBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `CURLIMITE` reader - Force Event for Current Limit Error"]
 pub type CURLIMITE_R = crate::BitReader<bool>;
 #[doc = "Field `CURLIMITE` writer - Force Event for Current Limit Error"]
-pub type CURLIMITE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 23>;
+pub type CURLIMITE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `AC12E` reader - Force Event for Auto CMD Error"]
 pub type AC12E_R = crate::BitReader<bool>;
 #[doc = "Field `AC12E` writer - Force Event for Auto CMD Error"]
-pub type AC12E_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 24>;
+pub type AC12E_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `ADMAE` reader - Force Event for ADMA Error"]
 pub type ADMAE_R = crate::BitReader<bool>;
 #[doc = "Field `ADMAE` writer - Force Event for ADMA Error"]
-pub type ADMAE_W<'a> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, 25>;
+pub type ADMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FEVTERRSTAT_SPEC, bool, O>;
 #[doc = "Field `TUNINGE` reader - Force Event for Tuning Errro"]
 pub type TUNINGE_R = crate::BitReader<bool>;
 #[doc = "Field `VENSPECE` reader - Force Event for Vendox Specific Error Status"]
@@ -197,82 +197,98 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Force Event for Command Not Issued By Auto CM12 Not Executed"]
     #[inline(always)]
-    pub fn ac12nex(&mut self) -> AC12NEX_W {
+    #[must_use]
+    pub fn ac12nex(&mut self) -> AC12NEX_W<0> {
         AC12NEX_W::new(self)
     }
     #[doc = "Bit 1 - Force Event for Auto CMD Timeout Error"]
     #[inline(always)]
-    pub fn ac12toe(&mut self) -> AC12TOE_W {
+    #[must_use]
+    pub fn ac12toe(&mut self) -> AC12TOE_W<1> {
         AC12TOE_W::new(self)
     }
     #[doc = "Bit 2 - Force Event for Auto CMD CRC Error"]
     #[inline(always)]
-    pub fn ac12crce(&mut self) -> AC12CRCE_W {
+    #[must_use]
+    pub fn ac12crce(&mut self) -> AC12CRCE_W<2> {
         AC12CRCE_W::new(self)
     }
     #[doc = "Bit 3 - Force Event for Auto CMD End Bit Error"]
     #[inline(always)]
-    pub fn ac12ebe(&mut self) -> AC12EBE_W {
+    #[must_use]
+    pub fn ac12ebe(&mut self) -> AC12EBE_W<3> {
         AC12EBE_W::new(self)
     }
     #[doc = "Bit 4 - Force Event for Auto CMD Index Error"]
     #[inline(always)]
-    pub fn ac12indxe(&mut self) -> AC12INDXE_W {
+    #[must_use]
+    pub fn ac12indxe(&mut self) -> AC12INDXE_W<4> {
         AC12INDXE_W::new(self)
     }
     #[doc = "Bit 7 - Force Event for Command Not Issued By Auto CMD12 Error"]
     #[inline(always)]
-    pub fn cnibac12e(&mut self) -> CNIBAC12E_W {
+    #[must_use]
+    pub fn cnibac12e(&mut self) -> CNIBAC12E_W<7> {
         CNIBAC12E_W::new(self)
     }
     #[doc = "Bit 16 - Force Event for Command Timeout Error"]
     #[inline(always)]
-    pub fn cmdtoe(&mut self) -> CMDTOE_W {
+    #[must_use]
+    pub fn cmdtoe(&mut self) -> CMDTOE_W<16> {
         CMDTOE_W::new(self)
     }
     #[doc = "Bit 17 - Force Event for Command CRC Error"]
     #[inline(always)]
-    pub fn cmdcrce(&mut self) -> CMDCRCE_W {
+    #[must_use]
+    pub fn cmdcrce(&mut self) -> CMDCRCE_W<17> {
         CMDCRCE_W::new(self)
     }
     #[doc = "Bit 18 - Force Event for Command End Bit Error"]
     #[inline(always)]
-    pub fn cmdebe(&mut self) -> CMDEBE_W {
+    #[must_use]
+    pub fn cmdebe(&mut self) -> CMDEBE_W<18> {
         CMDEBE_W::new(self)
     }
     #[doc = "Bit 19 - Force Event for Command Index Error"]
     #[inline(always)]
-    pub fn cmdindxe(&mut self) -> CMDINDXE_W {
+    #[must_use]
+    pub fn cmdindxe(&mut self) -> CMDINDXE_W<19> {
         CMDINDXE_W::new(self)
     }
     #[doc = "Bit 20 - Force Event for Data Timeout Error"]
     #[inline(always)]
-    pub fn dattoe(&mut self) -> DATTOE_W {
+    #[must_use]
+    pub fn dattoe(&mut self) -> DATTOE_W<20> {
         DATTOE_W::new(self)
     }
     #[doc = "Bit 21 - Force Event for Data CRC Error"]
     #[inline(always)]
-    pub fn datcrce(&mut self) -> DATCRCE_W {
+    #[must_use]
+    pub fn datcrce(&mut self) -> DATCRCE_W<21> {
         DATCRCE_W::new(self)
     }
     #[doc = "Bit 22 - Force Event for Data End Bit Error"]
     #[inline(always)]
-    pub fn datebe(&mut self) -> DATEBE_W {
+    #[must_use]
+    pub fn datebe(&mut self) -> DATEBE_W<22> {
         DATEBE_W::new(self)
     }
     #[doc = "Bit 23 - Force Event for Current Limit Error"]
     #[inline(always)]
-    pub fn curlimite(&mut self) -> CURLIMITE_W {
+    #[must_use]
+    pub fn curlimite(&mut self) -> CURLIMITE_W<23> {
         CURLIMITE_W::new(self)
     }
     #[doc = "Bit 24 - Force Event for Auto CMD Error"]
     #[inline(always)]
-    pub fn ac12e(&mut self) -> AC12E_W {
+    #[must_use]
+    pub fn ac12e(&mut self) -> AC12E_W<24> {
         AC12E_W::new(self)
     }
     #[doc = "Bit 25 - Force Event for ADMA Error"]
     #[inline(always)]
-    pub fn admae(&mut self) -> ADMAE_W {
+    #[must_use]
+    pub fn admae(&mut self) -> ADMAE_W<25> {
         ADMAE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -294,11 +310,10 @@ impl crate::Readable for FEVTERRSTAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [fevterrstat::W](W) writer structure"]
 impl crate::Writable for FEVTERRSTAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FEVTERRSTAT to value 0"]
 impl crate::Resettable for FEVTERRSTAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

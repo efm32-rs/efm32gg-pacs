@@ -37,7 +37,8 @@ impl From<crate::W<INDIRECTWRITEXFERSTART_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Start of Indirect Access"]
 pub type ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ADDR` writer - Start of Indirect Access"]
-pub type ADDR_W<'a> = crate::FieldWriter<'a, u32, INDIRECTWRITEXFERSTART_SPEC, u32, u32, 32, 0>;
+pub type ADDR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, INDIRECTWRITEXFERSTART_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Start of Indirect Access"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Start of Indirect Access"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
+    #[must_use]
+    pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for INDIRECTWRITEXFERSTART_SPEC {
 #[doc = "`write(|w| ..)` method takes [indirectwritexferstart::W](W) writer structure"]
 impl crate::Writable for INDIRECTWRITEXFERSTART_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INDIRECTWRITEXFERSTART to value 0"]
 impl crate::Resettable for INDIRECTWRITEXFERSTART_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

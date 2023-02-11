@@ -47,8 +47,5 @@ impl crate::Readable for MODULEID_SPEC {
 }
 #[doc = "`reset()` method sets MODULEID to value 0x0400_0300"]
 impl crate::Resettable for MODULEID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0400_0300
-    }
+    const RESET_VALUE: Self::Ux = 0x0400_0300;
 }

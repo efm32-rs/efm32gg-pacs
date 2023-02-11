@@ -37,25 +37,27 @@ impl From<crate::W<DEVINSTRWRCONFIG_SPEC>> for W {
 #[doc = "Field `WROPCODE` reader - Write Opcode"]
 pub type WROPCODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WROPCODE` writer - Write Opcode"]
-pub type WROPCODE_W<'a> = crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 8, 0>;
+pub type WROPCODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 8, O>;
 #[doc = "Field `WELDIS` reader - WEL Disable"]
 pub type WELDIS_R = crate::BitReader<bool>;
 #[doc = "Field `WELDIS` writer - WEL Disable"]
-pub type WELDIS_W<'a> = crate::BitWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, bool, 8>;
+pub type WELDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, bool, O>;
 #[doc = "Field `ADDRXFERTYPESTDMODE` reader - Address Transfer Type for Standard SPI Modes"]
 pub type ADDRXFERTYPESTDMODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDRXFERTYPESTDMODE` writer - Address Transfer Type for Standard SPI Modes"]
-pub type ADDRXFERTYPESTDMODE_W<'a> =
-    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 2, 12>;
+pub type ADDRXFERTYPESTDMODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 2, O>;
 #[doc = "Field `DATAXFERTYPEEXTMODE` reader - Data Transfer Type for Standard SPI Modes"]
 pub type DATAXFERTYPEEXTMODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DATAXFERTYPEEXTMODE` writer - Data Transfer Type for Standard SPI Modes"]
-pub type DATAXFERTYPEEXTMODE_W<'a> =
-    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 2, 16>;
+pub type DATAXFERTYPEEXTMODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 2, O>;
 #[doc = "Field `DUMMYWRCLKCYCLES` reader - Dummy Write Clock Cycles"]
 pub type DUMMYWRCLKCYCLES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DUMMYWRCLKCYCLES` writer - Dummy Write Clock Cycles"]
-pub type DUMMYWRCLKCYCLES_W<'a> = crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 5, 24>;
+pub type DUMMYWRCLKCYCLES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DEVINSTRWRCONFIG_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:7 - Write Opcode"]
     #[inline(always)]
@@ -86,27 +88,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Write Opcode"]
     #[inline(always)]
-    pub fn wropcode(&mut self) -> WROPCODE_W {
+    #[must_use]
+    pub fn wropcode(&mut self) -> WROPCODE_W<0> {
         WROPCODE_W::new(self)
     }
     #[doc = "Bit 8 - WEL Disable"]
     #[inline(always)]
-    pub fn weldis(&mut self) -> WELDIS_W {
+    #[must_use]
+    pub fn weldis(&mut self) -> WELDIS_W<8> {
         WELDIS_W::new(self)
     }
     #[doc = "Bits 12:13 - Address Transfer Type for Standard SPI Modes"]
     #[inline(always)]
-    pub fn addrxfertypestdmode(&mut self) -> ADDRXFERTYPESTDMODE_W {
+    #[must_use]
+    pub fn addrxfertypestdmode(&mut self) -> ADDRXFERTYPESTDMODE_W<12> {
         ADDRXFERTYPESTDMODE_W::new(self)
     }
     #[doc = "Bits 16:17 - Data Transfer Type for Standard SPI Modes"]
     #[inline(always)]
-    pub fn dataxfertypeextmode(&mut self) -> DATAXFERTYPEEXTMODE_W {
+    #[must_use]
+    pub fn dataxfertypeextmode(&mut self) -> DATAXFERTYPEEXTMODE_W<16> {
         DATAXFERTYPEEXTMODE_W::new(self)
     }
     #[doc = "Bits 24:28 - Dummy Write Clock Cycles"]
     #[inline(always)]
-    pub fn dummywrclkcycles(&mut self) -> DUMMYWRCLKCYCLES_W {
+    #[must_use]
+    pub fn dummywrclkcycles(&mut self) -> DUMMYWRCLKCYCLES_W<24> {
         DUMMYWRCLKCYCLES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -128,11 +135,10 @@ impl crate::Readable for DEVINSTRWRCONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [devinstrwrconfig::W](W) writer structure"]
 impl crate::Writable for DEVINSTRWRCONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DEVINSTRWRCONFIG to value 0x02"]
 impl crate::Resettable for DEVINSTRWRCONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

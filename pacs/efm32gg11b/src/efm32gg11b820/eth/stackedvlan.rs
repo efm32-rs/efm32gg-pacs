@@ -37,11 +37,11 @@ impl From<crate::W<STACKEDVLAN_SPEC>> for W {
 #[doc = "Field `MATCH` reader - User defined VLAN_TYPE field"]
 pub type MATCH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MATCH` writer - User defined VLAN_TYPE field"]
-pub type MATCH_W<'a> = crate::FieldWriter<'a, u32, STACKEDVLAN_SPEC, u16, u16, 16, 0>;
+pub type MATCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STACKEDVLAN_SPEC, u16, u16, 16, O>;
 #[doc = "Field `ENBPROCESSING` reader - Enable stacked VLAN processing mode"]
 pub type ENBPROCESSING_R = crate::BitReader<bool>;
 #[doc = "Field `ENBPROCESSING` writer - Enable stacked VLAN processing mode"]
-pub type ENBPROCESSING_W<'a> = crate::BitWriter<'a, u32, STACKEDVLAN_SPEC, bool, 31>;
+pub type ENBPROCESSING_W<'a, const O: u8> = crate::BitWriter<'a, u32, STACKEDVLAN_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - User defined VLAN_TYPE field"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - User defined VLAN_TYPE field"]
     #[inline(always)]
-    pub fn match_(&mut self) -> MATCH_W {
+    #[must_use]
+    pub fn match_(&mut self) -> MATCH_W<0> {
         MATCH_W::new(self)
     }
     #[doc = "Bit 31 - Enable stacked VLAN processing mode"]
     #[inline(always)]
-    pub fn enbprocessing(&mut self) -> ENBPROCESSING_W {
+    #[must_use]
+    pub fn enbprocessing(&mut self) -> ENBPROCESSING_W<31> {
         ENBPROCESSING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for STACKEDVLAN_SPEC {
 #[doc = "`write(|w| ..)` method takes [stackedvlan::W](W) writer structure"]
 impl crate::Writable for STACKEDVLAN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STACKEDVLAN to value 0"]
 impl crate::Resettable for STACKEDVLAN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

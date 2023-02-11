@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:23 - DMA Structure Operation Done Interrupt Flag"]
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
-        DONE_R::new((self.bits & 0x00ff_ffff) as u32)
+        DONE_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bit 31 - Transfer Error Interrupt Flag"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for IF_SPEC {
 }
 #[doc = "`reset()` method sets IF to value 0"]
 impl crate::Resettable for IF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

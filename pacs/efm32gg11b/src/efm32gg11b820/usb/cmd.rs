@@ -20,18 +20,20 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `STARTCD` writer - Start Charger Detection Enabled"]
-pub type STARTCD_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 0>;
+pub type STARTCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 #[doc = "Field `STOPCD` writer - Start Charger Detection in Progress"]
-pub type STOPCD_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 1>;
+pub type STOPCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Start Charger Detection Enabled"]
     #[inline(always)]
-    pub fn startcd(&mut self) -> STARTCD_W {
+    #[must_use]
+    pub fn startcd(&mut self) -> STARTCD_W<0> {
         STARTCD_W::new(self)
     }
     #[doc = "Bit 1 - Start Charger Detection in Progress"]
     #[inline(always)]
-    pub fn stopcd(&mut self) -> STOPCD_W {
+    #[must_use]
+    pub fn stopcd(&mut self) -> STOPCD_W<1> {
         STOPCD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -49,11 +51,10 @@ impl crate::RegisterSpec for CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0"]
 impl crate::Resettable for CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

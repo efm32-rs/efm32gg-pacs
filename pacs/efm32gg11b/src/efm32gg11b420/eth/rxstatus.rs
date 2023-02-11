@@ -37,19 +37,19 @@ impl From<crate::W<RXSTATUS_SPEC>> for W {
 #[doc = "Field `BUFFNOTAVAIL` reader - Buffer not available"]
 pub type BUFFNOTAVAIL_R = crate::BitReader<bool>;
 #[doc = "Field `BUFFNOTAVAIL` writer - Buffer not available"]
-pub type BUFFNOTAVAIL_W<'a> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, 0>;
+pub type BUFFNOTAVAIL_W<'a, const O: u8> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, O>;
 #[doc = "Field `FRMRX` reader - Frame received"]
 pub type FRMRX_R = crate::BitReader<bool>;
 #[doc = "Field `FRMRX` writer - Frame received"]
-pub type FRMRX_W<'a> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, 1>;
+pub type FRMRX_W<'a, const O: u8> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, O>;
 #[doc = "Field `RXOVERRUN` reader - Receive overrun"]
 pub type RXOVERRUN_R = crate::BitReader<bool>;
 #[doc = "Field `RXOVERRUN` writer - Receive overrun"]
-pub type RXOVERRUN_W<'a> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, 2>;
+pub type RXOVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, O>;
 #[doc = "Field `RESPNOTOK` reader - bresp/hresp not OK"]
 pub type RESPNOTOK_R = crate::BitReader<bool>;
 #[doc = "Field `RESPNOTOK` writer - bresp/hresp not OK"]
-pub type RESPNOTOK_W<'a> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, 3>;
+pub type RESPNOTOK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RXSTATUS_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Buffer not available"]
     #[inline(always)]
@@ -75,22 +75,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Buffer not available"]
     #[inline(always)]
-    pub fn buffnotavail(&mut self) -> BUFFNOTAVAIL_W {
+    #[must_use]
+    pub fn buffnotavail(&mut self) -> BUFFNOTAVAIL_W<0> {
         BUFFNOTAVAIL_W::new(self)
     }
     #[doc = "Bit 1 - Frame received"]
     #[inline(always)]
-    pub fn frmrx(&mut self) -> FRMRX_W {
+    #[must_use]
+    pub fn frmrx(&mut self) -> FRMRX_W<1> {
         FRMRX_W::new(self)
     }
     #[doc = "Bit 2 - Receive overrun"]
     #[inline(always)]
-    pub fn rxoverrun(&mut self) -> RXOVERRUN_W {
+    #[must_use]
+    pub fn rxoverrun(&mut self) -> RXOVERRUN_W<2> {
         RXOVERRUN_W::new(self)
     }
     #[doc = "Bit 3 - bresp/hresp not OK"]
     #[inline(always)]
-    pub fn respnotok(&mut self) -> RESPNOTOK_W {
+    #[must_use]
+    pub fn respnotok(&mut self) -> RESPNOTOK_W<3> {
         RESPNOTOK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -112,11 +116,10 @@ impl crate::Readable for RXSTATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxstatus::W](W) writer structure"]
 impl crate::Writable for RXSTATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXSTATUS to value 0"]
 impl crate::Resettable for RXSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

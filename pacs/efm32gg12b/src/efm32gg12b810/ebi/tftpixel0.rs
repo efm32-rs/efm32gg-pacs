@@ -37,18 +37,19 @@ impl From<crate::W<TFTPIXEL0_SPEC>> for W {
 #[doc = "Field `DATA` reader - RGB Data"]
 pub type DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA` writer - RGB Data"]
-pub type DATA_W<'a> = crate::FieldWriter<'a, u32, TFTPIXEL0_SPEC, u32, u32, 24, 0>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTPIXEL0_SPEC, u32, u32, 24, O>;
 impl R {
     #[doc = "Bits 0:23 - RGB Data"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
-        DATA_R::new((self.bits & 0x00ff_ffff) as u32)
+        DATA_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - RGB Data"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W {
+    #[must_use]
+    pub fn data(&mut self) -> DATA_W<0> {
         DATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for TFTPIXEL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [tftpixel0::W](W) writer structure"]
 impl crate::Writable for TFTPIXEL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TFTPIXEL0 to value 0"]
 impl crate::Resettable for TFTPIXEL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

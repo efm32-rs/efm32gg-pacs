@@ -37,7 +37,7 @@ impl From<crate::W<RXBDCTRL_SPEC>> for W {
 #[doc = "Field `RXBDTSMODE` reader - RX Descriptor Timestamp Insertion mode, 00: TS insertion disable, 01: TS inserted for PTP Event Frames only, 10: TS inserted for All PTP Frames only, 11: TS insertion for All Frames"]
 pub type RXBDTSMODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXBDTSMODE` writer - RX Descriptor Timestamp Insertion mode, 00: TS insertion disable, 01: TS inserted for PTP Event Frames only, 10: TS inserted for All PTP Frames only, 11: TS insertion for All Frames"]
-pub type RXBDTSMODE_W<'a> = crate::FieldWriter<'a, u32, RXBDCTRL_SPEC, u8, u8, 2, 4>;
+pub type RXBDTSMODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXBDCTRL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 4:5 - RX Descriptor Timestamp Insertion mode, 00: TS insertion disable, 01: TS inserted for PTP Event Frames only, 10: TS inserted for All PTP Frames only, 11: TS insertion for All Frames"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 4:5 - RX Descriptor Timestamp Insertion mode, 00: TS insertion disable, 01: TS inserted for PTP Event Frames only, 10: TS inserted for All PTP Frames only, 11: TS insertion for All Frames"]
     #[inline(always)]
-    pub fn rxbdtsmode(&mut self) -> RXBDTSMODE_W {
+    #[must_use]
+    pub fn rxbdtsmode(&mut self) -> RXBDTSMODE_W<4> {
         RXBDTSMODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for RXBDCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxbdctrl::W](W) writer structure"]
 impl crate::Writable for RXBDCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXBDCTRL to value 0"]
 impl crate::Resettable for RXBDCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

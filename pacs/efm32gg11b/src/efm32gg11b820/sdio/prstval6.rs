@@ -17,8 +17,10 @@ impl From<crate::R<PRSTVAL6_SPEC>> for R {
 pub type SDR104SDCLKFREQVAL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDR104CLKGENVAL` reader - Clock Generator Select Value for SDR104"]
 pub type SDR104CLKGENVAL_R = crate::BitReader<bool>;
+#[doc = "Field `SDR104DRVSTVAL` reader - Driver Strength Select Value for SDR104"]
+pub type SDR104DRVSTVAL_R = crate::FieldReader<u8, SDR104DRVSTVAL_A>;
 #[doc = "Driver Strength Select Value for SDR104\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SDR104DRVSTVAL_A {
     #[doc = "0: Driver Type B is selected (Default)"]
@@ -36,8 +38,6 @@ impl From<SDR104DRVSTVAL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SDR104DRVSTVAL` reader - Driver Strength Select Value for SDR104"]
-pub type SDR104DRVSTVAL_R = crate::FieldReader<u8, SDR104DRVSTVAL_A>;
 impl SDR104DRVSTVAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -75,8 +75,10 @@ impl SDR104DRVSTVAL_R {
 pub type DDR50SDCLKFREQVAL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DDR50CLKGENVAL` reader - Clock Generator Select Value for DDR50"]
 pub type DDR50CLKGENVAL_R = crate::BitReader<bool>;
+#[doc = "Field `DDR50DRVSTVAL` reader - Driver Strength Select Value for DDR50"]
+pub type DDR50DRVSTVAL_R = crate::FieldReader<u8, DDR50DRVSTVAL_A>;
 #[doc = "Driver Strength Select Value for DDR50\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DDR50DRVSTVAL_A {
     #[doc = "0: Driver Type B is selected (Default)"]
@@ -94,8 +96,6 @@ impl From<DDR50DRVSTVAL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DDR50DRVSTVAL` reader - Driver Strength Select Value for DDR50"]
-pub type DDR50DRVSTVAL_R = crate::FieldReader<u8, DDR50DRVSTVAL_A>;
 impl DDR50DRVSTVAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -172,8 +172,5 @@ impl crate::Readable for PRSTVAL6_SPEC {
 }
 #[doc = "`reset()` method sets PRSTVAL6 to value 0"]
 impl crate::Resettable for PRSTVAL6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

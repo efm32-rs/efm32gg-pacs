@@ -37,7 +37,8 @@ impl From<crate::W<UNDERSIZEFRAMES_SPEC>> for W {
 #[doc = "Field `COUNT` reader - Undersize frames received"]
 pub type COUNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COUNT` writer - Undersize frames received"]
-pub type COUNT_W<'a> = crate::FieldWriter<'a, u32, UNDERSIZEFRAMES_SPEC, u16, u16, 10, 0>;
+pub type COUNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, UNDERSIZEFRAMES_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9 - Undersize frames received"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Undersize frames received"]
     #[inline(always)]
-    pub fn count(&mut self) -> COUNT_W {
+    #[must_use]
+    pub fn count(&mut self) -> COUNT_W<0> {
         COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for UNDERSIZEFRAMES_SPEC {
 #[doc = "`write(|w| ..)` method takes [undersizeframes::W](W) writer structure"]
 impl crate::Writable for UNDERSIZEFRAMES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UNDERSIZEFRAMES to value 0"]
 impl crate::Resettable for UNDERSIZEFRAMES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

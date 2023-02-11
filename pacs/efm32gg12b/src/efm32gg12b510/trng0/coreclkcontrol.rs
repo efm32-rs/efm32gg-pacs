@@ -37,11 +37,12 @@ impl From<crate::W<CORECLKCONTROL_SPEC>> for W {
 #[doc = "Field `CORECLKDIS` reader - Core Clock Disable"]
 pub type CORECLKDIS_R = crate::BitReader<bool>;
 #[doc = "Field `CORECLKDIS` writer - Core Clock Disable"]
-pub type CORECLKDIS_W<'a> = crate::BitWriter<'a, u32, CORECLKCONTROL_SPEC, bool, 0>;
+pub type CORECLKDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CORECLKCONTROL_SPEC, bool, O>;
 #[doc = "Field `CORECLKPRESC` reader - Clock division factor of CORECLKPRESC+1"]
 pub type CORECLKPRESC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORECLKPRESC` writer - Clock division factor of CORECLKPRESC+1"]
-pub type CORECLKPRESC_W<'a> = crate::FieldWriter<'a, u32, CORECLKCONTROL_SPEC, u8, u8, 3, 4>;
+pub type CORECLKPRESC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CORECLKCONTROL_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bit 0 - Core Clock Disable"]
     #[inline(always)]
@@ -57,12 +58,14 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Core Clock Disable"]
     #[inline(always)]
-    pub fn coreclkdis(&mut self) -> CORECLKDIS_W {
+    #[must_use]
+    pub fn coreclkdis(&mut self) -> CORECLKDIS_W<0> {
         CORECLKDIS_W::new(self)
     }
     #[doc = "Bits 4:6 - Clock division factor of CORECLKPRESC+1"]
     #[inline(always)]
-    pub fn coreclkpresc(&mut self) -> CORECLKPRESC_W {
+    #[must_use]
+    pub fn coreclkpresc(&mut self) -> CORECLKPRESC_W<4> {
         CORECLKPRESC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +87,10 @@ impl crate::Readable for CORECLKCONTROL_SPEC {
 #[doc = "`write(|w| ..)` method takes [coreclkcontrol::W](W) writer structure"]
 impl crate::Writable for CORECLKCONTROL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORECLKCONTROL to value 0"]
 impl crate::Resettable for CORECLKCONTROL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

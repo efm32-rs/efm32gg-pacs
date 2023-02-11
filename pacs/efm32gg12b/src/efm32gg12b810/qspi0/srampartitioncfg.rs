@@ -37,7 +37,7 @@ impl From<crate::W<SRAMPARTITIONCFG_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Indirect Read Partition Size"]
 pub type ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDR` writer - Indirect Read Partition Size"]
-pub type ADDR_W<'a> = crate::FieldWriter<'a, u32, SRAMPARTITIONCFG_SPEC, u8, u8, 8, 0>;
+pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAMPARTITIONCFG_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Indirect Read Partition Size"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Indirect Read Partition Size"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
+    #[must_use]
+    pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for SRAMPARTITIONCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [srampartitioncfg::W](W) writer structure"]
 impl crate::Writable for SRAMPARTITIONCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAMPARTITIONCFG to value 0x80"]
 impl crate::Resettable for SRAMPARTITIONCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

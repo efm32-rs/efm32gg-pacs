@@ -37,7 +37,8 @@ impl From<crate::W<SDMASYSADDR_SPEC>> for W {
 #[doc = "Field `SDMASYSADDRARG` reader - Physical SYS Memory ADDR Used for DMA Transfers or the Second Argument for the Auto CMD23"]
 pub type SDMASYSADDRARG_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SDMASYSADDRARG` writer - Physical SYS Memory ADDR Used for DMA Transfers or the Second Argument for the Auto CMD23"]
-pub type SDMASYSADDRARG_W<'a> = crate::FieldWriter<'a, u32, SDMASYSADDR_SPEC, u32, u32, 32, 0>;
+pub type SDMASYSADDRARG_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SDMASYSADDR_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Physical SYS Memory ADDR Used for DMA Transfers or the Second Argument for the Auto CMD23"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Physical SYS Memory ADDR Used for DMA Transfers or the Second Argument for the Auto CMD23"]
     #[inline(always)]
-    pub fn sdmasysaddrarg(&mut self) -> SDMASYSADDRARG_W {
+    #[must_use]
+    pub fn sdmasysaddrarg(&mut self) -> SDMASYSADDRARG_W<0> {
         SDMASYSADDRARG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for SDMASYSADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdmasysaddr::W](W) writer structure"]
 impl crate::Writable for SDMASYSADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDMASYSADDR to value 0"]
 impl crate::Resettable for SDMASYSADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

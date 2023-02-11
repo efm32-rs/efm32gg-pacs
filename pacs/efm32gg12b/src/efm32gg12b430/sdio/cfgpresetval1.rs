@@ -37,27 +37,31 @@ impl From<crate::W<CFGPRESETVAL1_SPEC>> for W {
 #[doc = "Field `HSPSDCLKFREQ` reader - High Speed SD_CLK Frequency"]
 pub type HSPSDCLKFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HSPSDCLKFREQ` writer - High Speed SD_CLK Frequency"]
-pub type HSPSDCLKFREQ_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u16, u16, 10, 0>;
+pub type HSPSDCLKFREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u16, u16, 10, O>;
 #[doc = "Field `HSPCLKGENEN` reader - High Speed SD_CLK Gen Enable"]
 pub type HSPCLKGENEN_R = crate::BitReader<bool>;
 #[doc = "Field `HSPCLKGENEN` writer - High Speed SD_CLK Gen Enable"]
-pub type HSPCLKGENEN_W<'a> = crate::BitWriter<'a, u32, CFGPRESETVAL1_SPEC, bool, 10>;
+pub type HSPCLKGENEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFGPRESETVAL1_SPEC, bool, O>;
 #[doc = "Field `HSPDRVST` reader - High Speed SD Drive Strength"]
 pub type HSPDRVST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HSPDRVST` writer - High Speed SD Drive Strength"]
-pub type HSPDRVST_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u8, u8, 2, 11>;
+pub type HSPDRVST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `SDR12SDCLKFREQ` reader - Preset Value for SDR12 Speed of SD_CLK"]
 pub type SDR12SDCLKFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDR12SDCLKFREQ` writer - Preset Value for SDR12 Speed of SD_CLK"]
-pub type SDR12SDCLKFREQ_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u16, u16, 10, 16>;
+pub type SDR12SDCLKFREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u16, u16, 10, O>;
 #[doc = "Field `SDR12CLKGENEN` reader - SDR12 Speed Clock Gen Enable"]
 pub type SDR12CLKGENEN_R = crate::BitReader<bool>;
 #[doc = "Field `SDR12CLKGENEN` writer - SDR12 Speed Clock Gen Enable"]
-pub type SDR12CLKGENEN_W<'a> = crate::BitWriter<'a, u32, CFGPRESETVAL1_SPEC, bool, 26>;
+pub type SDR12CLKGENEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFGPRESETVAL1_SPEC, bool, O>;
 #[doc = "Field `SDR12DRVST` reader - SDR12 Speed Drive Strength"]
 pub type SDR12DRVST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDR12DRVST` writer - SDR12 Speed Drive Strength"]
-pub type SDR12DRVST_W<'a> = crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u8, u8, 2, 27>;
+pub type SDR12DRVST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CFGPRESETVAL1_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:9 - High Speed SD_CLK Frequency"]
     #[inline(always)]
@@ -93,32 +97,38 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - High Speed SD_CLK Frequency"]
     #[inline(always)]
-    pub fn hspsdclkfreq(&mut self) -> HSPSDCLKFREQ_W {
+    #[must_use]
+    pub fn hspsdclkfreq(&mut self) -> HSPSDCLKFREQ_W<0> {
         HSPSDCLKFREQ_W::new(self)
     }
     #[doc = "Bit 10 - High Speed SD_CLK Gen Enable"]
     #[inline(always)]
-    pub fn hspclkgenen(&mut self) -> HSPCLKGENEN_W {
+    #[must_use]
+    pub fn hspclkgenen(&mut self) -> HSPCLKGENEN_W<10> {
         HSPCLKGENEN_W::new(self)
     }
     #[doc = "Bits 11:12 - High Speed SD Drive Strength"]
     #[inline(always)]
-    pub fn hspdrvst(&mut self) -> HSPDRVST_W {
+    #[must_use]
+    pub fn hspdrvst(&mut self) -> HSPDRVST_W<11> {
         HSPDRVST_W::new(self)
     }
     #[doc = "Bits 16:25 - Preset Value for SDR12 Speed of SD_CLK"]
     #[inline(always)]
-    pub fn sdr12sdclkfreq(&mut self) -> SDR12SDCLKFREQ_W {
+    #[must_use]
+    pub fn sdr12sdclkfreq(&mut self) -> SDR12SDCLKFREQ_W<16> {
         SDR12SDCLKFREQ_W::new(self)
     }
     #[doc = "Bit 26 - SDR12 Speed Clock Gen Enable"]
     #[inline(always)]
-    pub fn sdr12clkgenen(&mut self) -> SDR12CLKGENEN_W {
+    #[must_use]
+    pub fn sdr12clkgenen(&mut self) -> SDR12CLKGENEN_W<26> {
         SDR12CLKGENEN_W::new(self)
     }
     #[doc = "Bits 27:28 - SDR12 Speed Drive Strength"]
     #[inline(always)]
-    pub fn sdr12drvst(&mut self) -> SDR12DRVST_W {
+    #[must_use]
+    pub fn sdr12drvst(&mut self) -> SDR12DRVST_W<27> {
         SDR12DRVST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +150,10 @@ impl crate::Readable for CFGPRESETVAL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfgpresetval1::W](W) writer structure"]
 impl crate::Writable for CFGPRESETVAL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFGPRESETVAL1 to value 0"]
 impl crate::Resettable for CFGPRESETVAL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

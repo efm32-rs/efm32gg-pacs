@@ -37,61 +37,66 @@ impl From<crate::W<NETWORKCFG_SPEC>> for W {
 #[doc = "Field `SPEED` reader - Speed"]
 pub type SPEED_R = crate::BitReader<bool>;
 #[doc = "Field `SPEED` writer - Speed"]
-pub type SPEED_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 0>;
+pub type SPEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `FULLDUPLEX` reader - Full duplex"]
 pub type FULLDUPLEX_R = crate::BitReader<bool>;
 #[doc = "Field `FULLDUPLEX` writer - Full duplex"]
-pub type FULLDUPLEX_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 1>;
+pub type FULLDUPLEX_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `DISCRDNONVLANFRAMES` reader - Discard non-VLAN frames"]
 pub type DISCRDNONVLANFRAMES_R = crate::BitReader<bool>;
 #[doc = "Field `DISCRDNONVLANFRAMES` writer - Discard non-VLAN frames"]
-pub type DISCRDNONVLANFRAMES_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 2>;
+pub type DISCRDNONVLANFRAMES_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `JUMBOFRAMES` reader - Jumbo frames enable"]
 pub type JUMBOFRAMES_R = crate::BitReader<bool>;
 #[doc = "Field `JUMBOFRAMES` writer - Jumbo frames enable"]
-pub type JUMBOFRAMES_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 3>;
+pub type JUMBOFRAMES_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `COPYALLFRAMES` reader - Copy all frames"]
 pub type COPYALLFRAMES_R = crate::BitReader<bool>;
 #[doc = "Field `COPYALLFRAMES` writer - Copy all frames"]
-pub type COPYALLFRAMES_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 4>;
+pub type COPYALLFRAMES_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `NOBROADCAST` reader - No broadcast"]
 pub type NOBROADCAST_R = crate::BitReader<bool>;
 #[doc = "Field `NOBROADCAST` writer - No broadcast"]
-pub type NOBROADCAST_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 5>;
+pub type NOBROADCAST_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `MULTICASTHASHEN` reader - Multicast hash enable"]
 pub type MULTICASTHASHEN_R = crate::BitReader<bool>;
 #[doc = "Field `MULTICASTHASHEN` writer - Multicast hash enable"]
-pub type MULTICASTHASHEN_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 6>;
+pub type MULTICASTHASHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `UNICASTHASHEN` reader - Unicast hash enable"]
 pub type UNICASTHASHEN_R = crate::BitReader<bool>;
 #[doc = "Field `UNICASTHASHEN` writer - Unicast hash enable"]
-pub type UNICASTHASHEN_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 7>;
+pub type UNICASTHASHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `RX1536BYTEFRAMES` reader - Receive 1536 byte frames"]
 pub type RX1536BYTEFRAMES_R = crate::BitReader<bool>;
 #[doc = "Field `RX1536BYTEFRAMES` writer - Receive 1536 byte frames"]
-pub type RX1536BYTEFRAMES_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 8>;
+pub type RX1536BYTEFRAMES_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `RETRYTEST` reader - Retry test"]
 pub type RETRYTEST_R = crate::BitReader<bool>;
 #[doc = "Field `RETRYTEST` writer - Retry test"]
-pub type RETRYTEST_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 12>;
+pub type RETRYTEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `PAUSEEN` reader - Pause enable"]
 pub type PAUSEEN_R = crate::BitReader<bool>;
 #[doc = "Field `PAUSEEN` writer - Pause enable"]
-pub type PAUSEEN_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 13>;
+pub type PAUSEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `RXBUFFOFFSET` reader - Receive buffer offset"]
 pub type RXBUFFOFFSET_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXBUFFOFFSET` writer - Receive buffer offset"]
-pub type RXBUFFOFFSET_W<'a> = crate::FieldWriter<'a, u32, NETWORKCFG_SPEC, u8, u8, 2, 14>;
+pub type RXBUFFOFFSET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, NETWORKCFG_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LENFIELDERRFRMDISCRD` reader - Length field error frame discard"]
 pub type LENFIELDERRFRMDISCRD_R = crate::BitReader<bool>;
 #[doc = "Field `LENFIELDERRFRMDISCRD` writer - Length field error frame discard"]
-pub type LENFIELDERRFRMDISCRD_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 16>;
+pub type LENFIELDERRFRMDISCRD_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `FCSREMOVE` reader - FCS remove"]
 pub type FCSREMOVE_R = crate::BitReader<bool>;
 #[doc = "Field `FCSREMOVE` writer - FCS remove"]
-pub type FCSREMOVE_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 17>;
+pub type FCSREMOVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
+#[doc = "Field `MDCCLKDIV` reader - MDC clock division"]
+pub type MDCCLKDIV_R = crate::FieldReader<u8, MDCCLKDIV_A>;
 #[doc = "MDC clock division\n\nValue on reset: 2"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MDCCLKDIV_A {
     #[doc = "0: divide HFBUSCLKETH by 8 (HFBUSCLKETH up to 20 MHz)"]
@@ -117,8 +122,6 @@ impl From<MDCCLKDIV_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `MDCCLKDIV` reader - MDC clock division"]
-pub type MDCCLKDIV_R = crate::FieldReader<u8, MDCCLKDIV_A>;
 impl MDCCLKDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -177,8 +180,9 @@ impl MDCCLKDIV_R {
     }
 }
 #[doc = "Field `MDCCLKDIV` writer - MDC clock division"]
-pub type MDCCLKDIV_W<'a> = crate::FieldWriterSafe<'a, u32, NETWORKCFG_SPEC, u8, MDCCLKDIV_A, 3, 18>;
-impl<'a> MDCCLKDIV_W<'a> {
+pub type MDCCLKDIV_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, NETWORKCFG_SPEC, u8, MDCCLKDIV_A, 3, O>;
+impl<'a, const O: u8> MDCCLKDIV_W<'a, O> {
     #[doc = "divide HFBUSCLKETH by 8 (HFBUSCLKETH up to 20 MHz)"]
     #[inline(always)]
     pub fn divby8(self) -> &'a mut W {
@@ -223,31 +227,31 @@ impl<'a> MDCCLKDIV_W<'a> {
 #[doc = "Field `DISCOPYOFPFRAMES` reader - Disable copy of pause frames"]
 pub type DISCOPYOFPFRAMES_R = crate::BitReader<bool>;
 #[doc = "Field `DISCOPYOFPFRAMES` writer - Disable copy of pause frames"]
-pub type DISCOPYOFPFRAMES_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 23>;
+pub type DISCOPYOFPFRAMES_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `RXCHKSUMOFFLOADEN` reader - Receive checksum offload enable"]
 pub type RXCHKSUMOFFLOADEN_R = crate::BitReader<bool>;
 #[doc = "Field `RXCHKSUMOFFLOADEN` writer - Receive checksum offload enable"]
-pub type RXCHKSUMOFFLOADEN_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 24>;
+pub type RXCHKSUMOFFLOADEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `ENHALFDUPLEXRX` reader - Enable frames to be received in half-duplex mode while transmitting."]
 pub type ENHALFDUPLEXRX_R = crate::BitReader<bool>;
 #[doc = "Field `ENHALFDUPLEXRX` writer - Enable frames to be received in half-duplex mode while transmitting."]
-pub type ENHALFDUPLEXRX_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 25>;
+pub type ENHALFDUPLEXRX_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `IGNORERXFCS` reader - Ignore RX FCS"]
 pub type IGNORERXFCS_R = crate::BitReader<bool>;
 #[doc = "Field `IGNORERXFCS` writer - Ignore RX FCS"]
-pub type IGNORERXFCS_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 26>;
+pub type IGNORERXFCS_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `IPGSTRTCHEN` reader - IPG stretch enable"]
 pub type IPGSTRTCHEN_R = crate::BitReader<bool>;
 #[doc = "Field `IPGSTRTCHEN` writer - IPG stretch enable"]
-pub type IPGSTRTCHEN_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 28>;
+pub type IPGSTRTCHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `NSPCHANGE` reader - Receive bad preamble."]
 pub type NSPCHANGE_R = crate::BitReader<bool>;
 #[doc = "Field `NSPCHANGE` writer - Receive bad preamble."]
-pub type NSPCHANGE_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 29>;
+pub type NSPCHANGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 #[doc = "Field `IGNOREIPGRXER` reader - Ignore IPG rx_er."]
 pub type IGNOREIPGRXER_R = crate::BitReader<bool>;
 #[doc = "Field `IGNOREIPGRXER` writer - Ignore IPG rx_er."]
-pub type IGNOREIPGRXER_W<'a> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, 30>;
+pub type IGNOREIPGRXER_W<'a, const O: u8> = crate::BitWriter<'a, u32, NETWORKCFG_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Speed"]
     #[inline(always)]
@@ -363,112 +367,134 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Speed"]
     #[inline(always)]
-    pub fn speed(&mut self) -> SPEED_W {
+    #[must_use]
+    pub fn speed(&mut self) -> SPEED_W<0> {
         SPEED_W::new(self)
     }
     #[doc = "Bit 1 - Full duplex"]
     #[inline(always)]
-    pub fn fullduplex(&mut self) -> FULLDUPLEX_W {
+    #[must_use]
+    pub fn fullduplex(&mut self) -> FULLDUPLEX_W<1> {
         FULLDUPLEX_W::new(self)
     }
     #[doc = "Bit 2 - Discard non-VLAN frames"]
     #[inline(always)]
-    pub fn discrdnonvlanframes(&mut self) -> DISCRDNONVLANFRAMES_W {
+    #[must_use]
+    pub fn discrdnonvlanframes(&mut self) -> DISCRDNONVLANFRAMES_W<2> {
         DISCRDNONVLANFRAMES_W::new(self)
     }
     #[doc = "Bit 3 - Jumbo frames enable"]
     #[inline(always)]
-    pub fn jumboframes(&mut self) -> JUMBOFRAMES_W {
+    #[must_use]
+    pub fn jumboframes(&mut self) -> JUMBOFRAMES_W<3> {
         JUMBOFRAMES_W::new(self)
     }
     #[doc = "Bit 4 - Copy all frames"]
     #[inline(always)]
-    pub fn copyallframes(&mut self) -> COPYALLFRAMES_W {
+    #[must_use]
+    pub fn copyallframes(&mut self) -> COPYALLFRAMES_W<4> {
         COPYALLFRAMES_W::new(self)
     }
     #[doc = "Bit 5 - No broadcast"]
     #[inline(always)]
-    pub fn nobroadcast(&mut self) -> NOBROADCAST_W {
+    #[must_use]
+    pub fn nobroadcast(&mut self) -> NOBROADCAST_W<5> {
         NOBROADCAST_W::new(self)
     }
     #[doc = "Bit 6 - Multicast hash enable"]
     #[inline(always)]
-    pub fn multicasthashen(&mut self) -> MULTICASTHASHEN_W {
+    #[must_use]
+    pub fn multicasthashen(&mut self) -> MULTICASTHASHEN_W<6> {
         MULTICASTHASHEN_W::new(self)
     }
     #[doc = "Bit 7 - Unicast hash enable"]
     #[inline(always)]
-    pub fn unicasthashen(&mut self) -> UNICASTHASHEN_W {
+    #[must_use]
+    pub fn unicasthashen(&mut self) -> UNICASTHASHEN_W<7> {
         UNICASTHASHEN_W::new(self)
     }
     #[doc = "Bit 8 - Receive 1536 byte frames"]
     #[inline(always)]
-    pub fn rx1536byteframes(&mut self) -> RX1536BYTEFRAMES_W {
+    #[must_use]
+    pub fn rx1536byteframes(&mut self) -> RX1536BYTEFRAMES_W<8> {
         RX1536BYTEFRAMES_W::new(self)
     }
     #[doc = "Bit 12 - Retry test"]
     #[inline(always)]
-    pub fn retrytest(&mut self) -> RETRYTEST_W {
+    #[must_use]
+    pub fn retrytest(&mut self) -> RETRYTEST_W<12> {
         RETRYTEST_W::new(self)
     }
     #[doc = "Bit 13 - Pause enable"]
     #[inline(always)]
-    pub fn pauseen(&mut self) -> PAUSEEN_W {
+    #[must_use]
+    pub fn pauseen(&mut self) -> PAUSEEN_W<13> {
         PAUSEEN_W::new(self)
     }
     #[doc = "Bits 14:15 - Receive buffer offset"]
     #[inline(always)]
-    pub fn rxbuffoffset(&mut self) -> RXBUFFOFFSET_W {
+    #[must_use]
+    pub fn rxbuffoffset(&mut self) -> RXBUFFOFFSET_W<14> {
         RXBUFFOFFSET_W::new(self)
     }
     #[doc = "Bit 16 - Length field error frame discard"]
     #[inline(always)]
-    pub fn lenfielderrfrmdiscrd(&mut self) -> LENFIELDERRFRMDISCRD_W {
+    #[must_use]
+    pub fn lenfielderrfrmdiscrd(&mut self) -> LENFIELDERRFRMDISCRD_W<16> {
         LENFIELDERRFRMDISCRD_W::new(self)
     }
     #[doc = "Bit 17 - FCS remove"]
     #[inline(always)]
-    pub fn fcsremove(&mut self) -> FCSREMOVE_W {
+    #[must_use]
+    pub fn fcsremove(&mut self) -> FCSREMOVE_W<17> {
         FCSREMOVE_W::new(self)
     }
     #[doc = "Bits 18:20 - MDC clock division"]
     #[inline(always)]
-    pub fn mdcclkdiv(&mut self) -> MDCCLKDIV_W {
+    #[must_use]
+    pub fn mdcclkdiv(&mut self) -> MDCCLKDIV_W<18> {
         MDCCLKDIV_W::new(self)
     }
     #[doc = "Bit 23 - Disable copy of pause frames"]
     #[inline(always)]
-    pub fn discopyofpframes(&mut self) -> DISCOPYOFPFRAMES_W {
+    #[must_use]
+    pub fn discopyofpframes(&mut self) -> DISCOPYOFPFRAMES_W<23> {
         DISCOPYOFPFRAMES_W::new(self)
     }
     #[doc = "Bit 24 - Receive checksum offload enable"]
     #[inline(always)]
-    pub fn rxchksumoffloaden(&mut self) -> RXCHKSUMOFFLOADEN_W {
+    #[must_use]
+    pub fn rxchksumoffloaden(&mut self) -> RXCHKSUMOFFLOADEN_W<24> {
         RXCHKSUMOFFLOADEN_W::new(self)
     }
     #[doc = "Bit 25 - Enable frames to be received in half-duplex mode while transmitting."]
     #[inline(always)]
-    pub fn enhalfduplexrx(&mut self) -> ENHALFDUPLEXRX_W {
+    #[must_use]
+    pub fn enhalfduplexrx(&mut self) -> ENHALFDUPLEXRX_W<25> {
         ENHALFDUPLEXRX_W::new(self)
     }
     #[doc = "Bit 26 - Ignore RX FCS"]
     #[inline(always)]
-    pub fn ignorerxfcs(&mut self) -> IGNORERXFCS_W {
+    #[must_use]
+    pub fn ignorerxfcs(&mut self) -> IGNORERXFCS_W<26> {
         IGNORERXFCS_W::new(self)
     }
     #[doc = "Bit 28 - IPG stretch enable"]
     #[inline(always)]
-    pub fn ipgstrtchen(&mut self) -> IPGSTRTCHEN_W {
+    #[must_use]
+    pub fn ipgstrtchen(&mut self) -> IPGSTRTCHEN_W<28> {
         IPGSTRTCHEN_W::new(self)
     }
     #[doc = "Bit 29 - Receive bad preamble."]
     #[inline(always)]
-    pub fn nspchange(&mut self) -> NSPCHANGE_W {
+    #[must_use]
+    pub fn nspchange(&mut self) -> NSPCHANGE_W<29> {
         NSPCHANGE_W::new(self)
     }
     #[doc = "Bit 30 - Ignore IPG rx_er."]
     #[inline(always)]
-    pub fn ignoreipgrxer(&mut self) -> IGNOREIPGRXER_W {
+    #[must_use]
+    pub fn ignoreipgrxer(&mut self) -> IGNOREIPGRXER_W<30> {
         IGNOREIPGRXER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -490,11 +516,10 @@ impl crate::Readable for NETWORKCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [networkcfg::W](W) writer structure"]
 impl crate::Writable for NETWORKCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NETWORKCFG to value 0x0008_0000"]
 impl crate::Resettable for NETWORKCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0008_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0008_0000;
 }

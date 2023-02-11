@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:29 - PTP Peer Event Frame Transmitted Nanoseconds"]
     #[inline(always)]
     pub fn timer(&self) -> TIMER_R {
-        TIMER_R::new((self.bits & 0x3fff_ffff) as u32)
+        TIMER_R::new(self.bits & 0x3fff_ffff)
     }
 }
 #[doc = "PTP Peer Event Frame Transmitted Nanoseconds Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tsupeertxnsec](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for TSUPEERTXNSEC_SPEC {
 }
 #[doc = "`reset()` method sets TSUPEERTXNSEC to value 0"]
 impl crate::Resettable for TSUPEERTXNSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

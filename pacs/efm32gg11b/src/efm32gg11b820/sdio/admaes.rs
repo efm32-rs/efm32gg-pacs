@@ -40,8 +40,5 @@ impl crate::Readable for ADMAES_SPEC {
 }
 #[doc = "`reset()` method sets ADMAES to value 0"]
 impl crate::Resettable for ADMAES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

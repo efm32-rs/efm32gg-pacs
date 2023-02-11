@@ -37,11 +37,12 @@ impl From<crate::W<PBUFRXCUTTHRU_SPEC>> for W {
 #[doc = "Field `DMARXCUTTHRUTHR` reader - Watermark value"]
 pub type DMARXCUTTHRUTHR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DMARXCUTTHRUTHR` writer - Watermark value"]
-pub type DMARXCUTTHRUTHR_W<'a> = crate::FieldWriter<'a, u32, PBUFRXCUTTHRU_SPEC, u16, u16, 10, 0>;
+pub type DMARXCUTTHRUTHR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PBUFRXCUTTHRU_SPEC, u16, u16, 10, O>;
 #[doc = "Field `DMARXCUTTHRU` reader - Enable RX partial store and forward operation"]
 pub type DMARXCUTTHRU_R = crate::BitReader<bool>;
 #[doc = "Field `DMARXCUTTHRU` writer - Enable RX partial store and forward operation"]
-pub type DMARXCUTTHRU_W<'a> = crate::BitWriter<'a, u32, PBUFRXCUTTHRU_SPEC, bool, 31>;
+pub type DMARXCUTTHRU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PBUFRXCUTTHRU_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:9 - Watermark value"]
     #[inline(always)]
@@ -57,12 +58,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Watermark value"]
     #[inline(always)]
-    pub fn dmarxcutthruthr(&mut self) -> DMARXCUTTHRUTHR_W {
+    #[must_use]
+    pub fn dmarxcutthruthr(&mut self) -> DMARXCUTTHRUTHR_W<0> {
         DMARXCUTTHRUTHR_W::new(self)
     }
     #[doc = "Bit 31 - Enable RX partial store and forward operation"]
     #[inline(always)]
-    pub fn dmarxcutthru(&mut self) -> DMARXCUTTHRU_W {
+    #[must_use]
+    pub fn dmarxcutthru(&mut self) -> DMARXCUTTHRU_W<31> {
         DMARXCUTTHRU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +87,10 @@ impl crate::Readable for PBUFRXCUTTHRU_SPEC {
 #[doc = "`write(|w| ..)` method takes [pbufrxcutthru::W](W) writer structure"]
 impl crate::Writable for PBUFRXCUTTHRU_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PBUFRXCUTTHRU to value 0x03ff"]
 impl crate::Resettable for PBUFRXCUTTHRU_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03ff
-    }
+    const RESET_VALUE: Self::Ux = 0x03ff;
 }

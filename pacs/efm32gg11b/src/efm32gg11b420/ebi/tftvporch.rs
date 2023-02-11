@@ -37,15 +37,15 @@ impl From<crate::W<TFTVPORCH_SPEC>> for W {
 #[doc = "Field `VSYNC` reader - Vertical Synchronization Pulse Width"]
 pub type VSYNC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VSYNC` writer - Vertical Synchronization Pulse Width"]
-pub type VSYNC_W<'a> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u8, u8, 7, 0>;
+pub type VSYNC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u8, u8, 7, O>;
 #[doc = "Field `VFPORCH` reader - Vertical Front Porch Size"]
 pub type VFPORCH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VFPORCH` writer - Vertical Front Porch Size"]
-pub type VFPORCH_W<'a> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u16, u16, 12, 8>;
+pub type VFPORCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u16, u16, 12, O>;
 #[doc = "Field `VBPORCH` reader - Vertical Back Porch Size"]
 pub type VBPORCH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VBPORCH` writer - Vertical Back Porch Size"]
-pub type VBPORCH_W<'a> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u16, u16, 12, 20>;
+pub type VBPORCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TFTVPORCH_SPEC, u16, u16, 12, O>;
 impl R {
     #[doc = "Bits 0:6 - Vertical Synchronization Pulse Width"]
     #[inline(always)]
@@ -66,17 +66,20 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Vertical Synchronization Pulse Width"]
     #[inline(always)]
-    pub fn vsync(&mut self) -> VSYNC_W {
+    #[must_use]
+    pub fn vsync(&mut self) -> VSYNC_W<0> {
         VSYNC_W::new(self)
     }
     #[doc = "Bits 8:19 - Vertical Front Porch Size"]
     #[inline(always)]
-    pub fn vfporch(&mut self) -> VFPORCH_W {
+    #[must_use]
+    pub fn vfporch(&mut self) -> VFPORCH_W<8> {
         VFPORCH_W::new(self)
     }
     #[doc = "Bits 20:31 - Vertical Back Porch Size"]
     #[inline(always)]
-    pub fn vbporch(&mut self) -> VBPORCH_W {
+    #[must_use]
+    pub fn vbporch(&mut self) -> VBPORCH_W<20> {
         VBPORCH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -98,11 +101,10 @@ impl crate::Readable for TFTVPORCH_SPEC {
 #[doc = "`write(|w| ..)` method takes [tftvporch::W](W) writer structure"]
 impl crate::Writable for TFTVPORCH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TFTVPORCH to value 0"]
 impl crate::Resettable for TFTVPORCH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

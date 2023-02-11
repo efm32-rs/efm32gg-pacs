@@ -37,27 +37,27 @@ impl From<crate::W<ROUTEPEN_SPEC>> for W {
 #[doc = "Field `MDIOPEN` reader - MDIO I/O Enable"]
 pub type MDIOPEN_R = crate::BitReader<bool>;
 #[doc = "Field `MDIOPEN` writer - MDIO I/O Enable"]
-pub type MDIOPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 0>;
+pub type MDIOPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `MIITXERPEN` reader - MII TX ER I/O Enable"]
 pub type MIITXERPEN_R = crate::BitReader<bool>;
 #[doc = "Field `MIITXERPEN` writer - MII TX ER I/O Enable"]
-pub type MIITXERPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 1>;
+pub type MIITXERPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `MIIRXERPEN` reader - MII TX ER I/O Enable"]
 pub type MIIRXERPEN_R = crate::BitReader<bool>;
 #[doc = "Field `MIIRXERPEN` writer - MII TX ER I/O Enable"]
-pub type MIIRXERPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 2>;
+pub type MIIRXERPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `MIIPEN` reader - MII I/O Enable"]
 pub type MIIPEN_R = crate::BitReader<bool>;
 #[doc = "Field `MIIPEN` writer - MII I/O Enable"]
-pub type MIIPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 3>;
+pub type MIIPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `RMIIPEN` reader - RMII I/O Enable"]
 pub type RMIIPEN_R = crate::BitReader<bool>;
 #[doc = "Field `RMIIPEN` writer - RMII I/O Enable"]
-pub type RMIIPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 4>;
+pub type RMIIPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 #[doc = "Field `TSUTMRTOGPEN` reader - TSU_TMR_CNT_SEC Output Enable"]
 pub type TSUTMRTOGPEN_R = crate::BitReader<bool>;
 #[doc = "Field `TSUTMRTOGPEN` writer - TSU_TMR_CNT_SEC Output Enable"]
-pub type TSUTMRTOGPEN_W<'a> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, 5>;
+pub type TSUTMRTOGPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROUTEPEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - MDIO I/O Enable"]
     #[inline(always)]
@@ -93,32 +93,38 @@ impl R {
 impl W {
     #[doc = "Bit 0 - MDIO I/O Enable"]
     #[inline(always)]
-    pub fn mdiopen(&mut self) -> MDIOPEN_W {
+    #[must_use]
+    pub fn mdiopen(&mut self) -> MDIOPEN_W<0> {
         MDIOPEN_W::new(self)
     }
     #[doc = "Bit 1 - MII TX ER I/O Enable"]
     #[inline(always)]
-    pub fn miitxerpen(&mut self) -> MIITXERPEN_W {
+    #[must_use]
+    pub fn miitxerpen(&mut self) -> MIITXERPEN_W<1> {
         MIITXERPEN_W::new(self)
     }
     #[doc = "Bit 2 - MII TX ER I/O Enable"]
     #[inline(always)]
-    pub fn miirxerpen(&mut self) -> MIIRXERPEN_W {
+    #[must_use]
+    pub fn miirxerpen(&mut self) -> MIIRXERPEN_W<2> {
         MIIRXERPEN_W::new(self)
     }
     #[doc = "Bit 3 - MII I/O Enable"]
     #[inline(always)]
-    pub fn miipen(&mut self) -> MIIPEN_W {
+    #[must_use]
+    pub fn miipen(&mut self) -> MIIPEN_W<3> {
         MIIPEN_W::new(self)
     }
     #[doc = "Bit 4 - RMII I/O Enable"]
     #[inline(always)]
-    pub fn rmiipen(&mut self) -> RMIIPEN_W {
+    #[must_use]
+    pub fn rmiipen(&mut self) -> RMIIPEN_W<4> {
         RMIIPEN_W::new(self)
     }
     #[doc = "Bit 5 - TSU_TMR_CNT_SEC Output Enable"]
     #[inline(always)]
-    pub fn tsutmrtogpen(&mut self) -> TSUTMRTOGPEN_W {
+    #[must_use]
+    pub fn tsutmrtogpen(&mut self) -> TSUTMRTOGPEN_W<5> {
         TSUTMRTOGPEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -140,11 +146,10 @@ impl crate::Readable for ROUTEPEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [routepen::W](W) writer structure"]
 impl crate::Writable for ROUTEPEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTEPEN to value 0"]
 impl crate::Resettable for ROUTEPEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

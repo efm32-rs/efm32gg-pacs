@@ -37,7 +37,8 @@ impl From<crate::W<JUMBOMAXLEN_SPEC>> for W {
 #[doc = "Field `JUMBOMAXLEN` reader - Maximum Jumbo Frame Size - resets to the gem_jumbo_max_length define value."]
 pub type JUMBOMAXLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `JUMBOMAXLEN` writer - Maximum Jumbo Frame Size - resets to the gem_jumbo_max_length define value."]
-pub type JUMBOMAXLEN_W<'a> = crate::FieldWriter<'a, u32, JUMBOMAXLEN_SPEC, u16, u16, 14, 0>;
+pub type JUMBOMAXLEN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, JUMBOMAXLEN_SPEC, u16, u16, 14, O>;
 impl R {
     #[doc = "Bits 0:13 - Maximum Jumbo Frame Size - resets to the gem_jumbo_max_length define value."]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - Maximum Jumbo Frame Size - resets to the gem_jumbo_max_length define value."]
     #[inline(always)]
-    pub fn jumbomaxlen(&mut self) -> JUMBOMAXLEN_W {
+    #[must_use]
+    pub fn jumbomaxlen(&mut self) -> JUMBOMAXLEN_W<0> {
         JUMBOMAXLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for JUMBOMAXLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [jumbomaxlen::W](W) writer structure"]
 impl crate::Writable for JUMBOMAXLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets JUMBOMAXLEN to value 0x2800"]
 impl crate::Resettable for JUMBOMAXLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2800
-    }
+    const RESET_VALUE: Self::Ux = 0x2800;
 }

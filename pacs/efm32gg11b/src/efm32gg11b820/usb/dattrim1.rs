@@ -37,35 +37,35 @@ impl From<crate::W<DATTRIM1_SPEC>> for W {
 #[doc = "Field `ROUT` reader - Trim for DP and DM Output Impedance for Both FS and LS"]
 pub type ROUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ROUT` writer - Trim for DP and DM Output Impedance for Both FS and LS"]
-pub type ROUT_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 6, 0>;
+pub type ROUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 6, O>;
 #[doc = "Field `ENDLYPULLUP` reader - Enables Delay of Pull in TX Mode for Both FS and LS"]
 pub type ENDLYPULLUP_R = crate::BitReader<bool>;
 #[doc = "Field `ENDLYPULLUP` writer - Enables Delay of Pull in TX Mode for Both FS and LS"]
-pub type ENDLYPULLUP_W<'a> = crate::BitWriter<'a, u32, DATTRIM1_SPEC, bool, 7>;
+pub type ENDLYPULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DATTRIM1_SPEC, bool, O>;
 #[doc = "Field `DLYPULLUPFS` reader - Trim for Rising Crossover Voltage in FS"]
 pub type DLYPULLUPFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DLYPULLUPFS` writer - Trim for Rising Crossover Voltage in FS"]
-pub type DLYPULLUPFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 8>;
+pub type DLYPULLUPFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `VCRSFS` reader - Trim for Falling Crossover Voltage in FS"]
 pub type VCRSFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCRSFS` writer - Trim for Falling Crossover Voltage in FS"]
-pub type VCRSFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 10>;
+pub type VCRSFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TFDMFS` reader - Trim for DM Fall Time in FS"]
 pub type TFDMFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TFDMFS` writer - Trim for DM Fall Time in FS"]
-pub type TFDMFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 12>;
+pub type TFDMFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TRDMFS` reader - Trim for DM Rise Time in FS"]
 pub type TRDMFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TRDMFS` writer - Trim for DM Rise Time in FS"]
-pub type TRDMFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 14>;
+pub type TRDMFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TFDPFS` reader - Trim for DP Fall Time in FS"]
 pub type TFDPFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TFDPFS` writer - Trim for DP Fall Time in FS"]
-pub type TFDPFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 16>;
+pub type TFDPFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TRDPFS` reader - Trim for DP Rise Time in FS"]
 pub type TRDPFS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TRDPFS` writer - Trim for DP Rise Time in FS"]
-pub type TRDPFS_W<'a> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, 18>;
+pub type TRDPFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATTRIM1_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:5 - Trim for DP and DM Output Impedance for Both FS and LS"]
     #[inline(always)]
@@ -111,42 +111,50 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Trim for DP and DM Output Impedance for Both FS and LS"]
     #[inline(always)]
-    pub fn rout(&mut self) -> ROUT_W {
+    #[must_use]
+    pub fn rout(&mut self) -> ROUT_W<0> {
         ROUT_W::new(self)
     }
     #[doc = "Bit 7 - Enables Delay of Pull in TX Mode for Both FS and LS"]
     #[inline(always)]
-    pub fn endlypullup(&mut self) -> ENDLYPULLUP_W {
+    #[must_use]
+    pub fn endlypullup(&mut self) -> ENDLYPULLUP_W<7> {
         ENDLYPULLUP_W::new(self)
     }
     #[doc = "Bits 8:9 - Trim for Rising Crossover Voltage in FS"]
     #[inline(always)]
-    pub fn dlypullupfs(&mut self) -> DLYPULLUPFS_W {
+    #[must_use]
+    pub fn dlypullupfs(&mut self) -> DLYPULLUPFS_W<8> {
         DLYPULLUPFS_W::new(self)
     }
     #[doc = "Bits 10:11 - Trim for Falling Crossover Voltage in FS"]
     #[inline(always)]
-    pub fn vcrsfs(&mut self) -> VCRSFS_W {
+    #[must_use]
+    pub fn vcrsfs(&mut self) -> VCRSFS_W<10> {
         VCRSFS_W::new(self)
     }
     #[doc = "Bits 12:13 - Trim for DM Fall Time in FS"]
     #[inline(always)]
-    pub fn tfdmfs(&mut self) -> TFDMFS_W {
+    #[must_use]
+    pub fn tfdmfs(&mut self) -> TFDMFS_W<12> {
         TFDMFS_W::new(self)
     }
     #[doc = "Bits 14:15 - Trim for DM Rise Time in FS"]
     #[inline(always)]
-    pub fn trdmfs(&mut self) -> TRDMFS_W {
+    #[must_use]
+    pub fn trdmfs(&mut self) -> TRDMFS_W<14> {
         TRDMFS_W::new(self)
     }
     #[doc = "Bits 16:17 - Trim for DP Fall Time in FS"]
     #[inline(always)]
-    pub fn tfdpfs(&mut self) -> TFDPFS_W {
+    #[must_use]
+    pub fn tfdpfs(&mut self) -> TFDPFS_W<16> {
         TFDPFS_W::new(self)
     }
     #[doc = "Bits 18:19 - Trim for DP Rise Time in FS"]
     #[inline(always)]
-    pub fn trdpfs(&mut self) -> TRDPFS_W {
+    #[must_use]
+    pub fn trdpfs(&mut self) -> TRDPFS_W<18> {
         TRDPFS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -168,11 +176,10 @@ impl crate::Readable for DATTRIM1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dattrim1::W](W) writer structure"]
 impl crate::Writable for DATTRIM1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATTRIM1 to value 0x24"]
 impl crate::Resettable for DATTRIM1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x24
-    }
+    const RESET_VALUE: Self::Ux = 0x24;
 }

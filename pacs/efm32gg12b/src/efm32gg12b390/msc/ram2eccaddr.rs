@@ -33,8 +33,5 @@ impl crate::Readable for RAM2ECCADDR_SPEC {
 }
 #[doc = "`reset()` method sets RAM2ECCADDR to value 0"]
 impl crate::Resettable for RAM2ECCADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

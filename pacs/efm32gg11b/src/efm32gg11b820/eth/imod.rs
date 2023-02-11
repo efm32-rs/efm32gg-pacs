@@ -37,11 +37,11 @@ impl From<crate::W<IMOD_SPEC>> for W {
 #[doc = "Field `RXINTMOD` reader - Count of 800ns periods before bit 1 is set in the interrupt status register after a frame is received"]
 pub type RXINTMOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXINTMOD` writer - Count of 800ns periods before bit 1 is set in the interrupt status register after a frame is received"]
-pub type RXINTMOD_W<'a> = crate::FieldWriter<'a, u32, IMOD_SPEC, u8, u8, 8, 0>;
+pub type RXINTMOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IMOD_SPEC, u8, u8, 8, O>;
 #[doc = "Field `TXINTMOD` reader - Count of 800ns periods before bit 7 is set in the interrupt status register after a frame is transmitted"]
 pub type TXINTMOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXINTMOD` writer - Count of 800ns periods before bit 7 is set in the interrupt status register after a frame is transmitted"]
-pub type TXINTMOD_W<'a> = crate::FieldWriter<'a, u32, IMOD_SPEC, u8, u8, 8, 16>;
+pub type TXINTMOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IMOD_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Count of 800ns periods before bit 1 is set in the interrupt status register after a frame is received"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Count of 800ns periods before bit 1 is set in the interrupt status register after a frame is received"]
     #[inline(always)]
-    pub fn rxintmod(&mut self) -> RXINTMOD_W {
+    #[must_use]
+    pub fn rxintmod(&mut self) -> RXINTMOD_W<0> {
         RXINTMOD_W::new(self)
     }
     #[doc = "Bits 16:23 - Count of 800ns periods before bit 7 is set in the interrupt status register after a frame is transmitted"]
     #[inline(always)]
-    pub fn txintmod(&mut self) -> TXINTMOD_W {
+    #[must_use]
+    pub fn txintmod(&mut self) -> TXINTMOD_W<16> {
         TXINTMOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for IMOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [imod::W](W) writer structure"]
 impl crate::Writable for IMOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMOD to value 0"]
 impl crate::Resettable for IMOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

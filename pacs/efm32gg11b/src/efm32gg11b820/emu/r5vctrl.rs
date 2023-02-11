@@ -37,17 +37,19 @@ impl From<crate::W<R5VCTRL_SPEC>> for W {
 #[doc = "Field `BYPASS` reader - 5V Regulator Bypass"]
 pub type BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `BYPASS` writer - 5V Regulator Bypass"]
-pub type BYPASS_W<'a> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, 0>;
+pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, O>;
 #[doc = "Field `EM4WUEN` reader - Enable EM4 Wakeup Due to VBUS Detection"]
 pub type EM4WUEN_R = crate::BitReader<bool>;
 #[doc = "Field `EM4WUEN` writer - Enable EM4 Wakeup Due to VBUS Detection"]
-pub type EM4WUEN_W<'a> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, 1>;
+pub type EM4WUEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, O>;
 #[doc = "Field `IMONEN` reader - Enable the Regulator Current Monitor for Selected Current Path to Either VREGI or VBUS"]
 pub type IMONEN_R = crate::BitReader<bool>;
 #[doc = "Field `IMONEN` writer - Enable the Regulator Current Monitor for Selected Current Path to Either VREGI or VBUS"]
-pub type IMONEN_W<'a> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, 2>;
+pub type IMONEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, R5VCTRL_SPEC, bool, O>;
+#[doc = "Field `INPUTMODE` reader - 5V Input Mode"]
+pub type INPUTMODE_R = crate::FieldReader<u8, INPUTMODE_A>;
 #[doc = "5V Input Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum INPUTMODE_A {
     #[doc = "0: Regulator input supply switched automatically to the highest voltage of either VBUS or VREGI"]
@@ -63,8 +65,6 @@ impl From<INPUTMODE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `INPUTMODE` reader - 5V Input Mode"]
-pub type INPUTMODE_R = crate::FieldReader<u8, INPUTMODE_A>;
 impl INPUTMODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -93,8 +93,9 @@ impl INPUTMODE_R {
     }
 }
 #[doc = "Field `INPUTMODE` writer - 5V Input Mode"]
-pub type INPUTMODE_W<'a> = crate::FieldWriter<'a, u32, R5VCTRL_SPEC, u8, INPUTMODE_A, 2, 8>;
-impl<'a> INPUTMODE_W<'a> {
+pub type INPUTMODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, R5VCTRL_SPEC, u8, INPUTMODE_A, 2, O>;
+impl<'a, const O: u8> INPUTMODE_W<'a, O> {
     #[doc = "Regulator input supply switched automatically to the highest voltage of either VBUS or VREGI"]
     #[inline(always)]
     pub fn auto(self) -> &'a mut W {
@@ -136,22 +137,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 5V Regulator Bypass"]
     #[inline(always)]
-    pub fn bypass(&mut self) -> BYPASS_W {
+    #[must_use]
+    pub fn bypass(&mut self) -> BYPASS_W<0> {
         BYPASS_W::new(self)
     }
     #[doc = "Bit 1 - Enable EM4 Wakeup Due to VBUS Detection"]
     #[inline(always)]
-    pub fn em4wuen(&mut self) -> EM4WUEN_W {
+    #[must_use]
+    pub fn em4wuen(&mut self) -> EM4WUEN_W<1> {
         EM4WUEN_W::new(self)
     }
     #[doc = "Bit 2 - Enable the Regulator Current Monitor for Selected Current Path to Either VREGI or VBUS"]
     #[inline(always)]
-    pub fn imonen(&mut self) -> IMONEN_W {
+    #[must_use]
+    pub fn imonen(&mut self) -> IMONEN_W<2> {
         IMONEN_W::new(self)
     }
     #[doc = "Bits 8:9 - 5V Input Mode"]
     #[inline(always)]
-    pub fn inputmode(&mut self) -> INPUTMODE_W {
+    #[must_use]
+    pub fn inputmode(&mut self) -> INPUTMODE_W<8> {
         INPUTMODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -173,11 +178,10 @@ impl crate::Readable for R5VCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [r5vctrl::W](W) writer structure"]
 impl crate::Writable for R5VCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets R5VCTRL to value 0"]
 impl crate::Resettable for R5VCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

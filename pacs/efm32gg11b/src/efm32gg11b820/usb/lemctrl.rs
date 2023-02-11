@@ -37,7 +37,7 @@ impl From<crate::W<LEMCTRL_SPEC>> for W {
 #[doc = "Field `TIMEBASE` reader - Set the Number of LFC Clk Counts to Form 3ms"]
 pub type TIMEBASE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMEBASE` writer - Set the Number of LFC Clk Counts to Form 3ms"]
-pub type TIMEBASE_W<'a> = crate::FieldWriter<'a, u32, LEMCTRL_SPEC, u16, u16, 10, 0>;
+pub type TIMEBASE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LEMCTRL_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9 - Set the Number of LFC Clk Counts to Form 3ms"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Set the Number of LFC Clk Counts to Form 3ms"]
     #[inline(always)]
-    pub fn timebase(&mut self) -> TIMEBASE_W {
+    #[must_use]
+    pub fn timebase(&mut self) -> TIMEBASE_W<0> {
         TIMEBASE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for LEMCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [lemctrl::W](W) writer structure"]
 impl crate::Writable for LEMCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LEMCTRL to value 0x67"]
 impl crate::Resettable for LEMCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x67
-    }
+    const RESET_VALUE: Self::Ux = 0x67;
 }

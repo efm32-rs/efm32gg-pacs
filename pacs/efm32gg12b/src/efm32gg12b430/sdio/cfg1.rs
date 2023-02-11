@@ -37,9 +37,11 @@ impl From<crate::W<CFG1_SPEC>> for W {
 #[doc = "Field `ASYNCINTRSUP` reader - Asynchronous Interrupt Support"]
 pub type ASYNCINTRSUP_R = crate::BitReader<bool>;
 #[doc = "Field `ASYNCINTRSUP` writer - Asynchronous Interrupt Support"]
-pub type ASYNCINTRSUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 0>;
+pub type ASYNCINTRSUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
+#[doc = "Field `SLOTTYPE` reader - Slot Type"]
+pub type SLOTTYPE_R = crate::FieldReader<u8, SLOTTYPE_A>;
 #[doc = "Slot Type\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SLOTTYPE_A {
     #[doc = "0: Removable SD Card Slot"]
@@ -55,8 +57,6 @@ impl From<SLOTTYPE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SLOTTYPE` reader - Slot Type"]
-pub type SLOTTYPE_R = crate::FieldReader<u8, SLOTTYPE_A>;
 impl SLOTTYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -85,8 +85,8 @@ impl SLOTTYPE_R {
     }
 }
 #[doc = "Field `SLOTTYPE` writer - Slot Type"]
-pub type SLOTTYPE_W<'a> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, SLOTTYPE_A, 2, 1>;
-impl<'a> SLOTTYPE_W<'a> {
+pub type SLOTTYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, SLOTTYPE_A, 2, O>;
+impl<'a, const O: u8> SLOTTYPE_W<'a, O> {
     #[doc = "Removable SD Card Slot"]
     #[inline(always)]
     pub fn rmsdslot(self) -> &'a mut W {
@@ -106,47 +106,47 @@ impl<'a> SLOTTYPE_W<'a> {
 #[doc = "Field `CSDR50SUP` reader - Core Support SDR50"]
 pub type CSDR50SUP_R = crate::BitReader<bool>;
 #[doc = "Field `CSDR50SUP` writer - Core Support SDR50"]
-pub type CSDR50SUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 3>;
+pub type CSDR50SUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `CSDR104SUP` reader - Support SDR104"]
 pub type CSDR104SUP_R = crate::BitReader<bool>;
 #[doc = "Field `CSDR104SUP` writer - Support SDR104"]
-pub type CSDR104SUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 4>;
+pub type CSDR104SUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `CDDR50SUP` reader - Support DDR50"]
 pub type CDDR50SUP_R = crate::BitReader<bool>;
 #[doc = "Field `CDDR50SUP` writer - Support DDR50"]
-pub type CDDR50SUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 5>;
+pub type CDDR50SUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `CDRVASUP` reader - Support Type a Driver"]
 pub type CDRVASUP_R = crate::BitReader<bool>;
 #[doc = "Field `CDRVASUP` writer - Support Type a Driver"]
-pub type CDRVASUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 6>;
+pub type CDRVASUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `CDRVCSUP` reader - Support Type C Driver"]
 pub type CDRVCSUP_R = crate::BitReader<bool>;
 #[doc = "Field `CDRVCSUP` writer - Support Type C Driver"]
-pub type CDRVCSUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 7>;
+pub type CDRVCSUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `CDRVDSUP` reader - Support Type D Driver"]
 pub type CDRVDSUP_R = crate::BitReader<bool>;
 #[doc = "Field `CDRVDSUP` writer - Support Type D Driver"]
-pub type CDRVDSUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 8>;
+pub type CDRVDSUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `RETUNTMRCTL` reader - Retuning Timer Control"]
 pub type RETUNTMRCTL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETUNTMRCTL` writer - Retuning Timer Control"]
-pub type RETUNTMRCTL_W<'a> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, 9>;
+pub type RETUNTMRCTL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `TUNSDR50` reader - Tuning for SDR50"]
 pub type TUNSDR50_R = crate::BitReader<bool>;
 #[doc = "Field `TUNSDR50` writer - Tuning for SDR50"]
-pub type TUNSDR50_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 13>;
+pub type TUNSDR50_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `RETUNMODES` reader - Retuning Modes"]
 pub type RETUNMODES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETUNMODES` writer - Retuning Modes"]
-pub type RETUNMODES_W<'a> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 2, 14>;
+pub type RETUNMODES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `SPISUP` reader - SPI Support"]
 pub type SPISUP_R = crate::BitReader<bool>;
 #[doc = "Field `SPISUP` writer - SPI Support"]
-pub type SPISUP_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 16>;
+pub type SPISUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 #[doc = "Field `ASYNCWKUPEN` reader - Asynchronous Wakeup Enable"]
 pub type ASYNCWKUPEN_R = crate::BitReader<bool>;
 #[doc = "Field `ASYNCWKUPEN` writer - Asynchronous Wakeup Enable"]
-pub type ASYNCWKUPEN_W<'a> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, 18>;
+pub type ASYNCWKUPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Asynchronous Interrupt Support"]
     #[inline(always)]
@@ -217,67 +217,80 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Asynchronous Interrupt Support"]
     #[inline(always)]
-    pub fn asyncintrsup(&mut self) -> ASYNCINTRSUP_W {
+    #[must_use]
+    pub fn asyncintrsup(&mut self) -> ASYNCINTRSUP_W<0> {
         ASYNCINTRSUP_W::new(self)
     }
     #[doc = "Bits 1:2 - Slot Type"]
     #[inline(always)]
-    pub fn slottype(&mut self) -> SLOTTYPE_W {
+    #[must_use]
+    pub fn slottype(&mut self) -> SLOTTYPE_W<1> {
         SLOTTYPE_W::new(self)
     }
     #[doc = "Bit 3 - Core Support SDR50"]
     #[inline(always)]
-    pub fn csdr50sup(&mut self) -> CSDR50SUP_W {
+    #[must_use]
+    pub fn csdr50sup(&mut self) -> CSDR50SUP_W<3> {
         CSDR50SUP_W::new(self)
     }
     #[doc = "Bit 4 - Support SDR104"]
     #[inline(always)]
-    pub fn csdr104sup(&mut self) -> CSDR104SUP_W {
+    #[must_use]
+    pub fn csdr104sup(&mut self) -> CSDR104SUP_W<4> {
         CSDR104SUP_W::new(self)
     }
     #[doc = "Bit 5 - Support DDR50"]
     #[inline(always)]
-    pub fn cddr50sup(&mut self) -> CDDR50SUP_W {
+    #[must_use]
+    pub fn cddr50sup(&mut self) -> CDDR50SUP_W<5> {
         CDDR50SUP_W::new(self)
     }
     #[doc = "Bit 6 - Support Type a Driver"]
     #[inline(always)]
-    pub fn cdrvasup(&mut self) -> CDRVASUP_W {
+    #[must_use]
+    pub fn cdrvasup(&mut self) -> CDRVASUP_W<6> {
         CDRVASUP_W::new(self)
     }
     #[doc = "Bit 7 - Support Type C Driver"]
     #[inline(always)]
-    pub fn cdrvcsup(&mut self) -> CDRVCSUP_W {
+    #[must_use]
+    pub fn cdrvcsup(&mut self) -> CDRVCSUP_W<7> {
         CDRVCSUP_W::new(self)
     }
     #[doc = "Bit 8 - Support Type D Driver"]
     #[inline(always)]
-    pub fn cdrvdsup(&mut self) -> CDRVDSUP_W {
+    #[must_use]
+    pub fn cdrvdsup(&mut self) -> CDRVDSUP_W<8> {
         CDRVDSUP_W::new(self)
     }
     #[doc = "Bits 9:12 - Retuning Timer Control"]
     #[inline(always)]
-    pub fn retuntmrctl(&mut self) -> RETUNTMRCTL_W {
+    #[must_use]
+    pub fn retuntmrctl(&mut self) -> RETUNTMRCTL_W<9> {
         RETUNTMRCTL_W::new(self)
     }
     #[doc = "Bit 13 - Tuning for SDR50"]
     #[inline(always)]
-    pub fn tunsdr50(&mut self) -> TUNSDR50_W {
+    #[must_use]
+    pub fn tunsdr50(&mut self) -> TUNSDR50_W<13> {
         TUNSDR50_W::new(self)
     }
     #[doc = "Bits 14:15 - Retuning Modes"]
     #[inline(always)]
-    pub fn retunmodes(&mut self) -> RETUNMODES_W {
+    #[must_use]
+    pub fn retunmodes(&mut self) -> RETUNMODES_W<14> {
         RETUNMODES_W::new(self)
     }
     #[doc = "Bit 16 - SPI Support"]
     #[inline(always)]
-    pub fn spisup(&mut self) -> SPISUP_W {
+    #[must_use]
+    pub fn spisup(&mut self) -> SPISUP_W<16> {
         SPISUP_W::new(self)
     }
     #[doc = "Bit 18 - Asynchronous Wakeup Enable"]
     #[inline(always)]
-    pub fn asyncwkupen(&mut self) -> ASYNCWKUPEN_W {
+    #[must_use]
+    pub fn asyncwkupen(&mut self) -> ASYNCWKUPEN_W<18> {
         ASYNCWKUPEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -299,11 +312,10 @@ impl crate::Readable for CFG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg1::W](W) writer structure"]
 impl crate::Writable for CFG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG1 to value 0"]
 impl crate::Resettable for CFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

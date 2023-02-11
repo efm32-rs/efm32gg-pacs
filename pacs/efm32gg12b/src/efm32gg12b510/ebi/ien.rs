@@ -37,43 +37,43 @@ impl From<crate::W<IEN_SPEC>> for W {
 #[doc = "Field `VSYNC` reader - Vertical Sync Interrupt Enable"]
 pub type VSYNC_R = crate::BitReader<bool>;
 #[doc = "Field `VSYNC` writer - Vertical Sync Interrupt Enable"]
-pub type VSYNC_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 0>;
+pub type VSYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `HSYNC` reader - Horizontal Sync Interrupt Enable"]
 pub type HSYNC_R = crate::BitReader<bool>;
 #[doc = "Field `HSYNC` writer - Horizontal Sync Interrupt Enable"]
-pub type HSYNC_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 1>;
+pub type HSYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `VBPORCH` reader - Vertical Back Porch Interrupt Enable"]
 pub type VBPORCH_R = crate::BitReader<bool>;
 #[doc = "Field `VBPORCH` writer - Vertical Back Porch Interrupt Enable"]
-pub type VBPORCH_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 2>;
+pub type VBPORCH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `VFPORCH` reader - Vertical Front Porch Interrupt Enable"]
 pub type VFPORCH_R = crate::BitReader<bool>;
 #[doc = "Field `VFPORCH` writer - Vertical Front Porch Interrupt Enable"]
-pub type VFPORCH_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 3>;
+pub type VFPORCH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `DDEMPTY` reader - Direct Drive Data Empty Interrupt Enable"]
 pub type DDEMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `DDEMPTY` writer - Direct Drive Data Empty Interrupt Enable"]
-pub type DDEMPTY_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 4>;
+pub type DDEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `DDJIT` reader - Direct Drive Jitter Interrupt Enable"]
 pub type DDJIT_R = crate::BitReader<bool>;
 #[doc = "Field `DDJIT` writer - Direct Drive Jitter Interrupt Enable"]
-pub type DDJIT_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 5>;
+pub type DDJIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `TFTPIXEL0EMPTY` reader - EBI_TFTPIXEL0 Empty Interrupt Enable"]
 pub type TFTPIXEL0EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `TFTPIXEL0EMPTY` writer - EBI_TFTPIXEL0 Empty Interrupt Enable"]
-pub type TFTPIXEL0EMPTY_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 6>;
+pub type TFTPIXEL0EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `TFTPIXEL1EMPTY` reader - EBI_TFTPIXEL1 Empty Interrupt Enable"]
 pub type TFTPIXEL1EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `TFTPIXEL1EMPTY` writer - EBI_TFTPIXEL1 Empty Interrupt Enable"]
-pub type TFTPIXEL1EMPTY_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 7>;
+pub type TFTPIXEL1EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `TFTPIXELFULL` reader - EBI_TFTPIXEL Full Interrupt Enable"]
 pub type TFTPIXELFULL_R = crate::BitReader<bool>;
 #[doc = "Field `TFTPIXELFULL` writer - EBI_TFTPIXEL Full Interrupt Enable"]
-pub type TFTPIXELFULL_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 8>;
+pub type TFTPIXELFULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 #[doc = "Field `TFTPIXELOF` reader - EBI_TFTPIXEL Overflow Interrupt Enable"]
 pub type TFTPIXELOF_R = crate::BitReader<bool>;
 #[doc = "Field `TFTPIXELOF` writer - EBI_TFTPIXEL Overflow Interrupt Enable"]
-pub type TFTPIXELOF_W<'a> = crate::BitWriter<'a, u32, IEN_SPEC, bool, 9>;
+pub type TFTPIXELOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Vertical Sync Interrupt Enable"]
     #[inline(always)]
@@ -129,52 +129,62 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Vertical Sync Interrupt Enable"]
     #[inline(always)]
-    pub fn vsync(&mut self) -> VSYNC_W {
+    #[must_use]
+    pub fn vsync(&mut self) -> VSYNC_W<0> {
         VSYNC_W::new(self)
     }
     #[doc = "Bit 1 - Horizontal Sync Interrupt Enable"]
     #[inline(always)]
-    pub fn hsync(&mut self) -> HSYNC_W {
+    #[must_use]
+    pub fn hsync(&mut self) -> HSYNC_W<1> {
         HSYNC_W::new(self)
     }
     #[doc = "Bit 2 - Vertical Back Porch Interrupt Enable"]
     #[inline(always)]
-    pub fn vbporch(&mut self) -> VBPORCH_W {
+    #[must_use]
+    pub fn vbporch(&mut self) -> VBPORCH_W<2> {
         VBPORCH_W::new(self)
     }
     #[doc = "Bit 3 - Vertical Front Porch Interrupt Enable"]
     #[inline(always)]
-    pub fn vfporch(&mut self) -> VFPORCH_W {
+    #[must_use]
+    pub fn vfporch(&mut self) -> VFPORCH_W<3> {
         VFPORCH_W::new(self)
     }
     #[doc = "Bit 4 - Direct Drive Data Empty Interrupt Enable"]
     #[inline(always)]
-    pub fn ddempty(&mut self) -> DDEMPTY_W {
+    #[must_use]
+    pub fn ddempty(&mut self) -> DDEMPTY_W<4> {
         DDEMPTY_W::new(self)
     }
     #[doc = "Bit 5 - Direct Drive Jitter Interrupt Enable"]
     #[inline(always)]
-    pub fn ddjit(&mut self) -> DDJIT_W {
+    #[must_use]
+    pub fn ddjit(&mut self) -> DDJIT_W<5> {
         DDJIT_W::new(self)
     }
     #[doc = "Bit 6 - EBI_TFTPIXEL0 Empty Interrupt Enable"]
     #[inline(always)]
-    pub fn tftpixel0empty(&mut self) -> TFTPIXEL0EMPTY_W {
+    #[must_use]
+    pub fn tftpixel0empty(&mut self) -> TFTPIXEL0EMPTY_W<6> {
         TFTPIXEL0EMPTY_W::new(self)
     }
     #[doc = "Bit 7 - EBI_TFTPIXEL1 Empty Interrupt Enable"]
     #[inline(always)]
-    pub fn tftpixel1empty(&mut self) -> TFTPIXEL1EMPTY_W {
+    #[must_use]
+    pub fn tftpixel1empty(&mut self) -> TFTPIXEL1EMPTY_W<7> {
         TFTPIXEL1EMPTY_W::new(self)
     }
     #[doc = "Bit 8 - EBI_TFTPIXEL Full Interrupt Enable"]
     #[inline(always)]
-    pub fn tftpixelfull(&mut self) -> TFTPIXELFULL_W {
+    #[must_use]
+    pub fn tftpixelfull(&mut self) -> TFTPIXELFULL_W<8> {
         TFTPIXELFULL_W::new(self)
     }
     #[doc = "Bit 9 - EBI_TFTPIXEL Overflow Interrupt Enable"]
     #[inline(always)]
-    pub fn tftpixelof(&mut self) -> TFTPIXELOF_W {
+    #[must_use]
+    pub fn tftpixelof(&mut self) -> TFTPIXELOF_W<9> {
         TFTPIXELOF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -196,11 +206,10 @@ impl crate::Readable for IEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ien::W](W) writer structure"]
 impl crate::Writable for IEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IEN to value 0"]
 impl crate::Resettable for IEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

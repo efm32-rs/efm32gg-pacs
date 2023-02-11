@@ -34,8 +34,10 @@ impl From<crate::W<ROUTELOC0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `EBILOC` reader - I/O Location"]
+pub type EBILOC_R = crate::FieldReader<u8, EBILOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum EBILOC_A {
     #[doc = "0: Location 0"]
@@ -57,8 +59,6 @@ impl From<EBILOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `EBILOC` reader - I/O Location"]
-pub type EBILOC_R = crate::FieldReader<u8, EBILOC_A>;
 impl EBILOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -105,8 +105,9 @@ impl EBILOC_R {
     }
 }
 #[doc = "Field `EBILOC` writer - I/O Location"]
-pub type EBILOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, EBILOC_A, 6, 0>;
-impl<'a> EBILOC_W<'a> {
+pub type EBILOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, EBILOC_A, 6, O>;
+impl<'a, const O: u8> EBILOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -138,8 +139,10 @@ impl<'a> EBILOC_W<'a> {
         self.variant(EBILOC_A::LOC5)
     }
 }
+#[doc = "Field `CSLOC` reader - I/O Location"]
+pub type CSLOC_R = crate::FieldReader<u8, CSLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CSLOC_A {
     #[doc = "0: Location 0"]
@@ -159,8 +162,6 @@ impl From<CSLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CSLOC` reader - I/O Location"]
-pub type CSLOC_R = crate::FieldReader<u8, CSLOC_A>;
 impl CSLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -201,8 +202,8 @@ impl CSLOC_R {
     }
 }
 #[doc = "Field `CSLOC` writer - I/O Location"]
-pub type CSLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, CSLOC_A, 6, 8>;
-impl<'a> CSLOC_W<'a> {
+pub type CSLOC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, CSLOC_A, 6, O>;
+impl<'a, const O: u8> CSLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -229,8 +230,10 @@ impl<'a> CSLOC_W<'a> {
         self.variant(CSLOC_A::LOC4)
     }
 }
+#[doc = "Field `NANDLOC` reader - I/O Location"]
+pub type NANDLOC_R = crate::FieldReader<u8, NANDLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NANDLOC_A {
     #[doc = "0: Location 0"]
@@ -252,8 +255,6 @@ impl From<NANDLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `NANDLOC` reader - I/O Location"]
-pub type NANDLOC_R = crate::FieldReader<u8, NANDLOC_A>;
 impl NANDLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -300,8 +301,9 @@ impl NANDLOC_R {
     }
 }
 #[doc = "Field `NANDLOC` writer - I/O Location"]
-pub type NANDLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, NANDLOC_A, 6, 16>;
-impl<'a> NANDLOC_W<'a> {
+pub type NANDLOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, NANDLOC_A, 6, O>;
+impl<'a, const O: u8> NANDLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -333,8 +335,10 @@ impl<'a> NANDLOC_W<'a> {
         self.variant(NANDLOC_A::LOC5)
     }
 }
+#[doc = "Field `TFTLOC` reader - I/O Location"]
+pub type TFTLOC_R = crate::FieldReader<u8, TFTLOC_A>;
 #[doc = "I/O Location\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TFTLOC_A {
     #[doc = "0: Location 0"]
@@ -352,8 +356,6 @@ impl From<TFTLOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TFTLOC` reader - I/O Location"]
-pub type TFTLOC_R = crate::FieldReader<u8, TFTLOC_A>;
 impl TFTLOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -388,8 +390,9 @@ impl TFTLOC_R {
     }
 }
 #[doc = "Field `TFTLOC` writer - I/O Location"]
-pub type TFTLOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, TFTLOC_A, 6, 24>;
-impl<'a> TFTLOC_W<'a> {
+pub type TFTLOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, TFTLOC_A, 6, O>;
+impl<'a, const O: u8> TFTLOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -436,22 +439,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - I/O Location"]
     #[inline(always)]
-    pub fn ebiloc(&mut self) -> EBILOC_W {
+    #[must_use]
+    pub fn ebiloc(&mut self) -> EBILOC_W<0> {
         EBILOC_W::new(self)
     }
     #[doc = "Bits 8:13 - I/O Location"]
     #[inline(always)]
-    pub fn csloc(&mut self) -> CSLOC_W {
+    #[must_use]
+    pub fn csloc(&mut self) -> CSLOC_W<8> {
         CSLOC_W::new(self)
     }
     #[doc = "Bits 16:21 - I/O Location"]
     #[inline(always)]
-    pub fn nandloc(&mut self) -> NANDLOC_W {
+    #[must_use]
+    pub fn nandloc(&mut self) -> NANDLOC_W<16> {
         NANDLOC_W::new(self)
     }
     #[doc = "Bits 24:29 - I/O Location"]
     #[inline(always)]
-    pub fn tftloc(&mut self) -> TFTLOC_W {
+    #[must_use]
+    pub fn tftloc(&mut self) -> TFTLOC_W<24> {
         TFTLOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -473,11 +480,10 @@ impl crate::Readable for ROUTELOC0_SPEC {
 #[doc = "`write(|w| ..)` method takes [routeloc0::W](W) writer structure"]
 impl crate::Writable for ROUTELOC0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTELOC0 to value 0"]
 impl crate::Resettable for ROUTELOC0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

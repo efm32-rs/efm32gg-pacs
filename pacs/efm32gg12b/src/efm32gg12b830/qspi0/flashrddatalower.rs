@@ -33,8 +33,5 @@ impl crate::Readable for FLASHRDDATALOWER_SPEC {
 }
 #[doc = "`reset()` method sets FLASHRDDATALOWER to value 0"]
 impl crate::Resettable for FLASHRDDATALOWER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

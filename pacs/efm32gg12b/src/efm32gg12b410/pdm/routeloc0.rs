@@ -34,8 +34,10 @@ impl From<crate::W<ROUTELOC0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DAT0LOC` reader - I/O Location for DAT0 pins"]
+pub type DAT0LOC_R = crate::FieldReader<u8, DAT0LOC_A>;
 #[doc = "I/O Location for DAT0 pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DAT0LOC_A {
     #[doc = "0: Location 0"]
@@ -55,8 +57,6 @@ impl From<DAT0LOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DAT0LOC` reader - I/O Location for DAT0 pins"]
-pub type DAT0LOC_R = crate::FieldReader<u8, DAT0LOC_A>;
 impl DAT0LOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -97,8 +97,9 @@ impl DAT0LOC_R {
     }
 }
 #[doc = "Field `DAT0LOC` writer - I/O Location for DAT0 pins"]
-pub type DAT0LOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT0LOC_A, 6, 0>;
-impl<'a> DAT0LOC_W<'a> {
+pub type DAT0LOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT0LOC_A, 6, O>;
+impl<'a, const O: u8> DAT0LOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -125,8 +126,10 @@ impl<'a> DAT0LOC_W<'a> {
         self.variant(DAT0LOC_A::LOC4)
     }
 }
+#[doc = "Field `DAT1LOC` reader - I/O Location for DAT1 pins"]
+pub type DAT1LOC_R = crate::FieldReader<u8, DAT1LOC_A>;
 #[doc = "I/O Location for DAT1 pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DAT1LOC_A {
     #[doc = "0: Location 0"]
@@ -146,8 +149,6 @@ impl From<DAT1LOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DAT1LOC` reader - I/O Location for DAT1 pins"]
-pub type DAT1LOC_R = crate::FieldReader<u8, DAT1LOC_A>;
 impl DAT1LOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -188,8 +189,9 @@ impl DAT1LOC_R {
     }
 }
 #[doc = "Field `DAT1LOC` writer - I/O Location for DAT1 pins"]
-pub type DAT1LOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT1LOC_A, 6, 8>;
-impl<'a> DAT1LOC_W<'a> {
+pub type DAT1LOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT1LOC_A, 6, O>;
+impl<'a, const O: u8> DAT1LOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -216,8 +218,10 @@ impl<'a> DAT1LOC_W<'a> {
         self.variant(DAT1LOC_A::LOC4)
     }
 }
+#[doc = "Field `DAT2LOC` reader - I/O Location for DAT2 pins"]
+pub type DAT2LOC_R = crate::FieldReader<u8, DAT2LOC_A>;
 #[doc = "I/O Location for DAT2 pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DAT2LOC_A {
     #[doc = "0: Location 0"]
@@ -237,8 +241,6 @@ impl From<DAT2LOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DAT2LOC` reader - I/O Location for DAT2 pins"]
-pub type DAT2LOC_R = crate::FieldReader<u8, DAT2LOC_A>;
 impl DAT2LOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -279,8 +281,9 @@ impl DAT2LOC_R {
     }
 }
 #[doc = "Field `DAT2LOC` writer - I/O Location for DAT2 pins"]
-pub type DAT2LOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT2LOC_A, 6, 16>;
-impl<'a> DAT2LOC_W<'a> {
+pub type DAT2LOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT2LOC_A, 6, O>;
+impl<'a, const O: u8> DAT2LOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -307,8 +310,10 @@ impl<'a> DAT2LOC_W<'a> {
         self.variant(DAT2LOC_A::LOC4)
     }
 }
+#[doc = "Field `DAT3LOC` reader - I/O Location for DAT3 pins"]
+pub type DAT3LOC_R = crate::FieldReader<u8, DAT3LOC_A>;
 #[doc = "I/O Location for DAT3 pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DAT3LOC_A {
     #[doc = "0: Location 0"]
@@ -328,8 +333,6 @@ impl From<DAT3LOC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DAT3LOC` reader - I/O Location for DAT3 pins"]
-pub type DAT3LOC_R = crate::FieldReader<u8, DAT3LOC_A>;
 impl DAT3LOC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -370,8 +373,9 @@ impl DAT3LOC_R {
     }
 }
 #[doc = "Field `DAT3LOC` writer - I/O Location for DAT3 pins"]
-pub type DAT3LOC_W<'a> = crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT3LOC_A, 6, 24>;
-impl<'a> DAT3LOC_W<'a> {
+pub type DAT3LOC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ROUTELOC0_SPEC, u8, DAT3LOC_A, 6, O>;
+impl<'a, const O: u8> DAT3LOC_W<'a, O> {
     #[doc = "Location 0"]
     #[inline(always)]
     pub fn loc0(self) -> &'a mut W {
@@ -423,22 +427,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - I/O Location for DAT0 pins"]
     #[inline(always)]
-    pub fn dat0loc(&mut self) -> DAT0LOC_W {
+    #[must_use]
+    pub fn dat0loc(&mut self) -> DAT0LOC_W<0> {
         DAT0LOC_W::new(self)
     }
     #[doc = "Bits 8:13 - I/O Location for DAT1 pins"]
     #[inline(always)]
-    pub fn dat1loc(&mut self) -> DAT1LOC_W {
+    #[must_use]
+    pub fn dat1loc(&mut self) -> DAT1LOC_W<8> {
         DAT1LOC_W::new(self)
     }
     #[doc = "Bits 16:21 - I/O Location for DAT2 pins"]
     #[inline(always)]
-    pub fn dat2loc(&mut self) -> DAT2LOC_W {
+    #[must_use]
+    pub fn dat2loc(&mut self) -> DAT2LOC_W<16> {
         DAT2LOC_W::new(self)
     }
     #[doc = "Bits 24:29 - I/O Location for DAT3 pins"]
     #[inline(always)]
-    pub fn dat3loc(&mut self) -> DAT3LOC_W {
+    #[must_use]
+    pub fn dat3loc(&mut self) -> DAT3LOC_W<24> {
         DAT3LOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -460,11 +468,10 @@ impl crate::Readable for ROUTELOC0_SPEC {
 #[doc = "`write(|w| ..)` method takes [routeloc0::W](W) writer structure"]
 impl crate::Writable for ROUTELOC0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROUTELOC0 to value 0"]
 impl crate::Resettable for ROUTELOC0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

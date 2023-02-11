@@ -37,11 +37,13 @@ impl From<crate::W<OPCODEEXTUPPER_SPEC>> for W {
 #[doc = "Field `EXTWELOPCODE` reader - WEL Opcode Extension"]
 pub type EXTWELOPCODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EXTWELOPCODE` writer - WEL Opcode Extension"]
-pub type EXTWELOPCODE_W<'a> = crate::FieldWriter<'a, u32, OPCODEEXTUPPER_SPEC, u8, u8, 8, 16>;
+pub type EXTWELOPCODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, OPCODEEXTUPPER_SPEC, u8, u8, 8, O>;
 #[doc = "Field `WELOPCODE` reader - WEL Opcode"]
 pub type WELOPCODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WELOPCODE` writer - WEL Opcode"]
-pub type WELOPCODE_W<'a> = crate::FieldWriter<'a, u32, OPCODEEXTUPPER_SPEC, u8, u8, 8, 24>;
+pub type WELOPCODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, OPCODEEXTUPPER_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 16:23 - WEL Opcode Extension"]
     #[inline(always)]
@@ -57,12 +59,14 @@ impl R {
 impl W {
     #[doc = "Bits 16:23 - WEL Opcode Extension"]
     #[inline(always)]
-    pub fn extwelopcode(&mut self) -> EXTWELOPCODE_W {
+    #[must_use]
+    pub fn extwelopcode(&mut self) -> EXTWELOPCODE_W<16> {
         EXTWELOPCODE_W::new(self)
     }
     #[doc = "Bits 24:31 - WEL Opcode"]
     #[inline(always)]
-    pub fn welopcode(&mut self) -> WELOPCODE_W {
+    #[must_use]
+    pub fn welopcode(&mut self) -> WELOPCODE_W<24> {
         WELOPCODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +88,10 @@ impl crate::Readable for OPCODEEXTUPPER_SPEC {
 #[doc = "`write(|w| ..)` method takes [opcodeextupper::W](W) writer structure"]
 impl crate::Writable for OPCODEEXTUPPER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OPCODEEXTUPPER to value 0x06f9_0000"]
 impl crate::Resettable for OPCODEEXTUPPER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x06f9_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x06f9_0000;
 }

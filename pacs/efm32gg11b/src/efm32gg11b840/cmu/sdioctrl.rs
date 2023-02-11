@@ -34,8 +34,10 @@ impl From<crate::W<SDIOCTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `SDIOCLKSEL` reader - SDIO Reference Clock Select"]
+pub type SDIOCLKSEL_R = crate::FieldReader<u8, SDIOCLKSEL_A>;
 #[doc = "SDIO Reference Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SDIOCLKSEL_A {
     #[doc = "0: HFRCO clock is used to clock SDIO"]
@@ -53,8 +55,6 @@ impl From<SDIOCLKSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SDIOCLKSEL` reader - SDIO Reference Clock Select"]
-pub type SDIOCLKSEL_R = crate::FieldReader<u8, SDIOCLKSEL_A>;
 impl SDIOCLKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,8 +89,9 @@ impl SDIOCLKSEL_R {
     }
 }
 #[doc = "Field `SDIOCLKSEL` writer - SDIO Reference Clock Select"]
-pub type SDIOCLKSEL_W<'a> = crate::FieldWriterSafe<'a, u32, SDIOCTRL_SPEC, u8, SDIOCLKSEL_A, 2, 0>;
-impl<'a> SDIOCLKSEL_W<'a> {
+pub type SDIOCLKSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, SDIOCTRL_SPEC, u8, SDIOCLKSEL_A, 2, O>;
+impl<'a, const O: u8> SDIOCLKSEL_W<'a, O> {
     #[doc = "HFRCO clock is used to clock SDIO"]
     #[inline(always)]
     pub fn hfrco(self) -> &'a mut W {
@@ -115,7 +116,7 @@ impl<'a> SDIOCLKSEL_W<'a> {
 #[doc = "Field `SDIOCLKDIS` reader - SDIO Reference Clock Disable"]
 pub type SDIOCLKDIS_R = crate::BitReader<bool>;
 #[doc = "Field `SDIOCLKDIS` writer - SDIO Reference Clock Disable"]
-pub type SDIOCLKDIS_W<'a> = crate::BitWriter<'a, u32, SDIOCTRL_SPEC, bool, 7>;
+pub type SDIOCLKDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIOCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - SDIO Reference Clock Select"]
     #[inline(always)]
@@ -131,12 +132,14 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - SDIO Reference Clock Select"]
     #[inline(always)]
-    pub fn sdioclksel(&mut self) -> SDIOCLKSEL_W {
+    #[must_use]
+    pub fn sdioclksel(&mut self) -> SDIOCLKSEL_W<0> {
         SDIOCLKSEL_W::new(self)
     }
     #[doc = "Bit 7 - SDIO Reference Clock Disable"]
     #[inline(always)]
-    pub fn sdioclkdis(&mut self) -> SDIOCLKDIS_W {
+    #[must_use]
+    pub fn sdioclkdis(&mut self) -> SDIOCLKDIS_W<7> {
         SDIOCLKDIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -158,11 +161,10 @@ impl crate::Readable for SDIOCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdioctrl::W](W) writer structure"]
 impl crate::Writable for SDIOCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDIOCTRL to value 0"]
 impl crate::Resettable for SDIOCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

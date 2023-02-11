@@ -37,7 +37,8 @@ impl From<crate::W<FRAMESTXED128_SPEC>> for W {
 #[doc = "Field `COUNT` reader - 128 to 255 byte frames transmitted without error"]
 pub type COUNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `COUNT` writer - 128 to 255 byte frames transmitted without error"]
-pub type COUNT_W<'a> = crate::FieldWriter<'a, u32, FRAMESTXED128_SPEC, u32, u32, 32, 0>;
+pub type COUNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FRAMESTXED128_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - 128 to 255 byte frames transmitted without error"]
     #[inline(always)]
@@ -48,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - 128 to 255 byte frames transmitted without error"]
     #[inline(always)]
-    pub fn count(&mut self) -> COUNT_W {
+    #[must_use]
+    pub fn count(&mut self) -> COUNT_W<0> {
         COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +72,10 @@ impl crate::Readable for FRAMESTXED128_SPEC {
 #[doc = "`write(|w| ..)` method takes [framestxed128::W](W) writer structure"]
 impl crate::Writable for FRAMESTXED128_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRAMESTXED128 to value 0"]
 impl crate::Resettable for FRAMESTXED128_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

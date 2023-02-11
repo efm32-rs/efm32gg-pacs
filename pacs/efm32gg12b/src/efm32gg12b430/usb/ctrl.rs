@@ -37,13 +37,15 @@ impl From<crate::W<CTRL_SPEC>> for W {
 #[doc = "Field `VBUSENAP` reader - VBUSEN Active Polarity"]
 pub type VBUSENAP_R = crate::BitReader<bool>;
 #[doc = "Field `VBUSENAP` writer - VBUSEN Active Polarity"]
-pub type VBUSENAP_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
+pub type VBUSENAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `SELFPOWERED` reader - PHY Power"]
 pub type SELFPOWERED_R = crate::BitReader<bool>;
 #[doc = "Field `SELFPOWERED` writer - PHY Power"]
-pub type SELFPOWERED_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
+pub type SELFPOWERED_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `LEMOSCCTRL` reader - Low Energy Mode Oscillator Control"]
+pub type LEMOSCCTRL_R = crate::FieldReader<u8, LEMOSCCTRL_A>;
 #[doc = "Low Energy Mode Oscillator Control\n\nValue on reset: 2"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum LEMOSCCTRL_A {
     #[doc = "0: Low Energy Mode has no effect on neither USBC or USHFRCO."]
@@ -57,8 +59,6 @@ impl From<LEMOSCCTRL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `LEMOSCCTRL` reader - Low Energy Mode Oscillator Control"]
-pub type LEMOSCCTRL_R = crate::FieldReader<u8, LEMOSCCTRL_A>;
 impl LEMOSCCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -81,8 +81,9 @@ impl LEMOSCCTRL_R {
     }
 }
 #[doc = "Field `LEMOSCCTRL` writer - Low Energy Mode Oscillator Control"]
-pub type LEMOSCCTRL_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, LEMOSCCTRL_A, 2, 4>;
-impl<'a> LEMOSCCTRL_W<'a> {
+pub type LEMOSCCTRL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CTRL_SPEC, u8, LEMOSCCTRL_A, 2, O>;
+impl<'a, const O: u8> LEMOSCCTRL_W<'a, O> {
     #[doc = "Low Energy Mode has no effect on neither USBC or USHFRCO."]
     #[inline(always)]
     pub fn none(self) -> &'a mut W {
@@ -97,29 +98,31 @@ impl<'a> LEMOSCCTRL_W<'a> {
 #[doc = "Field `LEMPHYCTRL` reader - Low Energy Mode USB PHY Control"]
 pub type LEMPHYCTRL_R = crate::BitReader<bool>;
 #[doc = "Field `LEMPHYCTRL` writer - Low Energy Mode USB PHY Control"]
-pub type LEMPHYCTRL_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 7>;
+pub type LEMPHYCTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `LEMIDLEEN` reader - Low Energy Mode on Bus Idle Enable"]
 pub type LEMIDLEEN_R = crate::BitReader<bool>;
 #[doc = "Field `LEMIDLEEN` writer - Low Energy Mode on Bus Idle Enable"]
-pub type LEMIDLEEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 9>;
+pub type LEMIDLEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `IDCDEN` reader - ID Pull-up Enable"]
 pub type IDCDEN_R = crate::BitReader<bool>;
 #[doc = "Field `IDCDEN` writer - ID Pull-up Enable"]
-pub type IDCDEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 12>;
+pub type IDCDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `OTGCLKCDIS` reader - OTG CLKC Disable"]
 pub type OTGCLKCDIS_R = crate::BitReader<bool>;
 #[doc = "Field `OTGCLKCDIS` writer - OTG CLKC Disable"]
-pub type OTGCLKCDIS_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 25>;
+pub type OTGCLKCDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `OTGIDINDIS` reader - OTG ID Input Disable"]
 pub type OTGIDINDIS_R = crate::BitReader<bool>;
 #[doc = "Field `OTGIDINDIS` writer - OTG ID Input Disable"]
-pub type OTGIDINDIS_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 26>;
+pub type OTGIDINDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `OTGPHYCTRLDIS` reader - OTG Control Signals to PHY Disable"]
 pub type OTGPHYCTRLDIS_R = crate::BitReader<bool>;
 #[doc = "Field `OTGPHYCTRLDIS` writer - OTG Control Signals to PHY Disable"]
-pub type OTGPHYCTRLDIS_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 27>;
+pub type OTGPHYCTRLDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `DCDEN` reader - Data Contact Detection Enable"]
+pub type DCDEN_R = crate::FieldReader<u8, DCDEN_A>;
 #[doc = "Data Contact Detection Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DCDEN_A {
     #[doc = "0: DCD is disabled."]
@@ -135,8 +138,6 @@ impl From<DCDEN_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DCDEN` reader - Data Contact Detection Enable"]
-pub type DCDEN_R = crate::FieldReader<u8, DCDEN_A>;
 impl DCDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -165,8 +166,8 @@ impl DCDEN_R {
     }
 }
 #[doc = "Field `DCDEN` writer - Data Contact Detection Enable"]
-pub type DCDEN_W<'a> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, DCDEN_A, 2, 28>;
-impl<'a> DCDEN_W<'a> {
+pub type DCDEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u8, DCDEN_A, 2, O>;
+impl<'a, const O: u8> DCDEN_W<'a, O> {
     #[doc = "DCD is disabled."]
     #[inline(always)]
     pub fn disabled(self) -> &'a mut W {
@@ -186,11 +187,11 @@ impl<'a> DCDEN_W<'a> {
 #[doc = "Field `PDEN` reader - Primary Detection Enable"]
 pub type PDEN_R = crate::BitReader<bool>;
 #[doc = "Field `PDEN` writer - Primary Detection Enable"]
-pub type PDEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 30>;
+pub type PDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `SDEN` reader - Secondary Detection Enable"]
 pub type SDEN_R = crate::BitReader<bool>;
 #[doc = "Field `SDEN` writer - Secondary Detection Enable"]
-pub type SDEN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 31>;
+pub type SDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - VBUSEN Active Polarity"]
     #[inline(always)]
@@ -256,62 +257,74 @@ impl R {
 impl W {
     #[doc = "Bit 0 - VBUSEN Active Polarity"]
     #[inline(always)]
-    pub fn vbusenap(&mut self) -> VBUSENAP_W {
+    #[must_use]
+    pub fn vbusenap(&mut self) -> VBUSENAP_W<0> {
         VBUSENAP_W::new(self)
     }
     #[doc = "Bit 3 - PHY Power"]
     #[inline(always)]
-    pub fn selfpowered(&mut self) -> SELFPOWERED_W {
+    #[must_use]
+    pub fn selfpowered(&mut self) -> SELFPOWERED_W<3> {
         SELFPOWERED_W::new(self)
     }
     #[doc = "Bits 4:5 - Low Energy Mode Oscillator Control"]
     #[inline(always)]
-    pub fn lemoscctrl(&mut self) -> LEMOSCCTRL_W {
+    #[must_use]
+    pub fn lemoscctrl(&mut self) -> LEMOSCCTRL_W<4> {
         LEMOSCCTRL_W::new(self)
     }
     #[doc = "Bit 7 - Low Energy Mode USB PHY Control"]
     #[inline(always)]
-    pub fn lemphyctrl(&mut self) -> LEMPHYCTRL_W {
+    #[must_use]
+    pub fn lemphyctrl(&mut self) -> LEMPHYCTRL_W<7> {
         LEMPHYCTRL_W::new(self)
     }
     #[doc = "Bit 9 - Low Energy Mode on Bus Idle Enable"]
     #[inline(always)]
-    pub fn lemidleen(&mut self) -> LEMIDLEEN_W {
+    #[must_use]
+    pub fn lemidleen(&mut self) -> LEMIDLEEN_W<9> {
         LEMIDLEEN_W::new(self)
     }
     #[doc = "Bit 12 - ID Pull-up Enable"]
     #[inline(always)]
-    pub fn idcden(&mut self) -> IDCDEN_W {
+    #[must_use]
+    pub fn idcden(&mut self) -> IDCDEN_W<12> {
         IDCDEN_W::new(self)
     }
     #[doc = "Bit 25 - OTG CLKC Disable"]
     #[inline(always)]
-    pub fn otgclkcdis(&mut self) -> OTGCLKCDIS_W {
+    #[must_use]
+    pub fn otgclkcdis(&mut self) -> OTGCLKCDIS_W<25> {
         OTGCLKCDIS_W::new(self)
     }
     #[doc = "Bit 26 - OTG ID Input Disable"]
     #[inline(always)]
-    pub fn otgidindis(&mut self) -> OTGIDINDIS_W {
+    #[must_use]
+    pub fn otgidindis(&mut self) -> OTGIDINDIS_W<26> {
         OTGIDINDIS_W::new(self)
     }
     #[doc = "Bit 27 - OTG Control Signals to PHY Disable"]
     #[inline(always)]
-    pub fn otgphyctrldis(&mut self) -> OTGPHYCTRLDIS_W {
+    #[must_use]
+    pub fn otgphyctrldis(&mut self) -> OTGPHYCTRLDIS_W<27> {
         OTGPHYCTRLDIS_W::new(self)
     }
     #[doc = "Bits 28:29 - Data Contact Detection Enable"]
     #[inline(always)]
-    pub fn dcden(&mut self) -> DCDEN_W {
+    #[must_use]
+    pub fn dcden(&mut self) -> DCDEN_W<28> {
         DCDEN_W::new(self)
     }
     #[doc = "Bit 30 - Primary Detection Enable"]
     #[inline(always)]
-    pub fn pden(&mut self) -> PDEN_W {
+    #[must_use]
+    pub fn pden(&mut self) -> PDEN_W<30> {
         PDEN_W::new(self)
     }
     #[doc = "Bit 31 - Secondary Detection Enable"]
     #[inline(always)]
-    pub fn sden(&mut self) -> SDEN_W {
+    #[must_use]
+    pub fn sden(&mut self) -> SDEN_W<31> {
         SDEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -333,11 +346,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x20"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<CMDARG1_SPEC>> for W {
 #[doc = "Field `CMDARG1` reader - Command Argument 1"]
 pub type CMDARG1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CMDARG1` writer - Command Argument 1"]
-pub type CMDARG1_W<'a> = crate::FieldWriter<'a, u32, CMDARG1_SPEC, u32, u32, 32, 0>;
+pub type CMDARG1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMDARG1_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Command Argument 1"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Command Argument 1"]
     #[inline(always)]
-    pub fn cmdarg1(&mut self) -> CMDARG1_W {
+    #[must_use]
+    pub fn cmdarg1(&mut self) -> CMDARG1_W<0> {
         CMDARG1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for CMDARG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmdarg1::W](W) writer structure"]
 impl crate::Writable for CMDARG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMDARG1 to value 0"]
 impl crate::Resettable for CMDARG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

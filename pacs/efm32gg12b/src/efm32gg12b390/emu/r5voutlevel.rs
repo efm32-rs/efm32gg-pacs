@@ -37,7 +37,7 @@ impl From<crate::W<R5VOUTLEVEL_SPEC>> for W {
 #[doc = "Field `OUTLEVEL` reader - 5V Regulator Voltage"]
 pub type OUTLEVEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUTLEVEL` writer - 5V Regulator Voltage"]
-pub type OUTLEVEL_W<'a> = crate::FieldWriter<'a, u32, R5VOUTLEVEL_SPEC, u8, u8, 4, 0>;
+pub type OUTLEVEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, R5VOUTLEVEL_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - 5V Regulator Voltage"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - 5V Regulator Voltage"]
     #[inline(always)]
-    pub fn outlevel(&mut self) -> OUTLEVEL_W {
+    #[must_use]
+    pub fn outlevel(&mut self) -> OUTLEVEL_W<0> {
         OUTLEVEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for R5VOUTLEVEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [r5voutlevel::W](W) writer structure"]
 impl crate::Writable for R5VOUTLEVEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets R5VOUTLEVEL to value 0x01"]
 impl crate::Resettable for R5VOUTLEVEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

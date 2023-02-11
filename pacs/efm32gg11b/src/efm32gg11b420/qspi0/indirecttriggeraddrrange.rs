@@ -37,8 +37,8 @@ impl From<crate::W<INDIRECTTRIGGERADDRRANGE_SPEC>> for W {
 #[doc = "Field `INDRANGEWIDTH` reader - Indirect Trigger Address Width"]
 pub type INDRANGEWIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INDRANGEWIDTH` writer - Indirect Trigger Address Width"]
-pub type INDRANGEWIDTH_W<'a> =
-    crate::FieldWriter<'a, u32, INDIRECTTRIGGERADDRRANGE_SPEC, u8, u8, 4, 0>;
+pub type INDRANGEWIDTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, INDIRECTTRIGGERADDRRANGE_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Indirect Trigger Address Width"]
     #[inline(always)]
@@ -49,7 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Indirect Trigger Address Width"]
     #[inline(always)]
-    pub fn indrangewidth(&mut self) -> INDRANGEWIDTH_W {
+    #[must_use]
+    pub fn indrangewidth(&mut self) -> INDRANGEWIDTH_W<0> {
         INDRANGEWIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -71,11 +72,10 @@ impl crate::Readable for INDIRECTTRIGGERADDRRANGE_SPEC {
 #[doc = "`write(|w| ..)` method takes [indirecttriggeraddrrange::W](W) writer structure"]
 impl crate::Writable for INDIRECTTRIGGERADDRRANGE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INDIRECTTRIGGERADDRRANGE to value 0x04"]
 impl crate::Resettable for INDIRECTTRIGGERADDRRANGE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

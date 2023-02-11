@@ -37,7 +37,7 @@ impl From<crate::W<RXOVERRUNS_SPEC>> for W {
 #[doc = "Field `COUNT` reader - Receive overruns"]
 pub type COUNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COUNT` writer - Receive overruns"]
-pub type COUNT_W<'a> = crate::FieldWriter<'a, u32, RXOVERRUNS_SPEC, u16, u16, 10, 0>;
+pub type COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXOVERRUNS_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9 - Receive overruns"]
     #[inline(always)]
@@ -48,7 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Receive overruns"]
     #[inline(always)]
-    pub fn count(&mut self) -> COUNT_W {
+    #[must_use]
+    pub fn count(&mut self) -> COUNT_W<0> {
         COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -70,11 +71,10 @@ impl crate::Readable for RXOVERRUNS_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxoverruns::W](W) writer structure"]
 impl crate::Writable for RXOVERRUNS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXOVERRUNS to value 0"]
 impl crate::Resettable for RXOVERRUNS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

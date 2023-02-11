@@ -33,8 +33,5 @@ impl crate::Readable for R5VSYNC_SPEC {
 }
 #[doc = "`reset()` method sets R5VSYNC to value 0"]
 impl crate::Resettable for R5VSYNC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

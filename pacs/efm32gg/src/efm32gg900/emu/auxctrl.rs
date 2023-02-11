@@ -37,11 +37,11 @@ impl From<crate::W<AUXCTRL_SPEC>> for W {
 #[doc = "Field `HRCCLR` reader - Hard Reset Cause Clear"]
 pub type HRCCLR_R = crate::BitReader<bool>;
 #[doc = "Field `HRCCLR` writer - Hard Reset Cause Clear"]
-pub type HRCCLR_W<'a> = crate::BitWriter<'a, u32, AUXCTRL_SPEC, bool, 0>;
+pub type HRCCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, AUXCTRL_SPEC, bool, O>;
 #[doc = "Field `REDLFXOBOOST` reader - Reduce LFXO Start-up Boost Current"]
 pub type REDLFXOBOOST_R = crate::BitReader<bool>;
 #[doc = "Field `REDLFXOBOOST` writer - Reduce LFXO Start-up Boost Current"]
-pub type REDLFXOBOOST_W<'a> = crate::BitWriter<'a, u32, AUXCTRL_SPEC, bool, 8>;
+pub type REDLFXOBOOST_W<'a, const O: u8> = crate::BitWriter<'a, u32, AUXCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Hard Reset Cause Clear"]
     #[inline(always)]
@@ -57,12 +57,14 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Hard Reset Cause Clear"]
     #[inline(always)]
-    pub fn hrcclr(&mut self) -> HRCCLR_W {
+    #[must_use]
+    pub fn hrcclr(&mut self) -> HRCCLR_W<0> {
         HRCCLR_W::new(self)
     }
     #[doc = "Bit 8 - Reduce LFXO Start-up Boost Current"]
     #[inline(always)]
-    pub fn redlfxoboost(&mut self) -> REDLFXOBOOST_W {
+    #[must_use]
+    pub fn redlfxoboost(&mut self) -> REDLFXOBOOST_W<8> {
         REDLFXOBOOST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
@@ -84,11 +86,10 @@ impl crate::Readable for AUXCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [auxctrl::W](W) writer structure"]
 impl crate::Writable for AUXCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AUXCTRL to value 0"]
 impl crate::Resettable for AUXCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
