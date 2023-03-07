@@ -20,7 +20,8 @@ jobs:
           toolchain: stable
           profile: minimal
           components: rustfmt
-          target: thumbv6m-none-eabi, thumbv7em-none-eabihf, thumbv7m-none-eabi, thumbv8m.main-none-eabihf
+      - name: Add targets
+        run: rustup target add thumbv6m-none-eabi thumbv7em-none-eabihf thumbv7m-none-eabi thumbv8m.main-none-eabihf
       - name: Build Crates
         run: |
           CARGO_TOML_FILES="$(find . -type f -name 'Cargo.toml')"
